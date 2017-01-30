@@ -6,8 +6,9 @@
 }
 
 body {
-    padding: 50px; /* Safe area */
-    font-family: sans-serif;
+    margin: 0;
+    padding: 1vw; /* Safe area */
+    font-family: 'Lato', sans-serif;
     background:transparent;                          /* The HTML consumer actually makes your background transparent by default, unless a color or image is specified - but this might be usefull when debugging in browsers */
     overflow:hidden;                                 /* Hide any overflowing elements - to disable scollbars */
     -webkit-font-smoothing:antialiased !important;
@@ -17,21 +18,74 @@ body {
 /**************************************************/
 /*              [Live Bug]                        */
 /**************************************************/
+
 .bug {
-    display:inline;
-    white-space: nowrap;
-    clear:none;
-    position: absolute;
-    left: 50px;
-    background-color: #000000;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
-.bug h1 {
-    color: #fff;
-    font-size: 1.55vw;
-    line-height: 1.8vw;
-    font-weight: normal;
-    float: left;
-    padding: 3px 10px;
-    margin-right: 0px;
+.bug #logo {
+    display: block;
+    position: absolute;
+    top: 1vw;
+    height: 3vw;
+    line-height: 3vw;
+    width: 8vw;
+    border-radius: 1.5vw;
+    border: 5px solid #333333;
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.5);
+    background: linear-gradient(to bottom, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%);
+    padding: 5px 10px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/*.bug #liveText {
+    color: #333333;
+    font-size: 1.5vw;
+    font-weight: 900;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}*/
+
+.bug #logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%) rotate(-10deg) perspective(1px);
+    height: 1.75vw;
+    opacity: 0.35;
+}
+
+.bug #textLive {
+    display: block;
+    position: absolute;
+    top: 1vw;
+    left: 7.5vw;
+    z-index: 1;
+    height: 3vw;
+    line-height: 3vw;
+    width: 8vw;
+    border-top-right-radius: 1.5vw;
+    border-bottom-right-radius: 1.5vw;
+    border: 5px solid #333333;
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.5);
+    background: linear-gradient(to bottom, rgba(197,68,51,1) 0%,rgba(187,64,47,1) 50%,rgba(175,72,47,1) 51%,rgba(201,91,47,1) 100%);
+    padding: 5px 10px;
+    overflow: hidden;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2vw;
+    font-weight: 900;
+}
+
+.bug #textLive span {
+    display: block;
+    position: relative;
+    padding-left: .5vw;
+    top: 50%;
+    transform: translateY(-50%) perspective(1px);
 }

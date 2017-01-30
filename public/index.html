@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html ng-app="cgApp">
-    <head>
-        <meta charset="UTF-8">
-        <title>CG</title>
-        <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
-        <link href="/css/theme.css" rel="stylesheet" type="text/css">
-    </head>
 
-    <body>
-        <div ng-controller="bugCtrl">
-            <div class="bug" ng-show="state.showLive">
-                <h1>Bug</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>CG</title>
+    <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
+    <link href="/css/fonts.css" rel="stylesheet" />
+    <link href="/css/theme.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div ng-controller="bugCtrl">
+        <div class="bug">
+            <div id="logo" ng-show="state.showLogo">
+                <img src="/img/forge.svg" />
             </div>
+            <div id="textLive" ng-show="state.showLive"><span>LIVE</span></div>
+        </div>
+    </div>
 
-        <script type="text/javascript" src="/node_modules/socket.io-client/dist/socket.io.js"></script>
-        <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
-        <script type="text/javascript" src="/bower_components/ng-socket-io/ng-socket-io.js"></script>
-        <script type="text/javascript" src="/js/cg.js"></script>
-    </body>
+    <script type="text/javascript" src="/node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="/bower_components/ng-socket-io/ng-socket-io.js"></script>
+    <script type="text/javascript" src="/js/cg.js"></script>
+</body>
+
 </html>
