@@ -1,0 +1,7 @@
+#forgeLogo {
+    display: inline;
+    height: 42px;
+    vertical-align: baseline;
+    transform: rotate(-6deg) translateY(10px);
+    margin-right: 5px;
+}
