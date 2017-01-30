@@ -11,7 +11,7 @@
 
 <body>
     <div ng-controller="bugCtrl">
-        <div class="bug">
+        <div id="bug">
             <div id="logo" ng-show="state.showLogo">
                 <img src="/img/forge.svg" />
             </div>
@@ -21,6 +21,7 @@
 
     <script type="text/javascript" src="/node_modules/socket.io-client/dist/socket.io.js"></script>
     <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-animate/angular-animate.js"></script>
     <script type="text/javascript" src="/bower_components/ng-socket-io/ng-socket-io.js"></script>
     <script type="text/javascript" src="/js/cg.js"></script>
 </body>

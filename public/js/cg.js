@@ -1,4 +1,4 @@
-var app = angular.module('cgApp', ['socket-io']);
+var app = angular.module('cgApp', ['socket-io', 'ngAnimate']);
 
 app.controller('bugCtrl', ['$scope', '$timeout', 'socket',
     function($scope, $timeout, socket){

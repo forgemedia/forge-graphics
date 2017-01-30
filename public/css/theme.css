@@ -19,11 +19,11 @@ body {
 /*              [Live Bug]                        */
 /**************************************************/
 
-.bug {
+#bug {
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
-.bug #logo {
+#bug #logo {
     display: block;
     position: absolute;
     top: 1vw;
@@ -39,7 +39,7 @@ body {
     z-index: 2;
 }
 
-/*.bug #liveText {
+/*#bug #liveText {
     color: #333333;
     font-size: 1.5vw;
     font-weight: 900;
@@ -49,7 +49,7 @@ body {
     display: table-cell;
 }*/
 
-.bug #logo img {
+#bug #logo img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -60,7 +60,16 @@ body {
     opacity: 0.35;
 }
 
-.bug #textLive {
+#bug #logo.ng-hide {
+    transform: scale(0.5);
+    opacity: 0;
+}
+
+#bug #logo.ng-hide-add, #bug #logo.ng-hide-remove {
+    transition: all cubic-bezier(0, .75, .75, 1) 0.35s;
+}
+
+#bug #textLive {
     display: block;
     position: absolute;
     top: 1vw;
@@ -82,10 +91,19 @@ body {
     font-weight: 900;
 }
 
-.bug #textLive span {
+#bug #textLive span {
     display: block;
     position: relative;
     padding-left: .5vw;
     top: 50%;
     transform: translateY(-50%) perspective(1px);
+}
+
+#bug #textLive.ng-hide {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+#bug #textLive.ng-hide-add, #bug #textLive.ng-hide-remove {
+    transition: all cubic-bezier(0, .75, .75, 1) 0.35s;
 }
