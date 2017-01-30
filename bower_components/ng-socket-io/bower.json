@@ -1,0 +1,10 @@
+{
+  "name": "ng-socket-io",
+  "version": "0.2.0",
+  "location": "https://github.com/mbenford/ngSocketIO-bower",
+  "main": ["ng-socket-io.min.js"],
+  "description": "SocketIO module for AngularJS",
+  "dependencies": {
+    "angular": "~1.0.5"
+  }
+}

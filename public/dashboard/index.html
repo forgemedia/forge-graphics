@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CGDashboardApp">
+
+<head>
+    <title>Forge CG Dashboard</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+</head>
+
+<body>
+    <div class="container" ng-controller="AppCtrl">
+        <header>
+            <div class="page-header">
+                <h1>Forge CG Dashboard <small>Varsity Test 2017</small></h1>
+            </div>
+        </header>
+
+        <div class="row">
+            <div class="col-lg-2">
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation" ng-class="{active:isActive(section.url)}" ng-repeat="section in menu"><a ng-href="#{{section.url}}">{{ section.name }}</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-10">
+                <div ng-view>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/node_modules/socket.io-client/dist/socket.io.js"></script>
+
+    <!-- Angular Dependencies -->
+    <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-aria/angular-aria.js"></script>
+
+    <!-- 3rd party angular libs -->
+    <script src="/bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="/bower_components/ng-socket-io/ng-socket-io.js"></script>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+
+</html>

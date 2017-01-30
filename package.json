@@ -1,6 +1,6 @@
 {
-	"name": "la1tv-roses-graphics",
-	"version": "1.0.0",
+	"name": "graphic-retest",
+	"version": "0.1.0",
 	"dependencies": {
 		"express": "*",
 		"socket.io": "*",
