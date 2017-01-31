@@ -3,19 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CG</title>
+    <title>Forge Graphics Character Generator</title>
     <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
     <link href="/css/fonts.css" rel="stylesheet" />
     <link href="/css/theme.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div ng-controller="bugCtrl">
+    <div ng-controller="generalCtrl">
         <div id="bug">
             <div id="logo" ng-show="state.showLogo">
                 <img src="/img/forge.svg" />
+                <p>VARSITY</p>
             </div>
-            <div id="textLive" ng-show="state.showLive"><span>LIVE</span></div>
+            <div id="textLive" ng-show="state.showLogo && state.showLive"><span>LIVE</span></div>
         </div>
     </div>
 

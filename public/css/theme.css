@@ -1,61 +1,53 @@
 * {
-  -webkit-box-sizing: border-box;
-  box-sizing:border-box;                                   /* This sets all elements to be the actual set dimensions, disregarding padding and borders */
-  webkit-backface-visibility: hidden;                     /* Hide the backface of elements - usuefull for 3d effects */
-  -webkit-transition: translate3d(0,0,0);                  /* Turns on hardware acceleration - not known to be of benefit in CCG, but won't hurt */
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  transition: translate3d(0,0,0);
 }
 
 body {
     margin: 0;
-    padding: 1vw; /* Safe area */
+    padding: 1vw;
     font-family: 'Lato', sans-serif;
-    background:transparent;                          /* The HTML consumer actually makes your background transparent by default, unless a color or image is specified - but this might be usefull when debugging in browsers */
-    overflow:hidden;                                 /* Hide any overflowing elements - to disable scollbars */
-    -webkit-font-smoothing:antialiased !important;
+    background: transparent;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased !important;
 }
 
-
-/**************************************************/
-/*              [Live Bug]                        */
-/**************************************************/
+/* Bug */
+/* TODO: Overlay transparent gradient texture onto colour */
+/* TODO: SCSS, multiple components */
 
 #bug {
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
-#bug #logo {
-    display: block;
+#bug>* {
     position: absolute;
-    top: 1vw;
     height: 3vw;
     line-height: 3vw;
-    width: 8vw;
-    border-radius: 1.5vw;
-    border: 5px solid #333333;
-    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.5);
-    background: linear-gradient(to bottom, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%);
-    padding: 5px 10px;
+    border: .3vw solid #333333;
+    box-shadow: inset 0px 0px 1vw 0px rgba(0,0,0,0.5);
     overflow: hidden;
-    z-index: 2;
+    padding-left: .5vw;
 }
 
-/*#bug #liveText {
-    color: #333333;
-    font-size: 1.5vw;
-    font-weight: 900;
-    margin: 0;
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell;
-}*/
+/* Bug: Logo */
+
+#bug #logo {
+    width: 8vw;
+    border-radius: 1.5vw;
+    background: linear-gradient(to bottom, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%);
+    z-index: 2;
+}
 
 #bug #logo img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     position: relative;
+
+    /* Logo-specific settings */
     top: 50%;
-    transform: translateY(-50%) rotate(-10deg) perspective(1px);
+    transform: translate(-5%, -50%) rotate(-10deg) perspective(1px);
     height: 1.75vw;
     opacity: 0.35;
 }
@@ -66,44 +58,41 @@ body {
 }
 
 #bug #logo.ng-hide-add, #bug #logo.ng-hide-remove {
-    transition: all cubic-bezier(0, .75, .75, 1) 0.35s;
+    transition: all 0.5s cubic-bezier(0, .75, .75, 1);
 }
 
+#bug #logo.ng-hide-add {
+    transition-delay: .5s;
+}
+
+/* Bug: 'LIVE' text */
+
 #bug #textLive {
-    display: block;
-    position: absolute;
-    top: 1vw;
     left: 7.5vw;
     z-index: 1;
-    height: 3vw;
-    line-height: 3vw;
     width: 8vw;
     border-top-right-radius: 1.5vw;
     border-bottom-right-radius: 1.5vw;
-    border: 5px solid #333333;
-    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.5);
     background: linear-gradient(to bottom, rgba(197,68,51,1) 0%,rgba(187,64,47,1) 50%,rgba(175,72,47,1) 51%,rgba(201,91,47,1) 100%);
-    padding: 5px 10px;
-    overflow: hidden;
     text-align: center;
     color: #ffffff;
     font-size: 2vw;
     font-weight: 900;
+    transition: all .5s cubic-bezier(0, .75, .75, 1) .5s;
 }
 
 #bug #textLive span {
     display: block;
     position: relative;
-    padding-left: .5vw;
     top: 50%;
-    transform: translateY(-50%) perspective(1px);
+    transform: translate(0, -50%) perspective(1px);
 }
 
 #bug #textLive.ng-hide {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translate(-5vw, 0);
 }
 
-#bug #textLive.ng-hide-add, #bug #textLive.ng-hide-remove {
-    transition: all cubic-bezier(0, .75, .75, 1) 0.35s;
+#bug #textLive.ng-hide-add {
+    transition-delay: 0;
 }

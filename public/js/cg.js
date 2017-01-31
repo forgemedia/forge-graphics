@@ -1,29 +1,28 @@
 var app = angular.module('cgApp', ['socket-io', 'ngAnimate']);
 
-app.controller('bugCtrl', ['$scope', '$timeout', 'socket',
+app.controller('generalCtrl', ['$scope', '$timeout', 'socket',
     function($scope, $timeout, socket){
-        $scope.tickInterval = 1000; //ms
+        $scope.tickInterval = 1000;
 
-        socket.on("bug", function (state) {
+        socket.on("general", function (state) {
             $scope.state = state;
         });
 
-        $scope.$watch('bug', function() {
+        $scope.$watch('general', function() {
             if (!$scope.state) {
-                getBugData();
+                getGeneralData();
             }
         }, true);
 
-        function getBugData() {
-            socket.emit("bug:get");
+        function getGeneralData() {
+            socket.emit("general:get");
         }
 
         var tick = function () {
-            $scope.clock = Date.now(); // get the current time
-            $timeout(tick, $scope.tickInterval); // reset the timer
+            $scope.clock = Date.now();
+            $timeout(tick, $scope.tickInterval);
         };
 
-        // Start the timer
         $timeout(tick, $scope.tickInterval);
     }
 ]);

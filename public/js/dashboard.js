@@ -1,4 +1,4 @@
-var app = angular.module('CGDashboardApp', ['ngRoute', 'LocalStorageModule', 'socket-io']);
+var app = angular.module('CGDashboardApp', ['ngRoute', 'LocalStorageModule', 'socket-io', 'ui.toggle']);
 
 app.controller('AppCtrl', ['$scope', '$location',
     function($scope, $location){
@@ -34,20 +34,20 @@ app.config(['$routeProvider', 'localStorageServiceProvider',
 
 app.controller('generalCGController', ['$scope', 'socket',
     function($scope, socket){
-        socket.on("bug", function (msg) {
+        socket.on("general", function (msg) {
             $scope.general = msg;
         });
 
         $scope.$watch('general', function() {
             if ($scope.general) {
-                socket.emit("bug", $scope.general);
+                socket.emit("general", $scope.general);
             } else {
-                getBugData();
+                getGeneralData();
             }
         }, true);
 
-        function getBugData() {
-            socket.emit("bug:get");
+        function getGeneralData() {
+            socket.emit("general:get");
         }
     }
 ]);

@@ -1,7 +1,15 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 #forgeLogo {
     display: inline;
     height: 42px;
-    vertical-align: baseline;
-    transform: rotate(-6deg) translateY(10px);
-    margin-right: 5px;
+    transform: translateY(-5px);
+    margin-right: 10px;
+}
+
+.checkbox.checkbox-indented {
+    padding-left: 15px;
+    border-left: 2px solid #eeeeee;
 }

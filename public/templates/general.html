@@ -4,12 +4,14 @@
     <div class="form-group">
         <div class="checkbox">
             <label>
-                <input type="checkbox" ng-model="general.showLogo">Show Logo</checkbox>
+                <toggle ng-model="general.showLogo"></toggle>
+                Show Logo
             </label>
         </div>
-        <div class="checkbox">
+        <div class="checkbox checkbox-indented">
             <label>
-                <input type="checkbox" ng-model="general.showLive">Show Live</checkbox>
+                <toggle ng-model="general.showLive" offstyle="btn-warning" onstyle="btn-danger"></toggle>
+                Show Live
             </label>
         </div>
     </div>
