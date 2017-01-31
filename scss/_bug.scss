@@ -1,0 +1,87 @@
+// Bug
+// TODO: Overlay transparent gradient texture onto colour
+
+$bug-height: 3vw;
+$bug-border-radius: $bug-height / 2;
+$bug-border-width: .3vw;
+$bug-border-colour: #333333;
+$bug-inset-shadow: 0px 0px 1vw 0px rgba(0,0,0,0.5);
+
+$bug-border: $bug-border-width solid $bug-border-colour;
+
+#bug {
+    >* {
+        position: absolute;
+        height: $bug-height;
+        line-height: $bug-height;
+        border: $bug-border;
+        box-shadow: inset $bug-inset-shadow;
+        overflow: hidden;
+        padding-left: .5vw;
+    }
+
+    #logo {
+        width: 8vw;
+        border-radius: $bug-border-radius;
+        background: linear-gradient(to bottom, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%);
+        z-index: 2;
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+
+            // Forge Logo-specific settings
+            top: 50%;
+            transform: translate(-5%, -50%) rotate(-10deg) perspective(1px);
+            height: 1.75vw;
+            opacity: 0.35;
+        }
+    }
+
+    #logo.ng-hide {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    #logo.ng-hide-add, #logo.ng-hide-remove {
+        transition: all 0.5s cubic-bezier(0, .75, .75, 1);
+    }
+
+    #logo.ng-hide-add {
+        transition-delay: .5s;
+    }
+
+    #textLive {
+        // Style
+        color: #ffffff;
+        background: linear-gradient(to bottom, rgba(197,68,51,1) 0%,rgba(187,64,47,1) 50%,rgba(175,72,47,1) 51%,rgba(201,91,47,1) 100%);
+        text-align: center;
+        font-size: 2vw;
+        font-weight: 900;
+        transition: all .5s cubic-bezier(0, .75, .75, 1) .5s;
+        width: 8vw;
+
+        left: 7.5vw;
+        z-index: 1;
+        border-top-right-radius: $bug-border-radius;
+        border-bottom-right-radius: $bug-border-radius;
+
+        span {
+           display: block;
+           position: relative;
+           top: 50%;
+           transform: translate(0, -50%) perspective(1px);
+       }
+    }
+
+    #textLive.ng-hide {
+        opacity: 0;
+        transform: translate(-5vw, 0);
+    }
+
+    #textLive.ng-hide-add {
+        transition-delay: 0s;
+    }
+}

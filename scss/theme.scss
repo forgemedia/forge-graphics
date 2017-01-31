@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  transition: translate3d(0,0,0);
+}
+
+@import 'fonts';
+@import 'bug';
+
+body {
+    margin: 0;
+    padding: 1vw;
+    font-family: 'Lato', sans-serif;
+    background: transparent;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased !important;
+}
