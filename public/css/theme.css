@@ -96,21 +96,27 @@
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+#bug {
+  margin-left: 1vw;
+  margin-top: 1vw;
+}
+
 #bug > * {
   position: absolute;
   height: 3vw;
   line-height: 3vw;
   border: 0.3vw solid #333333;
-  box-shadow: inset 0px 0px 1vw 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 1vw 0 rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  padding-left: .5vw;
+  padding-left: 0.5vw;
 }
 
 #bug #logo {
   width: 8vw;
   border-radius: 1.5vw;
-  background: -webkit-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
-  background: linear-gradient(to bottom, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.25) 51%, rgba(0, 0, 0, 0.1) 100%), #ffdc00;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.25) 51%, rgba(0, 0, 0, 0.1) 100%), #ffdc00;
+  background-blend-mode: multiply, normal;
   z-index: 2;
 }
 
@@ -120,10 +126,10 @@
   margin-right: auto;
   position: relative;
   top: 50%;
-  -webkit-transform: translate(-5%, -50%) rotate(-10deg) perspective(1px);
-          transform: translate(-5%, -50%) rotate(-10deg) perspective(1px);
-  height: 1.75vw;
-  opacity: 0.35;
+  -webkit-transform: translate(-5%, -50%) rotate(-8deg) perspective(1px);
+          transform: translate(-5%, -50%) rotate(-8deg) perspective(1px);
+  height: 1.9vw;
+  opacity: 0.65;
 }
 
 #bug #logo.ng-hide {
@@ -132,54 +138,97 @@
   opacity: 0;
 }
 
-#bug #logo.ng-hide-add, #bug #logo.ng-hide-remove {
+#bug #logo.ng-hide-add,
+#bug #logo.ng-hide-remove {
   -webkit-transition: all 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: all 0.5s cubic-bezier(0, 0.75, 0.75, 1);
 }
 
 #bug #logo.ng-hide-add {
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 
-#bug #textLive {
+#bug .liveSegment {
   color: #ffffff;
-  background: -webkit-linear-gradient(top, #c54433 0%, #bb402f 50%, #af482f 51%, #c95b2f 100%);
-  background: linear-gradient(to bottom, #c54433 0%, #bb402f 50%, #af482f 51%, #c95b2f 100%);
-  text-align: center;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.25) 51%, rgba(0, 0, 0, 0.1) 100%), #d4326b;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.25) 51%, rgba(0, 0, 0, 0.1) 100%), #d4326b;
+  background-blend-mode: multiply, normal;
   font-size: 2vw;
   font-weight: 900;
   -webkit-transition: all 0.5s cubic-bezier(0, 0.75, 0.75, 1) 0.5s;
   transition: all 0.5s cubic-bezier(0, 0.75, 0.75, 1) 0.5s;
-  width: 8vw;
+  width: 8.5vw;
   left: 7.5vw;
   z-index: 1;
   border-top-right-radius: 1.5vw;
   border-bottom-right-radius: 1.5vw;
 }
 
-#bug #textLive span {
-  display: block;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translate(0, -50%) perspective(1px);
-          transform: translate(0, -50%) perspective(1px);
+#bug .liveSegment .liveSegmentText {
+  -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  text-align: center;
 }
 
-#bug #textLive.ng-hide {
+#bug .liveSegment .liveSegmentText span {
+  width: 100%;
+  position: absolute;
+  line-height: 3vw;
+  -webkit-transform: translate(-50%, -10%) perspective(1px);
+          transform: translate(-50%, -10%) perspective(1px);
+}
+
+#bug .liveSegment .liveSegmentText.ng-hide {
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+          transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+  opacity: 0;
+}
+
+#bug .liveSegment .liveSegmentText.ng-hide-remove {
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  opacity: 0;
+}
+
+#bug .liveSegment.ng-hide {
   opacity: 0;
   -webkit-transform: translate(-5vw, 0);
           transform: translate(-5vw, 0);
 }
 
-#bug #textLive.ng-hide-add {
+#bug .liveSegment.ng-hide-add {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
 
+#lowerThirds {
+  position: absolute;
+  bottom: 1vw;
+  width: auto;
+  height: 5vw;
+  left: 1vw;
+  right: 1vw;
+  background-color: #cccccc;
+}
+
+#lowerThirds .lowerThird {
+  position: absolute;
+  width: 50%;
+  margin: 1vw;
+  background-color: #888888;
+}
+
+#lowerThirds .lowerThird#lowerThirdRight {
+  left: 50%;
+}
+
 body {
   margin: 0;
-  padding: 1vw;
   font-family: 'Lato', sans-serif;
   background: transparent;
   overflow: hidden;

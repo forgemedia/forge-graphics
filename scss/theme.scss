@@ -1,15 +1,21 @@
+// Varsity Graphics Theme
+
 * {
   box-sizing: border-box;
   backface-visibility: hidden;
   transition: translate3d(0,0,0);
 }
 
+$uos-colour: #ffdc00;
+$hallam-colour: #d4326b;
+
 @import 'fonts';
 @import 'bug';
+@import 'lowerThirds';
 
 body {
     margin: 0;
-    padding: 1vw;
+    //padding: 0vw;
     font-family: 'Lato', sans-serif;
     background: transparent;
     overflow: hidden;

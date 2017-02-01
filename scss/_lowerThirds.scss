@@ -1,0 +1,24 @@
+#lowerThirds {
+    position: absolute;
+    bottom: 1vw;
+    width: auto;
+    height: 5vw;
+    left: 1vw;
+    right: 1vw;
+    background-color: #cccccc;
+
+    .lowerThird {
+        position: absolute;
+        width: 50%;
+        margin: 1vw;
+        background-color: #888888;
+    }
+
+    .lowerThird#lowerThirdLeft {
+
+    }
+
+    .lowerThird#lowerThirdRight {
+        left: 50%;
+    }
+}

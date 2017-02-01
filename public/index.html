@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>Forge Graphics Character Generator</title>
     <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
-    <link href="/css/fonts.css" rel="stylesheet" />
     <link href="/css/theme.css" rel="stylesheet" />
 </head>
 
@@ -15,7 +14,14 @@
             <div id="logo" ng-show="state.showLogo">
                 <img src="/img/forge.svg" />
             </div>
-            <div id="textLive" ng-show="state.showLogo && state.showLive"><span>LIVE</span></div>
+            <div class="liveSegment" ng-show="state.showLogo && state.showLive">
+                <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH"}}&nbsp;<span class="colInv" ng-show="colonOnBool">:</span>&nbsp;{{clock|date:"mm"}}</span></div>
+                <div class="liveSegmentText" ng-show="liveToggle"><span>LIVE</span></div>
+            </div>
+        </div>
+        <div id="lowerThirds">
+            <div class="lowerThird" id="lowerThirdLeft"><span>LT Left</span></div>
+            <div class="lowerThird" id="lowerThirdRight"><span>LT Right</span></div>
         </div>
     </div>
 

@@ -3472,6 +3472,14 @@
 		"oAP": "\/build\/node_modules",
 		"oF": 0
 		},
+	"\/nodemon.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/nodemon-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/package.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -3479,16 +3487,6 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
-		},
-	"\/public\/css\/_bug.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/public\/css\/_bug-min.css",
-		"oF": 0,
-		"oS": 0
 		},
 	"\/public\/css\/dashboard.css": {
 		"aP": 1,
@@ -3654,20 +3652,20 @@
 		},
 	"\/public\/js\/cg.js": {
 		"ft": 64,
-		"mi": 1,
-		"oA": 0,
+		"mi": 0,
+		"oA": 1,
 		"oAP": "\/public\/js\/cg-min.js",
-		"oF": 0,
-		"sC": 1,
+		"oF": 1,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/public\/js\/dashboard.js": {
 		"ft": 64,
-		"mi": 1,
-		"oA": 0,
+		"mi": 0,
+		"oA": 1,
 		"oAP": "\/public\/js\/dashboard-min.js",
-		"oF": 0,
-		"sC": 1,
+		"oF": 1,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/public\/templates\/general.html": {
@@ -3699,6 +3697,19 @@
 		"oA": 1,
 		"oAP": "\/public\/css\/_fonts.css",
 		"oF": 1,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/scss\/_lowerThirds.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/public\/css\/_lowerThirds.css",
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},

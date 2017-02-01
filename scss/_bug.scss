@@ -1,29 +1,40 @@
 // Bug
-// TODO: Overlay transparent gradient texture onto colour
+// TODO: Split HTML for CG into multiple modules
 
+// Style variables
 $bug-height: 3vw;
 $bug-border-radius: $bug-height / 2;
-$bug-border-width: .3vw;
+$bug-border-width: 0.3vw;
 $bug-border-colour: #333333;
-$bug-inset-shadow: 0px 0px 1vw 0px rgba(0,0,0,0.5);
+$bug-inset-shadow: 0 0 1vw 0 rgba(0,0,0,0.5);
+$bug-overlay-gradient: linear-gradient(to bottom, rgba(0,0,0,.1) 0%,rgba(0,0,0,.3) 50%,rgba(0,0,0,.25) 51%,rgba(0,0,0,.1) 100%);
+$bug-logo-bgcolour: $uos-colour;
+$bug-live-bgcolour: $hallam-colour;
 
+// Business logic
 $bug-border: $bug-border-width solid $bug-border-colour;
+$bug-cubic-bezier: cubic-bezier(0, .75, .75, 1);
+$bug-cubic-bezier-reverse: cubic-bezier(.75, 0, 1, .25);
 
 #bug {
-    >* {
+    margin-left: 1vw;
+    margin-top: 1vw;
+
+    > * {
         position: absolute;
         height: $bug-height;
         line-height: $bug-height;
         border: $bug-border;
         box-shadow: inset $bug-inset-shadow;
         overflow: hidden;
-        padding-left: .5vw;
+        padding-left: 0.5vw;
     }
 
     #logo {
         width: 8vw;
         border-radius: $bug-border-radius;
-        background: linear-gradient(to bottom, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%);
+        background: $bug-overlay-gradient, $bug-logo-bgcolour;
+        background-blend-mode: multiply, normal;
         z-index: 2;
 
         img {
@@ -34,9 +45,9 @@ $bug-border: $bug-border-width solid $bug-border-colour;
 
             // Forge Logo-specific settings
             top: 50%;
-            transform: translate(-5%, -50%) rotate(-10deg) perspective(1px);
-            height: 1.75vw;
-            opacity: 0.35;
+            transform: translate(-5%, -50%) rotate(-8deg) perspective(1px);
+            height: 1.9vw;
+            opacity: 0.65;
         }
     }
 
@@ -45,43 +56,63 @@ $bug-border: $bug-border-width solid $bug-border-colour;
         opacity: 0;
     }
 
-    #logo.ng-hide-add, #logo.ng-hide-remove {
-        transition: all 0.5s cubic-bezier(0, .75, .75, 1);
+    #logo.ng-hide-add,
+    #logo.ng-hide-remove {
+        transition: all 0.5s $bug-cubic-bezier;
     }
 
     #logo.ng-hide-add {
-        transition-delay: .5s;
+        transition-delay: 0.5s;
     }
 
-    #textLive {
+    .liveSegment {
         // Style
         color: #ffffff;
-        background: linear-gradient(to bottom, rgba(197,68,51,1) 0%,rgba(187,64,47,1) 50%,rgba(175,72,47,1) 51%,rgba(201,91,47,1) 100%);
-        text-align: center;
+        background: $bug-overlay-gradient, $bug-live-bgcolour;
+        background-blend-mode: multiply, normal;
         font-size: 2vw;
         font-weight: 900;
-        transition: all .5s cubic-bezier(0, .75, .75, 1) .5s;
-        width: 8vw;
-
+        transition: all 0.5s $bug-cubic-bezier 0.5s;
+        width: 8.5vw;
         left: 7.5vw;
         z-index: 1;
         border-top-right-radius: $bug-border-radius;
         border-bottom-right-radius: $bug-border-radius;
 
-        span {
-           display: block;
-           position: relative;
-           top: 50%;
-           transform: translate(0, -50%) perspective(1px);
-       }
+        .liveSegmentText {
+            transition: opacity .5s $bug-cubic-bezier, transform .5s $bug-cubic-bezier;
+            //padding-left: 1.5vw;
+            text-align: center;
+
+            span {
+                //display: inline;
+                width: 100%;
+                //margin: 0 auto;
+                position: absolute;
+                line-height: $bug-height;
+                //top: 50%;
+                transform: translate(-50%, -10%) perspective(1px);
+            }
+        }
+
+        .liveSegmentText.ng-hide {
+            transition-timing-function: $bug-cubic-bezier-reverse;
+            transform: translate(50%, 0);
+            opacity: 0;
+        }
+
+        .liveSegmentText.ng-hide-remove {
+            transform: translate(-50%, 0);
+            opacity: 0;
+        }
     }
 
-    #textLive.ng-hide {
+    .liveSegment.ng-hide {
         opacity: 0;
         transform: translate(-5vw, 0);
     }
 
-    #textLive.ng-hide-add {
+    .liveSegment.ng-hide-add {
         transition-delay: 0s;
     }
 }
