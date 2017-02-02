@@ -34,6 +34,11 @@ app.config(['$routeProvider', 'localStorageServiceProvider',
 
 app.controller('generalCGController', ['$scope', 'socket',
     function($scope, socket){
+        $scope.commitLowerThird = function () {
+            $scope.general.lowerThirdUpperText = $scope.general.ltuScratch;
+            $scope.general.lowerThirdLowerText = $scope.general.ltlScratch;
+        };
+
         socket.on("general", function (msg) {
             $scope.general = msg;
         });
@@ -48,6 +53,6 @@ app.controller('generalCGController', ['$scope', 'socket',
 
         function getGeneralData() {
             socket.emit("general:get");
-        }
+        };
     }
 ]);

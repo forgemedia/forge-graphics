@@ -1,14 +1,21 @@
 // Varsity Graphics Theme
 
 * {
-  box-sizing: border-box;
-  backface-visibility: hidden;
-  transition: translate3d(0,0,0);
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    background-clip: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 $uos-colour: #ffdc00;
 $hallam-colour: #d4326b;
+$overlay-background: linear-gradient(to bottom, rgba(0,0,0,.1) 0%,rgba(0,0,0,.3) 50%,rgba(0,0,0,.25) 51%,rgba(0,0,0,.1) 100%);
+//$overlay-background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.3) 100%);
+$component-inset-shadow: 0 0 1vw 0 rgba(0,0,0,0.5);
+//$component-inset-shadow: 0 0 0 0 rgba(0,0,0,0);
+$border-colour: #333333;
 
+@import "../bower_components/susy/sass/susy";
 @import 'fonts';
 @import 'bug';
 @import 'lowerThirds';
@@ -16,7 +23,6 @@ $hallam-colour: #d4326b;
 body {
     margin: 0;
     //padding: 0vw;
-    font-family: 'Lato', sans-serif;
     background: transparent;
     overflow: hidden;
     -webkit-font-smoothing: antialiased !important;

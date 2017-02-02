@@ -1,5 +1,8 @@
 <!-- <input type="checkbox" ng-model="general.showLive">Show Bug</checkbox> -->
 
+<div class="page-header">
+    <h3>Bug</h3>
+</div>
 <form>
     <div class="form-group">
         <div class="checkbox">
@@ -14,5 +17,27 @@
                 Show LIVE/Clock
             </label>
         </div>
+    </div>
+</form>
+
+<div class="page-header">
+    <h3>Lower Third</h3>
+</div>
+<form>
+    <div class="form-group">
+        <div class="checkbox">
+            <label>
+                <toggle ng-model="general.showLowerThird"></toggle>
+                Show Lower Third
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lowerThirdText">Lower Third Text</label>
+        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" id="lowerThirdText" ng-model="general.ltuScratch" placeholder="Upper"></input>
+        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" id="lowerThirdText" ng-model="general.ltlScratch" placeholder="Lower"></input>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-default" ng-click="commitLowerThird()">Set Lower Third</button>
     </div>
 </form>

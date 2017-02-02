@@ -1,24 +1,43 @@
+$lower-third-height: 5.5vw;
+$lower-third-border-radius: $lower-third-height / 2;
+$lower-third-border-width: 0.3vw;
+$lower-third-border: $lower-third-border-width solid $border-colour;
+$lower-third-dark-text-colour: #333333;
+
 #lowerThirds {
-    position: absolute;
-    bottom: 1vw;
-    width: auto;
-    height: 5vw;
-    left: 1vw;
-    right: 1vw;
-    background-color: #cccccc;
+    @include container(80vw);
+    padding-top: 75vh;
 
-    .lowerThird {
-        position: absolute;
-        width: 50%;
-        margin: 1vw;
-        background-color: #888888;
+    #lowerThird {
+        background: $overlay-background, #ffffff;
+        height: $lower-third-height;
+        border-radius: $lower-third-border-radius;
+        border: $lower-third-border;
+        box-shadow: inset $component-inset-shadow;
+        overflow: hidden;
+
+        span {
+            display: block;
+        }
+
+        span.lowerThirdUpperText {
+            font-size: 2.25vw;
+            font-weight: 700;
+            padding-top: 0.15vw;
+            padding-bottom: 0.3vw;
+            color: $lower-third-dark-text-colour;
+        }
+
+        span.lowerThirdLowerText {
+            font-size: 1.25vw;
+            font-weight: 500;
+            color: lighten($lower-third-dark-text-colour, 15%);
+        }
     }
 
-    .lowerThird#lowerThirdLeft {
-
-    }
-
-    .lowerThird#lowerThirdRight {
-        left: 50%;
+    #lowerThird.centreLowerThird {
+        @include span(8 of 12);
+        @include pre(2 of 12);
+        text-align: center;
     }
 }

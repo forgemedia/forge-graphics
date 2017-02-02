@@ -15,13 +15,16 @@
                 <img src="/img/forge.svg" />
             </div>
             <div class="liveSegment" ng-show="state.showLogo && state.showLive">
-                <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH"}}&nbsp;<span class="colInv" ng-show="colonOnBool">:</span>&nbsp;{{clock|date:"mm"}}</span></div>
+                <!-- <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH"}}&nbsp;<span style="padding-top: .1vw" ng-show="colonOnBool">:</span>&nbsp;{{clock|date:"mm"}}</span></div> -->
+                <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH:mm"}}</span></div>
                 <div class="liveSegmentText" ng-show="liveToggle"><span>LIVE</span></div>
             </div>
         </div>
         <div id="lowerThirds">
-            <div class="lowerThird" id="lowerThirdLeft"><span>LT Left</span></div>
-            <div class="lowerThird" id="lowerThirdRight"><span>LT Right</span></div>
+            <div id="lowerThird" class="centreLowerThird" ng-show="state.showLowerThird">
+                <span class="lowerThirdUpperText">{{state.lowerThirdUpperText}}</span>
+                <span class="lowerThirdLowerText">{{state.lowerThirdLowerText}}</span>
+            </div>
         </div>
     </div>
 

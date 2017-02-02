@@ -1,18 +1,15 @@
 // Bug
-// TODO: Split HTML for CG into multiple modules
 
 // Style variables
 $bug-height: 3vw;
 $bug-border-radius: $bug-height / 2;
 $bug-border-width: 0.3vw;
-$bug-border-colour: #333333;
-$bug-inset-shadow: 0 0 1vw 0 rgba(0,0,0,0.5);
-$bug-overlay-gradient: linear-gradient(to bottom, rgba(0,0,0,.1) 0%,rgba(0,0,0,.3) 50%,rgba(0,0,0,.25) 51%,rgba(0,0,0,.1) 100%);
+
 $bug-logo-bgcolour: $uos-colour;
 $bug-live-bgcolour: $hallam-colour;
 
 // Business logic
-$bug-border: $bug-border-width solid $bug-border-colour;
+$bug-border: $bug-border-width solid $border-colour;
 $bug-cubic-bezier: cubic-bezier(0, .75, .75, 1);
 $bug-cubic-bezier-reverse: cubic-bezier(.75, 0, 1, .25);
 
@@ -25,7 +22,7 @@ $bug-cubic-bezier-reverse: cubic-bezier(.75, 0, 1, .25);
         height: $bug-height;
         line-height: $bug-height;
         border: $bug-border;
-        box-shadow: inset $bug-inset-shadow;
+        box-shadow: inset $component-inset-shadow;
         overflow: hidden;
         padding-left: 0.5vw;
     }
@@ -33,7 +30,7 @@ $bug-cubic-bezier-reverse: cubic-bezier(.75, 0, 1, .25);
     #logo {
         width: 8vw;
         border-radius: $bug-border-radius;
-        background: $bug-overlay-gradient, $bug-logo-bgcolour;
+        background: $overlay-background, $bug-logo-bgcolour;
         background-blend-mode: multiply, normal;
         z-index: 2;
 
@@ -47,7 +44,7 @@ $bug-cubic-bezier-reverse: cubic-bezier(.75, 0, 1, .25);
             top: 50%;
             transform: translate(-5%, -50%) rotate(-8deg) perspective(1px);
             height: 1.9vw;
-            opacity: 0.65;
+            opacity: 0.75;
         }
     }
 
@@ -68,12 +65,12 @@ $bug-cubic-bezier-reverse: cubic-bezier(.75, 0, 1, .25);
     .liveSegment {
         // Style
         color: #ffffff;
-        background: $bug-overlay-gradient, $bug-live-bgcolour;
+        background: $overlay-background, $bug-live-bgcolour;
         background-blend-mode: multiply, normal;
         font-size: 2vw;
         font-weight: 900;
         transition: all 0.5s $bug-cubic-bezier 0.5s;
-        width: 8.5vw;
+        width: 9vw;
         left: 7.5vw;
         z-index: 1;
         border-top-right-radius: $bug-border-radius;
@@ -84,7 +81,7 @@ $bug-cubic-bezier-reverse: cubic-bezier(.75, 0, 1, .25);
             //padding-left: 1.5vw;
             text-align: center;
 
-            span {
+            > span {
                 //display: inline;
                 width: 100%;
                 //margin: 0 auto;

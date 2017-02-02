@@ -2,8 +2,8 @@
   box-sizing: border-box;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-transition: translate3d(0, 0, 0);
-  transition: translate3d(0, 0, 0);
+  background-clip: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 /* lato-100 - latin */
@@ -129,7 +129,7 @@
   -webkit-transform: translate(-5%, -50%) rotate(-8deg) perspective(1px);
           transform: translate(-5%, -50%) rotate(-8deg) perspective(1px);
   height: 1.9vw;
-  opacity: 0.65;
+  opacity: 0.75;
 }
 
 #bug #logo.ng-hide {
@@ -158,7 +158,7 @@
   font-weight: 900;
   -webkit-transition: all 0.5s cubic-bezier(0, 0.75, 0.75, 1) 0.5s;
   transition: all 0.5s cubic-bezier(0, 0.75, 0.75, 1) 0.5s;
-  width: 8.5vw;
+  width: 9vw;
   left: 7.5vw;
   z-index: 1;
   border-top-right-radius: 1.5vw;
@@ -173,7 +173,7 @@
   text-align: center;
 }
 
-#bug .liveSegment .liveSegmentText span {
+#bug .liveSegment .liveSegmentText > span {
   width: 100%;
   position: absolute;
   line-height: 3vw;
@@ -207,29 +207,56 @@
 }
 
 #lowerThirds {
-  position: absolute;
-  bottom: 1vw;
-  width: auto;
-  height: 5vw;
-  left: 1vw;
-  right: 1vw;
-  background-color: #cccccc;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 75vh;
 }
 
-#lowerThirds .lowerThird {
-  position: absolute;
-  width: 50%;
-  margin: 1vw;
-  background-color: #888888;
+#lowerThirds:after {
+  content: " ";
+  display: block;
+  clear: both;
 }
 
-#lowerThirds .lowerThird#lowerThirdRight {
-  left: 50%;
+#lowerThirds #lowerThird {
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.25) 51%, rgba(0, 0, 0, 0.1) 100%), #ffffff;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.25) 51%, rgba(0, 0, 0, 0.1) 100%), #ffffff;
+  height: 5.5vw;
+  border-radius: 2.75vw;
+  border: 0.3vw solid #333333;
+  box-shadow: inset 0 0 1vw 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+#lowerThirds #lowerThird span {
+  display: block;
+}
+
+#lowerThirds #lowerThird span.lowerThirdUpperText {
+  font-size: 2.25vw;
+  font-weight: 700;
+  padding-top: 0.15vw;
+  padding-bottom: 0.3vw;
+  color: #333333;
+}
+
+#lowerThirds #lowerThird span.lowerThirdLowerText {
+  font-size: 1.25vw;
+  font-weight: 500;
+  color: #595959;
+}
+
+#lowerThirds #lowerThird.centreLowerThird {
+  width: 66.1016949153%;
+  float: left;
+  margin-right: 1.6949152542%;
+  margin-left: 16.9491525424%;
+  text-align: center;
 }
 
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
   background: transparent;
   overflow: hidden;
   -webkit-font-smoothing: antialiased !important;
