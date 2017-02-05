@@ -140,8 +140,10 @@
 
 #bug #logo.ng-hide-add,
 #bug #logo.ng-hide-remove {
-  -webkit-transition: all 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: all 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
 }
 
 #bug #logo.ng-hide-add {
@@ -219,40 +221,76 @@
   clear: both;
 }
 
-#lowerThirds #lowerThird {
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.25) 51%, rgba(0, 0, 0, 0.1) 100%), #ffffff;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.25) 51%, rgba(0, 0, 0, 0.1) 100%), #ffffff;
-  height: 5.5vw;
-  border-radius: 2.75vw;
-  border: 0.3vw solid #333333;
-  box-shadow: inset 0 0 1vw 0 rgba(0, 0, 0, 0.5);
+#lowerThirds > * {
   overflow: hidden;
+  -webkit-transform: perspective(25vw);
+          transform: perspective(25vw);
 }
 
-#lowerThirds #lowerThird span {
+#lowerThirds .lowerThird {
+  -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+}
+
+#lowerThirds .lowerThird > div {
+  border-radius: 1.5vw;
+  border: 0.3vw solid #333333;
+  box-shadow: inset 0 0 1vw 0 rgba(0, 0, 0, 0.5);
+}
+
+#lowerThirds .lowerThird span {
   display: block;
 }
 
-#lowerThirds #lowerThird span.lowerThirdUpperText {
+#lowerThirds .lowerThird .upperSegment {
+  background: #ffffff;
+  height: 3.6vw;
+  z-index: 1;
+}
+
+#lowerThirds .lowerThird .upperSegment span {
   font-size: 2.25vw;
   font-weight: 700;
-  padding-top: 0.15vw;
   padding-bottom: 0.3vw;
   color: #333333;
 }
 
-#lowerThirds #lowerThird span.lowerThirdLowerText {
+#lowerThirds .lowerThird .lowerSegment {
+  position: relative;
+  height: 3.6vw;
+  -webkit-transform: translateY(-1.2vw);
+          transform: translateY(-1.2vw);
+  z-index: 2;
+}
+
+#lowerThirds .lowerThird .lowerSegment span {
   font-size: 1.25vw;
   font-weight: 500;
   color: #595959;
 }
 
-#lowerThirds #lowerThird.centreLowerThird {
+#lowerThirds .lowerThird.centreLowerThird {
   width: 66.1016949153%;
   float: left;
   margin-right: 1.6949152542%;
   margin-left: 16.9491525424%;
   text-align: center;
+}
+
+#lowerThirds .lowerThird.ng-hide-remove {
+  opacity: 0;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+
+#lowerThirds .lowerThird.ng-hide {
+  opacity: 0;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+          transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
 }
 
 body {

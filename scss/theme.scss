@@ -9,11 +9,17 @@
 
 $uos-colour: #ffdc00;
 $hallam-colour: #d4326b;
+$dark-colour: #333333;
+$light-colour: #ffffff;
+
 $overlay-background: linear-gradient(to bottom, rgba(0,0,0,.1) 0%,rgba(0,0,0,.3) 50%,rgba(0,0,0,.25) 51%,rgba(0,0,0,.1) 100%);
 //$overlay-background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.3) 100%);
 $component-inset-shadow: 0 0 1vw 0 rgba(0,0,0,0.5);
 //$component-inset-shadow: 0 0 0 0 rgba(0,0,0,0);
 $border-colour: #333333;
+$cubic-bezier: cubic-bezier(0, .75, .75, 1);
+$cubic-bezier-reverse: cubic-bezier(.75, 0, 1, .25);
+$perspective: 25vw;
 
 @import "../bower_components/susy/sass/susy";
 @import 'fonts';

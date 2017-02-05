@@ -21,9 +21,13 @@
             </div>
         </div>
         <div id="lowerThirds">
-            <div id="lowerThird" class="centreLowerThird" ng-show="state.showLowerThird">
-                <span class="lowerThirdUpperText">{{state.lowerThirdUpperText}}</span>
-                <span class="lowerThirdLowerText">{{state.lowerThirdLowerText}}</span>
+            <div class="lowerThird centreLowerThird" ng-show="state.showCentreLowerThird">
+                <div class="upperSegment">
+                    <span>{{state.lowerThirdUpperText}}</span>
+                </div>
+                <div class="lowerSegment">
+                    <span>{{state.lowerThirdLowerText}}</span>
+                </div>
             </div>
         </div>
     </div>
