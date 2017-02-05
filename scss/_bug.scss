@@ -2,11 +2,13 @@
 
 // Style variables
 $bug-height: 3vw;
-$bug-border-radius: $bug-height / 2;
-$bug-border-width: 0.3vw;
+$bug-border-radius: $bug-height / 4;
+$bug-border-width: 0;
 
-$bug-logo-bgcolour: $uos-colour;
-$bug-live-bgcolour: $hallam-colour;
+$bug-logo-bgcolour: $light-blue-colour;
+$bug-live-bgcolour: $dark-blue-colour;
+
+$logo-width: 9.5vw;
 
 // Business logic
 $bug-border: $bug-border-width solid $border-colour;
@@ -26,28 +28,39 @@ $bug-border: $bug-border-width solid $border-colour;
     }
 
     #logo {
-        width: 8vw;
+        width: $logo-width;
         border-radius: $bug-border-radius;
         background: $overlay-background, $bug-logo-bgcolour;
         background-blend-mode: multiply, normal;
         z-index: 2;
 
         img {
-            display: block;
+            display: inline-block;
             margin-left: auto;
             margin-right: auto;
-            position: relative;
+            position: absolute;
+        }
 
+        img#polls {
+            height: 4vw;
+            transform: translateY(-10%) rotate(6deg);
+            opacity: 0.45;
+            padding-left: 0.3vw;
+        }
+
+        img#forge {
             // Forge Logo-specific settings
-            top: 50%;
-            transform: translate(-5%, -50%) rotate(-8deg) perspective(1px);
-            height: 1.9vw;
-            opacity: 0.75;
+            //top: 50%;
+            //transform: translate(-5%, -50%) rotate(-8deg) perspective(1px);
+            top: 0.65vw;
+            height: 1.6vw;
+            left: 3vw;
+            //opacity: 0.6;
         }
     }
 
     #logo.ng-hide {
-        transform: scale(0.5);
+        transform: translateX(-10vw);
         opacity: 0;
     }
 
@@ -57,19 +70,21 @@ $bug-border: $bug-border-width solid $border-colour;
     }
 
     #logo.ng-hide-add {
-        transition-delay: 0.5s;
+        transition-timing-function: $cubic-bezier-reverse;
+        transition-delay: 0.25s;
     }
 
     .liveSegment {
         // Style
-        color: #ffffff;
+        padding-top: 0.3vw;
+        color: $light-colour;
         background: $overlay-background, $bug-live-bgcolour;
         background-blend-mode: multiply, normal;
         font-size: 2vw;
-        font-weight: 900;
-        transition: all 0.5s $cubic-bezier 0.5s;
-        width: 9vw;
-        left: 7.5vw;
+        font-weight: 500;
+        transition: all 0.5s $cubic-bezier 0.3s;
+        width: 8.5vw;
+        left: $logo-width - 0.5vw;
         z-index: 1;
         border-top-right-radius: $bug-border-radius;
         border-bottom-right-radius: $bug-border-radius;
@@ -87,17 +102,18 @@ $bug-border: $bug-border-width solid $border-colour;
                 line-height: $bug-height;
                 //top: 50%;
                 transform: translate(-50%, -10%) perspective(1px);
+                padding-left: 0.6vw;
             }
         }
 
         .liveSegmentText.ng-hide {
             transition-timing-function: $cubic-bezier-reverse;
-            transform: translate(50%, 0);
+            //transform: translate(50%, 0);
             opacity: 0;
         }
 
         .liveSegmentText.ng-hide-remove {
-            transform: translate(-50%, 0);
+            //transform: translate(-50%, 0);
             opacity: 0;
         }
     }
@@ -108,6 +124,7 @@ $bug-border: $bug-border-width solid $border-colour;
     }
 
     .liveSegment.ng-hide-add {
+        transition-timing-function: $cubic-bezier-reverse;
         transition-delay: 0s;
     }
 }

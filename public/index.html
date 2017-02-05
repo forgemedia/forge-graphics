@@ -12,12 +12,13 @@
     <div ng-controller="generalCtrl">
         <div id="bug">
             <div id="logo" ng-show="state.showLogo">
-                <img src="/img/forge.svg" />
+                <img id="polls" src="/img/polls.svg" />
+                <img id="forge" src="/img/forge.svg" />
             </div>
             <div class="liveSegment" ng-show="state.showLogo && state.showLive">
                 <!-- <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH"}}&nbsp;<span style="padding-top: .1vw" ng-show="colonOnBool">:</span>&nbsp;{{clock|date:"mm"}}</span></div> -->
                 <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH:mm"}}</span></div>
-                <div class="liveSegmentText" ng-show="liveToggle"><span>LIVE</span></div>
+                <div class="liveSegmentText" ng-show="liveToggle"><span>Live</span></div>
             </div>
         </div>
         <div id="lowerThirds">

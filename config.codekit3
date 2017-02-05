@@ -4429,6 +4429,18 @@
 		"oAP": "\/public\/dashboard\/index.html",
 		"oF": 0
 		},
+	"\/public\/fonts\/AGBookRounded-Medium.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/AGBookRounded-Medium.woff",
+		"oF": 0
+		},
+	"\/public\/fonts\/AGBookRounded-Regular.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/AGBookRounded-Regular.woff",
+		"oF": 0
+		},
 	"\/public\/fonts\/lato-v11-latin-100.woff": {
 		"ft": 8192,
 		"oA": 2,
@@ -4554,6 +4566,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/public\/img\/forge.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/img\/polls.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/img\/polls.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
