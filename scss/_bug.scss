@@ -8,14 +8,16 @@ $bug-border-width: 0;
 $bug-logo-bgcolour: $light-blue-colour;
 $bug-live-bgcolour: $dark-blue-colour;
 
-$logo-width: 9.5vw;
+$logo-width: 11vw;
 
 // Business logic
 $bug-border: $bug-border-width solid $border-colour;
 
 #bug {
-    margin-left: 1vw;
+    //margin-left: 1vw;
     margin-top: 1vw;
+    position: absolute;
+    top: $bug-top;
 
     > * {
         position: absolute;
@@ -29,10 +31,12 @@ $bug-border: $bug-border-width solid $border-colour;
 
     #logo {
         width: $logo-width;
-        border-radius: $bug-border-radius;
+        //border-top-right-radius: $bug-border-radius;
+        //border-bottom-right-radius: $bug-border-radius;
         background: $overlay-background, $bug-logo-bgcolour;
         background-blend-mode: multiply, normal;
         z-index: 2;
+        //padding-left: 1vw;
 
         img {
             display: inline-block;
@@ -45,7 +49,7 @@ $bug-border: $bug-border-width solid $border-colour;
             height: 4vw;
             transform: translateY(-10%) rotate(6deg);
             opacity: 0.45;
-            padding-left: 0.3vw;
+            padding-left: 1vw;
         }
 
         img#forge {
@@ -54,7 +58,7 @@ $bug-border: $bug-border-width solid $border-colour;
             //transform: translate(-5%, -50%) rotate(-8deg) perspective(1px);
             top: 0.65vw;
             height: 1.6vw;
-            left: 3vw;
+            left: 4vw;
             //opacity: 0.6;
         }
     }
@@ -84,10 +88,10 @@ $bug-border: $bug-border-width solid $border-colour;
         font-weight: 500;
         transition: all 0.5s $cubic-bezier 0.3s;
         width: 8.5vw;
-        left: $logo-width - 0.5vw;
+        left: $logo-width - 1vw;
         z-index: 1;
-        border-top-right-radius: $bug-border-radius;
-        border-bottom-right-radius: $bug-border-radius;
+        //border-top-right-radius: $bug-border-radius;
+        //border-bottom-right-radius: $bug-border-radius;
 
         .liveSegmentText {
             transition: opacity .5s $cubic-bezier, transform .5s $cubic-bezier;
@@ -101,7 +105,7 @@ $bug-border: $bug-border-width solid $border-colour;
                 position: absolute;
                 line-height: $bug-height;
                 //top: 50%;
-                transform: translate(-50%, -10%) perspective(1px);
+                transform: translate(-52%, -8%) perspective(1px);
                 padding-left: 0.6vw;
             }
         }
@@ -120,7 +124,7 @@ $bug-border: $bug-border-width solid $border-colour;
 
     .liveSegment.ng-hide {
         opacity: 0;
-        transform: translate(-5vw, 0);
+        transform: translate(-15vw, 0);
     }
 
     .liveSegment.ng-hide-add {

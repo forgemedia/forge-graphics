@@ -21,6 +21,8 @@ $border-colour: #333333;
 $cubic-bezier: cubic-bezier(0, .75, .75, 1);
 $cubic-bezier-reverse: cubic-bezier(.75, 0, 1, .25);
 $perspective: 25vw;
+$bug-top: 85vh;
+$lower-third-top: 70vh;
 
 @import "../bower_components/susy/sass/susy";
 @import 'fonts';

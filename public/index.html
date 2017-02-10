@@ -18,17 +18,19 @@
             <div class="liveSegment" ng-show="state.showLogo && state.showLive">
                 <!-- <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH"}}&nbsp;<span style="padding-top: .1vw" ng-show="colonOnBool">:</span>&nbsp;{{clock|date:"mm"}}</span></div> -->
                 <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH:mm"}}</span></div>
-                <div class="liveSegmentText" ng-show="liveToggle"><span>Live</span></div>
+                <div class="liveSegmentText" ng-show="liveToggle"><span>LIVE</span></div>
             </div>
         </div>
-        <div id="lowerThirds">
-            <div class="lowerThird centreLowerThird" ng-show="state.showCentreLowerThird">
-                <div class="upperSegment">
-                    <span>{{state.lowerThirdUpperText}}</span>
-                </div>
-                <div class="lowerSegment">
-                    <span>{{state.lowerThirdLowerText}}</span>
-                </div>
+        <div id="lowerThirdBackground" class="" ng-show="state.showLowerThirdBackground">
+            <div class="upperSegment segmentBackground">
+                <!-- <span>{{state.lowerThirdUpperText}}</span> -->
+                <!-- <span></span> -->
+            </div>
+            <div class="lowerSegment segmentBackground" ng-show="state.showLowerThirdBackground">
+                <!-- <span>{{state.lowerThirdLowerText}}</span> -->
+                <!-- span -->
+            </div>
+            <div class="lowerThirdContainer">
             </div>
         </div>
     </div>

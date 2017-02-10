@@ -1,72 +1,98 @@
-$lower-third-height: 6vw;
-$lower-third-border-radius: $lower-third-height / 4;
+//$lower-third-border-radius: $lower-third-height / 10;
+$lower-third-border-radius: 0;
 $lower-third-border-width: 0;
 $lower-third-border: $lower-third-border-width solid $border-colour;
-$lower-third-dark-text-colour: $dark-colour;
 
-#lowerThirds {
-    @include container(80vw);
-    padding-top: 75vh;
+$lower-third-height: $bug-top - $lower-third-top;
+
+#lowerThirdBackground {
+    //@include container(80vw);
+    width: 100vw;
+    position: absolute;
+    margin-top: $lower-third-top;
+    //height: $lower-third-height;
+
+    transition: transform 0.5s $cubic-bezier, opacity 0.5s $cubic-bezier;
 
     > * {
         overflow: hidden;
         transform: perspective($perspective);
     }
 
-    .lowerThird {
-        transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
+    > div {
+        border: $lower-third-border;
+        box-shadow: inset $component-inset-shadow;
+    }
 
-        > div {
-            border-radius: $lower-third-border-radius;
-            border: $lower-third-border;
-            box-shadow: inset $component-inset-shadow;
-        }
+    span {
+        display: block;
+    }
 
+    .lowerThirdContainer {
+        @include container(80vw);
+    }
+
+    .upperSegment {
         span {
-            display: block;
-        }
-
-        .upperSegment {
-            background: $light-colour;
-            height: ($lower-third-height / 5) * 3;
-            z-index: 1;
-
-            span {
-                font-size: 2.25vw;
-                font-weight: 700;
-                padding-bottom: 0.3vw;
-                color: $lower-third-dark-text-colour;
-            }
-        }
-
-        .lowerSegment {
-            position: relative;
-            height: ($lower-third-height / 5) * 3;
-            transform: translateY(-$lower-third-height / 5);
-            z-index: 2;
-
-            span {
-                font-size: 1.25vw;
-                font-weight: 500;
-                color: lighten($lower-third-dark-text-colour, 15%);
-            }
+            font-size: 2.25vw;
+            //font-weight: 700;
+            padding-top: 0.65vw;
+            padding-bottom: 0.3vw;
+            color: $light-colour;
         }
     }
 
-    .lowerThird.centreLowerThird {
-        @include span(8 of 12);
-        @include pre(2 of 12);
-        text-align: center;
+    .upperSegment.segmentBackground {
+        background: $dark-blue-colour;
+        height: ($lower-third-height / 10) * 5;
+        position: relative;
+        z-index: 2;
+        border-top-left-radius: $lower-third-border-radius;
+        border-top-right-radius: $lower-third-border-radius;
     }
 
-    .lowerThird.ng-hide-remove {
+    .lowerSegment {
+        span {
+            padding-top: 1.6vw;
+            font-size: 1.25vw;
+            font-weight: 500;
+            color: $light-colour;
+        }
+    }
+
+    .lowerSegment.segmentBackground {
+        //@include span(10 of 12);
+        background: $light-blue-colour;
+        position: relative;
+        height: ($lower-third-height / 10) * 5;
+        //transform: translateY(-$lower-third-height / 5);
+        z-index: 0;
+        //border-bottom-left-radius: $lower-third-border-radius;
+        //border-bottom-right-radius: $lower-third-border-radius;
+        transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
+    }
+
+    .lowerSegment.ng-hide-remove {
+        transform: translateY(-4vw);
         opacity: 0;
-        transform: rotateX(90deg);
+        transition-delay: 0.75s;
     }
 
-    .lowerThird.ng-hide {
+    .lowerSegment.ng-hide {
+        transform: translateY(-5vw);
         opacity: 0;
         transition-timing-function: $cubic-bezier-reverse;
-        transform: rotateX(-90deg);
     }
+}
+
+#lowerThirdBackground.ng-hide-remove {
+    opacity: 0;
+}
+
+#lowerThirdBackground.ng-hide-add {
+    transition-delay: 0.6s;
+}
+
+#lowerThirdBackground.ng-hide {
+    opacity: 0;
 }

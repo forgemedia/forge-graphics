@@ -4429,6 +4429,18 @@
 		"oAP": "\/public\/dashboard\/index.html",
 		"oF": 0
 		},
+	"\/public\/fonts\/AGBookRdMed.woff2": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/AGBookRdMed.woff2",
+		"oF": 0
+		},
+	"\/public\/fonts\/AGBookRdReg.woff2": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/AGBookRdReg.woff2",
+		"oF": 0
+		},
 	"\/public\/fonts\/AGBookRounded-Medium.woff": {
 		"ft": 8192,
 		"oA": 2,
