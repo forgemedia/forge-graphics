@@ -8,25 +8,28 @@ $bug-border-width: 0;
 $bug-logo-bgcolour: $light-blue-colour;
 $bug-live-bgcolour: $dark-blue-colour;
 
-$logo-width: 11vw;
-
 // Business logic
 $bug-border: $bug-border-width solid $border-colour;
 
+$logo-left: 10vw;
+$logo-width: $logo-left + 9vw;
+
 #bug {
     //margin-left: 1vw;
-    margin-top: 1vw;
+    //margin-top: 1vw;
     position: absolute;
-    top: $bug-top;
+    top: $lower-third-height;
+    //top: $bug-top;
+    z-index: 2;
 
     > * {
         position: absolute;
         height: $bug-height;
         line-height: $bug-height;
         border: $bug-border;
-        box-shadow: inset $component-inset-shadow;
         overflow: hidden;
         padding-left: 0.5vw;
+        //box-shadow: inset 0px 20px 10px -20px rgba(0,0,0,0.6);
     }
 
     #logo {
@@ -47,9 +50,9 @@ $bug-border: $bug-border-width solid $border-colour;
 
         img#polls {
             height: 4vw;
-            transform: translateY(-10%) rotate(6deg);
+            transform: translate(-5%, -10%) rotate(6deg);
             opacity: 0.45;
-            padding-left: 1vw;
+            margin-left: $logo-left;
         }
 
         img#forge {
@@ -58,7 +61,7 @@ $bug-border: $bug-border-width solid $border-colour;
             //transform: translate(-5%, -50%) rotate(-8deg) perspective(1px);
             top: 0.65vw;
             height: 1.6vw;
-            left: 4vw;
+            left: $logo-left + 2.5vw;
             //opacity: 0.6;
         }
     }
@@ -92,6 +95,7 @@ $bug-border: $bug-border-width solid $border-colour;
         z-index: 1;
         //border-top-right-radius: $bug-border-radius;
         //border-bottom-right-radius: $bug-border-radius;
+        //box-shadow: inset 20px 20px 10px -20px rgba(0,0,0,0.6);
 
         .liveSegmentText {
             transition: opacity .5s $cubic-bezier, transform .5s $cubic-bezier;

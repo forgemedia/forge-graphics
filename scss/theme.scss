@@ -23,6 +23,7 @@ $cubic-bezier-reverse: cubic-bezier(.75, 0, 1, .25);
 $perspective: 25vw;
 $bug-top: 85vh;
 $lower-third-top: 70vh;
+$lower-third-height: $bug-top - $lower-third-top;
 
 @import "../bower_components/susy/sass/susy";
 @import 'fonts';
@@ -33,6 +34,12 @@ body {
     margin: 0;
     //padding: 0vw;
     background: transparent;
+    //background: #00ff00;
     overflow: hidden;
     -webkit-font-smoothing: antialiased !important;
+}
+
+#main-container {
+    position: absolute;
+    top: 70vh;
 }

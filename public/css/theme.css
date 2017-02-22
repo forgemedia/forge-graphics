@@ -111,9 +111,9 @@
 }
 
 #bug {
-  margin-top: 1vw;
   position: absolute;
-  top: 85vh;
+  top: 15vh;
+  z-index: 2;
 }
 
 #bug > * {
@@ -121,13 +121,12 @@
   height: 3vw;
   line-height: 3vw;
   border: 0 solid #333333;
-  box-shadow: inset 0 0 0 0 transparent;
   overflow: hidden;
   padding-left: 0.5vw;
 }
 
 #bug #logo {
-  width: 11vw;
+  width: 19vw;
   background: -webkit-linear-gradient(top, transparent 0%, transparent 100%), #26bae1;
   background: linear-gradient(to bottom, transparent 0%, transparent 100%), #26bae1;
   background-blend-mode: multiply, normal;
@@ -143,16 +142,16 @@
 
 #bug #logo img#polls {
   height: 4vw;
-  -webkit-transform: translateY(-10%) rotate(6deg);
-          transform: translateY(-10%) rotate(6deg);
+  -webkit-transform: translate(-5%, -10%) rotate(6deg);
+          transform: translate(-5%, -10%) rotate(6deg);
   opacity: 0.45;
-  padding-left: 1vw;
+  margin-left: 10vw;
 }
 
 #bug #logo img#forge {
   top: 0.65vw;
   height: 1.6vw;
-  left: 4vw;
+  left: 12.5vw;
 }
 
 #bug #logo.ng-hide {
@@ -187,7 +186,7 @@
   -webkit-transition: all 0.5s cubic-bezier(0, 0.75, 0.75, 1) 0.3s;
   transition: all 0.5s cubic-bezier(0, 0.75, 0.75, 1) 0.3s;
   width: 8.5vw;
-  left: 10vw;
+  left: 18vw;
   z-index: 1;
 }
 
@@ -231,70 +230,64 @@
           transition-delay: 0s;
 }
 
-#lowerThirdBackground {
+#lowerThird {
   width: 100vw;
-  position: absolute;
-  margin-top: 70vh;
+  position: relative;
+  z-index: 0;
   -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
 }
 
-#lowerThirdBackground > * {
+#lowerThird > * {
   overflow: hidden;
   -webkit-transform: perspective(25vw);
           transform: perspective(25vw);
 }
 
-#lowerThirdBackground > div {
-  border: 0 solid #333333;
-  box-shadow: inset 0 0 0 0 transparent;
+#lowerThird .lowerThirdContainer {
+  left: 10vw;
+  position: absolute;
+  z-index: 5;
 }
 
-#lowerThirdBackground span {
-  display: block;
+#lowerThird .lowerThirdContainer .leftLowerThird {
+  width: 40vw;
 }
 
-#lowerThirdBackground .lowerThirdContainer {
-  max-width: 80vw;
-  margin-left: auto;
-  margin-right: auto;
+#lowerThird .upperSegment {
+  margin-top: 1.2vh;
 }
 
-#lowerThirdBackground .lowerThirdContainer:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-#lowerThirdBackground .upperSegment span {
-  font-size: 2.25vw;
-  padding-top: 0.65vw;
-  padding-bottom: 0.3vw;
+#lowerThird .upperSegment span {
+  font-size: 6vh;
   color: #ffffff;
 }
 
-#lowerThirdBackground .upperSegment.segmentBackground {
+#lowerThird .lowerSegment {
+  margin-top: 1.5vh;
+}
+
+#lowerThird .lowerSegment span {
+  font-size: 2vh;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+#lowerThird .upperSegmentBackground {
   background: #2e3192;
-  height: 7.5vh;
+  height: 9.375vh;
   position: relative;
   z-index: 2;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-#lowerThirdBackground .lowerSegment span {
-  padding-top: 1.6vw;
-  font-size: 1.25vw;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-#lowerThirdBackground .lowerSegment.segmentBackground {
+#lowerThird .lowerSegmentBackground {
   background: #26bae1;
   position: relative;
-  height: 7.5vh;
+  height: 5.625vh;
   z-index: 0;
   -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
@@ -302,7 +295,7 @@
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
 }
 
-#lowerThirdBackground .lowerSegment.ng-hide-remove {
+#lowerThird .lowerSegmentBackground.ng-hide-remove {
   -webkit-transform: translateY(-4vw);
           transform: translateY(-4vw);
   opacity: 0;
@@ -310,7 +303,7 @@
           transition-delay: 0.75s;
 }
 
-#lowerThirdBackground .lowerSegment.ng-hide {
+#lowerThird .lowerSegmentBackground.ng-hide {
   -webkit-transform: translateY(-5vw);
           transform: translateY(-5vw);
   opacity: 0;
@@ -318,16 +311,16 @@
           transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
 }
 
-#lowerThirdBackground.ng-hide-remove {
+#lowerThird.ng-hide-remove {
   opacity: 0;
 }
 
-#lowerThirdBackground.ng-hide-add {
+#lowerThird.ng-hide-add {
   -webkit-transition-delay: 0.6s;
           transition-delay: 0.6s;
 }
 
-#lowerThirdBackground.ng-hide {
+#lowerThird.ng-hide {
   opacity: 0;
 }
 
@@ -336,4 +329,9 @@ body {
   background: transparent;
   overflow: hidden;
   -webkit-font-smoothing: antialiased !important;
+}
+
+#main-container {
+  position: absolute;
+  top: 70vh;
 }
