@@ -1,6 +1,8 @@
 .lowerThird.headlineLowerThird {
     transition: transform 1s $cubic-bezier, opacity 1s $cubic-bezier;
 
+
+    // Container
     .lowerThirdContainer {
         .textRow {
             position: absolute;
@@ -11,20 +13,10 @@
         }
     }
 
+
+    // Segments
     .segment {
         text-transform: uppercase;
-    }
-
-    @keyframes incomingAnim {
-        0% {
-            transform: scale(0);
-        }
-        70% {
-            transform: scale(1.5);
-        }
-        100% {
-            transform: scale(1);
-        }
     }
 
     .upperSegment {
@@ -39,11 +31,6 @@
         }
     }
 
-    .upperSegment.ng-hide-remove {
-        animation: 10s incomingAnim ease;
-        animation-delay: 3s;
-    }
-
     .lowerSegment, .largeTopSegment {
         margin-top: 0.4vw;
         span {
@@ -53,8 +40,8 @@
             color: $light-colour;
             letter-spacing: -0.2vw;
         }
-        transition: opacity 0.5s $cubic-bezier;
-        transition-delay: 4s;
+        transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
+        transition-delay: 0.2s;
     }
 
     .largeTopSegment {
@@ -63,12 +50,24 @@
         }
     }
 
-    .lowerSegment.ng-hide {
-        opacity: 0;
+
+    // Segment animations
+    .upperSegment.ng-hide-remove {
+        //animation-delay: 3s;
     }
 
-    // TODO: Show 'INCOMING RESULT' big first
+    //.lowerSegment.ng-hide {
+    //    opacity: 0;
+    //    transform: translateX(4vw);
+    //}
 
+    .lowerSegment.ng-hide-remove, .largeTopSegment.ng-hide-remove {
+        opacity: 0;
+        transform: translateX(-4vw);
+    }
+
+
+    // Segment backgrounds
     .upperSegmentBackground {
         background: $light-blue-colour;
         height: ($lower-third-height / 8) * 2;
@@ -77,11 +76,7 @@
         width: 100vw;
         border-top-left-radius: $lower-third-border-radius;
         border-top-right-radius: $lower-third-border-radius;
-        transition: opacity 0.5s $cubic-bezier 1s;
-    }
-
-    .upperSegmentBackground.ng-hide {
-        opacity: 0;
+        transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
     }
 
     .lowerSegmentBackground, .largeTopSegmentBackground {
@@ -92,7 +87,7 @@
         height: ($lower-third-height / 8) * 6;
         width: 100vw;
         //transform: translateY(-$lower-third-height / 5);
-        z-index: 1;
+        z-index: 3;
         //border-bottom-left-radius: $lower-third-border-radius;
         //border-bottom-right-radius: $lower-third-border-radius;
         transition: opacity 0.5s $cubic-bezier;
@@ -103,10 +98,21 @@
         z-index: 0;
     }
 
+
+    // Segment background animations
+    .upperSegmentBackground.ng-hide {
+        opacity: 0;
+        transform: translateY(2vw);
+    }
+
+    .upperSegmentBackground.ng-hide-remove {
+        transition-delay: 1.2s;
+    }
+
     .lowerSegmentBackground.ng-hide-remove, .largeTopSegmentBackground.ng-hide-remove {
         //transform: translateY(-4vw);
         opacity: 0;
-        transition-delay: 0.75s;
+        //transition-delay: 0.75s;
     }
 
     .lowerSegmentBackground.ng-hide, .largeTopSegmentBackground.ng-hide {
@@ -114,18 +120,25 @@
         //transition-delay: 1s;
         opacity: 0;
         transition-timing-function: $cubic-bezier-reverse;
+        transition-delay: .5s;
     }
 
-    .largeTopSegmentBackground.ng-hide, .largeTopSegmentBackground.ng-hide-remove {
-        transform: none;
+    .lowerSegmentBackground.ng-hide-add {
+        transition-delay: 0s;
     }
+    //
+    //.largeTopSegmentBackground.ng-hide, .largeTopSegmentBackground.ng-hide-remove {
+    //    transform: none;
+    //}
 }
 
+
+// Lower third animations
 .lowerThird.headlineLowerThird.ng-hide-add {
-    transition: opacity 1s $cubic-bezier;
+    transition: opacity 1s $cubic-bezier 2s;
 }
 
-.lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide-add {
-    transition: opacity 0.1s $cubic-bezier;
-    transform: none;
-}
+//.lowerThird.headlineLowerThird {
+//    transition: opacity 0.1s $cubic-bezier;
+//    transform: none;
+//}

@@ -6,7 +6,6 @@ $lower-third-border: $lower-third-border-width solid $border-colour;
 // TODO: shrink text if it overflows
 
 .lowerThird {
-    //@include container(80vw);
     width: 100vw;
     position: relative;
     //margin-top: $lower-third-top;

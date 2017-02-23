@@ -3,16 +3,13 @@
         .leftLowerThird {
             position: absolute;
             //background-color: #ff0000;
-            //width: 40vw;
             //@include span(50%);
             width: $main-container-width;
         }
 
         .rightLowerThird {
-            //left: 40vw;
             width: $main-container-width;
             position: absolute;
-            //width: 40vw;
             text-align: right;
         }
     }
