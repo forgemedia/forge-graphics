@@ -32,12 +32,14 @@ app.config(['$routeProvider', 'localStorageServiceProvider',
     }
 ]);
 
-app.controller('generalCGController', ['$scope', '$timeout', 'socket',
-    function($scope, $timeout, socket){
+app.controller('generalCGController', ['$scope', '$timeout', '$interval', 'socket',
+    function($scope, $timeout, $interval, socket){
         $scope.topSelections = [
             "Breaking News",
             "Incoming Result"
         ];
+
+        $scope.timeRemaining = 5;
 
         $scope.commitTitleLowerThird = function () {
             $scope.general.leftLowerThirdUpperText = $scope.general.lltuScratch;
@@ -54,15 +56,22 @@ app.controller('generalCGController', ['$scope', '$timeout', 'socket',
         $scope.triggerTitleLowerThird = function () {
             $scope.commitTitleLowerThird();
             $scope.general.showTitleLowerThird = true;
+            $interval(function () {
+                $scope.timeRemaining--;
+            }, 1000, 5);
             $timeout(function() {
                 $scope.general.showTitleLowerThird = false;
             }, 5000);
+            $timeout(function() {
+                $scope.timeRemaining = 5;
+            }, 6000);
         };
 
         $scope.triggerHeadlineLowerThird = function () {
             $scope.commitHeadlineLowerThird();
             $scope.general.showLargeTop = true;
             $scope.general.showHeadlineLowerThird = true;
+
             $timeout(function() {
                 $scope.general.showLargeTop = false;
             }, 6000);
