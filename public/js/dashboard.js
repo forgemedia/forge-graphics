@@ -34,6 +34,11 @@ app.config(['$routeProvider', 'localStorageServiceProvider',
 
 app.controller('generalCGController', ['$scope', '$timeout', 'socket',
     function($scope, $timeout, socket){
+        $scope.topSelections = [
+            "Breaking News",
+            "Incoming Result"
+        ];
+
         $scope.commitTitleLowerThird = function () {
             $scope.general.leftLowerThirdUpperText = $scope.general.lltuScratch;
             $scope.general.leftLowerThirdLowerText = $scope.general.lltlScratch;

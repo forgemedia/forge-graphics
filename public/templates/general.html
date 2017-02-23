@@ -64,8 +64,9 @@
     </div> -->
     <div class="form-group">
         <label for="ltHeadline">Headline Lower Third Text</label>
-        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="general.hlTopScratch" placeholder="Top"></input>
-        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="general.hlMainScratch" placeholder="Main"></input>
+        <!-- <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="general.hlTopScratch" placeholder="Top"></input> -->
+        <select class="form-control" ng-model="general.hlTopScratch" ng-options="topSel for topSel in topSelections"></select>
+        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="general.hlMainScratch" placeholder="Headline"></input>
     </div>
     <div class="form-group">
         <button class="btn btn-default" ng-click="triggerHeadlineLowerThird()">Show</button>
