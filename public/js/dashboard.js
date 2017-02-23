@@ -32,12 +32,22 @@ app.config(['$routeProvider', 'localStorageServiceProvider',
     }
 ]);
 
-app.controller('generalCGController', ['$scope', 'socket',
-    function($scope, socket){
+app.controller('generalCGController', ['$scope', '$timeout', 'socket',
+    function($scope, $timeout, socket){
         $scope.commitLowerThird = function () {
-            $scope.general.lowerThirdUpperText = $scope.general.ltuScratch;
-            $scope.general.lowerThirdLowerText = $scope.general.ltlScratch;
+            $scope.general.leftLowerThirdUpperText = $scope.general.lltuScratch;
+            $scope.general.leftLowerThirdLowerText = $scope.general.lltlScratch;
+            $scope.general.rightLowerThirdUpperText = $scope.general.rltuScratch;
+            $scope.general.rightLowerThirdLowerText = $scope.general.rltlScratch;
         };
+
+        $scope.triggerLowerThird = function () {
+            $scope.commitLowerThird();
+            $scope.general.showTitleLowerThird = true;
+            $timeout(function() {
+                $scope.general.showTitleLowerThird = false;
+            }, 5000);
+        }
 
         socket.on("general", function (msg) {
             $scope.general = msg;

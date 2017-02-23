@@ -9,20 +9,29 @@
 </head>
 
 <body>
-    <div id="main-container">
-        <div ng-controller="generalCtrl">
-            <div id="lowerThird" class="" ng-show="state.showLowerThirdBackground">
+    <div ng-controller="generalCtrl">
+        <div id="hashtag" ng-show="state.showHashtag">
+            <span>#knowyourvote</span>
+        </div>
+        <div id="main-container">
+            <div class="lowerThird titleLowerThird" ng-show="state.showTitleLowerThird">
                 <div class="upperSegmentBackground">
                     <div class="lowerThirdContainer">
                         <div class="leftLowerThird">
-                            <div class="segment upperSegment"><span>{{state.lowerThirdUpperText}}</span></div>
+                            <div class="segment upperSegment"><span>{{state.leftLowerThirdUpperText}}</span></div>
+                        </div>
+                        <div class="rightLowerThird">
+                            <div class="segment upperSegment"><span>{{state.rightLowerThirdUpperText}}</span></div>
                         </div>
                     </div>
                 </div>
-                <div class="lowerSegmentBackground" ng-show="state.showLowerThirdBackground">
+                <div class="lowerSegmentBackground" ng-show="state.showTitleLowerThird">
                     <div class="lowerThirdContainer">
                         <div class="leftLowerThird">
-                            <div class="segment lowerSegment"><span>{{state.lowerThirdLowerText}}</span></div>
+                            <div class="segment lowerSegment"><span>{{state.leftLowerThirdLowerText}}</span></div>
+                        </div>
+                        <div class="rightLowerThird">
+                            <div class="segment lowerSegment"><span>{{state.rightLowerThirdLowerText}}</span></div>
                         </div>
                     </div>
                 </div>

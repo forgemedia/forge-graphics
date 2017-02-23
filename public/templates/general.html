@@ -17,27 +17,47 @@
                 Show LIVE/Clock
             </label>
         </div>
+        <div class="checkbox">
+            <label>
+                <toggle ng-model="general.showHashtag"></toggle>
+                Show Hashtag
+            </label>
+        </div>
     </div>
 </form>
 
 <div class="page-header">
-    <h3>Lower Third</h3>
+    <h3>Lower Third (Title)</h3>
 </div>
 <form>
-    <div class="form-group">
+    <!-- <div class="form-group">
         <div class="checkbox">
             <label>
-                <toggle ng-model="general.showLowerThirdBackground"></toggle>
-                Show Lower Third Background
+                <toggle ng-model="general.showLowerThird"></toggle>
+                Show Lower Third
             </label>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="lowerThirdText">Left Lower Third Text</label>
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="general.lltuScratch" placeholder="Upper"></input>
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="general.lltlScratch" placeholder="Lower"></input>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lowerThirdText">Right Lower Third Text</label>
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="general.rltuScratch" placeholder="Upper"></input>
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="general.rltlScratch" placeholder="Lower"></input>
+            </div>
         </div>
     </div>
     <div class="form-group">
-        <label for="lowerThirdText">Lower Third Text</label>
-        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" id="lowerThirdText" ng-model="general.ltuScratch" placeholder="Upper"></input>
-        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" id="lowerThirdText" ng-model="general.ltlScratch" placeholder="Lower"></input>
-    </div>
-    <div class="form-group">
-        <button class="btn btn-default" ng-click="commitLowerThird()">Set Lower Third</button>
+        <!-- <button class="btn btn-default" ng-click="commitLowerThird()">Set Lower Third</button> -->
+        <button class="btn btn-default" ng-click="triggerLowerThird()">Trigger for 5 seconds</button>
     </div>
 </form>
+
+<div class="page-header">
+    <h3>Lower Third (Headline/Breaking)</h3>
+</div>

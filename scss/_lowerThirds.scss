@@ -3,7 +3,9 @@ $lower-third-border-radius: 0;
 $lower-third-border-width: 0;
 $lower-third-border: $lower-third-border-width solid $border-colour;
 
-#lowerThird {
+// TODO: shrink text if it overflows
+
+.lowerThird {
     //@include container(80vw);
     width: 100vw;
     position: relative;
@@ -19,47 +21,65 @@ $lower-third-border: $lower-third-border-width solid $border-colour;
         transform: perspective($perspective);
     }
 
-    //> div {
-    //    border: $lower-third-border;
-    //    box-shadow: inset $component-inset-shadow;
-    //}
-
-    //span {
-    //    display: block;
-    //}
-
     .lowerThirdContainer {
         //@include container(200em);
-        left: 10vw;
+        left: $main-margin;
 
         position: absolute;
         z-index: 5;
+    }
+}
 
+.lowerThird.ng-hide-remove {
+    opacity: 0;
+}
+
+.lowerThird.ng-hide-add {
+    transition-delay: 0.6s;
+}
+
+.lowerThird.ng-hide {
+    opacity: 0;
+}
+
+.lowerThird.titleLowerThird {
+    .lowerThirdContainer {
         .leftLowerThird {
+            position: absolute;
             //background-color: #ff0000;
-            width: 40vw;
+            //width: 40vw;
             //@include span(50%);
+            width: $main-container-width;
+        }
+
+        .rightLowerThird {
+            //left: 40vw;
+            width: $main-container-width;
+            position: absolute;
+            //width: 40vw;
+            text-align: right;
         }
     }
-
     .upperSegment {
-        margin-top: 1.2vh;
+        margin-top: 0.5vw;
         span {
-            font-size: 6vh;
+            font-size: 4vw;
             //font-weight: 700;
             //padding-top: 0.65vw;
             //padding-bottom: 0.3vw;
             color: $light-colour;
+            letter-spacing: -0.2vw;
         }
     }
 
     .lowerSegment {
-        margin-top: 1.5vh;
+        margin-top: 0.6vw;
         span {
             //padding-top: 1.6vw;
-            font-size: 2vh;
+            font-size: 1.8vw;
             font-weight: 500;
             color: $light-colour;
+            letter-spacing: -0.1vw;
         }
     }
 
@@ -97,14 +117,6 @@ $lower-third-border: $lower-third-border-width solid $border-colour;
     }
 }
 
-#lowerThird.ng-hide-remove {
-    opacity: 0;
-}
+.lowerThird.headlineLowerThird {
 
-#lowerThird.ng-hide-add {
-    transition-delay: 0.6s;
-}
-
-#lowerThird.ng-hide {
-    opacity: 0;
 }

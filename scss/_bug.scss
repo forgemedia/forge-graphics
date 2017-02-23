@@ -11,7 +11,7 @@ $bug-live-bgcolour: $dark-blue-colour;
 // Business logic
 $bug-border: $bug-border-width solid $border-colour;
 
-$logo-left: 10vw;
+$logo-left: $main-margin;
 $logo-width: $logo-left + 9vw;
 
 #bug {
@@ -111,6 +111,7 @@ $logo-width: $logo-left + 9vw;
                 //top: 50%;
                 transform: translate(-52%, -8%) perspective(1px);
                 padding-left: 0.6vw;
+                letter-spacing: -0.1vw;
             }
         }
 
