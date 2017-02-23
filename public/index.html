@@ -10,7 +10,7 @@
 
 <body>
     <div ng-controller="generalCtrl">
-        <div id="hashtag" ng-show="state.showHashtag">
+        <div id="hashtag" ng-show="state.showHashtag && state.showLogo">
             <span>#knowyourvote</span>
         </div>
         <div id="main-container">
@@ -69,6 +69,9 @@
                     <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH:mm"}}</span></div>
                     <div class="liveSegmentText" ng-show="liveToggle"><span>LIVE</span></div>
                 </div>
+            </div>
+            <div id="ticker" ng-show="state.showTicker && state.showLogo">
+                <span></span>
             </div>
         </div>
     </div>

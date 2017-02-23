@@ -1,0 +1,13 @@
+#ticker {
+    position: absolute;
+    top: $lower-third-height;
+    height: $bug-height;
+    background: $mid-colour;
+    width: 100vw;
+    color: $dark-colour;
+    transition: opacity 0.5s linear;
+}
+
+#ticker.ng-hide {
+    opacity: 0;
+}
