@@ -34,19 +34,37 @@ app.config(['$routeProvider', 'localStorageServiceProvider',
 
 app.controller('generalCGController', ['$scope', '$timeout', 'socket',
     function($scope, $timeout, socket){
-        $scope.commitLowerThird = function () {
+        $scope.commitTitleLowerThird = function () {
             $scope.general.leftLowerThirdUpperText = $scope.general.lltuScratch;
             $scope.general.leftLowerThirdLowerText = $scope.general.lltlScratch;
             $scope.general.rightLowerThirdUpperText = $scope.general.rltuScratch;
             $scope.general.rightLowerThirdLowerText = $scope.general.rltlScratch;
         };
 
-        $scope.triggerLowerThird = function () {
-            $scope.commitLowerThird();
+        $scope.commitHeadlineLowerThird = function() {
+            $scope.general.headlineTop = $scope.general.hlTopScratch;
+            $scope.general.headlineMain = $scope.general.hlMainScratch;
+        };
+
+        $scope.triggerTitleLowerThird = function () {
+            $scope.commitTitleLowerThird();
             $scope.general.showTitleLowerThird = true;
             $timeout(function() {
                 $scope.general.showTitleLowerThird = false;
             }, 5000);
+        };
+
+        $scope.triggerHeadlineLowerThird = function () {
+            $scope.commitHeadlineLowerThird();
+            $scope.general.showLargeTop = true;
+            $scope.general.showHeadlineLowerThird = true;
+            $timeout(function() {
+                $scope.general.showLargeTop = false;
+            }, 6000);
+        }
+
+        $scope.hideHeadlineLowerThird = function () {
+            $scope.general.showHeadlineLowerThird = false;
         }
 
         socket.on("general", function (msg) {

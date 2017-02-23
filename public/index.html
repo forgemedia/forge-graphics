@@ -36,6 +36,29 @@
                     </div>
                 </div>
             </div>
+            <div class="lowerThird headlineLowerThird" ng-show="state.showHeadlineLowerThird">
+                <div class="largeTopSegmentBackground" ng-show="state.showLargeTop">
+                    <div class="lowerThirdContainer">
+                        <div class="textRow">
+                            <div class="segment largeTopSegment"><span>{{state.headlineTop}}</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="upperSegmentBackground" ng-show="!state.showLargeTop">
+                    <div class="lowerThirdContainer">
+                        <div class="textRow">
+                            <div class="segment upperSegment"><span>{{state.headlineTop}}</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lowerSegmentBackground" ng-show="state.showHeadlineLowerThird && !state.showLargeTop">
+                    <div class="textRow">
+                        <div class="lowerThirdContainer">
+                            <div class="segment lowerSegment" ng-show="state.showHeadlineLowerThird && !state.showLargeTop"><span>{{state.headlineMain}}</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="bug">
                 <div id="logo" ng-show="state.showLogo">
                     <img id="polls" src="/img/polls.svg" />

@@ -30,14 +30,6 @@
     <h3>Lower Third (Title)</h3>
 </div>
 <form>
-    <!-- <div class="form-group">
-        <div class="checkbox">
-            <label>
-                <toggle ng-model="general.showLowerThird"></toggle>
-                Show Lower Third
-            </label>
-        </div>
-    </div> -->
     <div class="container">
         <div class="row">
             <div class="form-group col-md-6">
@@ -46,18 +38,45 @@
                 <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="general.lltlScratch" placeholder="Lower"></input>
             </div>
             <div class="form-group col-md-6">
-                <label for="lowerThirdText">Right Lower Third Text</label>
+                <label for="lowerThirdText">Right Lower Third Text (leave blank to leave blank)</label>
                 <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="general.rltuScratch" placeholder="Upper"></input>
                 <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="general.rltlScratch" placeholder="Lower"></input>
             </div>
         </div>
     </div>
     <div class="form-group">
-        <!-- <button class="btn btn-default" ng-click="commitLowerThird()">Set Lower Third</button> -->
-        <button class="btn btn-default" ng-click="triggerLowerThird()">Trigger for 5 seconds</button>
+        <!-- TODO: Countdown from 5 seconds -->
+        <button class="btn btn-default" ng-click="triggerTitleLowerThird()">Trigger for 5 seconds</button>
     </div>
 </form>
 
 <div class="page-header">
     <h3>Lower Third (Headline/Breaking)</h3>
 </div>
+<form>
+    <!-- <div class="form-group">
+        <div class="checkbox">
+            <label>
+                <toggle ng-model="general.showHeadlineLowerThird"></toggle>
+                Show
+            </label>
+        </div>
+    </div> -->
+    <div class="form-group">
+        <label for="ltHeadline">Headline Lower Third Text</label>
+        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="general.hlTopScratch" placeholder="Top"></input>
+        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="general.hlMainScratch" placeholder="Main"></input>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-default" ng-click="triggerHeadlineLowerThird()">Show</button>
+        <button class="btn btn-default" ng-click="hideHeadlineLowerThird()">Hide</button>
+    </div>
+    <!-- <div class="form-group">
+        <div class="checkbox">
+            <label>
+                <toggle ng-model="general.showLargeTop"></toggle>
+                Trigger
+            </label>
+        </div>
+    </div> -->
+</form>

@@ -32,6 +32,8 @@ $main-margin: (100vw - $main-container-width) / 2;
 @import 'fonts';
 @import 'bug';
 @import 'lowerThirds';
+@import 'titleLowerThird';
+@import 'headlineLowerThird';
 
 body {
     margin: 0;

@@ -1,0 +1,75 @@
+.lowerThird.titleLowerThird {
+    .lowerThirdContainer {
+        .leftLowerThird {
+            position: absolute;
+            //background-color: #ff0000;
+            //width: 40vw;
+            //@include span(50%);
+            width: $main-container-width;
+        }
+
+        .rightLowerThird {
+            //left: 40vw;
+            width: $main-container-width;
+            position: absolute;
+            //width: 40vw;
+            text-align: right;
+        }
+    }
+
+    .upperSegment {
+        margin-top: 0.5vw;
+        span {
+            font-size: 4vw;
+            //font-weight: 700;
+            //padding-top: 0.65vw;
+            //padding-bottom: 0.3vw;
+            color: $light-colour;
+            letter-spacing: -0.2vw;
+        }
+    }
+
+    .lowerSegment {
+        margin-top: 0.6vw;
+        span {
+            //padding-top: 1.6vw;
+            font-size: 1.8vw;
+            font-weight: 500;
+            color: $light-colour;
+            letter-spacing: -0.1vw;
+        }
+    }
+
+    .upperSegmentBackground {
+        background: $dark-blue-colour;
+        height: ($lower-third-height / 8) * 5;
+        position: relative;
+        z-index: 2;
+        border-top-left-radius: $lower-third-border-radius;
+        border-top-right-radius: $lower-third-border-radius;
+    }
+
+    .lowerSegmentBackground {
+        //@include span(10 of 12);
+        background: $light-blue-colour;
+        position: relative;
+        height: ($lower-third-height / 8) * 3;
+        //transform: translateY(-$lower-third-height / 5);
+        z-index: 0;
+        //border-bottom-left-radius: $lower-third-border-radius;
+        //border-bottom-right-radius: $lower-third-border-radius;
+        transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
+    }
+
+    .lowerSegmentBackground.ng-hide-remove {
+        transform: translateY(-4vw);
+        opacity: 0;
+        transition-delay: 0.75s;
+    }
+
+    .lowerSegmentBackground.ng-hide {
+        transform: translateY(-5vw);
+        opacity: 0;
+        transition-timing-function: $cubic-bezier-reverse;
+    }
+}

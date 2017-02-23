@@ -1,0 +1,131 @@
+.lowerThird.headlineLowerThird {
+    transition: transform 1s $cubic-bezier, opacity 1s $cubic-bezier;
+
+    .lowerThirdContainer {
+        .textRow {
+            position: absolute;
+            //background-color: #ff0000;
+            //width: 40vw;
+            //@include span(50%);
+            width: $main-container-width;
+        }
+    }
+
+    .segment {
+        text-transform: uppercase;
+    }
+
+    @keyframes incomingAnim {
+        0% {
+            transform: scale(0);
+        }
+        70% {
+            transform: scale(1.5);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .upperSegment {
+        margin-top: 0.52vw;
+        span {
+            font-size: 1vw;
+            //font-weight: 700;
+            //padding-top: 0.65vw;
+            //padding-bottom: 0.3vw;
+            color: $yellow-colour;
+            //letter-spacing: -0.2vw;
+        }
+    }
+
+    .upperSegment.ng-hide-remove {
+        animation: 10s incomingAnim ease;
+        animation-delay: 3s;
+    }
+
+    .lowerSegment, .largeTopSegment {
+        margin-top: 0.4vw;
+        span {
+            //padding-top: 1.6vw;
+            font-size: 5vw;
+            font-weight: 500;
+            color: $light-colour;
+            letter-spacing: -0.2vw;
+        }
+        transition: opacity 0.5s $cubic-bezier;
+        transition-delay: 4s;
+    }
+
+    .largeTopSegment {
+        span {
+            color: $yellow-colour;
+        }
+    }
+
+    .lowerSegment.ng-hide {
+        opacity: 0;
+    }
+
+    // TODO: Show 'INCOMING RESULT' big first
+
+    .upperSegmentBackground {
+        background: $light-blue-colour;
+        height: ($lower-third-height / 8) * 2;
+        position: absolute;
+        z-index: 2;
+        width: 100vw;
+        border-top-left-radius: $lower-third-border-radius;
+        border-top-right-radius: $lower-third-border-radius;
+        transition: opacity 0.5s $cubic-bezier 1s;
+    }
+
+    .upperSegmentBackground.ng-hide {
+        opacity: 0;
+    }
+
+    .lowerSegmentBackground, .largeTopSegmentBackground {
+        //@include span(10 of 12);
+        background: $dark-blue-colour;
+        position: absolute;
+        top: ($lower-third-height / 8) * 2;
+        height: ($lower-third-height / 8) * 6;
+        width: 100vw;
+        //transform: translateY(-$lower-third-height / 5);
+        z-index: 1;
+        //border-bottom-left-radius: $lower-third-border-radius;
+        //border-bottom-right-radius: $lower-third-border-radius;
+        transition: opacity 0.5s $cubic-bezier;
+    }
+
+    .largeTopSegmentBackground {
+        background: $light-blue-colour;
+        z-index: 0;
+    }
+
+    .lowerSegmentBackground.ng-hide-remove, .largeTopSegmentBackground.ng-hide-remove {
+        //transform: translateY(-4vw);
+        opacity: 0;
+        transition-delay: 0.75s;
+    }
+
+    .lowerSegmentBackground.ng-hide, .largeTopSegmentBackground.ng-hide {
+        //transform: translateY(-5vw);
+        //transition-delay: 1s;
+        opacity: 0;
+        transition-timing-function: $cubic-bezier-reverse;
+    }
+
+    .largeTopSegmentBackground.ng-hide, .largeTopSegmentBackground.ng-hide-remove {
+        transform: none;
+    }
+}
+
+.lowerThird.headlineLowerThird.ng-hide-add {
+    transition: opacity 1s $cubic-bezier;
+}
+
+.lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide-add {
+    transition: opacity 0.1s $cubic-bezier;
+    transform: none;
+}
