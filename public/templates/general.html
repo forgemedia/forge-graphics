@@ -1,8 +1,8 @@
 <!-- <input type="checkbox" ng-model="general.showLive">Show Bug</checkbox> -->
 
-<div class="page-header">
+<!-- <div class="page-header">
     <h3>Bug</h3>
-</div>
+</div> -->
 <form>
     <div class="form-group">
         <div class="checkbox">
@@ -33,7 +33,7 @@
 </form>
 
 <div class="page-header">
-    <h3>Lower Third (Title)</h3>
+    <h3>Lower Third <small>Names</small></h3>
 </div>
 <form>
     <div class="container">
@@ -52,12 +52,12 @@
     </div>
     <div class="form-group">
         <!-- TODO: Countdown from 5 seconds -->
-        <button class="btn btn-default" ng-click="triggerTitleLowerThird()">Trigger for 5 seconds</button>
+        <button class="btn btn-default" ng-disabled="general.showHeadlineLowerThird" ng-click="triggerTitleLowerThird()">Show (5 seconds)</button>
     </div>
 </form>
 
 <div class="page-header">
-    <h3>Lower Third (Headline/Breaking)</h3>
+    <h3>Lower Third <small>Breaking News</small></h3>
 </div>
 <form>
     <!-- <div class="form-group">
@@ -75,8 +75,8 @@
         <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="general.hlMainScratch" placeholder="Headline"></input>
     </div>
     <div class="form-group">
-        <button class="btn btn-default" ng-click="triggerHeadlineLowerThird()">Show</button>
-        <button class="btn btn-default" ng-click="hideHeadlineLowerThird()">Hide</button>
+        <button class="btn btn-default" ng-disabled="general.showTitleLowerThird || general.showHeadlineLowerThird" ng-click="triggerHeadlineLowerThird()">Show</button>
+        <button class="btn btn-default" ng-disabled="!general.showHeadlineLowerThird" ng-click="hideHeadlineLowerThird()">Hide</button>
     </div>
     <!-- <div class="form-group">
         <div class="checkbox">

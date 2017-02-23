@@ -33,8 +33,7 @@ $logo-width: $logo-left + 9vw;
         width: $logo-width;
         //border-top-right-radius: $bug-border-radius;
         //border-bottom-right-radius: $bug-border-radius;
-        background: $overlay-background, $bug-logo-bgcolour;
-        background-blend-mode: multiply, normal;
+        background: $bug-logo-bgcolour;
         z-index: 2;
         //padding-left: 1vw;
 
