@@ -23,9 +23,19 @@ $lower-third-border: $lower-third-border-width solid $border-colour;
     .lowerThirdContainer {
         //@include container(200em);
         left: $main-margin;
+        width: $main-container-width;
 
         position: absolute;
         z-index: 5;
+    }
+
+    .segment {
+        white-space: nowrap;
+        width: 100%;
+        span {
+            width: 100%;
+            display: block;
+        }
     }
 }
 

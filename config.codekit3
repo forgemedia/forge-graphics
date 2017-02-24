@@ -4413,6 +4413,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/public\/css\/theme.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/public\/css\/theme-min.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/public\/dashboard\/index.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -4593,6 +4603,12 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/public\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/index.html",
+		"oF": 0
+		},
 	"\/public\/js\/cg.js": {
 		"ft": 64,
 		"mi": 0,
@@ -4610,6 +4626,12 @@
 		"oF": 1,
 		"sC": 0,
 		"tS": 0
+		},
+	"\/public\/templates\/general.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/templates\/general.html",
+		"oF": 0
 		},
 	"\/README.md": {
 		"cS": 0,
@@ -4729,6 +4751,19 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "\/public\/css\/dashboard.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/scss\/theme.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/public\/css\/theme.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

@@ -75,11 +75,11 @@ app.controller('generalCGController', ['$scope', '$timeout', '$interval', 'socke
             $timeout(function() {
                 $scope.general.showLargeTop = false;
             }, 6000);
-        }
+        };
 
         $scope.hideHeadlineLowerThird = function () {
             $scope.general.showHeadlineLowerThird = false;
-        }
+        };
 
         socket.on("general", function (msg) {
             $scope.general = msg;

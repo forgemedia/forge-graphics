@@ -51,8 +51,12 @@
         </div>
     </div>
     <div class="form-group">
-        <!-- TODO: Countdown from 5 seconds -->
-        <button class="btn btn-danger" ng-disabled="general.showHeadlineLowerThird || general.showTitleLowerThird" ng-click="triggerTitleLowerThird()">Show ({{timeRemaining}} seconds)</button></span>
+        <button
+        class="btn btn-danger"
+        ng-disabled="
+        general.showHeadlineLowerThird ||
+        general.showTitleLowerThird"
+        ng-click="triggerTitleLowerThird()">Show ({{timeRemaining}} seconds)</button></span>
     </div>
 </form>
 
@@ -69,13 +73,16 @@
         </div>
     </div> -->
     <div class="form-group">
-        <label for="ltHeadline">Headline Lower Third Text</label>
+        <label for="ltHeadline">Headline Lower Third Text (must be kept as short as possible)</label>
         <!-- <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="general.hlTopScratch" placeholder="Top"></input> -->
-        <select class="form-control" ng-model="general.hlTopScratch" ng-options="topSel for topSel in topSelections"></select>
+        <select class="form-control" ng-model="general.hlTopScratch" ng-options="topSel for topSel in topSelections" ng-init="general.hlTopScratch = topSelections[0]"></select>
         <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="general.hlMainScratch" placeholder="Headline"></input>
     </div>
     <div class="form-group">
-        <button class="btn btn-danger" ng-disabled="general.showTitleLowerThird || general.showHeadlineLowerThird" ng-click="triggerHeadlineLowerThird()">Show</button>
+        <button
+            class="btn btn-danger"
+            ng-disabled="general.showTitleLowerThird || general.showHeadlineLowerThird"
+            ng-click="triggerHeadlineLowerThird()">Show</button>
         <button class="btn btn-warning" ng-disabled="!general.showHeadlineLowerThird" ng-click="hideHeadlineLowerThird()">Hide</button>
     </div>
     <!-- <div class="form-group">
