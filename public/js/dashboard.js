@@ -9,7 +9,7 @@ app.controller('AppCtrl', ['$scope', '$location',
         };
 
         $scope.menu.push({
-            name: 'General',
+            name: 'Bug',
             url: '/general',
             type: 'link'
         });
@@ -62,17 +62,28 @@ app.controller('generalCGController', ['$scope', 'socket',
     }
 ]);
 
-app.controller('lowerThirdsCGController', ['$scope', '$timeout', '$interval', 'socket',
-    function($scope, $timeout, $interval, socket){
+app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$timeout', '$interval', '$window', 'socket',
+    function($scope, localStorageService, $timeout, $interval, $window, socket){
+        var titleStored = localStorageService.get('lt_title');
+        var headlineStored = localStorageService.get('lt_headline');
+
+        if (titleStored === null) $scope.ltTitleDashEntries = [];
+        else $scope.ltTitleDashEntries = titleStored;
+
+        if (headlineStored === null) $scope.ltHeadlineDashEntries = [];
+        else $scope.ltHeadlineDashEntries = headlineStored;
+
         $scope.topSelections = [
             "Breaking News",
             "Incoming Result"
         ];
 
+        $scope.hlTopScratch = $scope.topSelections[0];
+
         $scope.timeRemaining = 5;
 
         $scope.triggerTitleLowerThird = function () {
-            socket.emit("lowerThirds:showTitle", [$scope.lltuScratch, $scope.lltlScratch, $scope.rltuScratch, $scope.rltlScratch]);
+            socket.emit("lowerThirds:showTitle", $scope.ltTitleDashEntries);
             $interval(function () {
                 $scope.timeRemaining--;
             }, 1000, 5);
@@ -85,8 +96,7 @@ app.controller('lowerThirdsCGController', ['$scope', '$timeout', '$interval', 's
         };
 
         $scope.triggerHeadlineLowerThird = function () {
-            socket.emit("lowerThirds:showHeadline", [$scope.hlTopScratch, $scope.hlMainScratch]);
-
+            socket.emit("lowerThirds:showHeadline", $scope.ltHeadlineDashEntries);
         };
 
         $scope.hideHeadlineLowerThird = function () {
@@ -96,5 +106,13 @@ app.controller('lowerThirdsCGController', ['$scope', '$timeout', '$interval', 's
         socket.on("lowerThirds", function (msg) {
             $scope.lowerThirds = msg;
         });
+
+        $scope.storeEntries = function() {
+            localStorageService.set('lt_title', $scope.ltTitleDashEntries);
+            localStorageService.set('lt_headline', $scope.ltHeadlineDashEntries);
+        };
+
+        $scope.$on("$destroy", $scope.storeEntries);
+        $window.onbeforeunload = $scope.storeEntries;
     }
 ]);
