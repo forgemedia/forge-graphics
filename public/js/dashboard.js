@@ -71,12 +71,12 @@ app.controller('lowerThirdsCGController', ['$scope', '$timeout', '$interval', 's
 
         $scope.timeRemaining = 5;
 
-        $scope.commitTitleLowerThird = function () {
-            // $scope.lowerThirds.leftLowerThirdUpperText = $scope.lowerThirds.lltuScratch;
-            // $scope.lowerThirds.leftLowerThirdLowerText = $scope.lowerThirds.lltlScratch;
-            $scope.lowerThirds.rightLowerThirdUpperText = $scope.lowerThirds.rltuScratch;
-            $scope.lowerThirds.rightLowerThirdLowerText = $scope.lowerThirds.rltlScratch;
-        };
+        // $scope.commitTitleLowerThird = function () {
+        //     // $scope.lowerThirds.leftLowerThirdUpperText = $scope.lowerThirds.lltuScratch;
+        //     // $scope.lowerThirds.leftLowerThirdLowerText = $scope.lowerThirds.lltlScratch;
+        //     $scope.lowerThirds.rightLowerThirdUpperText = $scope.lowerThirds.rltuScratch;
+        //     $scope.lowerThirds.rightLowerThirdLowerText = $scope.lowerThirds.rltlScratch;
+        // };
 
         $scope.commitHeadlineLowerThird = function() {
             $scope.lowerThirds.headlineTop = $scope.lowerThirds.hlTopScratch;
@@ -85,7 +85,7 @@ app.controller('lowerThirdsCGController', ['$scope', '$timeout', '$interval', 's
 
         $scope.triggerTitleLowerThird = function () {
             // $scope.commitTitleLowerThird();
-            socket.emit("lowerThirds:showTitle", [$scope.lltuScratch, $scope.lltlScratch]);
+            socket.emit("lowerThirds:showTitle", [$scope.lltuScratch, $scope.lltlScratch, $scope.rltuScratch, $scope.rltlScratch]);
             $interval(function () {
                 $scope.timeRemaining--;
             }, 1000, 5);
