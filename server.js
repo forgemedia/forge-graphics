@@ -37,12 +37,12 @@ io.on('connection', function(socket) {
 		io.sockets.emit("lowerThirds:hideTitle");
 	});
 
-	socket.on('lowerThirds:showHeadlineLowerThird', function(msg) {
-		io.sockets.emit("lowerThirds:showHeadlineLowerThird", msg);
+	socket.on('lowerThirds:showHeadline', function(msg) {
+		io.sockets.emit("lowerThirds:showHeadline", msg);
 	});
 
-	socket.on('lowerThirds:hideHeadlineLowerThird', function() {
-		io.sockets.emit("lowerThirds:hideHeadlineLowerThird");
+	socket.on('lowerThirds:hideHeadline', function() {
+		io.sockets.emit("lowerThirds:hideHeadline");
 	});
 
     socket.on('lowerThirds:get', function(msg) {

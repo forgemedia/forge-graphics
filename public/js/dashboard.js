@@ -94,7 +94,7 @@ app.controller('lowerThirdsCGController', ['$scope', '$timeout', '$interval', 's
             // $scope.lowerThirds.showLargeTop = true;
             // socket.emit("lowerThirds:showHeadlineLargeTop");
             // $scope.lowerThirds.showHeadlineLowerThird = true;
-            socket.emit("lowerThirds:showHeadlineLowerThird", [$scope.hlTopScratch, $scope.hlMainScratch]);
+            socket.emit("lowerThirds:showHeadline", [$scope.hlTopScratch, $scope.hlMainScratch]);
 
             // $timeout(function() {
             //     socket.emit("lowerThirds:hideHeadlineLargeTop");
@@ -102,7 +102,7 @@ app.controller('lowerThirdsCGController', ['$scope', '$timeout', '$interval', 's
         };
 
         $scope.hideHeadlineLowerThird = function () {
-            socket.emit("lowerThirds:hideHeadlineLowerThird");
+            socket.emit("lowerThirds:hideHeadline");
         };
 
         socket.on("lowerThirds", function (msg) {
