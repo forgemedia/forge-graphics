@@ -9,12 +9,12 @@
 </head>
 
 <body>
-    <div ng-controller="generalCtrl">
-        <div id="hashtag" ng-show="state.showHashtag && state.showLogo">
+    <div>
+        <div ng-controller="generalCtrl" id="hashtag" ng-show="state.showHashtag && state.showLogo">
             <span>#knowyourvote</span>
         </div>
         <div id="main-container">
-            <div class="lowerThird titleLowerThird" ng-show="state.showTitleLowerThird">
+            <div ng-controller="lowerThirdsCtrl" class="lowerThird titleLowerThird" ng-show="state.showTitleLowerThird">
                 <div class="upperSegmentBackground">
                     <div class="lowerThirdContainer">
                         <div class="leftLowerThird">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class="lowerThird headlineLowerThird" ng-show="state.showHeadlineLowerThird">
+            <div ng-controller="lowerThirdsCtrl" class="lowerThird headlineLowerThird" ng-show="state.showHeadlineLowerThird">
                 <div class="largeTopSegmentBackground" ng-show="state.showLargeTop">
                     <div class="lowerThirdContainer">
                         <div class="textRow">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div id="bug">
+            <div ng-controller="generalCtrl" id="bug">
                 <div id="logo" ng-show="state.showLogo">
                     <img id="polls" src="/img/polls.svg" />
                     <img id="forge" src="/img/forge.svg" />
@@ -68,7 +68,7 @@
                     <div class="liveSegmentText" ng-show="liveToggle"><span>LIVE</span></div>
                 </div>
             </div>
-            <div id="ticker" ng-show="state.showTicker && state.showLogo">
+            <div ng-controller="generalCtrl" id="ticker" ng-show="state.showTicker && state.showLogo">
                 <span></span>
             </div>
         </div>

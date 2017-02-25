@@ -8,6 +8,7 @@ var io = require('socket.io').listen(server);
 var debug = true;
 
 var general = {};
+var lowerThirds = {};
 
 io.on('connection', function(socket) {
 	console.log('  Client connected');
@@ -20,6 +21,16 @@ io.on('connection', function(socket) {
 
     socket.on('general:get', function(msg) {
 		io.sockets.emit('general', general);
+	});
+
+	socket.on('lowerThirds', function(msg) {
+		if (debug) console.log('* lowerThirds', msg);
+        lowerThirds = msg;
+		io.sockets.emit('lowerThirds', msg);
+	});
+
+    socket.on('lowerThirds:get', function(msg) {
+		io.sockets.emit('lowerThirds', lowerThirds);
 	});
 });
 

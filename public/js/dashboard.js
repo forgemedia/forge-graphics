@@ -13,6 +13,12 @@ app.controller('AppCtrl', ['$scope', '$location',
             url: '/general',
             type: 'link'
         });
+
+        $scope.menu.push({
+            name: 'Lower Thirds',
+            url: '/lowerThirds',
+            type: 'link'
+        });
     }
 ]);
 
@@ -28,59 +34,16 @@ app.config(['$routeProvider', 'localStorageServiceProvider',
                 templateUrl: '/templates/general.html',
                 controller: 'generalCGController'
             })
+            .when("/lowerThirds", {
+                templateUrl: '/templates/lowerThirds.html',
+                controller: 'lowerThirdsCGController'
+            })
             .otherwise({redirectTo: '/general'});
     }
 ]);
 
-app.controller('generalCGController', ['$scope', '$timeout', '$interval', 'socket',
-    function($scope, $timeout, $interval, socket){
-        $scope.topSelections = [
-            "Breaking News",
-            "Incoming Result"
-        ];
-
-        $scope.timeRemaining = 5;
-
-        $scope.commitTitleLowerThird = function () {
-            $scope.general.leftLowerThirdUpperText = $scope.general.lltuScratch;
-            $scope.general.leftLowerThirdLowerText = $scope.general.lltlScratch;
-            $scope.general.rightLowerThirdUpperText = $scope.general.rltuScratch;
-            $scope.general.rightLowerThirdLowerText = $scope.general.rltlScratch;
-        };
-
-        $scope.commitHeadlineLowerThird = function() {
-            $scope.general.headlineTop = $scope.general.hlTopScratch;
-            $scope.general.headlineMain = $scope.general.hlMainScratch;
-        };
-
-        $scope.triggerTitleLowerThird = function () {
-            $scope.commitTitleLowerThird();
-            $scope.general.showTitleLowerThird = true;
-            $interval(function () {
-                $scope.timeRemaining--;
-            }, 1000, 5);
-            $timeout(function() {
-                $scope.general.showTitleLowerThird = false;
-            }, 5000);
-            $timeout(function() {
-                $scope.timeRemaining = 5;
-            }, 6000);
-        };
-
-        $scope.triggerHeadlineLowerThird = function () {
-            $scope.commitHeadlineLowerThird();
-            $scope.general.showLargeTop = true;
-            $scope.general.showHeadlineLowerThird = true;
-
-            $timeout(function() {
-                $scope.general.showLargeTop = false;
-            }, 6000);
-        };
-
-        $scope.hideHeadlineLowerThird = function () {
-            $scope.general.showHeadlineLowerThird = false;
-        };
-
+app.controller('generalCGController', ['$scope', 'socket',
+    function($scope, socket){
         socket.on("general", function (msg) {
             $scope.general = msg;
         });
@@ -95,6 +58,73 @@ app.controller('generalCGController', ['$scope', '$timeout', '$interval', 'socke
 
         function getGeneralData() {
             socket.emit("general:get");
+        };
+    }
+]);
+
+app.controller('lowerThirdsCGController', ['$scope', '$timeout', '$interval', 'socket',
+    function($scope, $timeout, $interval, socket){
+        $scope.topSelections = [
+            "Breaking News",
+            "Incoming Result"
+        ];
+
+        $scope.timeRemaining = 5;
+
+        $scope.commitTitleLowerThird = function () {
+            $scope.lowerThirds.leftLowerThirdUpperText = $scope.lowerThirds.lltuScratch;
+            $scope.lowerThirds.leftLowerThirdLowerText = $scope.lowerThirds.lltlScratch;
+            $scope.lowerThirds.rightLowerThirdUpperText = $scope.lowerThirds.rltuScratch;
+            $scope.lowerThirds.rightLowerThirdLowerText = $scope.lowerThirds.rltlScratch;
+        };
+
+        $scope.commitHeadlineLowerThird = function() {
+            $scope.lowerThirds.headlineTop = $scope.lowerThirds.hlTopScratch;
+            $scope.lowerThirds.headlineMain = $scope.lowerThirds.hlMainScratch;
+        };
+
+        $scope.triggerTitleLowerThird = function () {
+            $scope.commitTitleLowerThird();
+            $scope.lowerThirds.showTitleLowerThird = true;
+            $interval(function () {
+                $scope.timeRemaining--;
+            }, 1000, 5);
+            $timeout(function() {
+                $scope.lowerThirds.showTitleLowerThird = false;
+            }, 5000);
+            $timeout(function() {
+                $scope.timeRemaining = 5;
+            }, 6000);
+        };
+
+        $scope.triggerHeadlineLowerThird = function () {
+            $scope.commitHeadlineLowerThird();
+            $scope.lowerThirds.showLargeTop = true;
+            $scope.lowerThirds.showHeadlineLowerThird = true;
+
+            $timeout(function() {
+                $scope.lowerThirds.showLargeTop = false;
+            }, 6000);
+        };
+
+        $scope.hideHeadlineLowerThird = function () {
+            $scope.lowerThirds.showHeadlineLowerThird = false;
+        };
+
+        socket.on("lowerThirds", function (msg) {
+            $scope.lowerThirds = msg;
+        });
+
+        $scope.$watch('lowerThirds', function() {
+            if ($scope.lowerThirds) {
+                socket.emit("lowerThirds", $scope.lowerThirds);
+            } else {
+                getlowerThirdsData();
+            }
+        }, true);
+
+        function getlowerThirdsData() {
+            socket.emit("lowerThirds:get");
         };
     }
 ]);
