@@ -96,17 +96,5 @@ app.controller('lowerThirdsCGController', ['$scope', '$timeout', '$interval', 's
         socket.on("lowerThirds", function (msg) {
             $scope.lowerThirds = msg;
         });
-
-        $scope.$watch('lowerThirds', function() {
-            if ($scope.lowerThirds) {
-                socket.emit("lowerThirds", $scope.lowerThirds);
-            } else {
-                getlowerThirdsData();
-            }
-        }, true);
-
-        function getlowerThirdsData() {
-            socket.emit("lowerThirds:get");
-        };
     }
 ]);

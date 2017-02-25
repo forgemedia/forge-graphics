@@ -44,10 +44,6 @@ io.on('connection', function(socket) {
 	socket.on('lowerThirds:hideHeadline', function() {
 		io.sockets.emit("lowerThirds:hideHeadline");
 	});
-
-    socket.on('lowerThirds:get', function(msg) {
-		io.sockets.emit('lowerThirds', lowerThirds);
-	});
 });
 
 app.use(express.static(__dirname + '/public'));

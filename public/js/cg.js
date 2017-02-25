@@ -78,16 +78,6 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
             $scope.state = state;
         });
 
-        $scope.$watch('lowerThirds', function() {
-            if (!$scope.state) {
-                getLowerThirdsData();
-            }
-        }, true);
-
-        function getLowerThirdsData() {
-            socket.emit("lowerThirds:get");
-        }
-
         var tick = function () {
             $timeout(tick, $scope.tickInterval);
         };
