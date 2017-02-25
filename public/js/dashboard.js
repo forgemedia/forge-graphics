@@ -71,20 +71,12 @@ app.controller('lowerThirdsCGController', ['$scope', '$timeout', '$interval', 's
 
         $scope.timeRemaining = 5;
 
-        // $scope.commitTitleLowerThird = function () {
-        //     // $scope.lowerThirds.leftLowerThirdUpperText = $scope.lowerThirds.lltuScratch;
-        //     // $scope.lowerThirds.leftLowerThirdLowerText = $scope.lowerThirds.lltlScratch;
-        //     $scope.lowerThirds.rightLowerThirdUpperText = $scope.lowerThirds.rltuScratch;
-        //     $scope.lowerThirds.rightLowerThirdLowerText = $scope.lowerThirds.rltlScratch;
+        // $scope.commitHeadlineLowerThird = function() {
+        //     $scope.lowerThirds.headlineTop = $scope.lowerThirds.hlTopScratch;
+        //     $scope.lowerThirds.headlineMain = $scope.lowerThirds.hlMainScratch;
         // };
 
-        $scope.commitHeadlineLowerThird = function() {
-            $scope.lowerThirds.headlineTop = $scope.lowerThirds.hlTopScratch;
-            $scope.lowerThirds.headlineMain = $scope.lowerThirds.hlMainScratch;
-        };
-
         $scope.triggerTitleLowerThird = function () {
-            // $scope.commitTitleLowerThird();
             socket.emit("lowerThirds:showTitle", [$scope.lltuScratch, $scope.lltlScratch, $scope.rltuScratch, $scope.rltlScratch]);
             $interval(function () {
                 $scope.timeRemaining--;
@@ -98,17 +90,19 @@ app.controller('lowerThirdsCGController', ['$scope', '$timeout', '$interval', 's
         };
 
         $scope.triggerHeadlineLowerThird = function () {
-            $scope.commitHeadlineLowerThird();
-            $scope.lowerThirds.showLargeTop = true;
-            $scope.lowerThirds.showHeadlineLowerThird = true;
+            // $scope.commitHeadlineLowerThird();
+            // $scope.lowerThirds.showLargeTop = true;
+            // socket.emit("lowerThirds:showHeadlineLargeTop");
+            // $scope.lowerThirds.showHeadlineLowerThird = true;
+            socket.emit("lowerThirds:showHeadlineLowerThird", [$scope.hlTopScratch, $scope.hlMainScratch]);
 
-            $timeout(function() {
-                $scope.lowerThirds.showLargeTop = false;
-            }, 6000);
+            // $timeout(function() {
+            //     socket.emit("lowerThirds:hideHeadlineLargeTop");
+            // }, 6000);
         };
 
         $scope.hideHeadlineLowerThird = function () {
-            $scope.lowerThirds.showHeadlineLowerThird = false;
+            socket.emit("lowerThirds:hideHeadlineLowerThird");
         };
 
         socket.on("lowerThirds", function (msg) {

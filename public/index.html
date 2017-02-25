@@ -36,24 +36,24 @@
                     </div>
                 </div>
             </div>
-            <div ng-controller="lowerThirdsCtrl" class="lowerThird headlineLowerThird" ng-show="state.showHeadlineLowerThird">
-                <div class="largeTopSegmentBackground" ng-show="state.showLargeTop">
+            <div ng-controller="lowerThirdsCtrl" class="lowerThird headlineLowerThird" ng-show="showHeadlineLowerThird">
+                <div class="largeTopSegmentBackground" ng-show="showHeadlineLargeTop">
                     <div class="lowerThirdContainer">
                         <div class="textRow">
-                            <div class="segment largeTopSegment"><span>{{state.headlineTop}}</span></div>
+                            <div class="segment largeTopSegment"><span>{{headlineTop}}</span></div>
                         </div>
                     </div>
                 </div>
-                <div class="upperSegmentBackground" ng-show="state.showHeadlineLowerThird && !state.showLargeTop">
+                <div class="upperSegmentBackground" ng-show="showHeadlineLowerThird && !showHeadlineLargeTop">
                     <div class="lowerThirdContainer">
                         <div class="textRow">
-                            <div class="segment upperSegment"><span>{{state.headlineTop}}</span></div>
+                            <div class="segment upperSegment"><span>{{headlineTop}}</span></div>
                         </div>
                     </div>
                 </div>
-                <div class="lowerSegmentBackground" ng-show="state.showHeadlineLowerThird && !state.showLargeTop">
+                <div class="lowerSegmentBackground" ng-show="showHeadlineLowerThird && !showHeadlineLargeTop">
                     <div class="lowerThirdContainer">
-                        <div class="segment lowerSegment" ng-show="state.showHeadlineLowerThird && !state.showLargeTop"><span>{{state.headlineMain}}</span></div>
+                        <div class="segment lowerSegment" ng-show="showHeadlineLowerThird && !showHeadlineLargeTop"><span>{{headlineMain}}</span></div>
                     </div>
                 </div>
             </div>

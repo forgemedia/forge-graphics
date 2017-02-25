@@ -43,6 +43,8 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
         $scope.tickInterval = 1000;
 
         $scope.showTitle = false;
+        $scope.showHeadlineLargeTop = false;
+        $scope.showHeadlineLowerThird = false;
 
         socket.on("lowerThirds:showTitle", function(msg) {
             if ($scope.showTitle) $scope.showTitle = false;
@@ -51,6 +53,21 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
             $scope.rightUpperTitleText = msg[2];
             $scope.rightLowerTitleText = msg[3];
             $scope.showTitle = true;
+        });
+
+        socket.on("lowerThirds:showHeadlineLowerThird", function(msg) {
+            if ($scope.showHeadlineLowerThird) $scope.showHeadlineLowerThird = false;
+            $scope.showHeadlineLargeTop = true;
+            $scope.headlineTop = msg[0];
+            $scope.headlineMain = msg[1];
+            $scope.showHeadlineLowerThird = true;
+            $timeout(function() {
+                $scope.showHeadlineLargeTop = false;
+            }, 6000);
+        });
+
+        socket.on("lowerThirds:hideHeadlineLowerThird", function() {
+            $scope.showHeadlineLowerThird = false;
         });
 
         socket.on("lowerThirds:hideTitle", function() {

@@ -41,15 +41,15 @@
     <div class="form-group">
         <label for="ltHeadline">Headline Lower Third Text (must be kept as short as possible)</label>
         <!-- <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="lowerThirds.hlTopScratch" placeholder="Top"></input> -->
-        <select class="form-control" ng-model="lowerThirds.hlTopScratch" ng-options="topSel for topSel in topSelections"></select>
-        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="lowerThirds.hlMainScratch" placeholder="Headline"></input>
+        <select class="form-control" ng-model="hlTopScratch" ng-options="topSel for topSel in topSelections"></select>
+        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="hlMainScratch" placeholder="Headline"></input>
     </div>
     <div class="form-group">
         <button
             class="btn btn-danger"
             ng-disabled="lowerThirds.showTitleLowerThird || lowerThirds.showHeadlineLowerThird"
             ng-click="triggerHeadlineLowerThird()">Show</button>
-        <button class="btn btn-warning" ng-disabled="!lowerThirds.showHeadlineLowerThird" ng-click="hideHeadlineLowerThird()">Hide</button>
+        <button class="btn btn-warning" ng-click="hideHeadlineLowerThird()">Hide</button>
     </div>
     <!-- <div class="form-group">
         <div class="checkbox">
