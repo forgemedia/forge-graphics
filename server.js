@@ -11,7 +11,7 @@ var general = {};
 var lowerThirds = {};
 
 io.on('connection', function(socket) {
-	console.log('  Client connected');
+	if (debug) console.log('  Client connected');
 
 	socket.on('general', function(msg) {
 		if (debug) console.log('* general', msg);
