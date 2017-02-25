@@ -1,6 +1,6 @@
 {
-	"name": "graphic-retest",
-	"version": "0.1.0",
+	"name": "forge-graphics-server",
+	"version": "0.2.0",
 	"dependencies": {
 		"express": "*",
 		"socket.io": "*",
