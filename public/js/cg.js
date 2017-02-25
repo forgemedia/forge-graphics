@@ -44,7 +44,10 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
 
         $scope.showTitle = false;
 
-        socket.on("lowerThirds:showTitle", function() {
+        socket.on("lowerThirds:showTitle", function(msg) {
+            if ($scope.showTitle) $scope.showTitle = false;
+            $scope.leftUpperTitleText = msg[0];
+            $scope.leftLowerTitleText = msg[1];
             $scope.showTitle = true;
         });
 
