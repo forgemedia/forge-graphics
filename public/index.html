@@ -14,7 +14,7 @@
             <span>#knowyourvote</span>
         </div>
         <div id="main-container">
-            <div ng-controller="lowerThirdsCtrl" class="lowerThird titleLowerThird" ng-show="state.showTitleLowerThird">
+            <div ng-controller="lowerThirdsCtrl" class="lowerThird titleLowerThird" ng-show="showTitle">
                 <div class="upperSegmentBackground">
                     <div class="lowerThirdContainer">
                         <div class="leftLowerThird">
@@ -25,7 +25,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="lowerSegmentBackground" ng-show="state.showTitleLowerThird">
+                <div class="lowerSegmentBackground" ng-show="showTitle">
                     <div class="lowerThirdContainer">
                         <div class="leftLowerThird">
                             <div class="segment lowerSegment"><span>{{state.leftLowerThirdLowerText}}</span></div>

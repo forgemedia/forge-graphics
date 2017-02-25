@@ -85,12 +85,12 @@ app.controller('lowerThirdsCGController', ['$scope', '$timeout', '$interval', 's
 
         $scope.triggerTitleLowerThird = function () {
             $scope.commitTitleLowerThird();
-            $scope.lowerThirds.showTitleLowerThird = true;
+            socket.emit("lowerThirds:showTitle")
             $interval(function () {
                 $scope.timeRemaining--;
             }, 1000, 5);
             $timeout(function() {
-                $scope.lowerThirds.showTitleLowerThird = false;
+                socket.emit("lowerThirds:hideTitle")
             }, 5000);
             $timeout(function() {
                 $scope.timeRemaining = 5;

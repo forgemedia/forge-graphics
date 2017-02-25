@@ -4,19 +4,21 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
     function($scope, $timeout, $interval, socket){
         $scope.tickInterval = 1000;
 
+        socket.emit("general:get");
+
         socket.on("general", function (state) {
             $scope.state = state;
         });
 
-        $scope.$watch('general', function() {
-            if (!$scope.state) {
-                getGeneralData();
-            }
-        }, true);
-
-        function getGeneralData() {
-            socket.emit("general:get");
-        }
+        // $scope.$watch('general', function() {
+        //     if (!$scope.state) {
+        //         getGeneralData();
+        //     }
+        // }, true);
+        //
+        // function getGeneralData() {
+        //     socket.emit("general:get");
+        // }
 
         $scope.colonOnBool = true;
 
@@ -39,6 +41,16 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
 app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
     function($scope, $timeout, $interval, socket){
         $scope.tickInterval = 1000;
+
+        $scope.showTitle = false;
+
+        socket.on("lowerThirds:showTitle", function() {
+            $scope.showTitle = true;
+        });
+
+        socket.on("lowerThirds:hideTitle", function() {
+            $scope.showTitle = false;
+        });
 
         socket.on("lowerThirds", function (state) {
             $scope.state = state;
