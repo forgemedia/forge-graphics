@@ -19,9 +19,6 @@
     <div class="form-group">
         <button
         class="btn btn-danger"
-        ng-disabled="
-        lowerThirds.showHeadlineLowerThird ||
-        lowerThirds.showTitleLowerThird"
         ng-click="triggerTitleLowerThird()">Show ({{timeRemaining}} seconds)</button></span>
     </div>
 </form>
@@ -38,7 +35,6 @@
     <div class="form-group">
         <button
             class="btn btn-danger"
-            ng-disabled="lowerThirds.showTitleLowerThird || lowerThirds.showHeadlineLowerThird"
             ng-click="triggerHeadlineLowerThird()">Show</button>
         <button class="btn btn-warning" ng-click="hideHeadlineLowerThird()">Hide</button>
     </div>
