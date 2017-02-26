@@ -53,6 +53,9 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
             $scope.rightUpperTitleText = msg[2];
             $scope.rightLowerTitleText = msg[3];
             $scope.showTitle = true;
+            $timeout(function() {
+                $scope.showTitle = false;
+            }, 6000);
         });
 
         socket.on("lowerThirds:showHeadline", function(msg) {
@@ -68,10 +71,6 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
 
         socket.on("lowerThirds:hideHeadline", function() {
             $scope.showHeadline = false;
-        });
-
-        socket.on("lowerThirds:hideTitle", function() {
-            $scope.showTitle = false;
         });
 
         socket.on("lowerThirds", function (state) {

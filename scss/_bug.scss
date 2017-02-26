@@ -69,7 +69,7 @@ $logo-width: $logo-left + 9vw;
 
     #logo.ng-hide-add,
     #logo.ng-hide-remove {
-        transition: transform 0.5s $cubic-bezier, opacity 0.5s $cubic-bezier;
+        transition: transform 0.75s $cubic-bezier, opacity 0.75s $cubic-bezier;
     }
 
     #logo.ng-hide-add {
@@ -126,6 +126,11 @@ $logo-width: $logo-left + 9vw;
     .liveSegment.ng-hide {
         opacity: 0;
         transform: translate(-15vw, 0);
+    }
+
+    .liveSegment.ng-hide-remove {
+        transition-duration: 1s;
+        transition-delay: 0.5s;
     }
 
     .liveSegment.ng-hide-add {

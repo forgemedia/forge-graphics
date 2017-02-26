@@ -33,10 +33,6 @@ io.on('connection', function(socket) {
 		io.sockets.emit("lowerThirds:showTitle", msg);
 	});
 
-	socket.on('lowerThirds:hideTitle', function() {
-		io.sockets.emit("lowerThirds:hideTitle");
-	});
-
 	socket.on('lowerThirds:showHeadline', function(msg) {
 		io.sockets.emit("lowerThirds:showHeadline", msg);
 	});

@@ -88,9 +88,6 @@ app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$ti
                 $scope.timeRemaining--;
             }, 1000, 5);
             $timeout(function() {
-                socket.emit("lowerThirds:hideTitle")
-            }, 5000);
-            $timeout(function() {
                 $scope.timeRemaining = 5;
             }, 6000);
         };
