@@ -96,6 +96,10 @@ app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$ti
             socket.emit("lowerThirds:showHeadline", $scope.ltHeadlineDashEntries);
         };
 
+        $scope.updateHeadlineLowerThird = function () {
+            socket.emit("lowerThirds:updateHeadline", $scope.ltHeadlineDashEntries);
+        }
+
         $scope.hideHeadlineLowerThird = function () {
             socket.emit("lowerThirds:hideHeadline");
         };

@@ -69,6 +69,11 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
             }, 6000);
         });
 
+        socket.on("lowerThirds:updateHeadline", function(msg) {
+            $scope.headlineTop = msg[0];
+            $scope.headlineMain = msg[1];
+        });
+
         socket.on("lowerThirds:hideHeadline", function() {
             $scope.showHeadline = false;
         });
