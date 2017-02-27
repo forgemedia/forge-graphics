@@ -15,10 +15,10 @@
     }
 
     .upperSegment {
-        margin-top: 0.5vw;
+        margin-top: 0.2vw;
         span {
             font-size: 4vw;
-            //font-weight: 700;
+            font-weight: 700;
             //padding-top: 0.65vw;
             //padding-bottom: 0.3vw;
             color: $light-colour;
@@ -27,7 +27,7 @@
     }
 
     .lowerSegment {
-        margin-top: 0.6vw;
+        margin-top: 0.4vw;
         span {
             //padding-top: 1.6vw;
             font-size: 1.8vw;
@@ -38,7 +38,7 @@
     }
 
     .upperSegmentBackground {
-        background: $dark-blue-colour;
+        background: $colour-b;
         height: ($lower-third-height / 8) * 5;
         position: relative;
         z-index: 2;
@@ -48,7 +48,7 @@
 
     .lowerSegmentBackground {
         //@include span(10 of 12);
-        background: $light-blue-colour;
+        background: $colour-c;
         position: relative;
         height: ($lower-third-height / 8) * 3;
         //transform: translateY(-$lower-third-height / 5);

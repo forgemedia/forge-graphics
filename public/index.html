@@ -10,9 +10,9 @@
 
 <body>
     <div>
-        <div ng-controller="generalCtrl" id="hashtag" ng-show="state.showHashtag && state.showLogo">
+        <!-- <div ng-controller="generalCtrl" id="hashtag" ng-show="state.showHashtag && state.showLogo">
             <span>#knowyourvote</span>
-        </div>
+        </div> -->
         <div id="main-container">
             <div ng-controller="lowerThirdsCtrl" class="lowerThird titleLowerThird" ng-show="showTitle">
                 <div class="upperSegmentBackground">
@@ -59,8 +59,8 @@
             </div>
             <div ng-controller="generalCtrl" id="bug">
                 <div id="logo" ng-show="state.showLogo">
-                    <img id="polls" src="/img/polls.svg" />
-                    <img id="forge" src="/img/forge.svg" />
+                    <!-- <img id="polls" src="/img/polls.svg" /> -->
+                    <img id="forge" src="/img/forgetv.svg" />
                 </div>
                 <div class="liveSegment" ng-show="state.showLogo && state.showLive">
                     <!-- <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH"}}&nbsp;<span style="padding-top: .1vw" ng-show="colonOnBool">:</span>&nbsp;{{clock|date:"mm"}}</span></div> -->
@@ -68,9 +68,9 @@
                     <div class="liveSegmentText" ng-show="liveToggle"><span>LIVE</span></div>
                 </div>
             </div>
-            <div ng-controller="generalCtrl" id="ticker" ng-show="state.showTicker && state.showLogo">
+            <!-- <div ng-controller="generalCtrl" id="ticker" ng-show="state.showTicker && state.showLogo">
                 <span></span>
-            </div>
+            </div> -->
         </div>
     </div>
 

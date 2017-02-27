@@ -1,7 +1,6 @@
 .lowerThird.headlineLowerThird {
     transition: transform 1s $cubic-bezier, opacity 1s $cubic-bezier;
 
-
     // Container
     .lowerThirdContainer {
         .textRow {
@@ -19,27 +18,27 @@
     }
 
     .upperSegment {
-        margin-top: 0.45vw;
+        margin-top: 0.4vw;
         span {
-            font-size: 1.5vw;
+            font-size: 1.4vw;
             //font-weight: 700;
             //padding-top: 0.65vw;
             //padding-bottom: 0.3vw;
-            color: $yellow-colour;
+            color: $light-colour;
             //letter-spacing: -0.2vw;
         }
     }
 
     .lowerSegment, .largeTopSegment {
-        margin-top: 0.75vw;
+        margin-top: 0.25vw;
         float: left;
         width: $main-container-width;
         span {
             //padding-top: 1.6vw;
-            font-size: 4vw;
-            font-weight: 500;
+            font-size: 4.5vw;
+            font-weight: 700;
             color: $light-colour;
-            //letter-spacing: -0.2vw;
+            letter-spacing: -0.1vw;
         }
         transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
         transition-delay: 0.2s;
@@ -47,7 +46,7 @@
 
     .largeTopSegment {
         span {
-            color: $yellow-colour;
+            //color: $colour-a;
         }
     }
 
@@ -70,7 +69,7 @@
 
     // Segment backgrounds
     .upperSegmentBackground {
-        background: $light-blue-colour;
+        background: $colour-b;
         height: ($lower-third-height / 20) * 6;
         position: absolute;
         z-index: 2;
@@ -82,7 +81,7 @@
 
     .lowerSegmentBackground, .largeTopSegmentBackground {
         //@include span(10 of 12);
-        background: $dark-blue-colour;
+        background: $colour-c;
         position: absolute;
         top: ($lower-third-height / 20) * 6;
         height: ($lower-third-height / 20) * 14;
@@ -95,7 +94,7 @@
     }
 
     .largeTopSegmentBackground {
-        background: $light-blue-colour;
+        background: $colour-b;
         z-index: 0;
     }
 
