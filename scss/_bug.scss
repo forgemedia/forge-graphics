@@ -30,6 +30,10 @@ $logo-width: $logo-left + 8vw;
         box-shadow: $right-box-shadow;
     }
 
+    .noBoxShadow {
+        box-shadow: none;
+    }
+
     #logo {
         width: $logo-width;
         //border-top-right-radius: $bug-border-radius;

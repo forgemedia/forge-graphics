@@ -30,6 +30,10 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
 
         $scope.liveToggle = true;
 
+        // $scope.tickerItems = [
+        //
+        // ];
+
         $interval(function () {
             $scope.liveToggle = !$scope.liveToggle;
         }, 10000);
