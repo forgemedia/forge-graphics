@@ -69,7 +69,9 @@
 
     // Segment backgrounds
     .upperSegmentBackground {
-        background: $colour-b;
+        background: $inverse-overlay-background, $colour-b;
+        background-blend-mode: multiply, normal;
+        //box-shadow: $lower-box-shadow;
         height: ($lower-third-height / 20) * 6;
         position: absolute;
         z-index: 2;
@@ -81,7 +83,9 @@
 
     .lowerSegmentBackground, .largeTopSegmentBackground {
         //@include span(10 of 12);
-        background: $colour-c;
+        background: $overlay-background, $colour-c;
+        background-blend-mode: multiply, normal;
+        box-shadow: $lower-box-shadow;
         position: absolute;
         top: ($lower-third-height / 20) * 6;
         height: ($lower-third-height / 20) * 14;

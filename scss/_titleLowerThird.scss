@@ -38,7 +38,9 @@
     }
 
     .upperSegmentBackground {
-        background: $colour-b;
+        background: $overlay-background, $colour-b;
+        background-blend-mode: multiply, normal;
+        box-shadow: $lower-box-shadow;
         height: ($lower-third-height / 8) * 5;
         position: relative;
         z-index: 2;
@@ -48,8 +50,10 @@
 
     .lowerSegmentBackground {
         //@include span(10 of 12);
-        background: $colour-c;
+        background: $inverse-overlay-background, $colour-c;
+        background-blend-mode: multiply, normal;
         position: relative;
+        box-shadow: $lower-box-shadow;
         height: ($lower-third-height / 8) * 3;
         //transform: translateY(-$lower-third-height / 5);
         z-index: 0;

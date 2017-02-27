@@ -27,13 +27,15 @@ $logo-width: $logo-left + 8vw;
         overflow: hidden;
         padding-left: 0.5vw;
         //box-shadow: inset 0px 20px 10px -20px rgba(0,0,0,0.6);
+        box-shadow: $right-box-shadow;
     }
 
     #logo {
         width: $logo-width;
         //border-top-right-radius: $bug-border-radius;
         //border-bottom-right-radius: $bug-border-radius;
-        background: $bug-logo-bgcolour;
+        background: $overlay-background, $bug-logo-bgcolour;
+        background-blend-mode: multiply, normal;
         z-index: 2;
         //padding-left: 1vw;
 

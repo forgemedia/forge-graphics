@@ -107,10 +107,13 @@
     line-height: 3vw;
     border: 0 solid #646464;
     overflow: hidden;
-    padding-left: 0.5vw; }
+    padding-left: 0.5vw;
+    box-shadow: 10px 0px 18px -10px rgba(0, 0, 0, 0.45); }
   #bug #logo {
     width: 18vw;
-    background: #aa0000;
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #aa0000;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #aa0000;
+    background-blend-mode: multiply, normal;
     z-index: 2; }
     #bug #logo img {
       display: inline-block;
@@ -136,8 +139,8 @@
             transition-delay: 0.25s; }
   #bug .liveSegment {
     color: #ffffff;
-    background: -webkit-linear-gradient(top, transparent 0%, transparent 100%), #880000;
-    background: linear-gradient(to bottom, transparent 0%, transparent 100%), #880000;
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #880000;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #880000;
     background-blend-mode: multiply, normal;
     font-size: 2vw;
     font-weight: 500;
@@ -266,7 +269,10 @@
     letter-spacing: -0.1vw; }
 
 .lowerThird.titleLowerThird .upperSegmentBackground {
-  background: #aa0000;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #aa0000;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #aa0000;
+  background-blend-mode: multiply, normal;
+  box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
   height: 9.375vh;
   position: relative;
   z-index: 2;
@@ -274,8 +280,11 @@
   border-top-right-radius: 0; }
 
 .lowerThird.titleLowerThird .lowerSegmentBackground {
-  background: #880000;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, transparent 100%), #880000;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, transparent 100%), #880000;
+  background-blend-mode: multiply, normal;
   position: relative;
+  box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
   height: 5.625vh;
   z-index: 0;
   -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
@@ -332,7 +341,9 @@
     -webkit-transform: translateX(-4vw);
             transform: translateX(-4vw); }
   .lowerThird.headlineLowerThird .upperSegmentBackground {
-    background: #aa0000;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, transparent 100%), #aa0000;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, transparent 100%), #aa0000;
+    background-blend-mode: multiply, normal;
     height: 4.5vh;
     position: absolute;
     z-index: 2;
@@ -344,7 +355,10 @@
     transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
     transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1); }
   .lowerThird.headlineLowerThird .lowerSegmentBackground, .lowerThird.headlineLowerThird .largeTopSegmentBackground {
-    background: #880000;
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #880000;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #880000;
+    background-blend-mode: multiply, normal;
+    box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
     position: absolute;
     top: 4.5vh;
     height: 10.5vh;
