@@ -75,7 +75,7 @@ app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$ti
 
         $scope.topSelections = [
             "Breaking News",
-            "Incoming Result"
+            "Question Time Updates"
         ];
 
         $scope.hlTopScratch = $scope.topSelections[0];

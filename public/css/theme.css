@@ -324,7 +324,7 @@
       font-size: 1.4vw;
       color: #ffffff; }
   .lowerThird.headlineLowerThird .lowerSegment, .lowerThird.headlineLowerThird .largeTopSegment {
-    margin-top: 0.25vw;
+    margin-top: 0.175vw;
     float: left;
     width: 80vw;
     -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
