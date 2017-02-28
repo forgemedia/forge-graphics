@@ -194,7 +194,7 @@
 #hashtag {
   width: 80vw;
   position: absolute;
-  top: 2vw;
+  top: 3vw;
   left: 10vw;
   text-align: right;
   -webkit-transition: opacity 0.5s linear 0.75s;
