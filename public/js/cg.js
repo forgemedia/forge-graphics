@@ -10,6 +10,10 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
             $scope.state = state;
         });
 
+        socket.on("general:resetcg", function() {
+            location.reload();
+        });
+
         // $scope.$watch('general', function() {
         //     if (!$scope.state) {
         //         getGeneralData();

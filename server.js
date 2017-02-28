@@ -23,6 +23,10 @@ io.on('connection', function(socket) {
 		io.sockets.emit('general', general);
 	});
 
+	socket.on('general:resetcg', function() {
+		io.sockets.emit('general:resetcg');
+	});
+
 	socket.on('lowerThirds', function(msg) {
 		if (debug) console.log('* lowerThirds', msg);
         lowerThirds = msg;

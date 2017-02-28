@@ -56,6 +56,11 @@ app.controller('generalCGController', ['$scope', 'socket',
             }
         }, true);
 
+
+        $scope.triggerResetCG = function () {
+            socket.emit("general:resetcg");
+        };
+
         function getGeneralData() {
             socket.emit("general:get");
         };
