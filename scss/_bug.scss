@@ -126,6 +126,12 @@ $logo-width: $logo-left + 9vw;
         }
     }
 
+    .liveSegment.redLive {
+        background: $overlay-background, $colour-d;
+        background-blend-mode: multiply, normal;
+        color: $light-colour;
+    }
+
     .liveSegment.ng-hide {
         opacity: 0;
         transform: translate(-15vw, 0);

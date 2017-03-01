@@ -182,6 +182,11 @@
       -webkit-transform: translate(-50%, 0);
               transform: translate(-50%, 0);
       opacity: 0; }
+  #bug .liveSegment.redLive {
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #880000;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #880000;
+    background-blend-mode: multiply, normal;
+    color: #ffffff; }
   #bug .liveSegment.ng-hide {
     opacity: 0;
     -webkit-transform: translate(-15vw, 0);
