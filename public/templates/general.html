@@ -46,7 +46,7 @@
             <button
                 class="btn btn-warning"
                 ng-click="commitTickerItems()">
-                Update ticker
+                Update ticker (Instant; use carefully)
             </button>
             <button
                 class="btn btn-danger"
@@ -65,7 +65,8 @@
                     </button>
                 </div>
                 <div class="col-md-11">
-                    <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="ti"></input>
+                    <!-- <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="ti"></input> -->
+                    <span>{{ti}}</span>
                 </div>
             </div>
         </div>
