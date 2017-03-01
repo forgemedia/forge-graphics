@@ -18,22 +18,56 @@
                 Show Hashtag
             </label>
         </div>
-        <!-- <div class="checkbox checkbox-indented">
+        <div class="checkbox checkbox-indented">
             <label>
                 <toggle ng-model="general.showTicker"></toggle>
                 Show Ticker
             </label>
         </div>
         <div class="form-group">
-            <p>Ticker items</p>
-            <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-repeat="ti in general.tickerItems" placeholder="Headline"></input>
-        </div> -->
-        <div class="form-group">
             <button
                 class="btn btn-danger"
                 ng-click="triggerResetCG()">
                 Reset Character Generator
             </button>
+        </div>
+        <div class="page-header">
+            <h3>Ticker items</h3>
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="newTickerItem"></input>
+            </div>
+            <button
+                class="btn btn-success"
+                ng-click="addTickerItem()">
+                Add item
+            </button>
+            <button
+                class="btn btn-warning"
+                ng-click="commitTickerItems()">
+                Update ticker
+            </button>
+            <button
+                class="btn btn-danger"
+                ng-click="resetTicker()">
+                Reset ticker items
+            </button>
+            <span><small>Press this if you cannot add items to the ticker</small></span>
+        </div>
+        <div class="form-group container">
+            <div class="form-group row" ng-repeat="ti in general.tickerItems track by $index">
+                <div class="col-md-1">
+                    <button
+                        class="btn btn-sm btn-warning"
+                        ng-click="removeTickerItem($index)">
+                        Remove item
+                    </button>
+                </div>
+                <div class="col-md-11">
+                    <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="ti"></input>
+                </div>
+            </div>
         </div>
     </div>
 </form>

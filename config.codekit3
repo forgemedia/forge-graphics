@@ -313,6 +313,153 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/bower_components\/angular-drag-to-reorder\/.bower.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/.bower.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/angular-drag-to-reorder\/.editorconfig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/.editorconfig",
+		"oF": 0
+		},
+	"\/bower_components\/angular-drag-to-reorder\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/.gitignore",
+		"oF": 0
+		},
+	"\/bower_components\/angular-drag-to-reorder\/bower.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/bower.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/angular-drag-to-reorder\/demo\/demo.coffee": {
+		"ft": 32,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/demo\/demo.coffee",
+		"oF": 0,
+		"oS": 0,
+		"sC": 1
+		},
+	"\/bower_components\/angular-drag-to-reorder\/demo\/images\/GitHub-Mark-32px.png": {
+		"ft": 32768,
+		"iS": 1714,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/demo\/images\/GitHub-Mark-32px.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/bower_components\/angular-drag-to-reorder\/demo\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/demo\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-drag-to-reorder\/demo\/styles\/reset.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/demo\/styles\/reset.scss",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/bower_components\/angular-drag-to-reorder\/demo\/styles\/style.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/demo\/styles\/style.scss",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/bower_components\/angular-drag-to-reorder\/dist\/angular-drag-to-reorder.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/dist\/angular-drag-to-reorder.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-drag-to-reorder\/dist\/angular-drag-to-reorder.min.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/dist\/angular-drag-to-reorder.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-drag-to-reorder\/gulpfile.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/gulpfile.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-drag-to-reorder\/LICENSE": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/LICENSE",
+		"oF": 0
+		},
+	"\/bower_components\/angular-drag-to-reorder\/package.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/package.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/angular-drag-to-reorder\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/README.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/angular-drag-to-reorder\/src\/angular-drag-to-reorder.coffee": {
+		"ft": 32,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-drag-to-reorder\/src\/angular-drag-to-reorder.coffee",
+		"oF": 0,
+		"oS": 0,
+		"sC": 1
+		},
 	"\/bower_components\/angular-local-storage\/.bower.json": {
 		"ft": 524288,
 		"oA": 2,

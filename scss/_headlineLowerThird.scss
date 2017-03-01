@@ -18,7 +18,7 @@
     }
 
     .upperSegment {
-        margin-top: 0.4vw;
+        margin-top: 0.5vw;
         span {
             font-size: 1.4vw;
             //font-weight: 700;
@@ -30,13 +30,13 @@
     }
 
     .lowerSegment, .largeTopSegment {
-        margin-top: 0.175vw;
+        margin-top: 0.4vw;
         float: left;
         width: $main-container-width;
         span {
             //padding-top: 1.6vw;
             font-size: 4.5vw;
-            font-weight: 700;
+            //font-weight: 700;
             color: $light-colour;
             letter-spacing: -0.1vw;
         }
@@ -98,7 +98,8 @@
     }
 
     .largeTopSegmentBackground {
-        background: $colour-b;
+        background: $overlay-background, $colour-b;
+        background-blend-mode: multiply, normal;
         z-index: 0;
     }
 

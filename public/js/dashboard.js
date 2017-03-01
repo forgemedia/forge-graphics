@@ -56,6 +56,22 @@ app.controller('generalCGController', ['$scope', 'socket',
             }
         }, true);
 
+        $scope.resetTicker = function() {
+            $scope.general.tickerItems = [];
+        };
+
+        $scope.addTickerItem = function() {
+            if ($scope.newTickerItem) $scope.general.tickerItems.push($scope.newTickerItem);
+            $scope.newTickerItem = "";
+        };
+
+        $scope.commitTickerItems = function() {
+            $scope.general.cTickerItems = $scope.general.tickerItems.slice();
+        };
+
+        $scope.removeTickerItem = function(index) {
+            $scope.general.tickerItems.splice(index, 1);
+        };
 
         $scope.triggerResetCG = function () {
             socket.emit("general:resetcg");
@@ -80,21 +96,22 @@ app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$ti
 
         $scope.topSelections = [
             "Breaking News",
-            "Question Time Updates"
+            "Incoming Result",
+            "Forge Debates Updates"
         ];
 
         $scope.hlTopScratch = $scope.topSelections[0];
 
-        $scope.timeRemaining = 5;
+        // $scope.timeRemaining = 10;
 
         $scope.triggerTitleLowerThird = function () {
             socket.emit("lowerThirds:showTitle", $scope.ltTitleDashEntries);
-            $interval(function () {
-                $scope.timeRemaining--;
-            }, 1000, 5);
-            $timeout(function() {
-                $scope.timeRemaining = 5;
-            }, 6000);
+            // $interval(function () {
+            //     $scope.timeRemaining--;
+            // }, 1000, 10);
+            // $timeout(function() {
+            //     $scope.timeRemaining = 10;
+            // }, 11000);
         };
 
         $scope.triggerHeadlineLowerThird = function () {

@@ -1,8 +1,8 @@
-$duration: 30s;
+$duration: 40s;
 
 @keyframes ticker {
     0% {
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(35%, 0, 0);
         visibility: visible;
     }
 
@@ -28,10 +28,10 @@ $duration: 30s;
 
 .ticker-contents {
     text-transform: uppercase;
-    font-weight: 700;
+    //font-weight: 700;
     display: inline-block;
-    height: 4rem;
-    line-height: 4rem;
+    //height: 4rem;
+    //line-height: 4rem;
     white-space: nowrap; // display items in a line
     padding-right: 100%; // ensure items go before animations repeat (taken from parent due to inline-block)
     animation-iteration-count: infinite;
@@ -53,16 +53,17 @@ $duration: 30s;
 
 .ticker-item {
     display: inline-block;
-    padding-top: .2vw;
-    font-size: 1.8vw;
+    padding-top: 0.25vw;
+    font-size: 2.25vw;
+    position: relative;
     //color: white;
 }
 
 .ticker-item:after {
     display: inline-block;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    content: "";
+    padding-left: 4vw;
+    padding-right: 4vw;
+    content: "—";
 }
 
 //body {

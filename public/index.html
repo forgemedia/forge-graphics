@@ -11,7 +11,7 @@
 <body>
     <div>
         <div ng-controller="generalCtrl" id="hashtag" ng-show="state.showHashtag && state.showLogo">
-            <span>#shefsuvote</span>
+            <span>#knowyourvote</span>
         </div>
         <div id="main-container">
             <div ng-controller="lowerThirdsCtrl" class="lowerThird titleLowerThird" ng-show="showTitle">
@@ -59,8 +59,8 @@
             </div>
             <div ng-controller="generalCtrl" id="bug">
                 <div id="logo" ng-show="state.showLogo">
-                    <!-- <img id="polls" src="/img/polls.svg" /> -->
-                    <img id="forge" src="/img/forgetv.svg" />
+                    <img id="polls" src="/img/polls.svg" />
+                    <img id="forge" src="/img/forge.svg" />
                 </div>
                 <div class="liveSegment" ng-show="state.showLogo && state.showLive" ng-class="{ 'noBoxShadow': state.showTicker }">
                     <!-- <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH"}}&nbsp;<span style="padding-top: .1vw" ng-show="colonOnBool">:</span>&nbsp;{{clock|date:"mm"}}</span></div> -->
@@ -70,7 +70,7 @@
             </div>
             <div ng-controller="generalCtrl" id="ticker" ng-show="state.showTicker && state.showLogo" >
                 <div class="ticker-contents">
-                    <div class="ticker-item" ng-repeat="ti in state.tickerItems">{{ti}}</div>
+                    <div class="ticker-item" ng-repeat="ti in state.cTickerItems track by $index">{{ti}}</div>
                 </div>
             </div>
         </div>

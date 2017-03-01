@@ -12,7 +12,8 @@
         "normalize-css": "latest",
         "ng-socket-io": "latest",
         "angular-local-storage": "latest",
-        "susy": "latest"
+        "susy": "latest",
+        "angular-drag-to-reorder": "latest"
     },
     "private": true,
     "resolutions": {

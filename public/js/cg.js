@@ -63,7 +63,7 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
             $scope.showTitle = true;
             $timeout(function() {
                 $scope.showTitle = false;
-            }, 6000);
+            }, 10000);
         });
 
         socket.on("lowerThirds:showHeadline", function(msg) {
