@@ -15,9 +15,9 @@
     }
 
     .upperSegment {
-        margin-top: 0.3vw;
+        margin-top: 0.8vw;
         span {
-            font-size: 4vw;
+            font-size: 3vw;
             //font-weight: 700;
             //padding-top: 0.65vw;
             //padding-bottom: 0.3vw;
@@ -27,12 +27,12 @@
     }
 
     .lowerSegment {
-        margin-top: 0.55vw;
+        margin-top: 0.5vw;
         span {
             //padding-top: 1.6vw;
             font-size: 1.8vw;
             font-weight: 500;
-            color: $light-colour;
+            color: $dark-colour;
             letter-spacing: -0.1vw;
         }
     }
@@ -50,7 +50,7 @@
 
     .lowerSegmentBackground {
         //@include span(10 of 12);
-        background: $inverse-overlay-background, $colour-c;
+        background: $inverse-overlay-background, $light-colour;
         background-blend-mode: multiply, normal;
         position: relative;
         box-shadow: $lower-box-shadow;

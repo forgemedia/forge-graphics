@@ -1,10 +1,6 @@
 // Style variables
 $bug-border-radius: $bug-height / 4;
 $bug-border-width: 0;
-
-$bug-logo-bgcolour: $colour-b;
-$bug-live-bgcolour: $colour-c;
-
 // Business logic
 $bug-border: $bug-border-width solid $border-colour;
 
@@ -38,7 +34,7 @@ $logo-width: $logo-left + 9vw;
         width: $logo-width;
         //border-top-right-radius: $bug-border-radius;
         //border-bottom-right-radius: $bug-border-radius;
-        background: $overlay-background, $bug-logo-bgcolour;
+        background: $overlay-background, $colour-b;
         background-blend-mode: multiply, normal;
         z-index: 2;
         //padding-left: 1vw;
@@ -86,8 +82,8 @@ $logo-width: $logo-left + 9vw;
     .liveSegment {
         // Style
         padding-top: 0.1vw;
-        color: $light-colour;
-        background: $overlay-background, $bug-live-bgcolour;
+        color: $dark-colour;
+        background: $overlay-background, $light-colour;
         background-blend-mode: multiply, normal;
         font-size: 2.25vw;
         //font-weight: normal;

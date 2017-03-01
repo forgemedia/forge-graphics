@@ -28,10 +28,10 @@ $cubic-bezier-reverse: cubic-bezier(.75, 0, 1, .25);
 
 $perspective: 25vw;
 
-$bug-top: 85vh;
+//$bug-top: 105vh;
 $bug-height: 3vw;
-$lower-third-top: 70vh;
-$lower-third-height: $bug-top - $lower-third-top;
+$lower-third-top: 72vh;
+$lower-third-height: 8vw;
 
 $main-container-width: 80vw;
 $main-margin: (100vw - $main-container-width) / 2;
@@ -56,5 +56,5 @@ body {
 
 #main-container {
     position: absolute;
-    top: 70vh;
+    top: $lower-third-top;
 }
