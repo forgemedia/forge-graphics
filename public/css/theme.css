@@ -405,6 +405,88 @@
   -webkit-transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1) 2s;
   transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1) 2s; }
 
+.lowerThird.ongoingLowerThird {
+  -webkit-transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 1s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 1s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: transform 1s cubic-bezier(0, 0.75, 0.75, 1), opacity 1s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: transform 1s cubic-bezier(0, 0.75, 0.75, 1), opacity 1s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 1s cubic-bezier(0, 0.75, 0.75, 1); }
+  .lowerThird.ongoingLowerThird .lowerThirdContainer .textRow {
+    position: absolute;
+    width: 80vw; }
+  .lowerThird.ongoingLowerThird .segment {
+    text-transform: uppercase; }
+  .lowerThird.ongoingLowerThird .upperSegment {
+    margin-top: 0.55vw; }
+    .lowerThird.ongoingLowerThird .upperSegment span {
+      font-size: 2.5vw;
+      color: #ffffff; }
+  .lowerThird.ongoingLowerThird .lowerSegment {
+    margin-top: 0.55vw;
+    float: left;
+    width: 80vw;
+    -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s; }
+    .lowerThird.ongoingLowerThird .lowerSegment span {
+      font-size: 2.55vw;
+      color: #ffffff;
+      letter-spacing: -0.1vw; }
+  .lowerThird.ongoingLowerThird .lowerSegment.ng-hide-remove {
+    opacity: 0;
+    -webkit-transform: translateX(-4vw);
+            transform: translateX(-4vw); }
+  .lowerThird.ongoingLowerThird .upperSegmentBackground {
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, transparent 100%), #2d2f7f;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, transparent 100%), #2d2f7f;
+    background-blend-mode: multiply, normal;
+    height: 4vw;
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1); }
+  .lowerThird.ongoingLowerThird .lowerSegmentBackground {
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #26bae1;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #26bae1;
+    background-blend-mode: multiply, normal;
+    box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
+    position: absolute;
+    top: 4vw;
+    height: 4vw;
+    width: 100vw;
+    z-index: 3;
+    -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1); }
+  .lowerThird.ongoingLowerThird .upperSegmentBackground.ng-hide {
+    opacity: 0;
+    -webkit-transform: translateY(2vw);
+            transform: translateY(2vw); }
+  .lowerThird.ongoingLowerThird .upperSegmentBackground.ng-hide-remove {
+    -webkit-transition-delay: 1.2s;
+            transition-delay: 1.2s; }
+  .lowerThird.ongoingLowerThird .lowerSegmentBackground.ng-hide-remove {
+    opacity: 0; }
+  .lowerThird.ongoingLowerThird .lowerSegmentBackground.ng-hide {
+    opacity: 0;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+            transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+    -webkit-transition-delay: .5s;
+            transition-delay: .5s; }
+  .lowerThird.ongoingLowerThird .lowerSegmentBackground.ng-hide-add {
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s; }
+
+.lowerThird.ongoingLowerThird.ng-hide-add {
+  -webkit-transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1) 2s;
+  transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1) 2s; }
+
 @-webkit-keyframes ticker {
   0% {
     -webkit-transform: translate3d(35%, 0, 0);

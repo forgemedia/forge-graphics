@@ -57,6 +57,20 @@
                     </div>
                 </div>
             </div>
+            <div ng-controller="lowerThirdsCtrl" class="lowerThird ongoingLowerThird" ng-show="showOngoing">
+                <div class="upperSegmentBackground" ng-show="showOngoing">
+                    <div class="lowerThirdContainer">
+                        <div class="textRow">
+                            <div class="segment upperSegment"><span>{{ongoingTop}}</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lowerSegmentBackground" ng-show="showOngoing">
+                    <div class="lowerThirdContainer">
+                        <div class="segment lowerSegment" ng-show="showOngoing"><span>{{ongoingMain}}</span></div>
+                    </div>
+                </div>
+            </div>
             <div ng-controller="generalCtrl" id="bug">
                 <div id="logo" ng-show="state.showLogo">
                     <img id="polls" src="/img/polls.svg" />

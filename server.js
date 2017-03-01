@@ -48,6 +48,14 @@ io.on('connection', function(socket) {
 	socket.on('lowerThirds:hideHeadline', function() {
 		io.sockets.emit("lowerThirds:hideHeadline");
 	});
+
+	socket.on('lowerThirds:showOngoing', function(msg) {
+		io.sockets.emit("lowerThirds:showOngoing", msg);
+	});
+
+	socket.on('lowerThirds:hideOngoing', function() {
+		io.sockets.emit("lowerThirds:hideOngoing");
+	});
 });
 
 app.use(express.static(__dirname + '/public'));

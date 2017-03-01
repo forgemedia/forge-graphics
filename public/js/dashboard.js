@@ -87,12 +87,16 @@ app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$ti
     function($scope, localStorageService, $timeout, $interval, $window, socket){
         var titleStored = localStorageService.get('lt_title');
         var headlineStored = localStorageService.get('lt_headline');
+        var ongoingStored = localStorageService.get('lt_ongoing');
 
         if (titleStored === null) $scope.ltTitleDashEntries = [];
         else $scope.ltTitleDashEntries = titleStored;
 
         if (headlineStored === null) $scope.ltHeadlineDashEntries = [];
         else $scope.ltHeadlineDashEntries = headlineStored;
+
+        if (ongoingStored === null) $scope.ltOngoingDashEntries = [];
+        else $scope.ltOngoingDashEntries = ongoingStored;
 
         $scope.topSelections = [
             "Breaking News",
@@ -120,10 +124,18 @@ app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$ti
 
         $scope.updateHeadlineLowerThird = function () {
             socket.emit("lowerThirds:updateHeadline", $scope.ltHeadlineDashEntries);
-        }
+        };
 
         $scope.hideHeadlineLowerThird = function () {
             socket.emit("lowerThirds:hideHeadline");
+        };
+
+        $scope.triggerOngoingLowerThird = function () {
+            socket.emit("lowerThirds:showOngoing", $scope.ltOngoingDashEntries);
+        };
+
+        $scope.hideOngoingLowerThird = function () {
+            socket.emit("lowerThirds:hideOngoing");
         };
 
         socket.on("lowerThirds", function (msg) {
@@ -133,6 +145,8 @@ app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$ti
         $scope.storeEntries = function() {
             localStorageService.set('lt_title', $scope.ltTitleDashEntries);
             localStorageService.set('lt_headline', $scope.ltHeadlineDashEntries);
+            localStorageService.set('lt_ongoing', $scope.ltOngoingDashEntries);
+
         };
 
         $scope.$on("$destroy", $scope.storeEntries);

@@ -53,6 +53,7 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
         $scope.showTitle = false;
         $scope.showHeadlineLargeTop = false;
         $scope.showHeadline = false;
+        $scope.showOngoing = false;
 
         socket.on("lowerThirds:showTitle", function(msg) {
             if ($scope.showTitle) $scope.showTitle = false;
@@ -84,6 +85,17 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
 
         socket.on("lowerThirds:hideHeadline", function() {
             $scope.showHeadline = false;
+        });
+
+        socket.on("lowerThirds:showOngoing", function(msg) {
+            if ($scope.showOngoing) $scope.showOngoing = false;
+            $scope.ongoingTop = msg[0];
+            $scope.ongoingMain = msg[1];
+            $scope.showOngoing = true;
+        });
+
+        socket.on("lowerThirds:hideOngoing", function() {
+            $scope.showOngoing = false;
         });
 
         socket.on("lowerThirds", function (state) {
