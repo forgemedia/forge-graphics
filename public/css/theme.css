@@ -573,12 +573,11 @@
       .barChart .barContainer .bar span.tally {
         z-index: 2;
         float: right;
-        font-family: "AG Book Rounded Std Medium"; }
+        font-weight: 700; }
     .barChart .barContainer span, .barChart .barContainer .name {
       line-height: 2.5vw;
       font-size: 2vw;
-      margin-left: .5vw;
-      font-family: "AG Book Rounded Std Regular"; }
+      margin-left: .5vw; }
     .barChart .barContainer .name {
       width: 10vw;
       text-overflow: fade; }
