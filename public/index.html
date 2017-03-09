@@ -10,6 +10,11 @@
 
 <body>
     <div>
+		<div ng-controller="generalCtrl" ng-show="showVotesGraph || showFinalGraph" id="barChartContainer">
+			<span class="bcTitle">{{curPos}}: {{round}} Round <small>{{curWinner}} wins</small></span>
+			<div class="barChart" id="bc1" ng-show="showVotesGraph"></div>
+			<div class="barChart" id="bc2" ng-show="showFinalGraph"></div>
+		</div>
         <div ng-controller="generalCtrl" id="hashtag" ng-show="state.showHashtag && state.showLogo">
             <span>#knowyourvote</span>
         </div>
@@ -94,6 +99,8 @@
     <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="/bower_components/angular-animate/angular-animate.js"></script>
     <script type="text/javascript" src="/bower_components/ng-socket-io/ng-socket-io.js"></script>
+	<script type="text/javascript" src="/bower_components/d3/d3.js"></script>
+	<script type="text/javascript" src="/js/chart.js"></script>
     <script type="text/javascript" src="/js/cg.js"></script>
 </body>
 

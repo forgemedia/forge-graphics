@@ -545,6 +545,71 @@
   padding-right: 4vw;
   content: "—"; }
 
+.barChart {
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4)), #e6e5e5;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4)), #e6e5e5;
+  width: 80vw;
+  margin: 1vw 1vh;
+  left: 10vw;
+  top: 10vh;
+  position: absolute;
+  padding: 1vw 1vw;
+  border-radius: 1vw; }
+  .barChart .barContainer {
+    height: 2.5vw;
+    margin: .5vw;
+    overflow: hidden; }
+    .barChart .barContainer * {
+      float: left; }
+    .barChart .barContainer .bar {
+      padding-right: .5vw;
+      border-radius: .5vw;
+      -webkit-transition: background 0.5s linear;
+      transition: background 0.5s linear; }
+      .barChart .barContainer .bar * {
+        float: none; }
+      .barChart .barContainer .bar span {
+        color: #ffffff; }
+      .barChart .barContainer .bar span.tally {
+        z-index: 2;
+        float: right;
+        font-family: "AG Book Rounded Std Medium"; }
+    .barChart .barContainer span, .barChart .barContainer .name {
+      line-height: 2.5vw;
+      font-size: 2vw;
+      margin-left: .5vw;
+      font-family: "AG Book Rounded Std Regular"; }
+    .barChart .barContainer .name {
+      width: 10vw;
+      text-overflow: fade; }
+
+#barChartContainer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  background: #2d2f7f; }
+  #barChartContainer span.bcTitle {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 5vh;
+    font-size: 3vw;
+    -webkit-transition: opacity 0.25s linear;
+    transition: opacity 0.25s linear;
+    color: #ffffff; }
+  #barChartContainer span small {
+    color: #cccccc; }
+  #barChartContainer span.bcTitle.ng-hide {
+    opacity: 0; }
+
+#barChartContainer.ng-hide {
+  opacity: 0; }
+
 body {
   margin: 0;
   background: transparent;

@@ -1,12 +1,12 @@
 var app = angular.module('cgApp', ['socket-io', 'ngAnimate']);
 
 app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
-    function($scope, $timeout, $interval, socket){
+    function($scope, $timeout, $interval, socket) {
         $scope.tickInterval = 1000;
 
         socket.emit("general:get");
 
-        socket.on("general", function (state) {
+        socket.on("general", function(state) {
             $scope.state = state;
         });
 
@@ -26,11 +26,50 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
 
         $scope.colonOnBool = true;
 
-        var tick = function () {
+        var tick = function() {
             $scope.clock = Date.now();
             $scope.colonOnBool = !$scope.colonOnBool;
             $timeout(tick, $scope.tickInterval);
         };
+
+        $scope.showVotesGraph = false;
+		$scope.showFinalGraph = false;
+		$scope.curWinner = "";
+		$scope.curPos = "";
+		$scope.round = "";
+
+        socket.on("general:showVotesGraph", function(msg) {
+			$scope.curWinner = msg[2];
+			$scope.curPos = msg[1];
+            d3.csv("/chartdata/" + msg[0], type, function(error, data) {
+				console.log("AAA");
+				$scope.round = "First";
+	            $scope.showVotesGraph = true;
+                barChartVotes("#bc1", data, error, false);
+                // barChartVotes("#bc2", data, error, true);
+				$timeout(function() {
+					$scope.showVotesGraph = false;
+					$scope.round = "Final";
+					$scope.showFinalGraph = true;
+	                // $scope.showVotesGraph = false;
+	                angular.element(document.querySelector('#bc1')).empty();
+					// $scope.showVotesGraph = true;
+	                barChartVotes("#bc2", data, error, true);
+
+	            }, 10000);
+				$timeout(function() {
+					$scope.showFinalGraph = false;
+					angular.element(document.querySelector('#bc2')).empty();
+				}, 20000);
+            });
+        });
+
+		socket.on("general:destroyVotesGraph", function() {
+			$scope.showVotesGraph = false;
+			$scope.showFinalGraph = false;
+			angular.element(document.querySelector('#bc1')).empty();
+			angular.element(document.querySelector('#bc2')).empty();
+		});
 
         $scope.liveToggle = true;
 
@@ -38,16 +77,16 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
         //
         // ];
 
-        $interval(function () {
+        $interval(function() {
             $scope.liveToggle = !$scope.liveToggle;
-        }, 10000);
+        }, 2000);
 
         $timeout(tick, $scope.tickInterval);
     }
 ]);
 
 app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
-    function($scope, $timeout, $interval, socket){
+    function($scope, $timeout, $interval, socket) {
         $scope.tickInterval = 1000;
 
         $scope.showTitle = false;
@@ -98,11 +137,11 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
             $scope.showOngoing = false;
         });
 
-        socket.on("lowerThirds", function (state) {
+        socket.on("lowerThirds", function(state) {
             $scope.state = state;
         });
 
-        var tick = function () {
+        var tick = function() {
             $timeout(tick, $scope.tickInterval);
         };
 

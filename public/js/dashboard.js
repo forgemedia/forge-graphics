@@ -77,6 +77,14 @@ app.controller('generalCGController', ['$scope', 'socket',
             socket.emit("general:resetcg");
         };
 
+		$scope.triggerVotesGraph = function() {
+			socket.emit("general:showVotesGraph", [$scope.votesCsvFile, $scope.vwPos, $scope.vwWin]);
+		};
+
+		$scope.triggerVotesGraphDestruction = function() {
+			socket.emit("general:destroyVotesGraph");
+		};
+
         function getGeneralData() {
             socket.emit("general:get");
         };
@@ -101,7 +109,14 @@ app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$ti
         $scope.topSelections = [
             "Breaking News",
             "Incoming Result",
-            "Forge Debates Updates"
+            "President",
+			"Activities Officer",
+			"Welfare Officer",
+			"Women's Officer",
+			"SU Development Officer",
+			"International Students' Officer",
+			"Sports Officer",
+			"Education Officer"
         ];
 
         $scope.hlTopScratch = $scope.topSelections[0];

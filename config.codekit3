@@ -2521,6 +2521,64 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/bower_components\/d3\/.bower.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/d3\/.bower.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/d3\/bower.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/d3\/bower.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/d3\/d3.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/d3\/d3.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/d3\/d3.min.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/d3\/d3.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/d3\/LICENSE": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/d3\/LICENSE",
+		"oF": 0
+		},
+	"\/bower_components\/d3\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/d3\/README.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"\/bower_components\/jquery\/.bower.json": {
 		"ft": 524288,
 		"oA": 2,
@@ -4550,6 +4608,12 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/public\/chartdata\/test.csv": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/chartdata\/test.csv",
+		"oF": 0
+		},
 	"\/public\/css\/dashboard.css": {
 		"aP": 1,
 		"bl": 0,
@@ -4775,6 +4839,15 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"\/public\/js\/chart.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/public\/js\/chart-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/public\/js\/dashboard.js": {
 		"ft": 64,
 		"mi": 0,
@@ -4824,6 +4897,19 @@
 		"oA": 1,
 		"oAP": "\/public\/css\/_bug.css",
 		"oF": 1,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/scss\/_chart.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/public\/css\/_chart.css",
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},

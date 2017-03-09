@@ -1,22 +1,23 @@
 {
-    "name": "forge-graphics-server",
-    "version": "0.2.0",
-    "dependencies": {
-        "bootstrap": "latest",
-        "angular-bootstrap-toggle": "latest",
-        "jquery": "latest",
-        "angular": ">1.6.0",
-        "angular-animate": ">1.6.0",
-        "angular-route": ">1.6.0",
-        "angular-aria": ">1.6.0",
-        "normalize-css": "latest",
-        "ng-socket-io": "latest",
-        "angular-local-storage": "latest",
-        "susy": "latest",
-        "angular-drag-to-reorder": "latest"
-    },
-    "private": true,
-    "resolutions": {
-        "angular": ">1.6.0"
-    }
+  "name": "forge-graphics-server",
+  "version": "0.2.0",
+  "dependencies": {
+    "bootstrap": "latest",
+    "angular-bootstrap-toggle": "latest",
+    "jquery": "latest",
+    "angular": ">1.6.0",
+    "angular-animate": ">1.6.0",
+    "angular-route": ">1.6.0",
+    "angular-aria": ">1.6.0",
+    "normalize-css": "latest",
+    "ng-socket-io": "latest",
+    "angular-local-storage": "latest",
+    "susy": "latest",
+    "angular-drag-to-reorder": "latest",
+    "d3": "^4.7.1"
+  },
+  "private": true,
+  "resolutions": {
+    "angular": ">1.6.0"
+  }
 }

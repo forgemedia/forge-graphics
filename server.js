@@ -27,6 +27,14 @@ io.on('connection', function(socket) {
 		io.sockets.emit('general:resetcg');
 	});
 
+	socket.on('general:showVotesGraph', function(msg) {
+		io.sockets.emit('general:showVotesGraph', msg);
+	});
+
+	socket.on('general:destroyVotesGraph', function() {
+		io.sockets.emit('general:destroyVotesGraph');
+	});
+
 	socket.on('lowerThirds', function(msg) {
 		if (debug) console.log('* lowerThirds', msg);
         lowerThirds = msg;
