@@ -104,7 +104,7 @@ $logo-width: $logo-left + 9vw;
 			}
         }
 
-		&.redLive {
+		&.altLive {
 			@include overlay($colour-d);
 			color: $light-colour;
 		}

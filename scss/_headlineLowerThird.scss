@@ -17,7 +17,7 @@
     .upperSegment {
 		@extend %headlineSegment !optional;
 
-        margin-top: 0.5vw;
+        margin-top: 0.35vw;
 
         span {
             font-size: 2vw;
@@ -51,7 +51,7 @@
     .lowerSegment {
 		@extend %headlineSegment !optional;
 
-        margin-top: 0.62vw;
+        margin-top: 0.4vw;
         float: left;
         width: $main-container-width;
 

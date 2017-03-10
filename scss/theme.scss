@@ -1,4 +1,6 @@
-// Varsity Graphics Theme
+@import "../bower_components/normalize-scss/_normalize";
+@import "../bower_components/susy/sass/susy";
+@import "../node_modules/spline-scss/dist/spline";
 
 * {
     box-sizing: border-box;
@@ -15,10 +17,8 @@ $dark-colour: #646464;
 $mid-colour: #d0d0d0;
 $light-colour: #ffffff;
 
-//$overlay-background: linear-gradient(to bottom, rgba(0,0,0,.1) 0%,rgba(0,0,0,.3) 50%,rgba(0,0,0,.25) 51%,rgba(0,0,0,.1) 100%);
 $overlay-background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%);
-$inverse-overlay-background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0) 100%);
-//$component-inset-shadow: 0 0 1vw 0 rgba(0,0,0,0.5);
+$inverse-overlay-background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%);
 $component-inset-shadow: 0 0 0 0 rgba(0,0,0,0);
 $lower-box-shadow: 0px 10px 18px -10px rgba(0,0,0,0.45);
 $right-box-shadow: 10px 0px 18px -10px rgba(0,0,0,0.45);
@@ -37,7 +37,6 @@ $lower-third-height: 8vw;
 $main-container-width: 80vw;
 $main-margin: (100vw - $main-container-width) / 2;
 
-@import "../bower_components/susy/sass/susy";
 @import 'mixins';
 @import 'fonts';
 @import 'bug';

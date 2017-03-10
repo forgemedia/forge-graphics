@@ -3681,41 +3681,36 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/bower_components\/normalize-css\/.bower.json": {
+	"\/bower_components\/normalize-scss\/.bower.json": {
 		"ft": 524288,
 		"oA": 2,
-		"oAP": "\/bower_components\/normalize-css\/.bower.json",
+		"oAP": "\/bower_components\/normalize-scss\/.bower.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/bower_components\/normalize-css\/.editorconfig": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/bower_components\/normalize-css\/.editorconfig",
-		"oF": 0
+	"\/bower_components\/normalize-scss\/_normalize.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/bower_components\/normalize-scss\/_normalize.scss",
+		"oF": 0,
+		"oS": 1,
+		"uL": 1
 		},
-	"\/bower_components\/normalize-css\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/bower_components\/normalize-css\/.gitignore",
-		"oF": 0
-		},
-	"\/bower_components\/normalize-css\/.travis.yml": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/bower_components\/normalize-css\/.travis.yml",
-		"oF": 0
-		},
-	"\/bower_components\/normalize-css\/bower.json": {
+	"\/bower_components\/normalize-scss\/bower.json": {
 		"ft": 524288,
 		"oA": 2,
-		"oAP": "\/bower_components\/normalize-css\/bower.json",
+		"oAP": "\/bower_components\/normalize-scss\/bower.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/bower_components\/normalize-css\/LICENSE.md": {
+	"\/bower_components\/normalize-scss\/LICENSE.md": {
 		"cS": 0,
 		"eF": 1,
 		"eL": 1,
@@ -3724,7 +3719,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 2,
-		"oAP": "\/bower_components\/normalize-css\/LICENSE.md",
+		"oAP": "\/bower_components\/normalize-scss\/LICENSE.md",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -3733,15 +3728,33 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/bower_components\/normalize-css\/normalize.css": {
+	"\/bower_components\/normalize-scss\/normalize.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/bower_components\/normalize-css\/normalize.css",
+		"oAP": "\/bower_components\/normalize-scss\/normalize.css",
 		"oF": 0,
 		"oS": 0
+		},
+	"\/bower_components\/normalize-scss\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/normalize-scss\/README.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"\/bower_components\/susy\/.bower.json": {
 		"ft": 524288,

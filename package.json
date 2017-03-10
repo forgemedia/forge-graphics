@@ -1,9 +1,10 @@
 {
-	"name": "forge-graphics-server",
-	"version": "0.2.0",
-	"dependencies": {
-		"express": "*",
-		"socket.io": "*",
-		"underscore": "*"
-	}
+  "name": "forge-graphics-server",
+  "version": "0.2.0",
+  "dependencies": {
+    "express": "*",
+    "socket.io": "*",
+    "spline-scss": "^2.2.0",
+    "underscore": "*"
+  }
 }
