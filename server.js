@@ -5,12 +5,13 @@ var app = express();
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
-var debug = true;
+var debug = false;
 
 var general = {};
+var lowerThirds = {};
 
 io.on('connection', function(socket) {
-	console.log('  Client connected');
+	if (debug) console.log('  Client connected');
 
 	socket.on('general', function(msg) {
 		if (debug) console.log('* general', msg);
@@ -20,6 +21,48 @@ io.on('connection', function(socket) {
 
     socket.on('general:get', function(msg) {
 		io.sockets.emit('general', general);
+	});
+
+	socket.on('general:resetcg', function() {
+		io.sockets.emit('general:resetcg');
+	});
+
+	socket.on('general:showVotesGraph', function(msg) {
+		io.sockets.emit('general:showVotesGraph', msg);
+	});
+
+	socket.on('general:destroyVotesGraph', function() {
+		io.sockets.emit('general:destroyVotesGraph');
+	});
+
+	socket.on('lowerThirds', function(msg) {
+		if (debug) console.log('* lowerThirds', msg);
+        lowerThirds = msg;
+		io.sockets.emit('lowerThirds', msg);
+	});
+
+	socket.on('lowerThirds:showTitle', function(msg) {
+		io.sockets.emit("lowerThirds:showTitle", msg);
+	});
+
+	socket.on('lowerThirds:showHeadline', function(msg) {
+		io.sockets.emit("lowerThirds:showHeadline", msg);
+	});
+
+	socket.on('lowerThirds:updateHeadline', function(msg) {
+		io.sockets.emit("lowerThirds:updateHeadline", msg);
+	});
+
+	socket.on('lowerThirds:hideHeadline', function() {
+		io.sockets.emit("lowerThirds:hideHeadline");
+	});
+
+	socket.on('lowerThirds:showOngoing', function(msg) {
+		io.sockets.emit("lowerThirds:showOngoing", msg);
+	});
+
+	socket.on('lowerThirds:hideOngoing', function() {
+		io.sockets.emit("lowerThirds:hideOngoing");
 	});
 });
 

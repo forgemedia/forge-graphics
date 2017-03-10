@@ -1,78 +1,99 @@
-// Bug
-
 // Style variables
-$bug-height: 3vw;
-$bug-border-radius: $bug-height / 2;
-$bug-border-width: 0.3vw;
-
-$bug-logo-bgcolour: $uos-colour;
-$bug-live-bgcolour: $hallam-colour;
-
+$bug-border-radius: $bug-height / 4;
+$bug-border-width: 0;
 // Business logic
 $bug-border: $bug-border-width solid $border-colour;
 
+$logo-left: $main-margin + 0.2vw;
+$logo-width: $logo-left + 9vw;
+
 #bug {
-    margin-left: 1vw;
-    margin-top: 1vw;
+    //margin-left: 1vw;
+    //margin-top: 1vw;
+    position: absolute;
+    top: $lower-third-height;
+    //top: $bug-top;
+    z-index: 2;
 
     > * {
         position: absolute;
         height: $bug-height;
         line-height: $bug-height;
         border: $bug-border;
-        box-shadow: inset $component-inset-shadow;
         overflow: hidden;
         padding-left: 0.5vw;
+        //box-shadow: inset 0px 20px 10px -20px rgba(0,0,0,0.6);
+        box-shadow: $right-box-shadow;
+    }
+
+    .noBoxShadow {
+        box-shadow: none;
     }
 
     #logo {
-        width: 8vw;
-        border-radius: $bug-border-radius;
-        background: $overlay-background, $bug-logo-bgcolour;
+        width: $logo-width;
+        //border-top-right-radius: $bug-border-radius;
+        //border-bottom-right-radius: $bug-border-radius;
+        background: $overlay-background, $colour-b;
         background-blend-mode: multiply, normal;
         z-index: 2;
+        //padding-left: 1vw;
 
         img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
+            display: inline-block;
+            //margin-left: auto;
+            //margin-right: auto;
+            position: absolute;
+        }
 
+        img#polls {
+            height: 4vw;
+            transform: translate(-5%, -10%) rotate(6deg);
+            opacity: 0.45;
+            margin-left: $logo-left;
+        }
+
+        img#forge {
             // Forge Logo-specific settings
-            top: 50%;
-            transform: translate(-5%, -50%) rotate(-8deg) perspective(1px);
-            height: 1.9vw;
-            opacity: 0.75;
+            //top: 50%;
+            //transform: translate(-5%, -50%) rotate(-8deg) perspective(1px);
+            top: 0.55vw;
+            height: 1.8vw;
+            left: $logo-left + 2vw;
+            //opacity: 0.6;
         }
     }
 
     #logo.ng-hide {
-        transform: scale(0.5);
+        transform: translateX(-10vw);
         opacity: 0;
     }
 
     #logo.ng-hide-add,
     #logo.ng-hide-remove {
-        transition: transform 0.5s $cubic-bezier, opacity 0.5s $cubic-bezier;
+        transition: transform 0.75s $cubic-bezier, opacity 0.75s $cubic-bezier;
     }
 
     #logo.ng-hide-add {
-        transition-delay: 0.5s;
+        transition-timing-function: $cubic-bezier-reverse;
+        transition-delay: 0.25s;
     }
 
     .liveSegment {
         // Style
-        color: #ffffff;
-        background: $overlay-background, $bug-live-bgcolour;
+        padding-top: 0.1vw;
+        color: $dark-colour;
+        background: $overlay-background, $light-colour;
         background-blend-mode: multiply, normal;
-        font-size: 2vw;
-        font-weight: 900;
-        transition: all 0.5s $cubic-bezier 0.5s;
-        width: 9vw;
-        left: 7.5vw;
+        font-size: 2.25vw;
+        //font-weight: normal;
+        transition: all 0.5s $cubic-bezier 0.3s;
+        width: 8.5vw;
+        left: $logo-width - 1vw;
         z-index: 1;
-        border-top-right-radius: $bug-border-radius;
-        border-bottom-right-radius: $bug-border-radius;
+        //border-top-right-radius: $bug-border-radius;
+        //border-bottom-right-radius: $bug-border-radius;
+        //box-shadow: inset 20px 20px 10px -20px rgba(0,0,0,0.6);
 
         .liveSegmentText {
             transition: opacity .5s $cubic-bezier, transform .5s $cubic-bezier;
@@ -80,13 +101,16 @@ $bug-border: $bug-border-width solid $border-colour;
             text-align: center;
 
             > span {
+                //font-weight: 700;
                 //display: inline;
                 width: 100%;
                 //margin: 0 auto;
                 position: absolute;
                 line-height: $bug-height;
                 //top: 50%;
-                transform: translate(-50%, -10%) perspective(1px);
+                transform: translate(-52%, -2%) perspective(1px);
+                padding-left: 0.6vw;
+                letter-spacing: -0.1vw;
             }
         }
 
@@ -102,12 +126,24 @@ $bug-border: $bug-border-width solid $border-colour;
         }
     }
 
+    .liveSegment.redLive {
+        background: $overlay-background, $colour-d;
+        background-blend-mode: multiply, normal;
+        color: $light-colour;
+    }
+
     .liveSegment.ng-hide {
         opacity: 0;
-        transform: translate(-5vw, 0);
+        transform: translate(-15vw, 0);
+    }
+
+    .liveSegment.ng-hide-remove {
+        transition-duration: 1s;
+        transition-delay: 0.5s;
     }
 
     .liveSegment.ng-hide-add {
+        transition-timing-function: $cubic-bezier-reverse;
         transition-delay: 0s;
     }
 }

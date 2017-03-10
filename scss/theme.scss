@@ -4,32 +4,60 @@
     box-sizing: border-box;
     backface-visibility: hidden;
     background-clip: border-box;
-    font-family: 'Lato', sans-serif;
+    font-family: 'AG Book Rounded', sans-serif;
 }
 
-$uos-colour: #ffdc00;
-$hallam-colour: #d4326b;
-$dark-colour: #333333;
+$colour-a: #cccccc;
+$colour-b: #26bae1;
+$colour-c: #2d2f7f;
+$colour-d: #880000;
+$dark-colour: #646464;
+$mid-colour: #d0d0d0;
 $light-colour: #ffffff;
 
-$overlay-background: linear-gradient(to bottom, rgba(0,0,0,.1) 0%,rgba(0,0,0,.3) 50%,rgba(0,0,0,.25) 51%,rgba(0,0,0,.1) 100%);
-//$overlay-background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.3) 100%);
-$component-inset-shadow: 0 0 1vw 0 rgba(0,0,0,0.5);
-//$component-inset-shadow: 0 0 0 0 rgba(0,0,0,0);
-$border-colour: #333333;
+//$overlay-background: linear-gradient(to bottom, rgba(0,0,0,.1) 0%,rgba(0,0,0,.3) 50%,rgba(0,0,0,.25) 51%,rgba(0,0,0,.1) 100%);
+$overlay-background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%);
+$inverse-overlay-background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0) 100%);
+//$component-inset-shadow: 0 0 1vw 0 rgba(0,0,0,0.5);
+$component-inset-shadow: 0 0 0 0 rgba(0,0,0,0);
+$lower-box-shadow: 0px 10px 18px -10px rgba(0,0,0,0.45);
+$right-box-shadow: 10px 0px 18px -10px rgba(0,0,0,0.45);
+$border-colour: $dark-colour;
+
 $cubic-bezier: cubic-bezier(0, .75, .75, 1);
 $cubic-bezier-reverse: cubic-bezier(.75, 0, 1, .25);
+
 $perspective: 25vw;
+
+//$bug-top: 105vh;
+$bug-height: 3vw;
+$lower-third-top: 72vh;
+$lower-third-height: 8vw;
+
+$main-container-width: 80vw;
+$main-margin: (100vw - $main-container-width) / 2;
 
 @import "../bower_components/susy/sass/susy";
 @import 'fonts';
 @import 'bug';
+@import 'hashtag';
 @import 'lowerThirds';
+@import 'titleLowerThird';
+@import 'headlineLowerThird';
+@import 'ongoingLowerThird';
+@import 'ticker';
+@import 'chart';
 
 body {
     margin: 0;
     //padding: 0vw;
     background: transparent;
+    //background: #00ff00;
     overflow: hidden;
     -webkit-font-smoothing: antialiased !important;
+}
+
+#main-container {
+    position: absolute;
+    top: $lower-third-top;
 }

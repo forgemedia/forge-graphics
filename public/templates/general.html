@@ -1,8 +1,3 @@
-<!-- <input type="checkbox" ng-model="general.showLive">Show Bug</checkbox> -->
-
-<div class="page-header">
-    <h3>Bug</h3>
-</div>
 <form>
     <div class="form-group">
         <div class="checkbox">
@@ -17,27 +12,78 @@
                 Show LIVE/Clock
             </label>
         </div>
-    </div>
-</form>
-
-<div class="page-header">
-    <h3>Lower Third</h3>
-</div>
-<form>
-    <div class="form-group">
-        <div class="checkbox">
+        <div class="checkbox checkbox-indented">
             <label>
-                <toggle ng-model="general.showCentreLowerThird"></toggle>
-                Show Centre Lower Third
+                <toggle ng-model="general.showHashtag"></toggle>
+                Show Hashtag
             </label>
         </div>
-    </div>
-    <div class="form-group">
-        <label for="lowerThirdText">Lower Third Text</label>
-        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" id="lowerThirdText" ng-model="general.ltuScratch" placeholder="Upper"></input>
-        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" id="lowerThirdText" ng-model="general.ltlScratch" placeholder="Lower"></input>
-    </div>
-    <div class="form-group">
-        <button class="btn btn-default" ng-click="commitLowerThird()">Set Lower Third</button>
+        <div class="checkbox checkbox-indented">
+            <label>
+                <toggle ng-model="general.showTicker"></toggle>
+                Show Ticker
+            </label>
+        </div>
+        <div class="form-group">
+            <button
+                class="btn btn-danger"
+                ng-click="triggerResetCG()">
+                Reset Character Generator
+            </button>
+        </div>
+		<div class="form-group">
+			<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" placeholder="File" ng-model="votesCsvFile"></input>
+			<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" placeholder="Position" ng-model="vwPos"></input>
+			<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" placeholder="Winner" ng-model="vwWin"></input>
+            <button
+                class="btn btn-danger"
+                ng-click="triggerVotesGraph()">
+                Trigger Votes Graph
+            </button>
+			<button
+                class="btn btn-danger"
+                ng-click="triggerVotesGraphDestruction()">
+                Destroy Votes Graph
+            </button>
+        </div>
+        <div class="page-header">
+            <h3>Ticker items</h3>
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="newTickerItem"></input>
+            </div>
+            <button
+                class="btn btn-success"
+                ng-click="addTickerItem()">
+                Add item
+            </button>
+            <button
+                class="btn btn-warning"
+                ng-click="commitTickerItems()">
+                Update ticker (Instant; use carefully)
+            </button>
+            <button
+                class="btn btn-danger"
+                ng-click="resetTicker()">
+                Reset ticker items
+            </button>
+            <span><small>Press this if you cannot add items to the ticker</small></span>
+        </div>
+        <div class="form-group container">
+            <div class="form-group row" ng-repeat="ti in general.tickerItems track by $index">
+                <div class="col-md-1">
+                    <button
+                        class="btn btn-sm btn-warning"
+                        ng-click="removeTickerItem($index)">
+                        Remove item
+                    </button>
+                </div>
+                <div class="col-md-11">
+                    <!-- <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="ti"></input> -->
+                    <span>{{ti}}</span>
+                </div>
+            </div>
+        </div>
     </div>
 </form>

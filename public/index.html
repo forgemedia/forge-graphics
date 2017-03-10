@@ -9,24 +9,87 @@
 </head>
 
 <body>
-    <div ng-controller="generalCtrl">
-        <div id="bug">
-            <div id="logo" ng-show="state.showLogo">
-                <img src="/img/forge.svg" />
-            </div>
-            <div class="liveSegment" ng-show="state.showLogo && state.showLive">
-                <!-- <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH"}}&nbsp;<span style="padding-top: .1vw" ng-show="colonOnBool">:</span>&nbsp;{{clock|date:"mm"}}</span></div> -->
-                <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH:mm"}}</span></div>
-                <div class="liveSegmentText" ng-show="liveToggle"><span>LIVE</span></div>
-            </div>
+    <div>
+		<div ng-controller="generalCtrl" ng-show="showVotesGraph || showFinalGraph" id="barChartContainer">
+			<span class="bcTitle">{{curPos}}: {{round}} Round <small>{{curWinner}} wins</small></span>
+			<div class="barChart" id="bc1" ng-show="showVotesGraph"></div>
+			<div class="barChart" id="bc2" ng-show="showFinalGraph"></div>
+		</div>
+        <div ng-controller="generalCtrl" id="hashtag" ng-show="state.showHashtag && state.showLogo">
+            <span>#knowyourvote</span>
         </div>
-        <div id="lowerThirds">
-            <div class="lowerThird centreLowerThird" ng-show="state.showCentreLowerThird">
-                <div class="upperSegment">
-                    <span>{{state.lowerThirdUpperText}}</span>
+        <div id="main-container">
+            <div ng-controller="lowerThirdsCtrl" class="lowerThird titleLowerThird" ng-show="showTitle">
+                <div class="upperSegmentBackground">
+                    <div class="lowerThirdContainer">
+                        <div class="leftLowerThird">
+                            <div class="segment upperSegment"><span>{{leftUpperTitleText}}</span></div>
+                        </div>
+                        <div class="rightLowerThird">
+                            <div class="segment upperSegment"><span>{{rightUpperTitleText}}</span></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="lowerSegment">
-                    <span>{{state.lowerThirdLowerText}}</span>
+                <div class="lowerSegmentBackground" ng-show="showTitle">
+                    <div class="lowerThirdContainer">
+                        <div class="leftLowerThird">
+                            <div class="segment lowerSegment"><span>{{leftLowerTitleText}}</span></div>
+                        </div>
+                        <div class="rightLowerThird">
+                            <div class="segment lowerSegment"><span>{{rightLowerTitleText}}</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-controller="lowerThirdsCtrl" class="lowerThird headlineLowerThird" ng-show="showHeadline">
+                <div class="largeTopSegmentBackground" ng-show="showHeadlineLargeTop">
+                    <div class="lowerThirdContainer">
+                        <div class="textRow">
+                            <div class="segment largeTopSegment"><span>{{headlineTop}}</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="upperSegmentBackground" ng-show="showHeadline && !showHeadlineLargeTop">
+                    <div class="lowerThirdContainer">
+                        <div class="textRow">
+                            <div class="segment upperSegment"><span>{{headlineTop}}</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lowerSegmentBackground" ng-show="showHeadline && !showHeadlineLargeTop">
+                    <div class="lowerThirdContainer">
+                        <div class="segment lowerSegment" ng-show="showHeadline && !showHeadlineLargeTop"><span>{{headlineMain}}</span></div>
+                    </div>
+                </div>
+            </div>
+            <div ng-controller="lowerThirdsCtrl" class="lowerThird ongoingLowerThird" ng-show="showOngoing">
+                <div class="upperSegmentBackground" ng-show="showOngoing">
+                    <div class="lowerThirdContainer">
+                        <div class="textRow">
+                            <div class="segment upperSegment"><span>{{ongoingTop}}</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lowerSegmentBackground" ng-show="showOngoing">
+                    <div class="lowerThirdContainer">
+                        <div class="segment lowerSegment" ng-show="showOngoing"><span>{{ongoingMain}}</span></div>
+                    </div>
+                </div>
+            </div>
+            <div ng-controller="generalCtrl" id="bug">
+                <div id="logo" ng-show="state.showLogo">
+                    <img id="polls" src="/img/polls.svg" />
+                    <img id="forge" src="/img/forge.svg" />
+                </div>
+                <div class="liveSegment" ng-show="state.showLogo && state.showLive" ng-class="{ 'redLive': liveToggle }">
+                    <!-- <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH"}}&nbsp;<span style="padding-top: .1vw" ng-show="colonOnBool">:</span>&nbsp;{{clock|date:"mm"}}</span></div> -->
+                    <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH:mm"}}</span></div>
+                    <div class="liveSegmentText" ng-show="liveToggle"><span>LIVE</span></div>
+                </div>
+            </div>
+            <div ng-controller="generalCtrl" id="ticker" ng-show="state.showTicker && state.showLogo" >
+                <div class="ticker-contents">
+                    <div class="ticker-item" ng-repeat="ti in state.cTickerItems track by $index">{{ti}}</div>
                 </div>
             </div>
         </div>
@@ -36,6 +99,8 @@
     <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="/bower_components/angular-animate/angular-animate.js"></script>
     <script type="text/javascript" src="/bower_components/ng-socket-io/ng-socket-io.js"></script>
+	<script type="text/javascript" src="/bower_components/d3/d3.js"></script>
+	<script type="text/javascript" src="/js/chart.js"></script>
     <script type="text/javascript" src="/js/cg.js"></script>
 </body>
 

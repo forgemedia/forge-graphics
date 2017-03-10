@@ -1,0 +1,61 @@
+<div class="page-header">
+    <h3>Names <small>Triggers for 10 seconds</small></h3>
+</div>
+<form>
+    <div class="container">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="lowerThirdText">Left Lower Third Text</label>
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="ltTitleDashEntries[0]" placeholder="Upper"></input>
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="ltTitleDashEntries[1]" placeholder="Lower"></input>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lowerThirdText">Right Lower Third Text (leave blank to leave blank)</label>
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="ltTitleDashEntries[2]" placeholder="Upper"></input>
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="ltTitleDashEntries[3]" placeholder="Lower"></input>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button
+        class="btn btn-danger"
+        ng-click="triggerTitleLowerThird()">Show</button></span>
+    </div>
+</form>
+
+<div class="page-header">
+    <h3>Breaking News <small>Stays on screen until hidden</small></h3>
+</div>
+<form>
+    <div class="form-group">
+        <label for="ltHeadline">Headline Lower Third Text (must be kept as short as possible)</label>
+        <select class="form-control" ng-model="ltHeadlineDashEntries[0]" ng-options="topSel for topSel in topSelections"></select>
+        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="ltHeadlineDashEntries[1]" placeholder="Headline"></input>
+    </div>
+    <div class="form-group">
+        <button
+            class="btn btn-danger"
+            ng-click="triggerHeadlineLowerThird()">Show</button>
+        <button
+            class="btn btn-warning"
+            ng-click="updateHeadlineLowerThird()">Update</button>
+        <button class="btn btn-success" ng-click="hideHeadlineLowerThird()">Hide</button>
+    </div>
+</form>
+
+<div class="page-header">
+    <h3>Ongoing <small>For ongoing events and clarification</small></h3>
+</div>
+<form>
+    <div class="form-group">
+        <label for="ltHeadline">Ongoing Lower Third Text</label>
+        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="ltOngoingDashEntries[0]" placeholder="Title"></input>
+        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="ltOngoingDashEntries[1]" placeholder="Subtitle"></input>
+    </div>
+    <div class="form-group">
+        <button
+            class="btn btn-danger"
+            ng-click="triggerOngoingLowerThird()">Show</button>
+        <button class="btn btn-success" ng-click="hideOngoingLowerThird()">Hide</button>
+    </div>
+</form>

@@ -1,72 +1,52 @@
-$lower-third-height: 6vw;
-$lower-third-border-radius: $lower-third-height / 4;
-$lower-third-border-width: 0.3vw;
+//$lower-third-border-radius: $lower-third-height / 10;
+$lower-third-border-radius: 0;
+$lower-third-border-width: 0;
 $lower-third-border: $lower-third-border-width solid $border-colour;
-$lower-third-dark-text-colour: $dark-colour;
 
-#lowerThirds {
-    @include container(80vw);
-    padding-top: 75vh;
+// TODO: shrink text if it overflows
+
+.lowerThird {
+    width: 100vw;
+    position: absolute;
+    //margin-top: $lower-third-top;
+    //height: $lower-third-height;
+
+    z-index: 0;
+
+    transition: transform 0.5s $cubic-bezier, opacity 0.5s $cubic-bezier;
 
     > * {
         overflow: hidden;
         transform: perspective($perspective);
     }
 
-    .lowerThird {
-        transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
+    .lowerThirdContainer {
+        //@include container(200em);
+        left: $main-margin;
+        width: $main-container-width;
 
-        > div {
-            border-radius: $lower-third-border-radius;
-            border: $lower-third-border;
-            box-shadow: inset $component-inset-shadow;
-        }
+        position: absolute;
+        z-index: 5;
+    }
 
+    .segment {
+        white-space: nowrap;
+        width: 100%;
         span {
+            width: 100%;
             display: block;
         }
-
-        .upperSegment {
-            background: $light-colour;
-            height: ($lower-third-height / 5) * 3;
-            z-index: 1;
-
-            span {
-                font-size: 2.25vw;
-                font-weight: 700;
-                padding-bottom: 0.3vw;
-                color: $lower-third-dark-text-colour;
-            }
-        }
-
-        .lowerSegment {
-            position: relative;
-            height: ($lower-third-height / 5) * 3;
-            transform: translateY(-$lower-third-height / 5);
-            z-index: 2;
-
-            span {
-                font-size: 1.25vw;
-                font-weight: 500;
-                color: lighten($lower-third-dark-text-colour, 15%);
-            }
-        }
     }
+}
 
-    .lowerThird.centreLowerThird {
-        @include span(8 of 12);
-        @include pre(2 of 12);
-        text-align: center;
-    }
+.lowerThird.ng-hide-remove {
+    opacity: 0;
+}
 
-    .lowerThird.ng-hide-remove {
-        opacity: 0;
-        transform: rotateX(90deg);
-    }
+.lowerThird.ng-hide-add {
+    transition-delay: 0.6s;
+}
 
-    .lowerThird.ng-hide {
-        opacity: 0;
-        transition-timing-function: $cubic-bezier-reverse;
-        transform: rotateX(-90deg);
-    }
+.lowerThird.ng-hide {
+    opacity: 0;
 }
