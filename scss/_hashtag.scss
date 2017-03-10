@@ -12,12 +12,13 @@
     }
 
     transition: opacity 0.5s linear 0.75s;
-}
 
-#hashtag.ng-hide {
-    opacity: 0;
-}
+	&.ng-hide {
+	    opacity: 0;
+	}
 
-#hashtag.ng-hide-add {
-    transition-delay: 0s;
+	&.ng-hide-add {
+	    transition-delay: 0s;
+	}
+
 }

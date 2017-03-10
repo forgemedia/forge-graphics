@@ -79,7 +79,7 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
 
         $interval(function() {
             $scope.liveToggle = !$scope.liveToggle;
-        }, 2000);
+        }, 10000);
 
         $timeout(tick, $scope.tickInterval);
     }

@@ -38,6 +38,7 @@ $main-container-width: 80vw;
 $main-margin: (100vw - $main-container-width) / 2;
 
 @import "../bower_components/susy/sass/susy";
+@import 'mixins';
 @import 'fonts';
 @import 'bug';
 @import 'hashtag';

@@ -1,76 +1,82 @@
 .lowerThird.titleLowerThird {
     .lowerThirdContainer {
+		%lowerThird {
+			width: $main-container-width;
+			position: absolute;
+		}
+
         .leftLowerThird {
-            position: absolute;
-            //background-color: #ff0000;
-            //@include span(50%);
-            width: $main-container-width;
+			@extend %lowerThird;
         }
 
         .rightLowerThird {
-            width: $main-container-width;
-            position: absolute;
+			@extend %lowerThird;
             text-align: right;
         }
     }
 
+	%titleSegment {}
+
+	%titleSegmentBackground {}
+
     .upperSegment {
+		@extend %titleSegment !optional;
+
         margin-top: 0.8vw;
+
         span {
             font-size: 3vw;
-            //font-weight: 700;
-            //padding-top: 0.65vw;
-            //padding-bottom: 0.3vw;
             color: $light-colour;
             letter-spacing: -0.2vw;
         }
+
+		&Background {
+			@extend %titleSegmentBackground !optional;
+			@include overlay($colour-b);
+
+			box-shadow: $lower-box-shadow;
+			height: ($lower-third-height / 8) * 5;
+			position: relative;
+			z-index: 2;
+			border-top-left-radius: $lower-third-border-radius;
+			border-top-right-radius: $lower-third-border-radius;
+		}
     }
 
     .lowerSegment {
+		@extend %titleSegment !optional;
+
         margin-top: 0.5vw;
+
         span {
-            //padding-top: 1.6vw;
             font-size: 1.8vw;
             font-weight: 500;
             color: $dark-colour;
             letter-spacing: -0.1vw;
         }
-    }
 
-    .upperSegmentBackground {
-        background: $overlay-background, $colour-b;
-        background-blend-mode: multiply, normal;
-        box-shadow: $lower-box-shadow;
-        height: ($lower-third-height / 8) * 5;
-        position: relative;
-        z-index: 2;
-        border-top-left-radius: $lower-third-border-radius;
-        border-top-right-radius: $lower-third-border-radius;
-    }
+		&Background {
+			@extend %titleSegmentBackground !optional;
+			@include overlay($light-colour);
 
-    .lowerSegmentBackground {
-        //@include span(10 of 12);
-        background: $inverse-overlay-background, $light-colour;
-        background-blend-mode: multiply, normal;
-        position: relative;
-        box-shadow: $lower-box-shadow;
-        height: ($lower-third-height / 8) * 3;
-        //transform: translateY(-$lower-third-height / 5);
-        z-index: 0;
-        //border-bottom-left-radius: $lower-third-border-radius;
-        //border-bottom-right-radius: $lower-third-border-radius;
-        transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
-    }
+			position: relative;
+			box-shadow: $lower-box-shadow;
+			height: ($lower-third-height / 8) * 3;
+			z-index: 0;
+			transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
 
-    .lowerSegmentBackground.ng-hide-remove {
-        transform: translateY(-4vw);
-        opacity: 0;
-        transition-delay: 0.75s;
-    }
+			&.ng-hide-remove {
+				transform: translateY(-4vw);
+				opacity: 0;
+				transition-delay: 0.75s;
+			}
 
-    .lowerSegmentBackground.ng-hide {
-        transform: translateY(-5vw);
-        opacity: 0;
-        transition-timing-function: $cubic-bezier-reverse;
+			&.ng-hide {
+				transform: translateY(-5vw);
+				opacity: 0;
+				transition-timing-function: $cubic-bezier-reverse;
+			}
+
+		}
     }
 }

@@ -1,6 +1,7 @@
 // Style variables
 $bug-border-radius: $bug-height / 4;
 $bug-border-width: 0;
+
 // Business logic
 $bug-border: $bug-border-width solid $border-colour;
 
@@ -8,11 +9,8 @@ $logo-left: $main-margin + 0.2vw;
 $logo-width: $logo-left + 9vw;
 
 #bug {
-    //margin-left: 1vw;
-    //margin-top: 1vw;
     position: absolute;
     top: $lower-third-height;
-    //top: $bug-top;
     z-index: 2;
 
     > * {
@@ -22,7 +20,6 @@ $logo-width: $logo-left + 9vw;
         border: $bug-border;
         overflow: hidden;
         padding-left: 0.5vw;
-        //box-shadow: inset 0px 20px 10px -20px rgba(0,0,0,0.6);
         box-shadow: $right-box-shadow;
     }
 
@@ -31,119 +28,100 @@ $logo-width: $logo-left + 9vw;
     }
 
     #logo {
+		@include overlay($colour-b);
+
         width: $logo-width;
-        //border-top-right-radius: $bug-border-radius;
-        //border-bottom-right-radius: $bug-border-radius;
-        background: $overlay-background, $colour-b;
-        background-blend-mode: multiply, normal;
         z-index: 2;
-        //padding-left: 1vw;
 
         img {
             display: inline-block;
-            //margin-left: auto;
-            //margin-right: auto;
             position: absolute;
+
+			&#polls {
+	            height: 4vw;
+	            transform: translate(-5%, -10%) rotate(6deg);
+	            opacity: 0.45;
+	            margin-left: $logo-left;
+	        }
+
+	        &#forge {
+	            top: 0.55vw;
+	            height: 1.8vw;
+	            left: $logo-left + 2vw;
+	        }
         }
 
-        img#polls {
-            height: 4vw;
-            transform: translate(-5%, -10%) rotate(6deg);
-            opacity: 0.45;
-            margin-left: $logo-left;
-        }
+		&.ng-hide {
+	        transform: translateX(-10vw);
+	        opacity: 0;
+	    }
 
-        img#forge {
-            // Forge Logo-specific settings
-            //top: 50%;
-            //transform: translate(-5%, -50%) rotate(-8deg) perspective(1px);
-            top: 0.55vw;
-            height: 1.8vw;
-            left: $logo-left + 2vw;
-            //opacity: 0.6;
-        }
-    }
+	    &.ng-hide-add,
+	    &.ng-hide-remove {
+	        transition: transform 0.75s $cubic-bezier, opacity 0.75s $cubic-bezier;
+	    }
 
-    #logo.ng-hide {
-        transform: translateX(-10vw);
-        opacity: 0;
-    }
-
-    #logo.ng-hide-add,
-    #logo.ng-hide-remove {
-        transition: transform 0.75s $cubic-bezier, opacity 0.75s $cubic-bezier;
-    }
-
-    #logo.ng-hide-add {
-        transition-timing-function: $cubic-bezier-reverse;
-        transition-delay: 0.25s;
+	    &.ng-hide-add {
+	        transition-timing-function: $cubic-bezier-reverse;
+	        transition-delay: 0.25s;
+	    }
     }
 
     .liveSegment {
-        // Style
+		@include overlay($light-colour);
+		color: $dark-colour;
+
         padding-top: 0.1vw;
-        color: $dark-colour;
-        background: $overlay-background, $light-colour;
-        background-blend-mode: multiply, normal;
-        font-size: 2.25vw;
-        //font-weight: normal;
-        transition: all 0.5s $cubic-bezier 0.3s;
         width: 8.5vw;
         left: $logo-width - 1vw;
         z-index: 1;
-        //border-top-right-radius: $bug-border-radius;
-        //border-bottom-right-radius: $bug-border-radius;
-        //box-shadow: inset 20px 20px 10px -20px rgba(0,0,0,0.6);
 
-        .liveSegmentText {
+		transition: all 0.5s $cubic-bezier 0.3s;
+
+		.liveSegmentText {
             transition: opacity .5s $cubic-bezier, transform .5s $cubic-bezier;
-            //padding-left: 1.5vw;
             text-align: center;
 
             > span {
-                //font-weight: 700;
-                //display: inline;
+		        font-size: 2.25vw;
                 width: 100%;
-                //margin: 0 auto;
                 position: absolute;
                 line-height: $bug-height;
-                //top: 50%;
                 transform: translate(-52%, -2%) perspective(1px);
                 padding-left: 0.6vw;
                 letter-spacing: -0.1vw;
             }
+
+			&.ng-hide {
+				transition-timing-function: $cubic-bezier-reverse;
+				transform: translate(50%, 0);
+				opacity: 0;
+			}
+
+			&.ng-hide-remove {
+				transform: translate(-50%, 0);
+				opacity: 0;
+			}
         }
 
-        .liveSegmentText.ng-hide {
-            transition-timing-function: $cubic-bezier-reverse;
-            transform: translate(50%, 0);
-            opacity: 0;
-        }
+		&.redLive {
+			@include overlay($colour-d);
+			color: $light-colour;
+		}
 
-        .liveSegmentText.ng-hide-remove {
-            transform: translate(-50%, 0);
-            opacity: 0;
-        }
-    }
+		&.ng-hide {
+			opacity: 0;
+			transform: translate(-15vw, 0);
+		}
 
-    .liveSegment.redLive {
-        background: $overlay-background, $colour-d;
-        background-blend-mode: multiply, normal;
-        color: $light-colour;
-    }
+		&.ng-hide-remove {
+			transition-duration: 1s;
+			transition-delay: 0.5s;
+		}
 
-    .liveSegment.ng-hide {
-        opacity: 0;
-        transform: translate(-15vw, 0);
-    }
-
-    .liveSegment.ng-hide-remove {
-        transition-duration: 1s;
-        transition-delay: 0.5s;
-    }
-
-    .liveSegment.ng-hide-add {
-        transition-timing-function: $cubic-bezier-reverse;
-        transition-delay: 0s;
+		&.ng-hide-add {
+			transition-timing-function: $cubic-bezier-reverse;
+			transition-delay: 0s;
+		}
     }
 }

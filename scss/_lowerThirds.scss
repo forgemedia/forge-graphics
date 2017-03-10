@@ -37,16 +37,17 @@ $lower-third-border: $lower-third-border-width solid $border-colour;
             display: block;
         }
     }
-}
 
-.lowerThird.ng-hide-remove {
-    opacity: 0;
-}
+	&.ng-hide-remove {
+	    opacity: 0;
+	}
 
-.lowerThird.ng-hide-add {
-    transition-delay: 0.6s;
-}
+	&.ng-hide-add {
+	    transition-delay: 0.6s;
+	}
 
-.lowerThird.ng-hide {
-    opacity: 0;
+	&.ng-hide {
+	    opacity: 0;
+	}
+
 }

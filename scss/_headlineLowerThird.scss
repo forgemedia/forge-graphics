@@ -1,149 +1,114 @@
 .lowerThird.headlineLowerThird {
     transition: transform 1s $cubic-bezier, opacity 1s $cubic-bezier;
 
-    // Container
     .lowerThirdContainer {
         .textRow {
             position: absolute;
-            //background-color: #ff0000;
-            //width: 40vw;
-            //@include span(50%);
             width: $main-container-width;
         }
     }
 
-    // Segments
-    .segment {
+    %headlineSegment {
         text-transform: uppercase;
     }
 
+	%headlineSegmentBackground {}
+
     .upperSegment {
+		@extend %headlineSegment !optional;
+
         margin-top: 0.5vw;
+
         span {
             font-size: 2vw;
-            //font-weight: 700;
-            //padding-top: 0.65vw;
-            //padding-bottom: 0.3vw;
             color: $light-colour;
-            //letter-spacing: -0.2vw;
         }
+
+		&Background {
+			@extend %headlineSegmentBackground !optional;
+			@include inverse-overlay($colour-b);
+
+			height: ($lower-third-height / 16) * 6;
+			position: absolute;
+			z-index: 2;
+			width: 100vw;
+			border-top-left-radius: $lower-third-border-radius;
+			border-top-right-radius: $lower-third-border-radius;
+			transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
+
+			&.ng-hide {
+				opacity: 0;
+				transform: translateY(2vw);
+			}
+
+			&.ng-hide-remove {
+				transition-delay: 1.2s;
+			}
+		}
+
     }
 
-    .lowerSegment, .largeTopSegment {
+    .lowerSegment {
+		@extend %headlineSegment !optional;
+
         margin-top: 0.62vw;
         float: left;
         width: $main-container-width;
+
         span {
-            //padding-top: 1.6vw;
             font-size: 3.5vw;
-            //font-weight: 700;
             color: $light-colour;
             letter-spacing: -0.1vw;
         }
+
         transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
         transition-delay: 0.2s;
+
+		&.ng-hide-remove {
+	        opacity: 0;
+	        transform: translateX(-4vw);
+	    }
+
+		&Background {
+			@extend %headlineSegmentBackground !optional;
+			@include overlay($colour-c);
+
+	        box-shadow: $lower-box-shadow;
+	        position: absolute;
+	        top: ($lower-third-height / 16) * 6;
+	        height: ($lower-third-height / 16) * 10;
+	        width: 100vw;
+	        z-index: 3;
+	        transition: opacity 0.5s $cubic-bezier;
+
+			&.ng-hide-remove {
+				opacity: 0;
+			}
+
+			&.ng-hide-add {
+		        transition-delay: 0s;
+		    }
+
+			&.ng-hide {
+				opacity: 0;
+				transition-timing-function: $cubic-bezier-reverse;
+				transition-delay: .5s;
+			}
+	    }
     }
 
-    .largeTopSegment {
-        span {
-            //color: $colour-a;
-        }
-    }
+	.largeTopSegment {
+		@extend .lowerSegment;
 
+		&Background {
+			@extend .lowerSegmentBackground;
+			@include overlay($colour-b);
 
-    // Segment animations
-    .upperSegment.ng-hide-remove {
-        //animation-delay: 3s;
-    }
+			z-index: 0;
+		}
+	}
 
-    //.lowerSegment.ng-hide {
-    //    opacity: 0;
-    //    transform: translateX(4vw);
-    //}
-
-    .lowerSegment.ng-hide-remove, .largeTopSegment.ng-hide-remove {
-        opacity: 0;
-        transform: translateX(-4vw);
-    }
-
-
-    // Segment backgrounds
-    .upperSegmentBackground {
-        background: $inverse-overlay-background, $colour-b;
-        background-blend-mode: multiply, normal;
-        //box-shadow: $lower-box-shadow;
-        height: ($lower-third-height / 16) * 6;
-        position: absolute;
-        z-index: 2;
-        width: 100vw;
-        border-top-left-radius: $lower-third-border-radius;
-        border-top-right-radius: $lower-third-border-radius;
-        transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
-    }
-
-    .lowerSegmentBackground, .largeTopSegmentBackground {
-        //@include span(10 of 12);
-        background: $overlay-background, $colour-c;
-        background-blend-mode: multiply, normal;
-        box-shadow: $lower-box-shadow;
-        position: absolute;
-        top: ($lower-third-height / 16) * 6;
-        height: ($lower-third-height / 16) * 10;
-        width: 100vw;
-        //transform: translateY(-$lower-third-height / 5);
-        z-index: 3;
-        //border-bottom-left-radius: $lower-third-border-radius;
-        //border-bottom-right-radius: $lower-third-border-radius;
-        transition: opacity 0.5s $cubic-bezier;
-    }
-
-    .largeTopSegmentBackground {
-        background: $overlay-background, $colour-b;
-        background-blend-mode: multiply, normal;
-        z-index: 0;
-    }
-
-
-    // Segment background animations
-    .upperSegmentBackground.ng-hide {
-        opacity: 0;
-        transform: translateY(2vw);
-    }
-
-    .upperSegmentBackground.ng-hide-remove {
-        transition-delay: 1.2s;
-    }
-
-    .lowerSegmentBackground.ng-hide-remove, .largeTopSegmentBackground.ng-hide-remove {
-        //transform: translateY(-4vw);
-        opacity: 0;
-        //transition-delay: 0.75s;
-    }
-
-    .lowerSegmentBackground.ng-hide, .largeTopSegmentBackground.ng-hide {
-        //transform: translateY(-5vw);
-        //transition-delay: 1s;
-        opacity: 0;
-        transition-timing-function: $cubic-bezier-reverse;
-        transition-delay: .5s;
-    }
-
-    .lowerSegmentBackground.ng-hide-add {
-        transition-delay: 0s;
-    }
-    //
-    //.largeTopSegmentBackground.ng-hide, .largeTopSegmentBackground.ng-hide-remove {
-    //    transform: none;
-    //}
+	&.ng-hide-add {
+	    transition: opacity 1s $cubic-bezier 2s;
+	}
 }
-
-
-// Lower third animations
-.lowerThird.headlineLowerThird.ng-hide-add {
-    transition: opacity 1s $cubic-bezier 2s;
-}
-
-//.lowerThird.headlineLowerThird {
-//    transition: opacity 0.1s $cubic-bezier;
-//    transform: none;
-//}

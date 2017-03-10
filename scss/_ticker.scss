@@ -12,66 +12,41 @@ $duration: 40s;
 }
 
 #ticker {
+	@include overlay($colour-c);
+
     position: absolute;
     top: $lower-third-height;
     height: $bug-height;
-    background: $overlay-background, $colour-c;
-    background-blend-mode: multiply, normal;
     width: 100vw;
     color: $light-colour;
     transition: opacity 0.5s linear;
-}
 
-#ticker.ng-hide {
-    opacity: 0;
+	&.ng-hide {
+	    opacity: 0;
+	}
 }
 
 .ticker-contents {
     text-transform: uppercase;
-    //font-weight: 700;
     display: inline-block;
-    //height: 4rem;
-    //line-height: 4rem;
-    white-space: nowrap; // display items in a line
-    padding-right: 100%; // ensure items go before animations repeat (taken from parent due to inline-block)
+    white-space: nowrap;
+    padding-right: 100%;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-name: ticker;
     animation-duration: $duration;
 }
 
-//.ticker-wrap {
-//    position: fixed;
-//    bottom: 0;
-//    width: 100%;
-//    overflow: hidden;
-//    height: 4rem;
-//    background-color: rgba(#000, 0.9);
-//    padding-left: 100%;
-//    // offset items to begin
-//}
-
 .ticker-item {
     display: inline-block;
     padding-top: 0.25vw;
     font-size: 2.25vw;
     position: relative;
-    //color: white;
-}
 
-.ticker-item:after {
-    display: inline-block;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    content: "—";
+	&:after {
+		display: inline-block;
+	    padding-left: 4vw;
+	    padding-right: 4vw;
+	    content: "—";
+	}
 }
-
-//body {
-//    padding-bottom: 5rem;
-//}
-//
-//h1,
-//h2,
-//p {
-//    padding: 0 5%;
-//}
