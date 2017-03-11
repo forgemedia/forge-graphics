@@ -23,17 +23,18 @@
 		@extend %titleSegment !optional;
 
         margin-top: 0.7vw;
+		z-index: 8;
 
         span {
             font-size: 3vw;
-            color: $dark-colour;
+            color: $light-colour;
             letter-spacing: -0.2vw;
 			font-weight: 700;
         }
 
 		&Background {
 			@extend %titleSegmentBackground !optional;
-			@include overlay($colour-b);
+			@include overlay($dark-colour);
 
 			box-shadow: $lower-box-shadow;
 			height: ($lower-third-height / 8) * 5;
@@ -41,6 +42,17 @@
 			z-index: 2;
 			border-top-left-radius: $lower-third-border-radius;
 			border-top-right-radius: $lower-third-border-radius;
+
+			//&:after {
+			//	//@extend .upperSegmentBackground;
+			//	@include overlay($colour-b);
+			//
+			//	content: "";
+			//	position: relative;
+			//	width: 50vw;
+			//	left: 50vw;
+			//	z-index: 7;
+			//}
 		}
     }
 
