@@ -16,7 +16,7 @@
 		@extend %ongoingSegment !optional;
 
         text-transform: uppercase;
-        margin-top: 0.55vw;
+        margin-top: 0.45vw;
 
         span {
             font-size: 2.5vw;
@@ -27,7 +27,7 @@
 
 		&Background {
 			@extend %ongoingSegmentBackground !optional;
-			@include overlay($colour-c);
+			@include overlay($dark-colour);
 
 			height: ($lower-third-height / 16) * 8;
 			position: absolute;
@@ -52,13 +52,13 @@
     .lowerSegment {
 		@extend %ongoingSegment !optional;
 
-        margin-top: 0.55vw;
+        margin-top: 0.45vw;
         float: left;
         width: $main-container-width;
 
         span {
             font-size: 2.55vw;
-            color: $light-colour;
+            color: $dark-colour;
             letter-spacing: -0.1vw;
         }
 
@@ -72,7 +72,7 @@
 
 		&Background {
 			@extend %ongoingSegmentBackground !optional;
-			@include overlay($colour-b);
+			@include overlay($light-colour);
 
 			box-shadow: $lower-box-shadow;
 			position: absolute;

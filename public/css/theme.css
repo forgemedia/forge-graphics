@@ -936,7 +936,7 @@ th {
 
 .lowerThird.ongoingLowerThird .upperSegment {
   text-transform: uppercase;
-  margin-top: 0.55vw;
+  margin-top: 0.45vw;
 }
 
 .lowerThird.ongoingLowerThird .upperSegment span, .lowerThird.ongoingLowerThird .upperSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.ongoingLowerThird .upperSegment .name {
@@ -945,8 +945,8 @@ th {
 }
 
 .lowerThird.ongoingLowerThird .upperSegmentBackground {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
   background-blend-mode: multiply, normal;
   height: 4vw;
   position: absolute;
@@ -972,7 +972,7 @@ th {
 }
 
 .lowerThird.ongoingLowerThird .lowerSegment, .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .largeTopSegment, .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .largeTopSegment {
-  margin-top: 0.55vw;
+  margin-top: 0.45vw;
   float: left;
   width: 80vw;
   -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
@@ -985,7 +985,7 @@ th {
 
 .lowerThird.ongoingLowerThird .lowerSegment span, .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .largeTopSegment span, .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .largeTopSegment span, .lowerThird.ongoingLowerThird .lowerSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.ongoingLowerThird .lowerSegment .name, .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .largeTopSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .largeTopSegment .name, .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .largeTopSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .largeTopSegment .name {
   font-size: 2.55vw;
-  color: #ffffff;
+  color: #323232;
   letter-spacing: -0.1vw;
 }
 
@@ -996,8 +996,8 @@ th {
 }
 
 .lowerThird.ongoingLowerThird .lowerSegmentBackground, .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .largeTopSegmentBackground {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background-blend-mode: multiply, normal;
   box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
   position: absolute;
