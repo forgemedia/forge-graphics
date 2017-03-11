@@ -19,6 +19,12 @@ app.controller('AppCtrl', ['$scope', '$location',
             url: '/lowerThirds',
             type: 'link'
         });
+
+		$scope.menu.push({
+			name: 'Boxing',
+			url: '/boxing',
+			type: 'link'
+		});
     }
 ]);
 
@@ -38,6 +44,10 @@ app.config(['$routeProvider', 'localStorageServiceProvider',
                 templateUrl: '/templates/lowerThirds.html',
                 controller: 'lowerThirdsCGController'
             })
+			.when("/boxing", {
+				templateUrl: '/templates/boxing.html',
+				controller: 'boxingCGController'
+			})
             .otherwise({redirectTo: '/general'});
     }
 ]);
@@ -108,15 +118,7 @@ app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$ti
 
         $scope.topSelections = [
             "Breaking News",
-            "Incoming Result",
-            "President",
-			"Activities Officer",
-			"Welfare Officer",
-			"Women's Officer",
-			"SU Development Officer",
-			"International Students' Officer",
-			"Sports Officer",
-			"Education Officer"
+            "Incoming Result"
         ];
 
         $scope.hlTopScratch = $scope.topSelections[0];
@@ -167,4 +169,39 @@ app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$ti
         $scope.$on("$destroy", $scope.storeEntries);
         $window.onbeforeunload = $scope.storeEntries;
     }
+]);
+
+app.controller('boxingCGController', ['$scope', '$timeout', 'socket',
+	function($scope, $timeout, socket) {
+		socket.on("boxing", function (msg) {
+            $scope.boxing = msg;
+        });
+
+        $scope.$watch('boxing', function() {
+            if ($scope.boxing) {
+                socket.emit("boxing", $scope.boxing);
+            } else {
+                getBoxingData();
+            }
+        }, true);
+
+		$scope.resetBouts = function() {
+			$scope.boxing.showBoxing = false;
+			$timeout(function() {
+				for (i = 0; i < 3; i++) $scope.boxing.boutComplete[i] = false;
+			}, 1000);
+		};
+
+		$scope.resetTimer = function() {
+			socket.emit("boxing:resetTimer");
+		};
+
+		$scope.startTimer = function() {
+			socket.emit("boxing:startTimer");
+		};
+
+        function getBoxingData() {
+            socket.emit("boxing:get");
+        };
+	}
 ]);

@@ -22,12 +22,13 @@
     .upperSegment {
 		@extend %titleSegment !optional;
 
-        margin-top: 0.8vw;
+        margin-top: 0.7vw;
 
         span {
             font-size: 3vw;
-            color: $light-colour;
+            color: $dark-colour;
             letter-spacing: -0.2vw;
+			font-weight: 700;
         }
 
 		&Background {

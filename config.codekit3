@@ -707,6 +707,398 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/bower_components\/angular-timer\/.bower.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/.bower.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/angular-timer\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/.gitignore",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/.travis.yml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/.travis.yml",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/app\/js\/_timer.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/bower_components\/angular-timer\/app\/js\/_timer.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/app\/js\/i18nService.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/app\/js\/i18nService.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/app\/js\/progressBarService.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/app\/js\/progressBarService.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/bower.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/bower.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/angular-timer\/CHANGELOG.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/CHANGELOG.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/angular-timer\/config\/karma-e2e.conf.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/config\/karma-e2e.conf.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/config\/karma.conf.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/config\/karma.conf.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/angular-timer.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/angular-timer.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/angular-timer.min.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/angular-timer.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/assets\/css\/angular-timer-bower.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/assets\/css\/angular-timer-bower.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/assets\/js\/angular-timer-all.min.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/assets\/js\/angular-timer-all.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/assets\/js\/angular-timer-bower.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/assets\/js\/angular-timer-bower.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/examples.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/examples.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/examples\/angularjs-add-countdown-seconds.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/examples\/angularjs-add-countdown-seconds.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/examples\/angularjs-multiple-timers.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/examples\/angularjs-multiple-timers.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/examples\/angularjs-polling-timer.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/examples\/angularjs-polling-timer.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/examples\/angularjs-reset-timer": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/examples\/angularjs-reset-timer",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/examples\/angularjs-single-timer.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/examples\/angularjs-single-timer.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/examples\/jquery-timer.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/examples\/jquery-timer.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/examples\/plain-javascript.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/examples\/plain-javascript.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/examples\/timer-with-autostart-false-and-starttime.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/examples\/timer-with-autostart-false-and-starttime.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/dist\/navbar.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/dist\/navbar.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/docs\/application.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/docs\/application.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/docs\/css\/docs.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/docs\/css\/docs.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/bower_components\/angular-timer\/docs\/css\/prettify.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/docs\/css\/prettify.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/bower_components\/angular-timer\/docs\/docs.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/docs\/docs.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/docs\/images\/forkme.png": {
+		"ft": 32768,
+		"iS": 7791,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/docs\/images\/forkme.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/bower_components\/angular-timer\/docs\/prettify.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/docs\/prettify.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/examples.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/examples.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/examples\/angularjs-add-countdown-seconds.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/examples\/angularjs-add-countdown-seconds.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/examples\/angularjs-multiple-timers.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/examples\/angularjs-multiple-timers.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/examples\/angularjs-polling-timer.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/examples\/angularjs-polling-timer.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/examples\/angularjs-reset-timer": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/examples\/angularjs-reset-timer",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/examples\/angularjs-single-timer.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/examples\/angularjs-single-timer.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/examples\/jquery-timer.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/examples\/jquery-timer.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/examples\/plain-javascript.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/examples\/plain-javascript.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/examples\/timer-with-autostart-false-and-starttime.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/examples\/timer-with-autostart-false-and-starttime.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/Gruntfile.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/Gruntfile.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/LICENSE.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/LICENSE.txt",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/navbar.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/navbar.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/package.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/package.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/angular-timer\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/README.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/angular-timer\/test\/e2e\/runner.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/test\/e2e\/runner.html",
+		"oF": 0
+		},
+	"\/bower_components\/angular-timer\/test\/e2e\/scenarios.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/test\/e2e\/scenarios.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/test\/unit\/directivesSpec.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/test\/unit\/directivesSpec.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/angular-timer\/test\/unit\/timerSetTimeTest.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-timer\/test\/unit\/timerSetTimeTest.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/bower_components\/angular\/.bower.json": {
 		"ft": 524288,
 		"oA": 2,
@@ -2579,6 +2971,99 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/bower_components\/humanize-duration\/.bower.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/humanize-duration\/.bower.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/humanize-duration\/bower.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/humanize-duration\/bower.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/humanize-duration\/CONTRIBUTING.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/humanize-duration\/CONTRIBUTING.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/humanize-duration\/HISTORY.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/humanize-duration\/HISTORY.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/humanize-duration\/humanize-duration.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/humanize-duration\/humanize-duration.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/humanize-duration\/LICENSE.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/humanize-duration\/LICENSE.txt",
+		"oF": 0
+		},
+	"\/bower_components\/humanize-duration\/package.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/humanize-duration\/package.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/humanize-duration\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/humanize-duration\/README.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"\/bower_components\/jquery\/.bower.json": {
 		"ft": 524288,
 		"oA": 2,
@@ -3628,6 +4113,895 @@
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
+		},
+	"\/bower_components\/moment\/.bower.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/.bower.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/moment\/benchmarks\/clone.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/benchmarks\/clone.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/bower.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/bower.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/moment\/CHANGELOG.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/CHANGELOG.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/moment\/LICENSE": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/LICENSE",
+		"oF": 0
+		},
+	"\/bower_components\/moment\/locale\/af.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/af.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/ar-ma.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/ar-ma.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/ar-sa.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/ar-sa.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/ar-tn.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/ar-tn.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/ar.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/ar.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/az.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/az.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/be.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/be.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/bg.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/bg.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/bn.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/bn.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/bo.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/bo.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/br.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/br.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/bs.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/bs.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/ca.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/ca.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/cs.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/cs.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/cv.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/cv.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/cy.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/cy.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/da.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/da.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/de-at.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/de-at.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/de.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/de.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/el.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/el.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/en-au.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/en-au.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/en-ca.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/en-ca.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/en-gb.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/en-gb.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/eo.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/eo.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/es.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/es.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/et.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/et.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/eu.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/eu.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/fa.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/fa.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/fi.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/fi.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/fo.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/fo.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/fr-ca.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/fr-ca.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/fr.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/fr.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/fy.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/fy.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/gl.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/gl.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/he.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/he.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/hi.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/hi.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/hr.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/hr.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/hu.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/hu.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/hy-am.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/hy-am.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/id.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/id.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/is.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/is.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/it.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/it.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/ja.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/ja.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/ka.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/ka.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/km.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/km.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/ko.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/ko.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/lb.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/lb.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/lt.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/lt.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/lv.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/lv.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/mk.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/mk.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/ml.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/ml.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/mr.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/mr.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/ms-my.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/ms-my.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/my.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/my.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/nb.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/nb.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/ne.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/ne.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/nl.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/nl.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/nn.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/nn.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/pl.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/pl.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/pt-br.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/pt-br.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/pt.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/pt.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/ro.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/ro.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/ru.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/ru.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/sk.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/sk.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/sl.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/sl.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/sq.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/sq.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/sr-cyrl.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/sr-cyrl.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/sr.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/sr.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/sv.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/sv.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/ta.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/ta.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/th.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/th.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/tl-ph.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/tl-ph.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/tr.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/tr.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/tzm-latn.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/tzm-latn.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/tzm.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/tzm.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/uk.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/uk.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/uz.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/uz.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/vi.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/vi.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/zh-cn.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/zh-cn.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/locale\/zh-tw.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/locale\/zh-tw.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/meteor\/export.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/meteor\/export.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/meteor\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/meteor\/README.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/moment\/meteor\/test.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/meteor\/test.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/min\/locales.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/min\/locales.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/min\/locales.min.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/min\/locales.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/min\/moment-with-locales.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/min\/moment-with-locales.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/min\/moment-with-locales.min.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/min\/moment-with-locales.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/min\/moment.min.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/min\/moment.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/moment.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/moment.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/bower_components\/moment\/Moment.js.nuspec": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/Moment.js.nuspec",
+		"oF": 0
+		},
+	"\/bower_components\/moment\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/README.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/moment\/scripts\/npm_prepublish.sh": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/moment\/scripts\/npm_prepublish.sh",
+		"oF": 0
 		},
 	"\/bower_components\/ng-socket-io\/.bower.json": {
 		"ft": 524288,
@@ -4870,6 +6244,12 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"\/public\/templates\/boxing.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/templates\/boxing.html",
+		"oF": 0
+		},
 	"\/public\/templates\/general.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -4899,6 +6279,19 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"\/scss\/_boxing.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/public\/css\/_boxing.css",
+		"oF": 0,
+		"oS": 1,
+		"uL": 1
 		},
 	"\/scss\/_bug.scss": {
 		"aP": 1,

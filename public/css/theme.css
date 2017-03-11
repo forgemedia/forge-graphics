@@ -414,7 +414,7 @@ th {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   background-clip: border-box;
-  font-family: 'AG Book Rounded', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 /* lato-100 - latin */
@@ -523,7 +523,7 @@ th {
 
 #bug {
   position: absolute;
-  top: 8vw;
+  top: 6vh;
   z-index: 2;
 }
 
@@ -531,10 +531,10 @@ th {
   position: absolute;
   height: 3vw;
   line-height: 3vw;
-  border: 0 solid #646464;
+  border: 0 solid #323232;
   overflow: hidden;
   padding-left: 0.5vw;
-  box-shadow: 10px 0px 18px -10px rgba(0, 0, 0, 0.45);
+  box-shadow: inset 0px 10px 18px -10px rgba(0, 0, 0, 0.45), 10px 0px 18px -10px rgba(0, 0, 0, 0.45);
 }
 
 #bug .noBoxShadow {
@@ -542,10 +542,12 @@ th {
 }
 
 #bug #logo {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #26bae1;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #26bae1;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background-blend-mode: multiply, normal;
-  width: 19.2vw;
+  border-top-right-radius: 1.5vw;
+  border-bottom-right-radius: 1.5vw;
+  width: 17.75vw;
   z-index: 2;
 }
 
@@ -554,18 +556,10 @@ th {
   position: absolute;
 }
 
-#bug #logo img#polls {
-  height: 4vw;
-  -webkit-transform: translate(-5%, -10%) rotate(6deg);
-          transform: translate(-5%, -10%) rotate(6deg);
-  opacity: 0.45;
-  margin-left: 10.2vw;
-}
-
 #bug #logo img#forge {
   top: 0.55vw;
   height: 1.8vw;
-  left: 12.2vw;
+  left: 10vw;
 }
 
 #bug #logo.ng-hide {
@@ -589,13 +583,15 @@ th {
 }
 
 #bug .liveSegment {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
   background-blend-mode: multiply, normal;
-  color: #646464;
+  border-top-right-radius: 1.5vw;
+  border-bottom-right-radius: 1.5vw;
+  color: #323232;
   padding-top: 0.1vw;
-  width: 8.5vw;
-  left: 18.2vw;
+  width: 9vw;
+  left: 15.75vw;
   z-index: 1;
   -webkit-transition: all 0.5s cubic-bezier(0, 0.75, 0.75, 1) 0.3s;
   transition: all 0.5s cubic-bezier(0, 0.75, 0.75, 1) 0.3s;
@@ -610,14 +606,15 @@ th {
 }
 
 #bug .liveSegment .liveSegmentText > span, #bug .liveSegment .barChart .barContainer .liveSegmentText > .name, .barChart .barContainer #bug .liveSegment .liveSegmentText > .name {
-  font-size: 2.25vw;
+  font-size: 2.2vw;
   width: 100%;
   position: absolute;
   line-height: 3vw;
-  -webkit-transform: translate(-52%, -2%) perspective(1px);
-          transform: translate(-52%, -2%) perspective(1px);
-  padding-left: 0.6vw;
-  letter-spacing: -0.1vw;
+  -webkit-transform: translate(-54%, -4%) perspective(1px);
+          transform: translate(-54%, -4%) perspective(1px);
+  padding-left: 1vw;
+  font-weight: 700;
+  letter-spacing: -0.15vw;
 }
 
 #bug .liveSegment .liveSegmentText.ng-hide {
@@ -635,8 +632,8 @@ th {
 }
 
 #bug .liveSegment.altLive {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #880000;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #880000;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
   background-blend-mode: multiply, normal;
   color: #ffffff;
 }
@@ -742,18 +739,19 @@ th {
 }
 
 .lowerThird.titleLowerThird .upperSegment {
-  margin-top: 0.8vw;
+  margin-top: 0.7vw;
 }
 
 .lowerThird.titleLowerThird .upperSegment span, .lowerThird.titleLowerThird .upperSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.titleLowerThird .upperSegment .name {
   font-size: 3vw;
-  color: #ffffff;
+  color: #323232;
   letter-spacing: -0.2vw;
+  font-weight: 700;
 }
 
 .lowerThird.titleLowerThird .upperSegmentBackground {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #26bae1;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #26bae1;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
   background-blend-mode: multiply, normal;
   box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
   height: 5vw;
@@ -770,7 +768,7 @@ th {
 .lowerThird.titleLowerThird .lowerSegment span, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegment span, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegment span, .lowerThird.titleLowerThird .lowerSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.titleLowerThird .lowerSegment .name, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegment .name, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegment .name {
   font-size: 1.8vw;
   font-weight: 500;
-  color: #646464;
+  color: #323232;
   letter-spacing: -0.1vw;
 }
 
@@ -830,8 +828,8 @@ th {
 }
 
 .lowerThird.headlineLowerThird .upperSegmentBackground {
-  background: -webkit-linear-gradient(bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #26bae1;
-  background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #26bae1;
+  background: -webkit-linear-gradient(bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
   background-blend-mode: multiply, normal;
   height: 3vw;
   position: absolute;
@@ -881,8 +879,8 @@ th {
 }
 
 .lowerThird.headlineLowerThird .lowerSegmentBackground, .lowerThird.headlineLowerThird .largeTopSegmentBackground {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #2d2f7f;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #2d2f7f;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
   background-blend-mode: multiply, normal;
   box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
   position: absolute;
@@ -912,8 +910,8 @@ th {
 }
 
 .lowerThird.headlineLowerThird .largeTopSegmentBackground {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #26bae1;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #26bae1;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
   background-blend-mode: multiply, normal;
   z-index: 0;
 }
@@ -946,8 +944,8 @@ th {
 }
 
 .lowerThird.ongoingLowerThird .upperSegmentBackground {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #2d2f7f;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #2d2f7f;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
   background-blend-mode: multiply, normal;
   height: 4vw;
   position: absolute;
@@ -997,8 +995,8 @@ th {
 }
 
 .lowerThird.ongoingLowerThird .lowerSegmentBackground, .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .largeTopSegmentBackground {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #26bae1;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #26bae1;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
   background-blend-mode: multiply, normal;
   box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
   position: absolute;
@@ -1057,8 +1055,8 @@ th {
 }
 
 #ticker {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #2d2f7f;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #2d2f7f;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
   background-blend-mode: multiply, normal;
   position: absolute;
   top: 8vw;
@@ -1189,6 +1187,109 @@ th {
 
 #barChartContainer.ng-hide {
   opacity: 0;
+}
+
+#boxingBug {
+  border-top-right-radius: 1.5vw;
+  border-bottom-right-radius: 1.5vw;
+  border-top-left-radius: 1.5vw;
+  border-bottom-left-radius: 1.5vw;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  background-blend-mode: multiply, normal;
+  z-index: 1;
+  position: absolute;
+  top: 6vh;
+  height: 3vw;
+  position: absolute;
+  line-height: 3vw;
+  border: 0 solid #323232;
+  overflow: hidden;
+  padding-left: 0.5vw;
+  box-shadow: inset 0px 10px 18px -10px rgba(0, 0, 0, 0.45), 10px 0px 18px -10px rgba(0, 0, 0, 0.45);
+  width: 29.5vw;
+  left: 20vw;
+  -webkit-transition: opacity 0.5s linear 1.5s, -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1) 1.5s;
+  transition: opacity 0.5s linear 1.5s, -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1) 1.5s;
+  transition: opacity 0.5s linear 1.5s, transform 0.5s cubic-bezier(0, 0.75, 0.75, 1) 1.5s;
+  transition: opacity 0.5s linear 1.5s, transform 0.5s cubic-bezier(0, 0.75, 0.75, 1) 1.5s, -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1) 1.5s;
+  color: #323232;
+}
+
+#boxingBug.ng-hide {
+  -webkit-transform: translateX(-10vw);
+          transform: translateX(-10vw);
+  opacity: 0;
+}
+
+#boxingBug.ng-hide-add, #boxingBug.ng-hide-remove {
+  -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+}
+
+#boxingBug.ng-hide-add {
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+          transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+#boxingBug > * {
+  position: absolute;
+  font-size: 1.5vw;
+}
+
+#boxingBug #round {
+  left: 14.5vw;
+  text-transform: uppercase;
+  color: #555555;
+  line-height: 3vw;
+}
+
+#boxingBug .bout {
+  color: #d0d0d0;
+  font-weight: 700;
+}
+
+#boxingBug .bout.complete {
+  color: #323232;
+}
+
+#boxingBug #bout1 {
+  left: 21.2vw;
+}
+
+#boxingBug #bout2 {
+  left: 23.4vw;
+}
+
+#boxingBug #bout3 {
+  left: 25.6vw;
+}
+
+#boxingBug #timer {
+  font-size: 2.2vw;
+  left: 6.2vw;
+  font-weight: 700;
+  z-index: 2;
+  color: #ffffff;
+}
+
+#boxingBug:after {
+  position: absolute;
+  border-top-right-radius: 1.5vw;
+  border-bottom-right-radius: 1.5vw;
+  box-shadow: 10px 0px 18px -10px rgba(0, 0, 0, 0.45);
+  content: "";
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
+  background-blend-mode: multiply, normal;
+  left: 2vw;
+  width: 11vw;
+  height: 3vw;
+  z-index: 1;
 }
 
 body {

@@ -1,16 +1,12 @@
-// Style variables
-$bug-border-radius: $bug-height / 4;
-$bug-border-width: 0;
-
 // Business logic
 $bug-border: $bug-border-width solid $border-colour;
 
-$logo-left: $main-margin + 0.2vw;
-$logo-width: $logo-left + 9vw;
+$logo-left: $main-margin;
+$logo-width: $logo-left + 7.75vw;
 
 #bug {
     position: absolute;
-    top: $lower-third-height;
+    top: $bug-top;
     z-index: 2;
 
     > * {
@@ -20,7 +16,7 @@ $logo-width: $logo-left + 9vw;
         border: $bug-border;
         overflow: hidden;
         padding-left: 0.5vw;
-        box-shadow: $right-box-shadow;
+        box-shadow: inset $lower-box-shadow, $right-box-shadow;
     }
 
     .noBoxShadow {
@@ -28,7 +24,8 @@ $logo-width: $logo-left + 9vw;
     }
 
     #logo {
-		@include overlay($colour-b);
+		@include overlay($light-colour);
+		@include bug-round-right;
 
         width: $logo-width;
         z-index: 2;
@@ -37,17 +34,10 @@ $logo-width: $logo-left + 9vw;
             display: inline-block;
             position: absolute;
 
-			&#polls {
-	            height: 4vw;
-	            transform: translate(-5%, -10%) rotate(6deg);
-	            opacity: 0.45;
-	            margin-left: $logo-left;
-	        }
-
 	        &#forge {
 	            top: 0.55vw;
 	            height: 1.8vw;
-	            left: $logo-left + 2vw;
+	            left: $logo-left;
 	        }
         }
 
@@ -68,12 +58,14 @@ $logo-width: $logo-left + 9vw;
     }
 
     .liveSegment {
-		@include overlay($light-colour);
+		@include overlay($colour-b);
+		@include bug-round-right;
+
 		color: $dark-colour;
 
         padding-top: 0.1vw;
-        width: 8.5vw;
-        left: $logo-width - 1vw;
+        width: 9vw;
+        left: $logo-width - 2vw;
         z-index: 1;
 
 		transition: all 0.5s $cubic-bezier 0.3s;
@@ -83,13 +75,14 @@ $logo-width: $logo-left + 9vw;
             text-align: center;
 
             > span {
-		        font-size: 2.25vw;
+		        font-size: 2.2vw;
                 width: 100%;
                 position: absolute;
                 line-height: $bug-height;
-                transform: translate(-52%, -2%) perspective(1px);
-                padding-left: 0.6vw;
-                letter-spacing: -0.1vw;
+                transform: translate(-54%, -4%) perspective(1px);
+                padding-left: 1vw;
+				font-weight: 700;
+                letter-spacing: -0.15vw;
             }
 
 			&.ng-hide {
@@ -105,7 +98,7 @@ $logo-width: $logo-left + 9vw;
         }
 
 		&.altLive {
-			@include overlay($colour-d);
+			@include overlay($colour-c);
 			color: $light-colour;
 		}
 

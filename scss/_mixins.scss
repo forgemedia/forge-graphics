@@ -7,3 +7,13 @@
 	background: $inverse-overlay-background, $backgroundColour;
 	background-blend-mode: multiply, normal;
 }
+
+@mixin bug-round-right {
+	border-top-right-radius: $bug-border-radius;
+	border-bottom-right-radius: $bug-border-radius;
+}
+
+@mixin bug-round-left {
+	border-top-left-radius: $bug-border-radius;
+	border-bottom-left-radius: $bug-border-radius;
+}

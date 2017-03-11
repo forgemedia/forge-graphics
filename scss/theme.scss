@@ -6,16 +6,17 @@
     box-sizing: border-box;
     backface-visibility: hidden;
     background-clip: border-box;
-    font-family: 'AG Book Rounded', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 $colour-a: #cccccc;
-$colour-b: #26bae1;
-$colour-c: #2d2f7f;
+$colour-b: #ffdc00;
+$colour-c: #d4326b;
 $colour-d: #880000;
-$dark-colour: #646464;
+$dark-colour: #323232;
 $mid-colour: #d0d0d0;
 $light-colour: #ffffff;
+$submid-colour: #555555;
 
 $overlay-background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%);
 $inverse-overlay-background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%);
@@ -29,10 +30,13 @@ $cubic-bezier-reverse: cubic-bezier(.75, 0, 1, .25);
 
 $perspective: 25vw;
 
-//$bug-top: 105vh;
+$bug-top: 6vh;
 $bug-height: 3vw;
 $lower-third-top: 72vh;
 $lower-third-height: 8vw;
+
+$bug-border-radius: $bug-height / 2;
+$bug-border-width: 0;
 
 $main-container-width: 80vw;
 $main-margin: (100vw - $main-container-width) / 2;
@@ -47,6 +51,7 @@ $main-margin: (100vw - $main-container-width) / 2;
 @import 'ongoingLowerThird';
 @import 'ticker';
 @import 'chart';
+@import 'boxing';
 
 body {
     margin: 0;

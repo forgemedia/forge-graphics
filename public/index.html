@@ -10,14 +10,32 @@
 
 <body>
     <div>
-		<div ng-controller="generalCtrl" ng-show="showVotesGraph || showFinalGraph" id="barChartContainer">
+		<!-- <div ng-controller="generalCtrl" ng-show="showVotesGraph || showFinalGraph" id="barChartContainer">
 			<span class="bcTitle">{{curPos}}: {{round}} Round <small>{{curWinner}} wins</small></span>
 			<div class="barChart" id="bc1" ng-show="showVotesGraph"></div>
 			<div class="barChart" id="bc2" ng-show="showFinalGraph"></div>
-		</div>
-        <div ng-controller="generalCtrl" id="hashtag" ng-show="state.showHashtag && state.showLogo">
+		</div> -->
+        <!-- <div ng-controller="generalCtrl" id="hashtag" ng-show="state.showHashtag && state.showLogo">
             <span>#knowyourvote</span>
-        </div>
+        </div> -->
+		<div ng-controller="generalCtrl" id="bug">
+			<div id="logo" ng-show="state.showLogo">
+				<!-- <img id="polls" src="/img/polls.svg" /> -->
+				<img id="forge" src="/img/forge-black.svg" />
+			</div>
+			<div class="liveSegment" ng-show="state.showLogo && state.showLive" ng-class="{ 'altLive': liveToggle }">
+				<!-- <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH"}}&nbsp;<span style="padding-top: .1vw" ng-show="colonOnBool">:</span>&nbsp;{{clock|date:"mm"}}</span></div> -->
+				<div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH:mm"}}</span></div>
+				<div class="liveSegmentText" ng-show="liveToggle"><span>LIVE</span></div>
+			</div>
+		</div>
+		<div id="boxingBug" ng-controller="boxingCtrl" ng-show="state.showBoxing">
+			<span id="timer"><timer autostart="false" interval="1000" countdown="120">{{minutes}}:{{sseconds}}</timer></span>
+			<span id="round">Round</span>
+			<span class="bout" id="bout1" ng-class="{ 'complete': state.boutComplete[0] }">1</span>
+			<span class="bout" id="bout2" ng-class="{ 'complete': state.boutComplete[1] }">2</span>
+			<span class="bout" id="bout3" ng-class="{ 'complete': state.boutComplete[2] }">3</span>
+		</div>
         <div id="main-container">
             <div ng-controller="lowerThirdsCtrl" class="lowerThird titleLowerThird" ng-show="showTitle">
                 <div class="upperSegmentBackground">
@@ -76,28 +94,21 @@
                     </div>
                 </div>
             </div>
-            <div ng-controller="generalCtrl" id="bug">
-                <div id="logo" ng-show="state.showLogo">
-                    <img id="polls" src="/img/polls.svg" />
-                    <img id="forge" src="/img/forge.svg" />
-                </div>
-                <div class="liveSegment" ng-show="state.showLogo && state.showLive" ng-class="{ 'altLive': liveToggle }">
-                    <!-- <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH"}}&nbsp;<span style="padding-top: .1vw" ng-show="colonOnBool">:</span>&nbsp;{{clock|date:"mm"}}</span></div> -->
-                    <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH:mm"}}</span></div>
-                    <div class="liveSegmentText" ng-show="liveToggle"><span>LIVE</span></div>
-                </div>
-            </div>
-            <div ng-controller="generalCtrl" id="ticker" ng-show="state.showTicker && state.showLogo" >
+
+            <!-- <div ng-controller="generalCtrl" id="ticker" ng-show="state.showTicker && state.showLogo" >
                 <div class="ticker-contents">
                     <div class="ticker-item" ng-repeat="ti in state.cTickerItems track by $index">{{ti}}</div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
     <script type="text/javascript" src="/node_modules/socket.io-client/dist/socket.io.js"></script>
+	<script type="text/javascript" src="/bower_components/humanize-duration/humanize-duration.js"></script>
+	<script type="text/javascript" src="/bower_components/moment/moment.js"></script>
     <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="/bower_components/angular-animate/angular-animate.js"></script>
+	<script type="text/javascript" src="/bower_components/angular-timer/dist/angular-timer.js"></script>
     <script type="text/javascript" src="/bower_components/ng-socket-io/ng-socket-io.js"></script>
 	<script type="text/javascript" src="/bower_components/d3/d3.js"></script>
 	<script type="text/javascript" src="/js/chart.js"></script>

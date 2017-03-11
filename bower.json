@@ -14,7 +14,8 @@
     "susy": "latest",
     "angular-drag-to-reorder": "latest",
     "d3": "^4.7.1",
-    "normalize-scss": "^3.0.3"
+    "normalize-scss": "^3.0.3",
+    "angular-timer": "^1.3.4"
   },
   "private": true,
   "resolutions": {

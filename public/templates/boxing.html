@@ -1,0 +1,43 @@
+<form>
+    <div class="form-group">
+        <div class="checkbox">
+            <label>
+                <toggle ng-model="boxing.showBoxing"></toggle>
+                Show Boxing bug
+            </label>
+        </div>
+		<div class="checkbox checkbox-indented">
+            <label>
+                <toggle ng-model="boxing.boutComplete[0]"></toggle>
+                Bout 1 In Progress/Complete
+            </label>
+        </div>
+		<div class="checkbox checkbox-indented">
+            <label>
+                <toggle ng-model="boxing.boutComplete[1]"></toggle>
+                Bout 2 In Progress/Complete
+            </label>
+        </div>
+		<div class="checkbox checkbox-indented">
+            <label>
+                <toggle ng-model="boxing.boutComplete[2]"></toggle>
+                Bout 3 In Progress/Complete
+            </label>
+        </div>
+		<button
+			class="btn btn-success"
+			ng-click="startTimer()">
+			Start Timer
+		</button>
+		<button
+			class="btn btn-warning"
+			ng-click="resetTimer()">
+			Reset Timer
+		</button>
+		<button
+			class="btn btn-danger"
+			ng-click="resetBouts()">
+			Reset All
+		</button>
+    </div>
+</form>

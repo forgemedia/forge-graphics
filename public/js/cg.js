@@ -1,4 +1,4 @@
-var app = angular.module('cgApp', ['socket-io', 'ngAnimate']);
+var app = angular.module('cgApp', ['socket-io', 'ngAnimate', 'timer']);
 
 app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
     function($scope, $timeout, $interval, socket) {
@@ -147,4 +147,22 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
 
         $timeout(tick, $scope.tickInterval);
     }
+]);
+
+app.controller('boxingCtrl', ['$scope', 'socket',
+	function($scope, socket) {
+        socket.emit("boxing:get");
+
+        socket.on("boxing", function(state) {
+            $scope.state = state;
+        });
+
+		socket.on("boxing:resetTimer", function() {
+			$scope.$broadcast('timer-reset');
+		});
+
+		socket.on("boxing:startTimer", function() {
+			 $scope.$broadcast('timer-start');
+		});
+	}
 ]);

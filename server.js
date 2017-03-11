@@ -9,6 +9,7 @@ var debug = false;
 
 var general = {};
 var lowerThirds = {};
+var boxing = {};
 
 io.on('connection', function(socket) {
 	if (debug) console.log('  Client connected');
@@ -63,6 +64,24 @@ io.on('connection', function(socket) {
 
 	socket.on('lowerThirds:hideOngoing', function() {
 		io.sockets.emit("lowerThirds:hideOngoing");
+	});
+
+	socket.on('boxing', function(msg) {
+		if (debug) console.log("* boxing", msg);
+		boxing = msg;
+		io.sockets.emit("boxing", msg);
+	});
+
+	socket.on('boxing:resetTimer', function(msg) {
+		io.sockets.emit("boxing:resetTimer");
+	});
+
+	socket.on('boxing:startTimer', function(msg) {
+		io.sockets.emit("boxing:startTimer");
+	});
+
+	socket.on('boxing:get', function(msg) {
+		io.sockets.emit('boxing', boxing);
 	});
 });
 
