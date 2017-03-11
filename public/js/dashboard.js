@@ -198,7 +198,7 @@ app.controller('boxingCGController', ['$scope', '$timeout', 'socket',
 		};
 
 		$scope.startTimer = function() {
-			if ($scope.showBoxing) socket.emit("boxing:startTimer");
+			socket.emit("boxing:startTimer");
 		};
 
         function getBoxingData() {

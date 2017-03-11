@@ -5,7 +5,7 @@ var app = express();
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
-var debug = false;
+var debug = true;
 
 var general = {};
 var lowerThirds = {};
@@ -73,14 +73,17 @@ io.on('connection', function(socket) {
 	});
 
 	socket.on('boxing:resetTimer', function(msg) {
+		if (debug) console.log("* boxing:resetTimer", msg);
 		io.sockets.emit("boxing:resetTimer");
 	});
 
 	socket.on('boxing:startTimer', function(msg) {
+		if (debug) console.log("* boxing:startTimer", msg);
 		io.sockets.emit("boxing:startTimer");
 	});
 
 	socket.on('boxing:get', function(msg) {
+		if (debug) console.log("* boxing:get", msg);
 		io.sockets.emit('boxing', boxing);
 	});
 });
