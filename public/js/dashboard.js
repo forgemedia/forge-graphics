@@ -188,6 +188,7 @@ app.controller('boxingCGController', ['$scope', '$timeout', 'socket',
 		$scope.resetBouts = function() {
 			$scope.boxing.showBoxing = false;
 			$timeout(function() {
+				socket.emit("boxing:resetTimer");
 				for (i = 0; i < 3; i++) $scope.boxing.boutComplete[i] = false;
 			}, 1000);
 		};
@@ -197,7 +198,7 @@ app.controller('boxingCGController', ['$scope', '$timeout', 'socket',
 		};
 
 		$scope.startTimer = function() {
-			socket.emit("boxing:startTimer");
+			if ($scope.showBoxing) socket.emit("boxing:startTimer");
 		};
 
         function getBoxingData() {
