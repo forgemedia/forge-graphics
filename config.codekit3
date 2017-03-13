@@ -6235,15 +6235,6 @@
 		"sC": 0,
 		"tS": 0
 		},
-	"\/public\/js\/dashboard.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/public\/js\/dashboard-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
 	"\/public\/templates\/boxing.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -6448,15 +6439,6 @@
 		"oF": 0,
 		"oS": 1,
 		"uL": 1
-		},
-	"\/server.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/server-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
 		}
 	},
 "hooks": [
