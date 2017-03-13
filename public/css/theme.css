@@ -604,7 +604,6 @@ th {
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), background 0.5s cubic-bezier(0, 0.75, 0.75, 1), color 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), background 0.5s cubic-bezier(0, 0.75, 0.75, 1), color 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   color: #323232;
-  padding-top: 0.1vw;
   width: 9vw;
   left: 15.75vw;
   z-index: 1;
@@ -639,28 +638,27 @@ th {
 }
 
 #bug .liveSegment .liveSegmentText > span, #bug .liveSegment .barChart .barContainer .liveSegmentText > .name, .barChart .barContainer #bug .liveSegment .liveSegmentText > .name {
+  display: block;
   font-size: 2.2vw;
-  width: 100%;
+  width: 9vw;
   position: absolute;
   line-height: 3vw;
-  -webkit-transform: translate(-54%, -4%) perspective(1px);
-          transform: translate(-54%, -4%) perspective(1px);
-  padding-left: 1.2vw;
   font-weight: 700;
   letter-spacing: -0.15vw;
+  left: 0.6vw;
 }
 
 #bug .liveSegment .liveSegmentText.ng-hide {
   -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
           transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-  -webkit-transform: translate(50%, 0);
-          transform: translate(50%, 0);
+  -webkit-transform: translateX(10vw);
+          transform: translateX(10vw);
   opacity: 0;
 }
 
 #bug .liveSegment .liveSegmentText.ng-hide-remove {
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  -webkit-transform: translateX(-10vw);
+          transform: translateX(-10vw);
   opacity: 0;
 }
 

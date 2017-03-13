@@ -47,7 +47,7 @@ $logo-width: $logo-left + 7.75vw;
 			color 0.5s $cubic-bezier;
 		color: $dark-colour;
 
-        padding-top: 0.1vw;
+        //padding-top: 0.1vw;
         width: 9vw;
         left: $logo-width - 2vw;
         z-index: 1;
@@ -57,24 +57,24 @@ $logo-width: $logo-left + 7.75vw;
             text-align: center;
 
             > span {
+				display: block;
 		        font-size: 2.2vw;
-                width: 100%;
+                width: 9vw;
                 position: absolute;
                 line-height: $bug-height;
-                transform: translate(-54%, -4%) perspective(1px);
-                padding-left: 1.2vw;
 				font-weight: 700;
                 letter-spacing: -0.15vw;
+				left: 0.6vw;
             }
 
 			&.ng-hide {
 				transition-timing-function: $cubic-bezier-reverse;
-				transform: translate(50%, 0);
+				transform: translateX(10vw);
 				opacity: 0;
 			}
 
 			&.ng-hide-remove {
-				transform: translate(-50%, 0);
+				transform: translateX(-10vw);
 				opacity: 0;
 			}
         }
