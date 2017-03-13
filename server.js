@@ -1,5 +1,5 @@
-var express 	= require('express'),
-	http 		= require('http');
+var express	= require('express');
+var http = require('http');
 
 var app = express();
 var server = http.createServer(app);
@@ -7,35 +7,31 @@ var io = require('socket.io').listen(server);
 
 var debug = true;
 
-var general = {};
-var lowerThirds = {};
-var boxing = {};
+var syncSockets = [
+	'general',
+	'lowerThirds',
+	'boxing'
+];
+
+var msgSockets = [
+	'general',
+	'general:resetcg',
+	'lowerThirds',
+	'lowerThirds:showTitle',
+	'lowerThirds:showHeadline',
+	'lowerThirds:updateHeadline',
+	'lowerThirds:hideHeadline',
+	'lowerThirds:showOngoing',
+	'lowerThirds:hideOngoing',
+	'boxing',
+	'boxing:startTimer',
+	'boxing:resetTimer'
+];
 
 var dataStores = {};
 
 io.on('connection', function(socket) {
 	if (debug) console.log('  Client connected');
-
-	var syncSockets = [
-		'general',
-		'lowerThirds',
-		'boxing'
-	];
-
-	var msgSockets = [
-		'general',
-		'general:resetcg',
-		'lowerThirds',
-		'lowerThirds:showTitle',
-		'lowerThirds:showHeadline',
-		'lowerThirds:updateHeadline',
-		'lowerThirds:hideHeadline',
-		'lowerThirds:showOngoing',
-		'lowerThirds:hideOngoing',
-		'boxing',
-		'boxing:startTimer',
-		'boxing:resetTimer'
-	];
 
 	syncSockets.forEach(function(d) {
 		socket.on(d, function(msg) {
