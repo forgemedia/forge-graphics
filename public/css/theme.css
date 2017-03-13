@@ -814,6 +814,20 @@ th {
           transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
 }
 
+.lowerThird.titleLowerThird.splitColour .rightLowerThird .upperSegment span, .lowerThird.titleLowerThird.splitColour .rightLowerThird .upperSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.titleLowerThird.splitColour .rightLowerThird .upperSegment .name {
+  color: #ffffff !important;
+}
+
+.lowerThird.titleLowerThird.splitColour .upperSegment span, .lowerThird.titleLowerThird.splitColour .upperSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.titleLowerThird.splitColour .upperSegment .name {
+  color: #323232;
+}
+
+.lowerThird.titleLowerThird.splitColour .upperSegmentBackground {
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), -webkit-linear-gradient(left, #ffdc00 50%, #ffdc00 49.99%, #d4326b 50.01%, #d4326b 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), linear-gradient(to right, #ffdc00 50%, #ffdc00 49.99%, #d4326b 50.01%, #d4326b 100%);
+  background-blend-mode: multiply, normal;
+}
+
 .lowerThird.headlineLowerThird {
   -webkit-transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 1s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 1s cubic-bezier(0, 0.75, 0.75, 1);
