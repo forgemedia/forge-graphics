@@ -11,81 +11,123 @@ var general = {};
 var lowerThirds = {};
 var boxing = {};
 
+var dataStores = {};
+
 io.on('connection', function(socket) {
 	if (debug) console.log('  Client connected');
 
-	socket.on('general', function(msg) {
-		if (debug) console.log('* general', msg);
-        general = msg;
-		io.sockets.emit('general', msg);
+	var syncSockets = [
+		'general',
+		'lowerThirds',
+		'boxing'
+	];
+
+	var msgSockets = [
+		'general',
+		'general:resetcg',
+		'lowerThirds',
+		'lowerThirds:showTitle',
+		'lowerThirds:showHeadline',
+		'lowerThirds:updateHeadline',
+		'lowerThirds:hideHeadline',
+		'lowerThirds:showOngoing',
+		'lowerThirds:hideOngoing',
+		'boxing',
+		'boxing:startTimer',
+		'boxing:resetTimer'
+	];
+
+	syncSockets.forEach(function(d) {
+		socket.on(d, function(msg) {
+			if (debug) console.log('* SYNC ' + d, msg);
+			dataStores[d] = msg;
+			io.sockets.emit(d, msg);
+		});
+		socket.on(d + ':get', function(msg) {
+			if (debug) console.log('* GET  ' + d + ':get', msg ? msg : '');
+			io.sockets.emit(d, dataStores[d]);
+		});
 	});
 
-    socket.on('general:get', function(msg) {
-		io.sockets.emit('general', general);
+	msgSockets.forEach(function(d) {
+		socket.on(d, function(msg) {
+			if (debug) console.log('* MSG  ' + d, msg ? msg : '');
+			io.sockets.emit(d, msg);
+		});
 	});
 
-	socket.on('general:resetcg', function() {
-		io.sockets.emit('general:resetcg');
-	});
-
-	socket.on('general:showVotesGraph', function(msg) {
-		io.sockets.emit('general:showVotesGraph', msg);
-	});
-
-	socket.on('general:destroyVotesGraph', function() {
-		io.sockets.emit('general:destroyVotesGraph');
-	});
-
-	socket.on('lowerThirds', function(msg) {
-		if (debug) console.log('* lowerThirds', msg);
-        lowerThirds = msg;
-		io.sockets.emit('lowerThirds', msg);
-	});
-
-	socket.on('lowerThirds:showTitle', function(msg) {
-		io.sockets.emit("lowerThirds:showTitle", msg);
-	});
-
-	socket.on('lowerThirds:showHeadline', function(msg) {
-		io.sockets.emit("lowerThirds:showHeadline", msg);
-	});
-
-	socket.on('lowerThirds:updateHeadline', function(msg) {
-		io.sockets.emit("lowerThirds:updateHeadline", msg);
-	});
-
-	socket.on('lowerThirds:hideHeadline', function() {
-		io.sockets.emit("lowerThirds:hideHeadline");
-	});
-
-	socket.on('lowerThirds:showOngoing', function(msg) {
-		io.sockets.emit("lowerThirds:showOngoing", msg);
-	});
-
-	socket.on('lowerThirds:hideOngoing', function() {
-		io.sockets.emit("lowerThirds:hideOngoing");
-	});
-
-	socket.on('boxing', function(msg) {
-		if (debug) console.log("* boxing", msg);
-		boxing = msg;
-		io.sockets.emit("boxing", msg);
-	});
-
-	socket.on('boxing:resetTimer', function(msg) {
-		if (debug) console.log("* boxing:resetTimer", msg);
-		io.sockets.emit("boxing:resetTimer");
-	});
-
-	socket.on('boxing:startTimer', function(msg) {
-		if (debug) console.log("* boxing:startTimer", msg);
-		io.sockets.emit("boxing:startTimer");
-	});
-
-	socket.on('boxing:get', function(msg) {
-		if (debug) console.log("* boxing:get", msg);
-		io.sockets.emit('boxing', boxing);
-	});
+	// socket.on('general', function(msg) {
+	// 	if (debug) console.log('* general', msg);
+    //     general = msg;
+	// 	io.sockets.emit('general', msg);
+	// });
+	//
+    // socket.on('general:get', function(msg) {
+	// 	io.sockets.emit('general', general);
+	// });
+	//
+	// socket.on('general:resetcg', function() {
+	// 	io.sockets.emit('general:resetcg');
+	// });
+	//
+	// socket.on('general:showVotesGraph', function(msg) {
+	// 	io.sockets.emit('general:showVotesGraph', msg);
+	// });
+	//
+	// socket.on('general:destroyVotesGraph', function() {
+	// 	io.sockets.emit('general:destroyVotesGraph');
+	// });
+	//
+	// socket.on('lowerThirds', function(msg) {
+	// 	if (debug) console.log('* lowerThirds', msg);
+    //     lowerThirds = msg;
+	// 	io.sockets.emit('lowerThirds', msg);
+	// });
+	//
+	// socket.on('lowerThirds:showTitle', function(msg) {
+	// 	io.sockets.emit("lowerThirds:showTitle", msg);
+	// });
+	//
+	// socket.on('lowerThirds:showHeadline', function(msg) {
+	// 	io.sockets.emit("lowerThirds:showHeadline", msg);
+	// });
+	//
+	// socket.on('lowerThirds:updateHeadline', function(msg) {
+	// 	io.sockets.emit("lowerThirds:updateHeadline", msg);
+	// });
+	//
+	// socket.on('lowerThirds:hideHeadline', function() {
+	// 	io.sockets.emit("lowerThirds:hideHeadline");
+	// });
+	//
+	// socket.on('lowerThirds:showOngoing', function(msg) {
+	// 	io.sockets.emit("lowerThirds:showOngoing", msg);
+	// });
+	//
+	// socket.on('lowerThirds:hideOngoing', function() {
+	// 	io.sockets.emit("lowerThirds:hideOngoing");
+	// });
+	//
+	// socket.on('boxing', function(msg) {
+	// 	if (debug) console.log("* boxing", msg);
+	// 	boxing = msg;
+	// 	io.sockets.emit("boxing", msg);
+	// });
+	//
+	// socket.on('boxing:resetTimer', function(msg) {
+	// 	if (debug) console.log("* boxing:resetTimer", msg);
+	// 	io.sockets.emit("boxing:resetTimer");
+	// });
+	//
+	// socket.on('boxing:startTimer', function(msg) {
+	// 	if (debug) console.log("* boxing:startTimer", msg);
+	// 	io.sockets.emit("boxing:startTimer");
+	// });
+	//
+	// socket.on('boxing:get', function(msg) {
+	// 	if (debug) console.log("* boxing:get", msg);
+	// 	io.sockets.emit('boxing', boxing);
+	// });
 });
 
 app.use(express.static(__dirname + '/public'));
