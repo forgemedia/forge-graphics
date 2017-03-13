@@ -522,18 +522,17 @@ th {
 }
 
 #bug {
-  position: absolute;
-  top: 6vh;
   z-index: 2;
 }
 
 #bug > * {
   position: absolute;
+  top: 6vh;
   height: 3vw;
+  position: absolute;
   line-height: 3vw;
   border: 0 solid #323232;
   overflow: hidden;
-  padding-left: 0.5vw;
   box-shadow: inset 0px 10px 18px -10px rgba(0, 0, 0, 0.45), 10px 0px 18px -10px rgba(0, 0, 0, 0.45);
 }
 
@@ -1215,10 +1214,6 @@ th {
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   -webkit-transition-delay: 0s !important;
           transition-delay: 0s !important;
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
-  background-blend-mode: multiply, normal;
-  z-index: 1;
   position: absolute;
   top: 6vh;
   height: 3vw;
@@ -1226,11 +1221,14 @@ th {
   line-height: 3vw;
   border: 0 solid #323232;
   overflow: hidden;
-  padding-left: 0.5vw;
   box-shadow: inset 0px 10px 18px -10px rgba(0, 0, 0, 0.45), 10px 0px 18px -10px rgba(0, 0, 0, 0.45);
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  background-blend-mode: multiply, normal;
+  color: #323232;
+  z-index: 1;
   width: 29.5vw;
   left: 20vw;
-  color: #323232;
 }
 
 #boxingBug.ng-hide {

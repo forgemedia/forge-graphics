@@ -5,18 +5,10 @@ $logo-left: $main-margin;
 $logo-width: $logo-left + 7.75vw;
 
 #bug {
-    position: absolute;
-    top: $bug-top;
     z-index: 2;
 
     > * {
-        position: absolute;
-        height: $bug-height;
-        line-height: $bug-height;
-        border: $bug-border;
-        overflow: hidden;
-        padding-left: 0.5vw;
-        box-shadow: inset $lower-box-shadow, $right-box-shadow;
+		@include bug-styling;
     }
 
     .noBoxShadow {

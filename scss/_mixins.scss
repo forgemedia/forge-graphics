@@ -37,3 +37,15 @@
 		transition-delay: $out-delay !important;
 	}
 }
+
+@mixin bug-styling {
+	position: absolute;
+	top: $bug-top;
+	height: $bug-height;
+
+	position: absolute;
+	line-height: $bug-height;
+	border: $bug-border;
+	overflow: hidden;
+	box-shadow: inset $lower-box-shadow, $right-box-shadow;
+}

@@ -5,24 +5,16 @@ $bout-left: 19vw;
 	@include bug-round-right;
 	@include bug-round-left;
 	@include bug-transition(0s, 0.25s);
+	@include bug-styling;
+
 	@include overlay($light-colour);
+	color: $dark-colour;
 
 	z-index: 1;
-	position: absolute;
-	top: $bug-top;
-	height: $bug-height;
-
-	position: absolute;
-	line-height: $bug-height;
-	border: $bug-border;
-	overflow: hidden;
-	padding-left: 0.5vw;
-	box-shadow: inset $lower-box-shadow, $right-box-shadow;
 
 	width: 29.5vw;
 	left: 20vw;
 
-	color: $dark-colour;
 
 	> * {
 		position: absolute;
