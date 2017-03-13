@@ -7,33 +7,31 @@ var io = require('socket.io').listen(server);
 
 var debug = true;
 
-var syncSockets = [
-	'general',
-	'lowerThirds',
-	'boxing'
-];
-
-var msgSockets = [
-	'general',
-	'general:resetcg',
-	'lowerThirds',
-	'lowerThirds:showTitle',
-	'lowerThirds:showHeadline',
-	'lowerThirds:updateHeadline',
-	'lowerThirds:hideHeadline',
-	'lowerThirds:showOngoing',
-	'lowerThirds:hideOngoing',
-	'boxing',
-	'boxing:startTimer',
-	'boxing:resetTimer'
-];
+var sockets = {
+	'general': [
+		'resetcg'
+	],
+	'lowerThirds': [
+		'showTitle',
+		'showHeadline',
+		'updateHeadline',
+		'hideHeadline',
+		'showOngoing',
+		'hideOngoing'
+	],
+	'boxing': [
+		'startTimer',
+		'resetTimer'
+	]
+};
 
 var dataStores = {};
 
 io.on('connection', function(socket) {
 	if (debug) console.log('  Client connected');
 
-	syncSockets.forEach(function(d) {
+	Object.keys(sockets).forEach(function(d) {
+		subs = sockets[d];
 		socket.on(d, function(msg) {
 			if (debug) console.log('* SYNC ' + d, msg);
 			dataStores[d] = msg;
@@ -43,12 +41,12 @@ io.on('connection', function(socket) {
 			if (debug) console.log('* GET  ' + d + ':get', msg ? msg : '');
 			io.sockets.emit(d, dataStores[d]);
 		});
-	});
-
-	msgSockets.forEach(function(d) {
-		socket.on(d, function(msg) {
-			if (debug) console.log('* MSG  ' + d, msg ? msg : '');
-			io.sockets.emit(d, msg);
+		subs.forEach(function(e) {
+			var f = d + ':' + e;
+			socket.on(f, function(msg) {
+				if (debug) console.log('* MSG  ' + f, msg ? msg : '');
+				io.sockets.emit(f, msg);
+			});
 		});
 	});
 });
