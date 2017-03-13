@@ -46,8 +46,13 @@ $logo-width: $logo-left + 7.75vw;
     .liveSegment {
 		@include overlay($colour-b);
 		@include bug-round-right;
-		@include bug-transition(0.3s, 0s);
+		@include bug-transition(0.5s, 0s);
 
+		transition:
+			opacity 0.5s $cubic-bezier,
+			transform 0.5s $cubic-bezier,
+			background 0.5s $cubic-bezier,
+			color 0.5s $cubic-bezier;
 		color: $dark-colour;
 
         padding-top: 0.1vw;
@@ -65,7 +70,7 @@ $logo-width: $logo-left + 7.75vw;
                 position: absolute;
                 line-height: $bug-height;
                 transform: translate(-54%, -4%) perspective(1px);
-                padding-left: 1vw;
+                padding-left: 1.2vw;
 				font-weight: 700;
                 letter-spacing: -0.15vw;
             }
