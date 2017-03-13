@@ -4,6 +4,7 @@ $bout-left: 19vw;
 #boxingBug {
 	@include bug-round-right;
 	@include bug-round-left;
+	@include bug-transition(0s, 0.25s);
 	@include overlay($light-colour);
 
 	z-index: 1;
@@ -21,24 +22,7 @@ $bout-left: 19vw;
 	width: 29.5vw;
 	left: 20vw;
 
-	transition: opacity 0.5s linear 1.5s, transform 0.5s $cubic-bezier 1.5s;
-
 	color: $dark-colour;
-
-	&.ng-hide {
-		transform: translateX(-10vw);
-		opacity: 0;
-	}
-
-	&.ng-hide-add,
-	&.ng-hide-remove {
-		transition: transform 0.75s $cubic-bezier, opacity 0.75s $cubic-bezier;
-	}
-
-	&.ng-hide-add {
-		transition-timing-function: $cubic-bezier-reverse;
-		transition-delay: 0.25s;
-	}
 
 	> * {
 		position: absolute;

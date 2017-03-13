@@ -26,6 +26,7 @@ $logo-width: $logo-left + 7.75vw;
     #logo {
 		@include overlay($light-colour);
 		@include bug-round-right;
+		@include bug-transition(0s, 0.25s);
 
         width: $logo-width;
         z-index: 2;
@@ -40,26 +41,12 @@ $logo-width: $logo-left + 7.75vw;
 	            left: $logo-left;
 	        }
         }
-
-		&.ng-hide {
-	        transform: translateX(-10vw);
-	        opacity: 0;
-	    }
-
-	    &.ng-hide-add,
-	    &.ng-hide-remove {
-	        transition: transform 0.75s $cubic-bezier, opacity 0.75s $cubic-bezier;
-	    }
-
-	    &.ng-hide-add {
-	        transition-timing-function: $cubic-bezier-reverse;
-	        transition-delay: 0.25s;
-	    }
-    }
+	}
 
     .liveSegment {
 		@include overlay($colour-b);
 		@include bug-round-right;
+		@include bug-transition(0.3s, 0s);
 
 		color: $dark-colour;
 
@@ -67,8 +54,6 @@ $logo-width: $logo-left + 7.75vw;
         width: 9vw;
         left: $logo-width - 2vw;
         z-index: 1;
-
-		transition: all 0.5s $cubic-bezier 0.3s;
 
 		.liveSegmentText {
             transition: opacity .5s $cubic-bezier, transform .5s $cubic-bezier;
@@ -100,21 +85,6 @@ $logo-width: $logo-left + 7.75vw;
 		&.altLive {
 			@include overlay($colour-c);
 			color: $light-colour;
-		}
-
-		&.ng-hide {
-			opacity: 0;
-			transform: translate(-15vw, 0);
-		}
-
-		&.ng-hide-remove {
-			transition-duration: 1s;
-			transition-delay: 0.5s;
-		}
-
-		&.ng-hide-add {
-			transition-timing-function: $cubic-bezier-reverse;
-			transition-delay: 0s;
 		}
     }
 }

@@ -14,16 +14,6 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
             location.reload();
         });
 
-        // $scope.$watch('general', function() {
-        //     if (!$scope.state) {
-        //         getGeneralData();
-        //     }
-        // }, true);
-        //
-        // function getGeneralData() {
-        //     socket.emit("general:get");
-        // }
-
         $scope.colonOnBool = true;
 
         var tick = function() {
@@ -38,44 +28,7 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
 		$scope.curPos = "";
 		$scope.round = "";
 
-        socket.on("general:showVotesGraph", function(msg) {
-			$scope.curWinner = msg[2];
-			$scope.curPos = msg[1];
-            d3.csv("/chartdata/" + msg[0], type, function(error, data) {
-				console.log("AAA");
-				$scope.round = "First";
-	            $scope.showVotesGraph = true;
-                barChartVotes("#bc1", data, error, false);
-                // barChartVotes("#bc2", data, error, true);
-				$timeout(function() {
-					$scope.showVotesGraph = false;
-					$scope.round = "Final";
-					$scope.showFinalGraph = true;
-	                // $scope.showVotesGraph = false;
-	                angular.element(document.querySelector('#bc1')).empty();
-					// $scope.showVotesGraph = true;
-	                barChartVotes("#bc2", data, error, true);
-
-	            }, 10000);
-				$timeout(function() {
-					$scope.showFinalGraph = false;
-					angular.element(document.querySelector('#bc2')).empty();
-				}, 20000);
-            });
-        });
-
-		socket.on("general:destroyVotesGraph", function() {
-			$scope.showVotesGraph = false;
-			$scope.showFinalGraph = false;
-			angular.element(document.querySelector('#bc1')).empty();
-			angular.element(document.querySelector('#bc2')).empty();
-		});
-
         $scope.liveToggle = true;
-
-        // $scope.tickerItems = [
-        //
-        // ];
 
         $interval(function() {
             $scope.liveToggle = !$scope.liveToggle;

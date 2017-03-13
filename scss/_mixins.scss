@@ -17,3 +17,23 @@
 	border-top-left-radius: $bug-border-radius;
 	border-bottom-left-radius: $bug-border-radius;
 }
+
+@mixin bug-transition($in-delay, $out-delay) {
+	transition: opacity 0.5s linear, transform 0.5s $cubic-bezier;
+	transition-delay: $in-delay !important;
+
+	&.ng-hide {
+		transform: translateX(-10vw);
+		opacity: 0;
+	}
+
+	&.ng-hide-add,
+	&.ng-hide-remove {
+		transition: transform 0.75s $cubic-bezier, opacity 0.75s $cubic-bezier;
+	}
+
+	&.ng-hide-add {
+		transition-timing-function: $cubic-bezier-reverse;
+		transition-delay: $out-delay !important;
+	}
+}
