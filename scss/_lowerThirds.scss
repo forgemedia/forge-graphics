@@ -6,6 +6,7 @@ $lower-third-border: $lower-third-border-width solid $border-colour;
 $lower-third-width: 80vw;
 $lower-third-margin: (100vw - $lower-third-width) / 2;
 $lower-third-container-width: $lower-third-width * 0.8;
+$lower-third-container-margin: ($lower-third-width - $lower-third-container-width) / 2;
 
 // TODO: shrink text if it overflows
 
@@ -27,7 +28,7 @@ $lower-third-container-width: $lower-third-width * 0.8;
 
     .lowerThirdContainer {
         //@include container(200em);
-        left: $main-margin;
+        left: $lower-third-container-margin;
         width: $main-container-width;
 
         position: absolute;
