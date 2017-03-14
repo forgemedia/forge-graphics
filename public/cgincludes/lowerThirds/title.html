@@ -1,0 +1,22 @@
+<div ng-controller="lowerThirdsCtrl" class="lowerThird titleLowerThird" ng-class="titleContent.titleClasses" ng-show="showTitle">
+	<div class="upperSegmentBackground">
+		<div class="lowerThirdContainer">
+			<div class="leftLowerThird">
+				<div class="segment upperSegment"><span>{{titleContent.leftUpper}}</span></div>
+			</div>
+			<div class="rightLowerThird">
+				<div class="segment upperSegment"><span>{{titleContent.rightUpper}}</span></div>
+			</div>
+		</div>
+	</div>
+	<div class="lowerSegmentBackground" ng-show="showTitle">
+		<div class="lowerThirdContainer">
+			<div class="leftLowerThird">
+				<div class="segment lowerSegment"><span>{{titleContent.leftLower}}</span></div>
+			</div>
+			<div class="rightLowerThird">
+				<div class="segment lowerSegment"><span>{{titleContent.rightLower}}</span></div>
+			</div>
+		</div>
+	</div>
+</div>

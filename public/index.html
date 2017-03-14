@@ -10,96 +10,15 @@
 
 <body>
     <div>
-		<!-- <div ng-controller="generalCtrl" ng-show="showVotesGraph || showFinalGraph" id="barChartContainer">
-			<span class="bcTitle">{{curPos}}: {{round}} Round <small>{{curWinner}} wins</small></span>
-			<div class="barChart" id="bc1" ng-show="showVotesGraph"></div>
-			<div class="barChart" id="bc2" ng-show="showFinalGraph"></div>
-		</div> -->
-        <!-- <div ng-controller="generalCtrl" id="hashtag" ng-show="state.showHashtag && state.showLogo">
-            <span>#knowyourvote</span>
-        </div> -->
-		<div ng-controller="generalCtrl" id="bug">
-			<div id="logo" ng-show="state.showLogo">
-				<!-- <img id="polls" src="/img/polls.svg" /> -->
-				<img id="forge" src="/img/forge-black.svg" />
-			</div>
-			<div class="liveSegment" ng-show="state.showLogo && state.showLive" ng-class="{ 'altLive': liveToggle }">
-				<!-- <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH"}}&nbsp;<span style="padding-top: .1vw" ng-show="colonOnBool">:</span>&nbsp;{{clock|date:"mm"}}</span></div> -->
-				<div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH:mm"}}</span></div>
-				<div class="liveSegmentText" ng-show="liveToggle"><span>LIVE</span></div>
-			</div>
-		</div>
-		<div id="boxingBug" ng-controller="boxingCtrl" ng-show="state.showBoxing">
-			<span id="timer"><timer autostart="false" interval="1000" countdown="120">{{minutes}}:{{sseconds}}</timer></span>
-			<span id="round">Round</span>
-			<span class="bout" id="bout1" ng-class="{ 'complete': state.boutComplete[0] }">1</span>
-			<span class="bout" id="bout2" ng-class="{ 'complete': state.boutComplete[1] }">2</span>
-			<span class="bout" id="bout3" ng-class="{ 'complete': state.boutComplete[2] }">3</span>
-		</div>
+		<div ng-include="'cgincludes/bug.html'"></div>
+		<!-- <div ng-include="'cgincludes/hashtag.html'"></div> -->
+		<!-- <div ng-include="'cgincludes/elections/chart.html'"></div> -->
+		<div ng-include="'cgincludes/varsity/boxing.html'"></div>
         <div id="main-container">
-            <div ng-controller="lowerThirdsCtrl" class="lowerThird titleLowerThird" ng-class="titleContent.titleClasses" ng-show="showTitle">
-                <div class="upperSegmentBackground">
-                    <div class="lowerThirdContainer">
-                        <div class="leftLowerThird">
-                            <div class="segment upperSegment"><span>{{titleContent.leftUpper}}</span></div>
-                        </div>
-                        <div class="rightLowerThird">
-                            <div class="segment upperSegment"><span>{{titleContent.rightUpper}}</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lowerSegmentBackground" ng-show="showTitle">
-                    <div class="lowerThirdContainer">
-                        <div class="leftLowerThird">
-                            <div class="segment lowerSegment"><span>{{titleContent.leftLower}}</span></div>
-                        </div>
-                        <div class="rightLowerThird">
-                            <div class="segment lowerSegment"><span>{{titleContent.rightLower}}</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div ng-controller="lowerThirdsCtrl" class="lowerThird headlineLowerThird" ng-show="showHeadline">
-                <div class="largeTopSegmentBackground" ng-show="showHeadlineLargeTop">
-                    <div class="lowerThirdContainer">
-                        <div class="textRow">
-                            <div class="segment largeTopSegment"><span>{{headlineTop}}</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="upperSegmentBackground" ng-show="showHeadline && !showHeadlineLargeTop">
-                    <div class="lowerThirdContainer">
-                        <div class="textRow">
-                            <div class="segment upperSegment"><span>{{headlineTop}}</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lowerSegmentBackground" ng-show="showHeadline && !showHeadlineLargeTop">
-                    <div class="lowerThirdContainer">
-                        <div class="segment lowerSegment" ng-show="showHeadline && !showHeadlineLargeTop"><span>{{headlineMain}}</span></div>
-                    </div>
-                </div>
-            </div>
-            <div ng-controller="lowerThirdsCtrl" class="lowerThird ongoingLowerThird" ng-show="showOngoing">
-                <div class="upperSegmentBackground" ng-show="showOngoing">
-                    <div class="lowerThirdContainer">
-                        <div class="textRow">
-                            <div class="segment upperSegment"><span>{{ongoingTop}}</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lowerSegmentBackground" ng-show="showOngoing">
-                    <div class="lowerThirdContainer">
-                        <div class="segment lowerSegment" ng-show="showOngoing"><span>{{ongoingMain}}</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- <div ng-controller="generalCtrl" id="ticker" ng-show="state.showTicker && state.showLogo" >
-                <div class="ticker-contents">
-                    <div class="ticker-item" ng-repeat="ti in state.cTickerItems track by $index">{{ti}}</div>
-                </div>
-            </div> -->
+            <div ng-include="'cgincludes/lowerThirds/title.html'"></div>
+            <!-- <div ng-include="'cgincludes/lowerThirds/headline.html'"></div>
+			<div ng-include="'cgincludes/lowerThirds/ongoing.html'"></div> -->
+            <!-- <div ng-include"'cgincludes/ticker.html'"></div> -->
         </div>
     </div>
 

@@ -1,0 +1,11 @@
+<div ng-controller="generalCtrl" id="bug">
+	<div id="logo" ng-show="state.showLogo">
+		<!-- <img id="polls" src="/img/polls.svg" /> -->
+		<img id="forge" src="/img/forge-black.svg" />
+	</div>
+	<div class="liveSegment" ng-show="state.showLogo && state.showLive" ng-class="{ 'altLive': liveToggle }">
+		<!-- <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH"}}&nbsp;<span style="padding-top: .1vw" ng-show="colonOnBool">:</span>&nbsp;{{clock|date:"mm"}}</span></div> -->
+		<div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH:mm"}}</span></div>
+		<div class="liveSegmentText" ng-show="liveToggle"><span>LIVE</span></div>
+	</div>
+</div>

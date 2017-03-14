@@ -1,0 +1,21 @@
+<div ng-controller="lowerThirdsCtrl" class="lowerThird headlineLowerThird" ng-show="showHeadline">
+	<div class="largeTopSegmentBackground" ng-show="showHeadlineLargeTop">
+		<div class="lowerThirdContainer">
+			<div class="textRow">
+				<div class="segment largeTopSegment"><span>{{headlineTop}}</span></div>
+			</div>
+		</div>
+	</div>
+	<div class="upperSegmentBackground" ng-show="showHeadline && !showHeadlineLargeTop">
+		<div class="lowerThirdContainer">
+			<div class="textRow">
+				<div class="segment upperSegment"><span>{{headlineTop}}</span></div>
+			</div>
+		</div>
+	</div>
+	<div class="lowerSegmentBackground" ng-show="showHeadline && !showHeadlineLargeTop">
+		<div class="lowerThirdContainer">
+			<div class="segment lowerSegment" ng-show="showHeadline && !showHeadlineLargeTop"><span>{{headlineMain}}</span></div>
+		</div>
+	</div>
+</div>

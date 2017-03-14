@@ -1,0 +1,5 @@
+<div ng-controller="generalCtrl" id="ticker" ng-show="state.showTicker && state.showLogo" >
+	<div class="ticker-contents">
+		<div class="ticker-item" ng-repeat="ti in state.cTickerItems track by $index">{{ti}}</div>
+	</div>
+</div>
