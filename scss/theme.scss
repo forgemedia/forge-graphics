@@ -44,14 +44,13 @@ $main-margin: (100vw - $main-container-width) / 2;
 @import 'mixins';
 @import 'fonts';
 @import 'bug';
-@import 'hashtag';
+@import 'bug/hashtag';
 @import 'lowerThirds';
-@import 'titleLowerThird';
-@import 'headlineLowerThird';
-@import 'ongoingLowerThird';
+@import 'lowerThirds/title';
+@import 'lowerThirds/headline';
+@import 'lowerThirds/headline';
 @import 'ticker';
-@import 'chart';
-@import 'boxing';
+@import 'varsity/boxing';
 
 body {
     margin: 0;

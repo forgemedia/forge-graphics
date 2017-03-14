@@ -507,6 +507,20 @@ th {
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+@font-face {
+  font-family: 'AG Book Rounded';
+  src: url("/fonts/AGBookRdMed.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AG Book Rounded';
+  src: url("/fonts/AGBookRdReg.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 #bug {
   z-index: 2;
 }
@@ -623,7 +637,7 @@ th {
   text-align: center;
 }
 
-#bug .liveSegment .liveSegmentText > span, #bug .liveSegment .barChart .barContainer .liveSegmentText > .name, .barChart .barContainer #bug .liveSegment .liveSegmentText > .name {
+#bug .liveSegment .liveSegmentText > span {
   display: block;
   font-size: 2.2vw;
   width: 9vw;
@@ -665,7 +679,7 @@ th {
   transition: opacity 0.5s linear 0.75s;
 }
 
-#hashtag span, #hashtag .barChart .barContainer .name, .barChart .barContainer #hashtag .name {
+#hashtag span {
   color: #ffffff;
   font-size: 2vw;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
@@ -709,7 +723,7 @@ th {
   width: 100%;
 }
 
-.lowerThird .segment span, .lowerThird .segment .barChart .barContainer .name, .barChart .barContainer .lowerThird .segment .name {
+.lowerThird .segment span {
   width: 100%;
   display: block;
 }
@@ -740,7 +754,7 @@ th {
   z-index: 8;
 }
 
-.lowerThird.titleLowerThird .upperSegment span, .lowerThird.titleLowerThird .upperSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.titleLowerThird .upperSegment .name {
+.lowerThird.titleLowerThird .upperSegment span {
   font-size: 3vw;
   color: #ffffff;
   letter-spacing: -0.2vw;
@@ -760,7 +774,7 @@ th {
   border-top-right-radius: 0.5vw;
 }
 
-.lowerThird.titleLowerThird .lowerSegment span, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegment span, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegment span, .lowerThird.titleLowerThird .lowerSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.titleLowerThird .lowerSegment .name, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegment .name, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegment .name {
+.lowerThird.titleLowerThird .lowerSegment span, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegment span, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegment span {
   font-size: 1.8vw;
   font-weight: 500;
   color: #323232;
@@ -800,11 +814,11 @@ th {
           transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
 }
 
-.lowerThird.titleLowerThird.splitColour .rightLowerThird .upperSegment span, .lowerThird.titleLowerThird.splitColour .rightLowerThird .upperSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.titleLowerThird.splitColour .rightLowerThird .upperSegment .name {
+.lowerThird.titleLowerThird.splitColour .rightLowerThird .upperSegment span {
   color: #ffffff !important;
 }
 
-.lowerThird.titleLowerThird.splitColour .upperSegment span, .lowerThird.titleLowerThird.splitColour .upperSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.titleLowerThird.splitColour .upperSegment .name {
+.lowerThird.titleLowerThird.splitColour .upperSegment span {
   color: #323232;
 }
 
@@ -834,7 +848,7 @@ th {
   margin-top: 0.35vw;
 }
 
-.lowerThird.headlineLowerThird .upperSegment span, .lowerThird.headlineLowerThird .upperSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.headlineLowerThird .upperSegment .name {
+.lowerThird.headlineLowerThird .upperSegment span {
   font-size: 2vw;
   color: #ffffff;
 }
@@ -878,7 +892,7 @@ th {
           transition-delay: 0.2s;
 }
 
-.lowerThird.headlineLowerThird .lowerSegment span, .lowerThird.headlineLowerThird .largeTopSegment span, .lowerThird.headlineLowerThird .lowerSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.headlineLowerThird .lowerSegment .name, .lowerThird.headlineLowerThird .largeTopSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.headlineLowerThird .largeTopSegment .name {
+.lowerThird.headlineLowerThird .lowerSegment span, .lowerThird.headlineLowerThird .largeTopSegment span {
   font-size: 3.5vw;
   color: #ffffff;
   letter-spacing: -0.1vw;
@@ -933,33 +947,36 @@ th {
   transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1) 2s;
 }
 
-.lowerThird.ongoingLowerThird {
+.lowerThird.headlineLowerThird {
   -webkit-transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 1s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 1s cubic-bezier(0, 0.75, 0.75, 1);
   transition: transform 1s cubic-bezier(0, 0.75, 0.75, 1), opacity 1s cubic-bezier(0, 0.75, 0.75, 1);
   transition: transform 1s cubic-bezier(0, 0.75, 0.75, 1), opacity 1s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 1s cubic-bezier(0, 0.75, 0.75, 1);
 }
 
-.lowerThird.ongoingLowerThird .lowerThirdContainer .textRow {
+.lowerThird.headlineLowerThird .lowerThirdContainer .textRow {
   position: absolute;
   width: 80vw;
 }
 
-.lowerThird.ongoingLowerThird .upperSegment {
+.lowerThird.headlineLowerThird .upperSegment, .lowerThird.headlineLowerThird .lowerSegment, .lowerThird.headlineLowerThird .largeTopSegment {
   text-transform: uppercase;
-  margin-top: 0.45vw;
 }
 
-.lowerThird.ongoingLowerThird .upperSegment span, .lowerThird.ongoingLowerThird .upperSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.ongoingLowerThird .upperSegment .name {
-  font-size: 2.5vw;
+.lowerThird.headlineLowerThird .upperSegment {
+  margin-top: 0.35vw;
+}
+
+.lowerThird.headlineLowerThird .upperSegment span {
+  font-size: 2vw;
   color: #ffffff;
 }
 
-.lowerThird.ongoingLowerThird .upperSegmentBackground {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
+.lowerThird.headlineLowerThird .upperSegmentBackground {
+  background: -webkit-linear-gradient(bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
   background-blend-mode: multiply, normal;
-  height: 4vw;
+  height: 3vw;
   position: absolute;
   z-index: 2;
   width: 100vw;
@@ -971,19 +988,19 @@ th {
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
 }
 
-.lowerThird.ongoingLowerThird .upperSegmentBackground.ng-hide {
+.lowerThird.headlineLowerThird .upperSegmentBackground.ng-hide {
   opacity: 0;
   -webkit-transform: translateY(2vw);
           transform: translateY(2vw);
 }
 
-.lowerThird.ongoingLowerThird .upperSegmentBackground.ng-hide-remove {
+.lowerThird.headlineLowerThird .upperSegmentBackground.ng-hide-remove {
   -webkit-transition-delay: 1.2s;
           transition-delay: 1.2s;
 }
 
-.lowerThird.ongoingLowerThird .lowerSegment, .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .largeTopSegment, .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .largeTopSegment {
-  margin-top: 0.45vw;
+.lowerThird.headlineLowerThird .lowerSegment, .lowerThird.headlineLowerThird .largeTopSegment {
+  margin-top: 0.4vw;
   float: left;
   width: 80vw;
   -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
@@ -994,37 +1011,42 @@ th {
           transition-delay: 0.2s;
 }
 
-.lowerThird.ongoingLowerThird .lowerSegment span, .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .largeTopSegment span, .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .largeTopSegment span, .lowerThird.ongoingLowerThird .lowerSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.ongoingLowerThird .lowerSegment .name, .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .largeTopSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .largeTopSegment .name, .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .largeTopSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .largeTopSegment .name {
-  font-size: 2.55vw;
-  color: #323232;
+.lowerThird.headlineLowerThird .lowerSegment span, .lowerThird.headlineLowerThird .largeTopSegment span {
+  font-size: 3.5vw;
+  color: #ffffff;
   letter-spacing: -0.1vw;
 }
 
-.lowerThird.ongoingLowerThird .lowerSegment.ng-hide-remove, .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegment, .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .ng-hide-remove.largeTopSegment {
+.lowerThird.headlineLowerThird .lowerSegment.ng-hide-remove, .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegment {
   opacity: 0;
   -webkit-transform: translateX(-4vw);
           transform: translateX(-4vw);
 }
 
-.lowerThird.ongoingLowerThird .lowerSegmentBackground, .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .largeTopSegmentBackground {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+.lowerThird.headlineLowerThird .lowerSegmentBackground, .lowerThird.headlineLowerThird .largeTopSegmentBackground {
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
   background-blend-mode: multiply, normal;
   box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
   position: absolute;
-  top: 4vw;
-  height: 4vw;
+  top: 3vw;
+  height: 5vw;
   width: 100vw;
   z-index: 3;
   -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1);
 }
 
-.lowerThird.ongoingLowerThird .lowerSegmentBackground.ng-hide-remove, .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .ng-hide-remove.largeTopSegmentBackground {
+.lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide-remove, .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegmentBackground {
   opacity: 0;
 }
 
-.lowerThird.ongoingLowerThird .lowerSegmentBackground.ng-hide, .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .ng-hide.largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .ng-hide.largeTopSegmentBackground {
+.lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide-add, .lowerThird.headlineLowerThird .ng-hide-add.largeTopSegmentBackground {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide, .lowerThird.headlineLowerThird .ng-hide.largeTopSegmentBackground {
   opacity: 0;
   -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
           transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
@@ -1032,12 +1054,14 @@ th {
           transition-delay: .5s;
 }
 
-.lowerThird.ongoingLowerThird .lowerSegmentBackground.ng-hide-add, .lowerThird.ongoingLowerThird .lowerThird.headlineLowerThird .ng-hide-add.largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.ongoingLowerThird .ng-hide-add.largeTopSegmentBackground {
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
+.lowerThird.headlineLowerThird .largeTopSegmentBackground {
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background-blend-mode: multiply, normal;
+  z-index: 0;
 }
 
-.lowerThird.ongoingLowerThird.ng-hide-add {
+.lowerThird.headlineLowerThird.ng-hide-add {
   -webkit-transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1) 2s;
   transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1) 2s;
 }
@@ -1110,95 +1134,6 @@ th {
   padding-left: 4vw;
   padding-right: 4vw;
   content: "—";
-}
-
-.barChart {
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4)), #e6e5e5;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4)), #e6e5e5;
-  width: 80vw;
-  margin: 1vw 1vh;
-  left: 10vw;
-  top: 13vh;
-  position: absolute;
-  padding: 1vw 1vw;
-  border-radius: 1vw;
-}
-
-.barChart .barContainer {
-  height: 2.5vw;
-  margin: .5vw;
-  overflow: hidden;
-}
-
-.barChart .barContainer * {
-  float: left;
-}
-
-.barChart .barContainer .bar {
-  padding-right: .5vw;
-  border-radius: .5vw;
-  -webkit-transition: background 0.5s linear;
-  transition: background 0.5s linear;
-}
-
-.barChart .barContainer .bar * {
-  float: none;
-}
-
-.barChart .barContainer .bar span, .barChart .barContainer .bar .name {
-  color: #ffffff;
-}
-
-.barChart .barContainer .bar span.tally, .barChart .barContainer .bar .tally.name {
-  z-index: 2;
-  float: right;
-  font-weight: 700;
-}
-
-.barChart .barContainer span, .barChart .barContainer .name {
-  line-height: 2.5vw;
-  font-size: 2vw;
-  margin-left: .5vw;
-}
-
-.barChart .barContainer .name {
-  width: 10vw;
-  text-overflow: fade;
-}
-
-#barChartContainer {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 100vh;
-  -webkit-transition: opacity 0.1s linear;
-  transition: opacity 0.1s linear;
-  background: #2d2f7f;
-}
-
-#barChartContainer span small, #barChartContainer .barChart .barContainer .name small, .barChart .barContainer #barChartContainer .name small {
-  color: #cccccc;
-}
-
-#barChartContainer span.bcTitle, #barChartContainer .barChart .barContainer .bcTitle.name, .barChart .barContainer #barChartContainer .bcTitle.name {
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-  position: absolute;
-  top: 8vh;
-  font-size: 3vw;
-  -webkit-transition: opacity 0.25s linear;
-  transition: opacity 0.25s linear;
-  color: #ffffff;
-}
-
-#barChartContainer span.bcTitle.ng-hide, #barChartContainer .barChart .barContainer .bcTitle.ng-hide.name, .barChart .barContainer #barChartContainer .bcTitle.ng-hide.name {
-  opacity: 0;
-}
-
-#barChartContainer.ng-hide {
-  opacity: 0;
 }
 
 #boxingBug {
