@@ -28,7 +28,7 @@
 	}
 }
 
-@mixin bug-styling {
+%bug-styling {
 	position: absolute;
 	top: $bug-top;
 	height: $bug-height;
@@ -38,4 +38,8 @@
 	border: $bug-border;
 	overflow: hidden;
 	box-shadow: inset $lower-box-shadow, $right-box-shadow;
+}
+
+@mixin bug-styling {
+	@extend %bug-styling;
 }

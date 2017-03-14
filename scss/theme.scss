@@ -28,8 +28,9 @@ $bug-height: 3vw;
 $lower-third-top: 72vh;
 $lower-third-height: 8vw;
 
-$bug-border-radius: $bug-height / 2;
 $bug-border-width: 0;
+$bug-border: $bug-border-width solid $border-colour;
+$bug-border-radius: $bug-height / 2;
 
 $main-container-width: 80vw;
 $main-margin: (100vw - $main-container-width) / 2;

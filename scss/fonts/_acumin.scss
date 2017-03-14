@@ -627,3 +627,9 @@
 	font-weight: 500;
 	font-style: italic;
 }
+%bug-styling {
+	span {
+		// Acumin-specific
+		transform: translateY(0.25vw);
+	}
+}

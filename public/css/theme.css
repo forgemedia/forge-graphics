@@ -409,6 +409,17 @@ th {
   padding: 0;
 }
 
+#bug > *, #boxingBug {
+  position: absolute;
+  top: 6vh;
+  height: 3vw;
+  position: absolute;
+  line-height: 3vw;
+  border: 0 solid #323232;
+  overflow: hidden;
+  box-shadow: inset 0px 10px 18px -10px rgba(0, 0, 0, 0.45), 10px 0px 18px -10px rgba(0, 0, 0, 0.45);
+}
+
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-Bold.woff2") format("woff2");
@@ -1039,19 +1050,13 @@ th {
   font-style: italic;
 }
 
-#bug {
-  z-index: 2;
+#bug > * span, #boxingBug span {
+  -webkit-transform: translateY(0.25vw);
+          transform: translateY(0.25vw);
 }
 
-#bug > * {
-  position: absolute;
-  top: 6vh;
-  height: 3vw;
-  position: absolute;
-  line-height: 3vw;
-  border: 0 solid #323232;
-  overflow: hidden;
-  box-shadow: inset 0px 10px 18px -10px rgba(0, 0, 0, 0.45), 10px 0px 18px -10px rgba(0, 0, 0, 0.45);
+#bug {
+  z-index: 2;
 }
 
 #bug .noBoxShadow {
@@ -1167,8 +1172,6 @@ th {
   font-weight: 700;
   letter-spacing: -0.15vw;
   left: 0.5vw;
-  -webkit-transform: translateY(0.25vw);
-          transform: translateY(0.25vw);
 }
 
 #bug .liveSegment .liveSegmentText.ng-hide {
@@ -1673,14 +1676,6 @@ th {
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   -webkit-transition-delay: 0s !important;
           transition-delay: 0s !important;
-  position: absolute;
-  top: 6vh;
-  height: 3vw;
-  position: absolute;
-  line-height: 3vw;
-  border: 0 solid #323232;
-  overflow: hidden;
-  box-shadow: inset 0px 10px 18px -10px rgba(0, 0, 0, 0.45), 10px 0px 18px -10px rgba(0, 0, 0, 0.45);
   background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background-blend-mode: multiply, normal;
