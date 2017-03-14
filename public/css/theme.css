@@ -507,20 +507,6 @@ th {
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-@font-face {
-  font-family: 'AG Book Rounded';
-  src: url("/fonts/AGBookRdMed.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'AG Book Rounded';
-  src: url("/fonts/AGBookRdReg.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
 #bug {
   z-index: 2;
 }
@@ -695,8 +681,9 @@ th {
 }
 
 .lowerThird {
-  width: 100vw;
+  width: 80vw;
   position: absolute;
+  left: 10vw;
   z-index: 0;
   -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
@@ -741,7 +728,7 @@ th {
 }
 
 .lowerThird.titleLowerThird .lowerThirdContainer .leftLowerThird, .lowerThird.titleLowerThird .lowerThirdContainer .rightLowerThird {
-  width: 80vw;
+  width: 64vw;
   position: absolute;
 }
 
@@ -769,8 +756,8 @@ th {
   height: 5vw;
   position: relative;
   z-index: 2;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-top-left-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
 }
 
 .lowerThird.titleLowerThird .lowerSegment, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegment, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegment {
@@ -796,6 +783,8 @@ th {
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  border-bottom-left-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
 }
 
 .lowerThird.titleLowerThird .lowerSegmentBackground.ng-hide-remove, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .ng-hide-remove.largeTopSegmentBackground {
@@ -861,8 +850,8 @@ th {
   position: absolute;
   z-index: 2;
   width: 100vw;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-top-left-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
   -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
@@ -956,7 +945,7 @@ th {
 
 .lowerThird.ongoingLowerThird .lowerThirdContainer .textRow {
   position: absolute;
-  width: 80vw;
+  width: 64vw;
 }
 
 .lowerThird.ongoingLowerThird .upperSegment {
@@ -977,8 +966,8 @@ th {
   position: absolute;
   z-index: 2;
   width: 100vw;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-top-left-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
   -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);

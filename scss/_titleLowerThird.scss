@@ -1,7 +1,7 @@
 .lowerThird.titleLowerThird {
     .lowerThirdContainer {
 		%lowerThird {
-			width: $main-container-width;
+			width: $lower-third-container-width;
 			position: absolute;
 		}
 
@@ -66,6 +66,8 @@
 			height: ($lower-third-height / 8) * 3;
 			z-index: 0;
 			transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
+			border-bottom-left-radius: $lower-third-border-radius;
+			border-bottom-right-radius: $lower-third-border-radius;
 
 			&.ng-hide-remove {
 				transform: translateY(-4vw);

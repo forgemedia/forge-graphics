@@ -1,13 +1,18 @@
 //$lower-third-border-radius: $lower-third-height / 10;
-$lower-third-border-radius: 0;
+$lower-third-border-radius: .5vw;
 $lower-third-border-width: 0;
 $lower-third-border: $lower-third-border-width solid $border-colour;
+
+$lower-third-width: 80vw;
+$lower-third-margin: (100vw - $lower-third-width) / 2;
+$lower-third-container-width: $lower-third-width * 0.8;
 
 // TODO: shrink text if it overflows
 
 .lowerThird {
-    width: 100vw;
+    width: $lower-third-width;
     position: absolute;
+	left: $lower-third-margin;
     //margin-top: $lower-third-top;
     //height: $lower-third-height;
 
