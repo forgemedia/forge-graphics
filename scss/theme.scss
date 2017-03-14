@@ -2,13 +2,6 @@
 @import "../bower_components/susy/sass/susy";
 @import "../node_modules/spline-scss/dist/spline";
 
-* {
-    box-sizing: border-box;
-    backface-visibility: hidden;
-    background-clip: border-box;
-    font-family: 'Lato', sans-serif;
-}
-
 $colour-a: #cccccc;
 $colour-b: #ffdc00;
 $colour-c: #d4326b;
@@ -43,7 +36,7 @@ $main-margin: (100vw - $main-container-width) / 2;
 
 @import 'mixins/bug';
 @import 'mixins/overlay';
-@import 'fonts/lato';
+@import 'fonts/acumin';
 @import 'bug';
 @import 'bug/hashtag';
 @import 'lowerThirds';
@@ -52,6 +45,13 @@ $main-margin: (100vw - $main-container-width) / 2;
 @import 'lowerThirds/headline';
 @import 'ticker';
 @import 'varsity/boxing';
+
+* {
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    background-clip: border-box;
+    font-family: 'Acumin Pro', sans-serif;
+}
 
 body {
     margin: 0;

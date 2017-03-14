@@ -33,6 +33,7 @@ $lower-background-height: ($lower-third-height / 8) * 3;
             letter-spacing: -0.2vw;
 			font-weight: 700;
 			line-height: $upper-background-height;
+			transform: translateY(0.2vw);
         }
 
 		&Background {
@@ -56,6 +57,7 @@ $lower-background-height: ($lower-third-height / 8) * 3;
             color: $dark-colour;
             letter-spacing: -0.1vw;
 			line-height: $lower-background-height;
+			transform: translateY(0.2vw);
         }
 
 		&Background {

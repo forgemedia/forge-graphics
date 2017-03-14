@@ -409,102 +409,634 @@ th {
   padding: 0;
 }
 
-* {
-  box-sizing: border-box;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  background-clip: border-box;
-  font-family: 'Lato', sans-serif;
-}
-
-/* lato-100 - latin */
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-Bold.woff2") format("woff2");
+  font-weight: bold;
   font-style: normal;
-  font-weight: 100;
-  src: local("Lato Hairline"), local("Lato-Hairline"), url("/fonts/lato-v11-latin-100.woff2") format("woff2"), url("/fonts/lato-v11-latin-100.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* lato-100italic - latin */
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-ExtraLightItalic.woff2") format("woff2");
+  font-weight: 200;
   font-style: italic;
-  font-weight: 100;
-  src: local("Lato Hairline Italic"), local("Lato-HairlineItalic"), url("/fonts/lato-v11-latin-100italic.woff2") format("woff2"), url("/fonts/lato-v11-latin-100italic.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* lato-300 - latin */
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-Bold.woff2") format("woff2");
+  font-weight: bold;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-LightItalic.woff2") format("woff2");
   font-weight: 300;
-  src: local("Lato Light"), local("Lato-Light"), url("/fonts/lato-v11-latin-300.woff2") format("woff2"), url("/fonts/lato-v11-latin-300.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-style: italic;
 }
 
-/* lato-300italic - latin */
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
   font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-LightItalic.woff2") format("woff2");
   font-weight: 300;
-  src: local("Lato Light Italic"), local("Lato-LightItalic"), url("/fonts/lato-v11-latin-300italic.woff2") format("woff2"), url("/fonts/lato-v11-latin-300italic.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* lato-regular - latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Lato Regular"), local("Lato-Regular"), url("/fonts/lato-v11-latin-regular.woff2") format("woff2"), url("/fonts/lato-v11-latin-regular.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* lato-italic - latin */
-@font-face {
-  font-family: 'Lato';
   font-style: italic;
-  font-weight: 400;
-  src: local("Lato Italic"), local("Lato-Italic"), url("/fonts/lato-v11-latin-italic.woff2") format("woff2"), url("/fonts/lato-v11-latin-italic.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* lato-700 - latin */
 @font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Lato Bold"), local("Lato-Bold"), url("/fonts/lato-v11-latin-700.woff2") format("woff2"), url("/fonts/lato-v11-latin-700.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* lato-700italic - latin */
-@font-face {
-  font-family: 'Lato';
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-SemiboldItalic.woff2") format("woff2");
+  font-weight: 600;
   font-style: italic;
-  font-weight: 700;
-  src: local("Lato Bold Italic"), local("Lato-BoldItalic"), url("/fonts/lato-v11-latin-700italic.woff2") format("woff2"), url("/fonts/lato-v11-latin-700italic.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* lato-900 - latin */
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-UltraBlack.woff2") format("woff2");
   font-weight: 900;
-  src: local("Lato Black"), local("Lato-Black"), url("/fonts/lato-v11-latin-900.woff2") format("woff2"), url("/fonts/lato-v11-latin-900.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-style: normal;
 }
 
-/* lato-900italic - latin */
 @font-face {
-  font-family: 'Lato';
-  font-style: italic;
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-UltraBlackItalic.woff2") format("woff2");
   font-weight: 900;
-  src: local("Lato Black Italic"), local("Lato-BlackItalic"), url("/fonts/lato-v11-latin-900italic.woff2") format("woff2"), url("/fonts/lato-v11-latin-900italic.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-ExtraLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-UltraBlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-UltraBlack.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-ThinItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-UltraBlack.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-ExtraLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-UltraBlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-SemiboldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-ExtraLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-UltraBlack.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-UltraBlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-ThinItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-SemiboldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-ThinItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-ThinItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-UltraBlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-ExtraLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-SemiboldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-UltraBlack.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url("/fonts/AcuminPro-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-ThinItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro ExtraCondensed';
+  src: url("/fonts/AcuminProExtraCond-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro SemiCondensed';
+  src: url("/fonts/AcuminProSemiCond-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Condensed';
+  src: url("/fonts/AcuminProCond-SemiboldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Acumin Pro Wide';
+  src: url("/fonts/AcuminProWide-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
 }
 
 #bug {
@@ -571,6 +1103,9 @@ th {
   top: 0.55vw;
   height: 1.8vw;
   left: 10vw;
+  opacity: 0.4;
+  -webkit-transform: scale(1.3) rotate(-6deg);
+          transform: scale(1.3) rotate(-6deg);
 }
 
 #bug .liveSegment {
@@ -631,7 +1166,9 @@ th {
   line-height: 3vw;
   font-weight: 700;
   letter-spacing: -0.15vw;
-  left: 0.6vw;
+  left: 0.5vw;
+  -webkit-transform: translateY(0.25vw);
+          transform: translateY(0.25vw);
 }
 
 #bug .liveSegment .liveSegmentText.ng-hide {
@@ -698,7 +1235,7 @@ th {
 }
 
 .lowerThird .lowerThirdContainer {
-  left: 8vw;
+  left: 2vw;
   width: 80vw;
   position: absolute;
   z-index: 5;
@@ -728,7 +1265,7 @@ th {
 }
 
 .lowerThird.titleLowerThird .lowerThirdContainer .leftLowerThird, .lowerThird.titleLowerThird .lowerThirdContainer .rightLowerThird {
-  width: 64vw;
+  width: 76vw;
   position: absolute;
 }
 
@@ -746,6 +1283,8 @@ th {
   letter-spacing: -0.2vw;
   font-weight: 700;
   line-height: 5vw;
+  -webkit-transform: translateY(0.2vw);
+          transform: translateY(0.2vw);
 }
 
 .lowerThird.titleLowerThird .upperSegmentBackground {
@@ -765,6 +1304,8 @@ th {
   color: #323232;
   letter-spacing: -0.1vw;
   line-height: 3vw;
+  -webkit-transform: translateY(0.2vw);
+          transform: translateY(0.2vw);
 }
 
 .lowerThird.titleLowerThird .lowerSegmentBackground, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegmentBackground {
@@ -1223,6 +1764,14 @@ th {
   width: 11vw;
   height: 3vw;
   z-index: 1;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-clip: border-box;
+  font-family: 'Acumin Pro', sans-serif;
 }
 
 body {
