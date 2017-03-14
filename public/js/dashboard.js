@@ -9,7 +9,7 @@ app.controller('AppCtrl', ['$scope', '$location',
         };
 
         $scope.menu.push({
-            name: 'Bug',
+            name: 'General/Bug',
             url: '/general',
             type: 'link'
         });
@@ -52,8 +52,8 @@ app.config(['$routeProvider', 'localStorageServiceProvider',
     }
 ]);
 
-app.controller('generalCGController', ['$scope', 'socket',
-    function($scope, socket){
+app.controller('generalCGController', ['$scope', 'localStorageService', 'socket',
+    function($scope, localStorageService, socket){
         socket.on("general", function (msg) {
             $scope.general = msg;
         });
@@ -95,6 +95,10 @@ app.controller('generalCGController', ['$scope', 'socket',
 			socket.emit("general:destroyVotesGraph");
 		};
 
+		$scope.clearLocalStorage = function() {
+			localStorageService.clearAll();
+		};
+
         function getGeneralData() {
             socket.emit("general:get");
         };
@@ -107,7 +111,7 @@ app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$ti
         var headlineStored = localStorageService.get('lt_headline');
         var ongoingStored = localStorageService.get('lt_ongoing');
 
-        if (titleStored === null) $scope.ltTitleDashEntries = [];
+        if (titleStored === null) $scope.ltTitleDashEntries = {};
         else $scope.ltTitleDashEntries = titleStored;
 
         if (headlineStored === null) $scope.ltHeadlineDashEntries = [];
@@ -121,7 +125,7 @@ app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$ti
             "Incoming Result"
         ];
 
-        $scope.hlTopScratch = $scope.topSelections[0];
+        // $scope.hlTopScratch = $scope.topSelections[0];
 
         // $scope.timeRemaining = 10;
 
@@ -163,8 +167,11 @@ app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$ti
             localStorageService.set('lt_title', $scope.ltTitleDashEntries);
             localStorageService.set('lt_headline', $scope.ltHeadlineDashEntries);
             localStorageService.set('lt_ongoing', $scope.ltOngoingDashEntries);
-
         };
+
+		$scope.clearLocalStorage = function() {
+			localStorageService.clearAll();
+		};
 
         $scope.$on("$destroy", $scope.storeEntries);
         $window.onbeforeunload = $scope.storeEntries;

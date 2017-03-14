@@ -37,24 +37,24 @@
 			<span class="bout" id="bout3" ng-class="{ 'complete': state.boutComplete[2] }">3</span>
 		</div>
         <div id="main-container">
-            <div ng-controller="lowerThirdsCtrl" class="lowerThird titleLowerThird" ng-show="showTitle">
+            <div ng-controller="lowerThirdsCtrl" class="lowerThird titleLowerThird" ng-class="titleContent.titleClasses" ng-show="showTitle">
                 <div class="upperSegmentBackground">
                     <div class="lowerThirdContainer">
                         <div class="leftLowerThird">
-                            <div class="segment upperSegment"><span>{{leftUpperTitleText}}</span></div>
+                            <div class="segment upperSegment"><span>{{titleContent.leftUpper}}</span></div>
                         </div>
                         <div class="rightLowerThird">
-                            <div class="segment upperSegment"><span>{{rightUpperTitleText}}</span></div>
+                            <div class="segment upperSegment"><span>{{titleContent.rightUpper}}</span></div>
                         </div>
                     </div>
                 </div>
                 <div class="lowerSegmentBackground" ng-show="showTitle">
                     <div class="lowerThirdContainer">
                         <div class="leftLowerThird">
-                            <div class="segment lowerSegment"><span>{{leftLowerTitleText}}</span></div>
+                            <div class="segment lowerSegment"><span>{{titleContent.leftLower}}</span></div>
                         </div>
                         <div class="rightLowerThird">
-                            <div class="segment lowerSegment"><span>{{rightLowerTitleText}}</span></div>
+                            <div class="segment lowerSegment"><span>{{titleContent.rightLower}}</span></div>
                         </div>
                     </div>
                 </div>

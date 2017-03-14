@@ -42,17 +42,19 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
     function($scope, $timeout, $interval, socket) {
         $scope.tickInterval = 1000;
 
-        $scope.showTitle = false;
-        $scope.showHeadlineLargeTop = false;
-        $scope.showHeadline = false;
-        $scope.showOngoing = false;
+        // $scope.showTitle = false;
+        // $scope.showHeadlineLargeTop = false;
+        // $scope.showHeadline = false;
+        // $scope.showOngoing = false;
+		$scope.titleContent = {};
 
         socket.on("lowerThirds:showTitle", function(msg) {
             if ($scope.showTitle) $scope.showTitle = false;
-            $scope.leftUpperTitleText = msg[0];
-            $scope.leftLowerTitleText = msg[1];
-            $scope.rightUpperTitleText = msg[2];
-            $scope.rightLowerTitleText = msg[3];
+            // $scope.leftUpperTitleText = msg[0];
+            // $scope.leftLowerTitleText = msg[1];
+            // $scope.rightUpperTitleText = msg[2];
+            // $scope.rightLowerTitleText = msg[3];
+			$scope.titleContent = msg;
             $scope.showTitle = true;
             $timeout(function() {
                 $scope.showTitle = false;
