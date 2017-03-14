@@ -1,13 +1,3 @@
-@mixin overlay($backgroundColour) {
-	background: $overlay-background, $backgroundColour;
-	background-blend-mode: multiply, normal;
-}
-
-@mixin inverse-overlay($backgroundColour) {
-	background: $inverse-overlay-background, $backgroundColour;
-	background-blend-mode: multiply, normal;
-}
-
 @mixin bug-round-right {
 	border-top-right-radius: $bug-border-radius;
 	border-bottom-right-radius: $bug-border-radius;

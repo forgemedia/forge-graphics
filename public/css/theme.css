@@ -507,20 +507,6 @@ th {
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-@font-face {
-  font-family: 'AG Book Rounded';
-  src: url("/fonts/AGBookRdMed.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'AG Book Rounded';
-  src: url("/fonts/AGBookRdReg.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
 #bug {
   z-index: 2;
 }
@@ -766,7 +752,6 @@ th {
   background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
   background-blend-mode: multiply, normal;
-  box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
   height: 5vw;
   position: relative;
   z-index: 2;

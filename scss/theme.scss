@@ -41,8 +41,9 @@ $bug-border-width: 0;
 $main-container-width: 80vw;
 $main-margin: (100vw - $main-container-width) / 2;
 
-@import 'mixins';
-@import 'fonts';
+@import 'mixins/bug';
+@import 'mixins/overlay';
+@import 'fonts/lato';
 @import 'bug';
 @import 'bug/hashtag';
 @import 'lowerThirds';
