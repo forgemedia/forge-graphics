@@ -1312,8 +1312,8 @@ th {
 }
 
 .lowerThird.titleLowerThird .lowerSegmentBackground, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegmentBackground {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  background: -webkit-linear-gradient(bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background-blend-mode: multiply, normal;
   position: relative;
   box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);

@@ -62,7 +62,7 @@ $lower-background-height: ($lower-third-height / 8) * 3;
 
 		&Background {
 			@extend %titleSegmentBackground !optional;
-			@include overlay($light-colour);
+			@include inverse-overlay($light-colour);
 
 			position: relative;
 			box-shadow: $lower-box-shadow;
