@@ -737,7 +737,6 @@ th {
 }
 
 .lowerThird.titleLowerThird .upperSegment {
-  margin-top: 0.7vw;
   z-index: 8;
 }
 
@@ -746,6 +745,7 @@ th {
   color: #ffffff;
   letter-spacing: -0.2vw;
   font-weight: 700;
+  line-height: 5vw;
 }
 
 .lowerThird.titleLowerThird .upperSegmentBackground {
@@ -760,15 +760,12 @@ th {
   border-top-right-radius: 0.5vw;
 }
 
-.lowerThird.titleLowerThird .lowerSegment, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegment, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegment {
-  margin-top: 0.5vw;
-}
-
 .lowerThird.titleLowerThird .lowerSegment span, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegment span, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegment span, .lowerThird.titleLowerThird .lowerSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.titleLowerThird .lowerSegment .name, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegment .name, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegment .barChart .barContainer .name, .barChart .barContainer .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegment .name {
   font-size: 1.8vw;
   font-weight: 500;
   color: #323232;
   letter-spacing: -0.1vw;
+  line-height: 3vw;
 }
 
 .lowerThird.titleLowerThird .lowerSegmentBackground, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegmentBackground {
@@ -945,7 +942,7 @@ th {
 
 .lowerThird.ongoingLowerThird .lowerThirdContainer .textRow {
   position: absolute;
-  width: 64vw;
+  width: 80vw;
 }
 
 .lowerThird.ongoingLowerThird .upperSegment {

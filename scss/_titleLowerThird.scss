@@ -1,3 +1,6 @@
+$upper-background-height: ($lower-third-height / 8) * 5;
+$lower-background-height: ($lower-third-height / 8) * 3;
+
 .lowerThird.titleLowerThird {
     .lowerThirdContainer {
 		%lowerThird {
@@ -22,7 +25,6 @@
     .upperSegment {
 		@extend %titleSegment !optional;
 
-        margin-top: 0.7vw;
 		z-index: 8;
 
         span {
@@ -30,6 +32,7 @@
             color: $light-colour;
             letter-spacing: -0.2vw;
 			font-weight: 700;
+			line-height: $upper-background-height;
         }
 
 		&Background {
@@ -37,7 +40,7 @@
 			@include overlay($dark-colour);
 
 			box-shadow: $lower-box-shadow;
-			height: ($lower-third-height / 8) * 5;
+			height: $upper-background-height;
 			position: relative;
 			z-index: 2;
 			border-top-left-radius: $lower-third-border-radius;
@@ -47,14 +50,12 @@
 
     .lowerSegment {
 		@extend %titleSegment !optional;
-
-        margin-top: 0.5vw;
-
         span {
             font-size: 1.8vw;
             font-weight: 500;
             color: $dark-colour;
             letter-spacing: -0.1vw;
+			line-height: $lower-background-height;
         }
 
 		&Background {
@@ -63,7 +64,7 @@
 
 			position: relative;
 			box-shadow: $lower-box-shadow;
-			height: ($lower-third-height / 8) * 3;
+			height: $lower-background-height;
 			z-index: 0;
 			transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
 			border-bottom-left-radius: $lower-third-border-radius;
