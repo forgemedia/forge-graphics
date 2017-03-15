@@ -31,6 +31,7 @@ $lower-third-height: 8vw;
 $bug-border-width: 0;
 $bug-border: $bug-border-width solid $border-colour;
 $bug-border-radius: $bug-height / 2;
+$bug-transition-duration: 0.75s;
 
 $main-container-width: 80vw;
 $main-margin: (100vw - $main-container-width) / 2;

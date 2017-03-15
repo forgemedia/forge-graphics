@@ -1056,7 +1056,7 @@ th {
 }
 
 #bug {
-  z-index: 2;
+  position: absolute;
 }
 
 #bug .noBoxShadow {
@@ -1069,14 +1069,13 @@ th {
   background-blend-mode: multiply, normal;
   border-top-right-radius: 1.5vw;
   border-bottom-right-radius: 1.5vw;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
   -webkit-transition-delay: 0s !important;
           transition-delay: 0s !important;
   width: 17.75vw;
-  z-index: 2;
 }
 
 #bug #logo.ng-hide {
@@ -1119,10 +1118,10 @@ th {
   background-blend-mode: multiply, normal;
   border-top-right-radius: 1.5vw;
   border-bottom-right-radius: 1.5vw;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
   -webkit-transition-delay: 0.5s !important;
           transition-delay: 0.5s !important;
   -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), background 0.5s cubic-bezier(0, 0.75, 0.75, 1), color 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
@@ -1132,7 +1131,7 @@ th {
   color: #323232;
   width: 9vw;
   left: 15.75vw;
-  z-index: 1;
+  z-index: -1;
 }
 
 #bug .liveSegment.ng-hide {
@@ -1221,14 +1220,27 @@ th {
 }
 
 .lowerThird {
+  -webkit-transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1);
   width: 80vw;
   position: absolute;
   left: 10vw;
   z-index: 0;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+}
+
+.lowerThird.ng-hide-remove {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  opacity: 0;
+}
+
+.lowerThird.ng-hide-add {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.lowerThird.ng-hide {
+  opacity: 0;
 }
 
 .lowerThird > * {
@@ -1250,19 +1262,6 @@ th {
 .lowerThird .segment span {
   width: 100%;
   display: block;
-}
-
-.lowerThird.ng-hide-remove {
-  opacity: 0;
-}
-
-.lowerThird.ng-hide-add {
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
-}
-
-.lowerThird.ng-hide {
-  opacity: 0;
 }
 
 .lowerThird.titleLowerThird .lowerThirdContainer .leftLowerThird, .lowerThird.titleLowerThird .lowerThirdContainer .rightLowerThird {
@@ -1313,12 +1312,12 @@ th {
   background: -webkit-linear-gradient(bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background-blend-mode: multiply, normal;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  -webkit-transition-delay: 0.75s !important;
-          transition-delay: 0.75s !important;
+  -webkit-transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.25s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.25s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), transform 0.25s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), transform 0.25s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.25s cubic-bezier(0, 0.75, 0.75, 1);
+  -webkit-transition-delay: 0.4s !important;
+          transition-delay: 0.4s !important;
   -webkit-transform-origin: center top 0;
           transform-origin: center top 0;
   position: relative;
@@ -1332,8 +1331,6 @@ th {
 .lowerThird.titleLowerThird .lowerSegmentBackground.ng-hide-remove, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .ng-hide-remove.largeTopSegmentBackground {
   -webkit-transform: rotateX(-90deg);
           transform: rotateX(-90deg);
-  -webkit-transition-delay: 0.75s;
-          transition-delay: 0.75s;
 }
 
 .lowerThird.titleLowerThird .lowerSegmentBackground.ng-hide, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .ng-hide.largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .ng-hide.largeTopSegmentBackground {
@@ -1671,19 +1668,20 @@ th {
   border-bottom-right-radius: 1.5vw;
   border-top-left-radius: 1.5vw;
   border-bottom-left-radius: 1.5vw;
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
   -webkit-transition-delay: 0s !important;
           transition-delay: 0s !important;
   background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background-blend-mode: multiply, normal;
   color: #323232;
-  z-index: 0;
+  position: absolute;
   width: 29.5vw;
   left: 20vw;
+  z-index: -1;
 }
 
 #boxingBug.ng-hide {
@@ -1743,7 +1741,7 @@ th {
   font-size: 2.2vw;
   left: 6.2vw;
   font-weight: 700;
-  z-index: 2;
+  z-index: -1;
   color: #ffffff;
 }
 
@@ -1759,7 +1757,7 @@ th {
   left: 2vw;
   width: 11vw;
   height: 3vw;
-  z-index: 1;
+  z-index: -2;
 }
 
 * {

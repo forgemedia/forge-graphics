@@ -8,8 +8,8 @@
 	border-bottom-left-radius: $bug-border-radius;
 }
 
-@mixin bug-transition($in-delay, $out-delay) {
-	transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
+@mixin bug-transition($duration, $in-delay, $out-delay) {
+	transition: opacity $duration $cubic-bezier, transform $duration $cubic-bezier;
 	transition-delay: $in-delay !important;
 
 	&.ng-hide {
@@ -19,7 +19,7 @@
 
 	&.ng-hide-add,
 	&.ng-hide-remove {
-		transition: transform 0.75s $cubic-bezier, opacity 0.75s $cubic-bezier;
+		transition: transform $duration $cubic-bezier, opacity $duration $cubic-bezier;
 	}
 
 	&.ng-hide-add {

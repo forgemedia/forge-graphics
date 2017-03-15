@@ -11,22 +11,19 @@ $lower-third-container-margin: ($lower-third-width - $lower-third-container-widt
 // TODO: shrink text if it overflows
 
 .lowerThird {
+	@include fade(0.25s, 0s, 0.8s);
+
     width: $lower-third-width;
     position: absolute;
 	left: $lower-third-margin;
-    //margin-top: $lower-third-top;
-    //height: $lower-third-height;
 
     z-index: 0;
-
-    transition: transform 0.5s $cubic-bezier, opacity 0.5s $cubic-bezier;
 
     > * {
         overflow: hidden;
     }
 
     .lowerThirdContainer {
-        //@include container(200em);
         left: $lower-third-container-margin;
         width: $main-container-width;
 
@@ -42,17 +39,4 @@ $lower-third-container-margin: ($lower-third-width - $lower-third-container-widt
             display: block;
         }
     }
-
-	&.ng-hide-remove {
-	    opacity: 0;
-	}
-
-	&.ng-hide-add {
-	    transition-delay: 0.6s;
-	}
-
-	&.ng-hide {
-	    opacity: 0;
-	}
-
 }
