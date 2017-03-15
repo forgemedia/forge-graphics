@@ -23,7 +23,6 @@ $lower-third-container-margin: ($lower-third-width - $lower-third-container-widt
 
     > * {
         overflow: hidden;
-        transform: perspective($perspective);
     }
 
     .lowerThirdContainer {

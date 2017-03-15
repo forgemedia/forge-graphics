@@ -63,27 +63,14 @@ $lower-background-height: ($lower-third-height / 8) * 3;
 		&Background {
 			@extend %titleSegmentBackground !optional;
 			@include inverse-overlay($light-colour);
+			@include flip-down(0.75s, 0s);
 
 			position: relative;
 			box-shadow: $lower-box-shadow;
 			height: $lower-background-height;
 			z-index: 0;
-			transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
 			border-bottom-left-radius: $lower-third-border-radius;
 			border-bottom-right-radius: $lower-third-border-radius;
-
-			&.ng-hide-remove {
-				transform: translateY(-4vw);
-				opacity: 0;
-				transition-delay: 0.75s;
-			}
-
-			&.ng-hide {
-				transform: translateY(-5vw);
-				opacity: 0;
-				transition-timing-function: $cubic-bezier-reverse;
-			}
-
 		}
     }
 

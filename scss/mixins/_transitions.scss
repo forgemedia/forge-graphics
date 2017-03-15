@@ -1,0 +1,18 @@
+@mixin flip-down($in-delay, $out-delay) {
+	transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;
+	transition-delay: $in-delay !important;
+	transform-origin: center top 0;
+
+	&.ng-hide-remove {
+		//transform: translateY(-4vw);
+		transform: rotateX(-90deg);
+		//opacity: 0;
+		transition-delay: 0.75s;
+	}
+
+	&.ng-hide {
+		transition-timing-function: $cubic-bezier-reverse;
+		transition-delay: $out-delay !important;
+		opacity: 0;
+	}
+}

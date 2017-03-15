@@ -1233,8 +1233,6 @@ th {
 
 .lowerThird > * {
   overflow: hidden;
-  -webkit-transform: perspective(25vw);
-          transform: perspective(25vw);
 }
 
 .lowerThird .lowerThirdContainer {
@@ -1315,32 +1313,35 @@ th {
   background: -webkit-linear-gradient(bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background-blend-mode: multiply, normal;
-  position: relative;
-  box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
-  height: 3vw;
-  z-index: 0;
   -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  -webkit-transition-delay: 0.75s !important;
+          transition-delay: 0.75s !important;
+  -webkit-transform-origin: center top 0;
+          transform-origin: center top 0;
+  position: relative;
+  box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
+  height: 3vw;
+  z-index: 0;
   border-bottom-left-radius: 0.5vw;
   border-bottom-right-radius: 0.5vw;
 }
 
 .lowerThird.titleLowerThird .lowerSegmentBackground.ng-hide-remove, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .ng-hide-remove.largeTopSegmentBackground {
-  -webkit-transform: translateY(-4vw);
-          transform: translateY(-4vw);
-  opacity: 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
   -webkit-transition-delay: 0.75s;
           transition-delay: 0.75s;
 }
 
 .lowerThird.titleLowerThird .lowerSegmentBackground.ng-hide, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .ng-hide.largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .ng-hide.largeTopSegmentBackground {
-  -webkit-transform: translateY(-5vw);
-          transform: translateY(-5vw);
-  opacity: 0;
   -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
           transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  -webkit-transition-delay: 0s !important;
+          transition-delay: 0s !important;
+  opacity: 0;
 }
 
 .lowerThird.titleLowerThird.splitColour .rightLowerThird .upperSegment span {
@@ -1767,6 +1768,8 @@ th {
           backface-visibility: hidden;
   background-clip: border-box;
   font-family: 'Acumin Pro', sans-serif;
+  -webkit-transform: perspective(50vw);
+          transform: perspective(50vw);
 }
 
 body {
