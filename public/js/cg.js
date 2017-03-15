@@ -1,7 +1,7 @@
 var app = angular.module('cgApp', ['socket-io', 'ngAnimate', 'timer']);
 
-app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
-    function($scope, $timeout, $interval, socket) {
+app.controller('generalCtrl', ['$scope', '$timeout', '$filter', '$interval', 'socket',
+    function($scope, $timeout, $filter, $interval, socket) {
         $scope.tickInterval = 1000;
 
         socket.emit("general:get");
@@ -14,8 +14,24 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
             location.reload();
         });
 
-		$scope.htNumber = 0;
+		$scope.colonOnBool = true;
 
+		var clockText = $filter('date')(Date.now(), "HH:mm");
+
+		var tick = function() {
+			$scope.clock = Date.now();
+			$scope.clockText = 'ABC';
+			$scope.colonOnBool = !$scope.colonOnBool;
+			$timeout(tick, $scope.tickInterval);
+		};
+
+        // $scope.showVotesGraph = false;
+		// $scope.showFinalGraph = false;
+		// $scope.curWinner = "";
+		// $scope.curPos = "";
+		// $scope.round = "";
+
+		$scope.htNumber = 0;
 		$scope.hashtags = [
 			{
 				hashtag: '@ForgeSport',
@@ -31,24 +47,22 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
 			}
 		];
 
-        $scope.colonOnBool = true;
-
-        var tick = function() {
-            $scope.clock = Date.now();
-            $scope.colonOnBool = !$scope.colonOnBool;
-            $timeout(tick, $scope.tickInterval);
-        };
-
-        $scope.showVotesGraph = false;
-		$scope.showFinalGraph = false;
-		$scope.curWinner = "";
-		$scope.curPos = "";
-		$scope.round = "";
-
-        $scope.liveToggle = true;
+		$scope.liNumber = 0;
+		$scope.liveItems = [
+			{
+				text: 'LIVE',
+				classes: ['altLive']
+			},
+			{
+				text: clockText,
+				classes: []
+			}
+		];
 
         $interval(function() {
-            $scope.liveToggle = !$scope.liveToggle;
+            // $scope.liveToggle = !$scope.liveToggle;
+			if ($scope.liNumber == $scope.liveItems.length - 1) $scope.liNumber = 0;
+			else $scope.liNumber++;
         }, 10000);
 
 		$interval(function() {
