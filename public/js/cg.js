@@ -14,6 +14,13 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
             location.reload();
         });
 
+		$scope.htNumber = 0;
+
+		$scope.hashtags = [
+			'suvarsity',
+			'hallamvarsity'
+		];
+
         $scope.colonOnBool = true;
 
         var tick = function() {
@@ -32,6 +39,8 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
 
         $interval(function() {
             $scope.liveToggle = !$scope.liveToggle;
+			if ($scope.htNumber == $scope.hashtags.length - 1) $scope.htNumber = 0;
+			else $scope.htNumber++;
         }, 10000);
 
         $timeout(tick, $scope.tickInterval);

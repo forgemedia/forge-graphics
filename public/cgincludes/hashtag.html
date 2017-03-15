@@ -1,3 +1,4 @@
 <div ng-controller="generalCtrl" id="hashtag" ng-show="state.showHashtag && state.showLogo">
-	<span>#suvarsity</span>
+	<!-- <span>#suvarsity</span> -->
+	<span ng-animate-swap="htNumber">#{{hashtags[htNumber]}}</span>
 </div>
