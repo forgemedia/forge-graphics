@@ -1221,27 +1221,10 @@ th {
 }
 
 .lowerThird {
-  -webkit-transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1);
   width: 80vw;
   position: absolute;
   left: 10vw;
   z-index: 0;
-}
-
-.lowerThird.ng-hide-remove {
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-  opacity: 0;
-}
-
-.lowerThird.ng-hide-add {
-  -webkit-transition-delay: 0.8s;
-          transition-delay: 0.8s;
-}
-
-.lowerThird.ng-hide {
-  opacity: 0;
 }
 
 .lowerThird > * {
@@ -1266,10 +1249,10 @@ th {
 }
 
 .lowerThird.titleLowerThird {
-  -webkit-transition: opacity 0.3s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.3s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.3s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.3s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: transform 0.3s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.3s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: transform 0.3s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.3s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.3s cubic-bezier(0, 0.75, 0.75, 1);
+  -webkit-transition: opacity 0.3s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.3s cubic-bezier(0, 1.5, 0.5, 1);
+  transition: opacity 0.3s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.3s cubic-bezier(0, 1.5, 0.5, 1);
+  transition: transform 0.3s cubic-bezier(0, 1.5, 0.5, 1), opacity 0.3s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: transform 0.3s cubic-bezier(0, 1.5, 0.5, 1), opacity 0.3s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.3s cubic-bezier(0, 1.5, 0.5, 1);
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
@@ -1294,6 +1277,8 @@ th {
 .lowerThird.titleLowerThird.ng-hide-add {
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+          transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
 }
 
 .lowerThird.titleLowerThird.ng-hide {
@@ -1358,10 +1343,10 @@ th {
 }
 
 .lowerThird.titleLowerThird .lowerSegmentBackground, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegmentBackground {
-  -webkit-transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.25s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.25s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), transform 0.25s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), transform 0.25s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.25s cubic-bezier(0, 0.75, 0.75, 1);
+  -webkit-transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.25s cubic-bezier(0, 1.5, 0.5, 1);
+  transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.25s cubic-bezier(0, 1.5, 0.5, 1);
+  transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), transform 0.25s cubic-bezier(0, 1.5, 0.5, 1);
+  transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), transform 0.25s cubic-bezier(0, 1.5, 0.5, 1), -webkit-transform 0.25s cubic-bezier(0, 1.5, 0.5, 1);
   -webkit-transition-delay: 0.4s !important;
           transition-delay: 0.4s !important;
   -webkit-transform-origin: center top 0;

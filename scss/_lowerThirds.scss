@@ -11,8 +11,6 @@ $lower-third-container-margin: ($lower-third-width - $lower-third-container-widt
 // TODO: shrink text if it overflows
 
 .lowerThird {
-	@include fade(0.25s, 0s, 0.8s);
-
     width: $lower-third-width;
     position: absolute;
 	left: $lower-third-margin;

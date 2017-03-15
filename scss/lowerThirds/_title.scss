@@ -18,6 +18,10 @@ $lower-background-height: ($lower-third-height / 8) * 3;
         }
     }
 
+	span {
+		
+	}
+
 	@include scale-from-centre(0.3s, 0s, 0.5s);
 
 	%titleSegment {}

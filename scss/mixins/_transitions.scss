@@ -1,5 +1,5 @@
 @mixin flip-down($duration, $in-delay, $out-delay) {
-	transition: opacity $duration $cubic-bezier, transform $duration $cubic-bezier;
+	transition: opacity $duration $cubic-bezier, transform $duration $overshoot-cubic-bezier;
 	transition-delay: $in-delay !important;
 	transform-origin: center top 0;
 
@@ -35,7 +35,7 @@
 }
 
 @mixin scale-from-centre($duration, $in-delay, $out-delay) {
-	transition: transform $duration $cubic-bezier, opacity $duration $cubic-bezier;
+	transition: transform $duration $overshoot-cubic-bezier, opacity $duration $cubic-bezier;
 	transform: scaleX(1);
 
 	&.ng-hide-remove {
@@ -46,6 +46,7 @@
 
 	&.ng-hide-add {
 		transition-delay: $out-delay;
+		transition-timing-function: $cubic-bezier-reverse;
 	}
 
 	&.ng-hide {
