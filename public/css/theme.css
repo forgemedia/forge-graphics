@@ -1375,12 +1375,8 @@ th {
   opacity: 0;
 }
 
-.lowerThird.titleLowerThird.splitColour .rightLowerThird .upperSegment span {
-  color: #ffffff !important;
-}
-
-.lowerThird.titleLowerThird.splitColour .upperSegment span {
-  color: #323232;
+.lowerThird.titleLowerThird.splitColour .leftLowerThird .upperSegment span {
+  color: #323232 !important;
 }
 
 .lowerThird.titleLowerThird.splitColour .upperSegmentBackground {
@@ -1780,6 +1776,12 @@ th {
 }
 
 #boxingBug:after {
+  -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  -webkit-transition-delay: 0.5s !important;
+          transition-delay: 0.5s !important;
   position: absolute;
   border-top-right-radius: 1.5vw;
   border-bottom-right-radius: 1.5vw;
@@ -1792,6 +1794,26 @@ th {
   width: 11vw;
   height: 3vw;
   z-index: -2;
+}
+
+#boxingBug:after.ng-hide {
+  -webkit-transform: translateX(-10vw);
+          transform: translateX(-10vw);
+  opacity: 0;
+}
+
+#boxingBug:after.ng-hide-add, #boxingBug:after.ng-hide-remove {
+  -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+}
+
+#boxingBug:after.ng-hide-add {
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+          transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  -webkit-transition-delay: 0s !important;
+          transition-delay: 0s !important;
 }
 
 * {

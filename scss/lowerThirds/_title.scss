@@ -2,50 +2,43 @@ $upper-background-height: ($lower-third-height / 8) * 5;
 $lower-background-height: ($lower-third-height / 8) * 3;
 
 .lowerThird.titleLowerThird {
-    .lowerThirdContainer {
+	.lowerThirdContainer {
 		%lowerThird {
 			width: $lower-third-container-width;
 			position: absolute;
 		}
 
-        .leftLowerThird {
+		.leftLowerThird {
 			@extend %lowerThird;
-        }
+		}
 
-        .rightLowerThird {
+		.rightLowerThird {
 			@extend %lowerThird;
-            text-align: right;
-        }
-    }
-
-	span {
-		
+			text-align: right;
+		}
 	}
-
 	@include scale-from-centre(0.3s, 0s, 0.5s);
 
 	%titleSegment {}
 
 	%titleSegmentBackground {}
 
-    .upperSegment {
+	.upperSegment {
 		@extend %titleSegment !optional;
-
 		z-index: 8;
 
-        span {
-            font-size: 3vw;
-            color: $light-colour;
-            letter-spacing: -0.05em;
+		span {
+			font-size: 3vw;
+			color: $light-colour;
+			letter-spacing: -0.05em;
 			font-weight: 700;
 			line-height: $upper-background-height;
 			transform: translateY(0.2vw);
-        }
+		}
 
 		&Background {
 			@extend %titleSegmentBackground !optional;
 			@include overlay($dark-colour);
-
 			//box-shadow: $lower-box-shadow;
 			height: $upper-background-height;
 			position: relative;
@@ -57,25 +50,24 @@ $lower-background-height: ($lower-third-height / 8) * 3;
 				@include fade(1s, 1.2s, 0s);
 			}
 		}
-    }
+	}
 
-    .lowerSegment {
+	.lowerSegment {
 		@extend %titleSegment !optional;
 
-        span {
-            font-size: 1.8vw;
-            font-weight: 500;
-            color: $dark-colour;
-            letter-spacing: -0.05em;
+		span {
+			font-size: 1.8vw;
+			font-weight: 500;
+			color: $dark-colour;
+			letter-spacing: -0.05em;
 			line-height: $lower-background-height;
 			transform: translateY(0.2vw);
-        }
+		}
 
 		&Background {
 			@extend %titleSegmentBackground !optional;
 			@include flip-down(0.25s, 0.4s, 0s);
 			@include inverse-overlay($light-colour);
-
 			position: relative;
 			box-shadow: $lower-box-shadow;
 			height: $lower-background-height;
@@ -83,19 +75,15 @@ $lower-background-height: ($lower-third-height / 8) * 3;
 			border-bottom-left-radius: $lower-third-border-radius;
 			border-bottom-right-radius: $lower-third-border-radius;
 		}
-    }
+	}
 
 	&.splitColour {
-		.rightLowerThird .upperSegment span { color: $light-colour !important; }
+		.leftLowerThird .upperSegment span {
+			color: $dark-colour !important;
+		}
 
-		.upperSegment {
-			span {
-				color: $dark-colour;
-			}
-
-			&Background {
-				@include overlay(linear-gradient(to right, $colour-b 50%, $colour-b 49.99%, $colour-c 50.01%, $colour-c 100%));
-			}
+		.upperSegmentBackground {
+			@include overlay(linear-gradient(to right, $colour-b 50%, $colour-b 49.99%, $colour-c 50.01%, $colour-c 100%));
 		}
 	}
 }
