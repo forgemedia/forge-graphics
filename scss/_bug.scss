@@ -20,7 +20,7 @@ $logo-width: $logo-left + 7.75vw;
 		@include bug-transition($bug-transition-duration, 0s, 0.25s);
 
         width: $logo-width;
-        //z-index: 2;
+        z-index: 2;
 
         img {
             display: inline-block;
@@ -51,7 +51,7 @@ $logo-width: $logo-left + 7.75vw;
         //padding-top: 0.1vw;
         width: 9vw;
         left: $logo-width - 2vw;
-        z-index: -1;
+        z-index: 1;
 
 		.liveSegmentText {
             transition: opacity .5s $cubic-bezier, transform .5s $cubic-bezier;
@@ -64,7 +64,6 @@ $logo-width: $logo-left + 7.75vw;
                 position: absolute;
                 line-height: $bug-height;
 				font-weight: 700;
-                letter-spacing: -0.15vw;
 				left: 0.5vw;
             }
 

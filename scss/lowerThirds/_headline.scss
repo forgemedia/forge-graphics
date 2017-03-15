@@ -58,7 +58,7 @@
         span {
             font-size: 3.5vw;
             color: $light-colour;
-            letter-spacing: -0.1vw;
+            letter-spacing: -0.1em;
         }
 
         transition: opacity 0.5s $cubic-bezier, transform 0.5s $cubic-bezier;

@@ -33,3 +33,23 @@
 		opacity: 0;
 	}
 }
+
+@mixin scale-from-centre($duration, $in-delay, $out-delay) {
+	transition: transform $duration $cubic-bezier, opacity $duration $cubic-bezier;
+	transform: scaleX(1);
+
+	&.ng-hide-remove {
+		transition-delay: $in-delay;
+		transform: scaleX(0);
+		opacity: 0;
+	}
+
+	&.ng-hide-add {
+		transition-delay: $out-delay;
+	}
+
+	&.ng-hide {
+		transform: scaleX(0);
+		opacity: 0;
+	}
+}

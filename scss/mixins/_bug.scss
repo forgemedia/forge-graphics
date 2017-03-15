@@ -38,6 +38,8 @@
 	border: $bug-border;
 	overflow: hidden;
 	box-shadow: inset $lower-box-shadow, $right-box-shadow;
+
+	letter-spacing: -0.15em;
 }
 
 @mixin bug-styling {
