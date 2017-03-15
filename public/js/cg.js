@@ -19,9 +19,7 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$filter', '$interval', 'so
 		var clockText = $filter('date')(Date.now(), "HH:mm");
 
 		var tick = function() {
-			$scope.clock = Date.now();
-			$scope.clockText = 'ABC';
-			$scope.colonOnBool = !$scope.colonOnBool;
+			$scope.clockText = $filter('date')(Date.now(), "HH:mm");
 			$timeout(tick, $scope.tickInterval);
 		};
 
