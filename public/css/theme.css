@@ -1006,14 +1006,6 @@ th {
       transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
       transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
       text-align: center; }
-      #bug .liveSegment .liveSegmentText > span {
-        display: block;
-        font-size: 2.2vw;
-        width: 9vw;
-        position: absolute;
-        line-height: 3vw;
-        font-weight: 700;
-        left: 0.5vw; }
       #bug .liveSegment .liveSegmentText.ng-hide {
         -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
                 transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
@@ -1024,6 +1016,14 @@ th {
         -webkit-transform: translateX(-10vw);
                 transform: translateX(-10vw);
         opacity: 0; }
+      #bug .liveSegment .liveSegmentText > span {
+        display: block;
+        font-size: 2.2vw;
+        width: 9vw;
+        position: absolute;
+        line-height: 3vw;
+        font-weight: 700;
+        left: 0.5vw; }
     #bug .liveSegment.altLive {
       background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
       background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;

@@ -54,7 +54,7 @@ $logo-width: $logo-left + 7.75vw;
         z-index: 1;
 
 		.liveSegmentText {
-            transition: opacity .5s $cubic-bezier, transform .5s $cubic-bezier;
+			@include live-segment-transition(0.5s, 0s, 0s);
             text-align: center;
 
             > span {
@@ -66,17 +66,6 @@ $logo-width: $logo-left + 7.75vw;
 				font-weight: 700;
 				left: 0.5vw;
             }
-
-			&.ng-hide {
-				transition-timing-function: $cubic-bezier-reverse;
-				transform: translateX(10vw);
-				opacity: 0;
-			}
-
-			&.ng-hide-remove {
-				transform: translateX(-10vw);
-				opacity: 0;
-			}
         }
 
 		&.altLive {
