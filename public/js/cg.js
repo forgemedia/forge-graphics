@@ -17,8 +17,18 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
 		$scope.htNumber = 0;
 
 		$scope.hashtags = [
-			'suvarsity',
-			'hallamvarsity'
+			{
+				hashtag: '@ForgeSport',
+				classes: []
+			},
+			{
+				hashtag: '#suvarsity',
+				classes: ['uos']
+			},
+			{
+				hashtag: '#hallamvarsity',
+				classes: ['shu']
+			}
 		];
 
         $scope.colonOnBool = true;
@@ -39,9 +49,12 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$interval', 'socket',
 
         $interval(function() {
             $scope.liveToggle = !$scope.liveToggle;
+        }, 10000);
+
+		$interval(function() {
 			if ($scope.htNumber == $scope.hashtags.length - 1) $scope.htNumber = 0;
 			else $scope.htNumber++;
-        }, 10000);
+		}, 20000);
 
         $timeout(tick, $scope.tickInterval);
     }

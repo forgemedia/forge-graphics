@@ -1,26 +1,32 @@
-#hashtag {
-    width: $main-container-width;
-    position: absolute;
-    top: $bug-top;
-	height: $bug-height;
-	line-height: $bug-height;
-    left: $main-margin;
-    text-align: right;
+#hashtagContainer {
+	@include live-segment-transition(0.5s, 0s, 0s);
 
-    span {
-        color: #ffffff;
-        font-size: 2vw;
-        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
-    }
+	.hashtag {
+		width: $main-container-width;
+		position: absolute;
+		top: $bug-top;
+		height: $bug-height;
+		line-height: $bug-height;
+		left: $main-margin;
+		text-align: right;
 
-    transition: opacity 0.5s linear 0.75s;
+		span {
+			@include live-segment-transition(0.5s, 0s, 0s);
+			position: relative;
+			color: #ffffff;
+			font-size: 2vw;
+			text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
 
-	&.ng-hide {
-	    opacity: 0;
+			&.uos {
+				color: $dark-colour;
+				text-shadow: 0 0 8px $colour-b;
+			}
+
+			&.shu {
+				text-shadow: 0 0 8px $colour-c;
+			}
+		}
+
+		@include live-segment-transition(0.5s, 0s, 0s)
 	}
-
-	&.ng-hide-add {
-	    transition-delay: 0s;
-	}
-
 }

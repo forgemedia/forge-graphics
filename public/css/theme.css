@@ -1006,13 +1006,13 @@ th {
       transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
       transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
       text-align: center; }
-      #bug .liveSegment .liveSegmentText.ng-hide {
+      #bug .liveSegment .liveSegmentText.ng-hide, #bug .liveSegment .liveSegmentText.ng-leave-active {
         -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
                 transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
         -webkit-transform: translateX(10vw);
                 transform: translateX(10vw);
         opacity: 0; }
-      #bug .liveSegment .liveSegmentText.ng-hide-remove {
+      #bug .liveSegment .liveSegmentText.ng-hide-remove, #bug .liveSegment .liveSegmentText.ng-enter {
         -webkit-transform: translateX(-10vw);
                 transform: translateX(-10vw);
         opacity: 0; }
@@ -1030,25 +1030,67 @@ th {
       background-blend-mode: multiply, normal;
       color: #ffffff; }
 
-#hashtag {
-  width: 80vw;
-  position: absolute;
-  top: 6vh;
-  height: 3vw;
-  line-height: 3vw;
-  left: 10vw;
-  text-align: right;
-  -webkit-transition: opacity 0.5s linear 0.75s;
-  transition: opacity 0.5s linear 0.75s; }
-  #hashtag span {
-    color: #ffffff;
-    font-size: 2vw;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75); }
-  #hashtag.ng-hide {
+#hashtagContainer {
+  -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1); }
+  #hashtagContainer.ng-hide, #hashtagContainer.ng-leave-active {
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+            transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+    -webkit-transform: translateX(10vw);
+            transform: translateX(10vw);
     opacity: 0; }
-  #hashtag.ng-hide-add {
-    -webkit-transition-delay: 0s;
-            transition-delay: 0s; }
+  #hashtagContainer.ng-hide-remove, #hashtagContainer.ng-enter {
+    -webkit-transform: translateX(-10vw);
+            transform: translateX(-10vw);
+    opacity: 0; }
+  #hashtagContainer .hashtag {
+    width: 80vw;
+    position: absolute;
+    top: 6vh;
+    height: 3vw;
+    line-height: 3vw;
+    left: 10vw;
+    text-align: right;
+    -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1); }
+    #hashtagContainer .hashtag span {
+      -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+      position: relative;
+      color: #ffffff;
+      font-size: 2vw;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.75); }
+      #hashtagContainer .hashtag span.ng-hide, #hashtagContainer .hashtag span.ng-leave-active {
+        -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+                transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+        -webkit-transform: translateX(10vw);
+                transform: translateX(10vw);
+        opacity: 0; }
+      #hashtagContainer .hashtag span.ng-hide-remove, #hashtagContainer .hashtag span.ng-enter {
+        -webkit-transform: translateX(-10vw);
+                transform: translateX(-10vw);
+        opacity: 0; }
+      #hashtagContainer .hashtag span.uos {
+        color: #323232;
+        text-shadow: 0 0 8px #ffdc00; }
+      #hashtagContainer .hashtag span.shu {
+        text-shadow: 0 0 8px #d4326b; }
+    #hashtagContainer .hashtag.ng-hide, #hashtagContainer .hashtag.ng-leave-active {
+      -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+              transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+      -webkit-transform: translateX(10vw);
+              transform: translateX(10vw);
+      opacity: 0; }
+    #hashtagContainer .hashtag.ng-hide-remove, #hashtagContainer .hashtag.ng-enter {
+      -webkit-transform: translateX(-10vw);
+              transform: translateX(-10vw);
+      opacity: 0; }
 
 .lowerThird {
   width: 80vw;

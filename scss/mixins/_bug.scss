@@ -31,13 +31,13 @@
 @mixin live-segment-transition($duration, $in-delay, $out-delay) {
 	transition: opacity .5s $cubic-bezier, transform .5s $cubic-bezier;
 
-	&.ng-hide {
+	&.ng-hide, &.ng-leave-active {
 		transition-timing-function: $cubic-bezier-reverse;
 		transform: translateX(10vw);
 		opacity: 0;
 	}
 
-	&.ng-hide-remove {
+	&.ng-hide-remove, &.ng-enter {
 		transform: translateX(-10vw);
 		opacity: 0;
 	}
