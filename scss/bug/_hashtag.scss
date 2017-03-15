@@ -1,7 +1,9 @@
 #hashtag {
     width: $main-container-width;
     position: absolute;
-    top: 3vw;
+    top: $bug-top;
+	height: $bug-height;
+	line-height: $bug-height;
     left: $main-margin;
     text-align: right;
 
