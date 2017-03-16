@@ -18,11 +18,6 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$filter', '$interval', 'so
 
 		var clockText = $filter('date')(Date.now(), "HH:mm");
 
-		var tick = function() {
-			$scope.clockText = $filter('date')(Date.now(), "HH:mm");
-			$timeout(tick, $scope.tickInterval);
-		};
-
         // $scope.showVotesGraph = false;
 		// $scope.showFinalGraph = false;
 		// $scope.curWinner = "";
@@ -56,6 +51,11 @@ app.controller('generalCtrl', ['$scope', '$timeout', '$filter', '$interval', 'so
 				classes: []
 			}
 		];
+
+		var tick = function() {
+			$scope.clockText = $scope.liveItems[1].text = $filter('date')(Date.now(), "HH:mm");
+			$timeout(tick, $scope.tickInterval);
+		};
 
         $interval(function() {
             // $scope.liveToggle = !$scope.liveToggle;
