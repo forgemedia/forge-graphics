@@ -34,6 +34,10 @@ app.controller('AppCtrl',
 			type: 'link'
 		});
 
+		$scope.$watch('currentSport', function() {
+			$location.path($scope.menu[0].url);
+		});
+
 		socket.emit('project:get');
 		socket.on('project', function(msg) {
 			$scope.project = msg;
