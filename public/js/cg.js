@@ -30,8 +30,6 @@ app.controller('generalCtrl',
             location.reload();
         });
 
-        $scope.colonOnBool = true;
-
         var clockText = $filter('date')(Date.now(), "HH:mm");
 
         // $scope.showVotesGraph = false;
