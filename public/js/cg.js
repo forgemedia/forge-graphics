@@ -1,72 +1,85 @@
 var app = angular.module('cgApp', ['socket-io', 'ngAnimate', 'timer']);
 
-app.controller('generalCtrl', ['$scope', '$timeout', '$filter', '$interval', 'socket',
-    function($scope, $timeout, $filter, $interval, socket) {
-        $scope.tickInterval = 1000;
+app.service('generalSync',
+    function(socket) {
+        var syncVars = {};
 
         socket.emit("general:get");
 
         socket.on("general", function(state) {
-            $scope.state = state;
+            syncVars = state;
         });
+
+        return {
+            sync: function() {
+                return syncVars;
+            }
+        };
+    }
+);
+
+app.controller('generalCtrl', ['$scope', 'generalSync', '$timeout', '$filter', '$interval', 'socket',
+    function($scope, generalSync, $timeout, $filter, $interval, socket) {
+        $scope.tickInterval = 1000;
+
+        $scope.state = {};
 
         socket.on("general:resetcg", function() {
             location.reload();
         });
 
-		$scope.colonOnBool = true;
+        $scope.colonOnBool = true;
 
-		var clockText = $filter('date')(Date.now(), "HH:mm");
+        var clockText = $filter('date')(Date.now(), "HH:mm");
 
         // $scope.showVotesGraph = false;
-		// $scope.showFinalGraph = false;
-		// $scope.curWinner = "";
-		// $scope.curPos = "";
-		// $scope.round = "";
+        // $scope.showFinalGraph = false;
+        // $scope.curWinner = "";
+        // $scope.curPos = "";
+        // $scope.round = "";
 
-		$scope.htNumber = 0;
-		$scope.hashtags = [
-			{
-				hashtag: '@ForgeSport',
-				classes: []
-			},
-			{
-				hashtag: '#suvarsity',
-				classes: ['uos']
-			},
-			{
-				hashtag: '#hallamvarsity',
-				classes: ['shu']
-			}
-		];
+        $scope.htNumber = 0;
+        $scope.hashtags = [{
+                hashtag: '@ForgeSport',
+                classes: []
+            },
+            {
+                hashtag: '#suvarsity',
+                classes: ['uos']
+            },
+            {
+                hashtag: '#hallamvarsity',
+                classes: ['shu']
+            }
+        ];
 
-		$scope.liNumber = 0;
-		$scope.liveItems = [
-			{
-				text: 'LIVE',
-				classes: ['altLive']
-			},
-			{
-				text: clockText,
-				classes: []
-			}
-		];
+        $scope.liNumber = 0;
+        $scope.liveItems = [{
+                text: 'LIVE',
+                classes: ['altLive']
+            },
+            {
+                text: clockText,
+                classes: []
+            }
+        ];
 
-		var tick = function() {
-			$scope.clockText = $scope.liveItems[1].text = $filter('date')(Date.now(), "HH:mm");
-			$timeout(tick, $scope.tickInterval);
-		};
+        var tick = function() {
+            $scope.state = generalSync.sync();
+            $scope.clockText = $scope.liveItems[1].text = $filter('date')(Date.now(), "HH:mm");
+            $timeout(tick, $scope.tickInterval);
+        };
 
         $interval(function() {
             // $scope.liveToggle = !$scope.liveToggle;
-			if ($scope.liNumber == $scope.liveItems.length - 1) $scope.liNumber = 0;
-			else $scope.liNumber++;
+            if ($scope.liNumber == $scope.liveItems.length - 1) $scope.liNumber = 0;
+            else $scope.liNumber++;
         }, 10000);
 
-		$interval(function() {
-			if ($scope.htNumber == $scope.hashtags.length - 1) $scope.htNumber = 0;
-			else $scope.htNumber++;
-		}, 20000);
+        $interval(function() {
+            if ($scope.htNumber == $scope.hashtags.length - 1) $scope.htNumber = 0;
+            else $scope.htNumber++;
+        }, 20000);
 
         $timeout(tick, $scope.tickInterval);
     }
@@ -80,7 +93,7 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
         // $scope.showHeadlineLargeTop = false;
         // $scope.showHeadline = false;
         // $scope.showOngoing = false;
-		$scope.titleContent = {};
+        $scope.titleContent = {};
 
         socket.on("lowerThirds:showTitle", function(msg) {
             if ($scope.showTitle) $scope.showTitle = false;
@@ -88,7 +101,7 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
             // $scope.leftLowerTitleText = msg[1];
             // $scope.rightUpperTitleText = msg[2];
             // $scope.rightLowerTitleText = msg[3];
-			$scope.titleContent = msg;
+            $scope.titleContent = msg;
             $scope.showTitle = true;
             $timeout(function() {
                 $scope.showTitle = false;
@@ -139,19 +152,19 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
 ]);
 
 app.controller('boxingCtrl', ['$scope', 'socket',
-	function($scope, socket) {
+    function($scope, socket) {
         socket.emit("boxing:get");
 
         socket.on("boxing", function(state) {
             $scope.state = state;
         });
 
-		socket.on("boxing:resetTimer", function() {
-			$scope.$broadcast('timer-reset');
-		});
+        socket.on("boxing:resetTimer", function() {
+            $scope.$broadcast('timer-reset');
+        });
 
-		socket.on("boxing:startTimer", function() {
-			 $scope.$broadcast('timer-start');
-		});
-	}
+        socket.on("boxing:startTimer", function() {
+            $scope.$broadcast('timer-start');
+        });
+    }
 ]);
