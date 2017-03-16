@@ -42,7 +42,7 @@
 </form>
 
 <div class="page-header">
-    <h3>Queue <small ng-show="!queue.length">(no items)</small></h3>
+    <h3>Queue <small>Drag to reorder</small> <small ng-show="!queue.length">(no items)</small></h3>
 </div>
 <div ui-sortable ng-model="queue">
 	<div class="queueItem container" ng-repeat="item in queue">
