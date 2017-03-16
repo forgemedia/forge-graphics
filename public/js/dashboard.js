@@ -56,6 +56,7 @@ app.controller('generalCGController',
     function($scope, localStorageService, socket){
         socket.on("general", function (msg) {
             $scope.general = msg;
+			$scope.general.showLive = true;
         });
 
         $scope.$watch('general', function() {

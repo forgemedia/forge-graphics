@@ -3,18 +3,18 @@
         <div class="checkbox">
             <label>
                 <toggle ng-model="general.showLogo"></toggle>
-                Show Logo
+                Show Bug
             </label>
         </div>
-        <div class="checkbox checkbox-indented">
+        <!-- <div class="checkbox checkbox-indented">
             <label>
                 <toggle ng-model="general.showLive" offstyle="btn-warning" onstyle="btn-danger"></toggle>
                 Show LIVE/Clock
             </label>
-        </div>
+        </div> -->
         <div class="checkbox checkbox-indented">
             <label>
-                <toggle ng-model="general.showHashtag"></toggle>
+                <toggle ng-model="general.showHashtag" ng-init="general.showHashtag = true"></toggle>
                 Show Hashtags/Twitter Handle
             </label>
         </div>
