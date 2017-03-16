@@ -192,14 +192,13 @@ app.controller('boxingCGController',
             }
         }, true);
 
-		$scope.resetBouts = function() {
+		$scope.resetRounds = function() {
 			$scope.boxing.showBoxing = false;
 			$timeout(function() {
 				socket.emit("boxing:resetTimer");
-				for (i = 0; i < 3; i++) $scope.boxing.boutComplete[i] = false;
+				for (i = 0; i < 3; i++) $scope.boxing.roundComplete[i] = false;
 			}, 1000);
 		};
-
 		$scope.resetTimer = function() {
 			socket.emit("boxing:resetTimer");
 		};

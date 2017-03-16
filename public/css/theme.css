@@ -1481,16 +1481,16 @@ th {
     text-transform: uppercase;
     color: #555555;
     line-height: 3vw; }
-  #boxingBug .bout {
+  #boxingBug .round {
     color: #d0d0d0;
     font-weight: 700; }
-    #boxingBug .bout.complete {
+    #boxingBug .round.complete {
       color: #323232; }
-  #boxingBug #bout1 {
+  #boxingBug #round1 {
     left: 21.2vw; }
-  #boxingBug #bout2 {
+  #boxingBug #round2 {
     left: 23.4vw; }
-  #boxingBug #bout3 {
+  #boxingBug #round3 {
     left: 25.6vw; }
   #boxingBug #timer {
     font-size: 2.2vw;

@@ -1,5 +1,5 @@
-$bout-spacing: 2.2vw;
-$bout-left: 19vw;
+$round-spacing: 2.2vw;
+$round-left: 19vw;
 
 #boxingBug {
 	@include bug-round-right;
@@ -29,7 +29,7 @@ $bout-left: 19vw;
 		line-height: $bug-height;
 	}
 
-	.bout {
+	.round {
 		color: $mid-colour;
 		font-weight: 700;
 
@@ -38,17 +38,17 @@ $bout-left: 19vw;
 		}
 	}
 
-	#bout {
+	#round {
 		&1 {
-			left: $bout-left + $bout-spacing;
+			left: $round-left + $round-spacing;
 		}
 
 		&2 {
-			left: $bout-left + ($bout-spacing * 2);
+			left: $round-left + ($round-spacing * 2);
 		}
 
 		&3 {
-			left: $bout-left + ($bout-spacing * 3);
+			left: $round-left + ($round-spacing * 3);
 		}
 	}
 

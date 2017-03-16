@@ -1,7 +1,7 @@
 <div id="boxingBug" ng-controller="boxingCtrl" ng-show="state.showBoxing">
 	<span id="timer"><timer autostart="false" interval="1000" countdown="120">{{minutes}}:{{sseconds}}</timer></span>
 	<span id="round">Round</span>
-	<span class="bout" id="bout1" ng-class="{ 'complete': state.boutComplete[0] }">1</span>
-	<span class="bout" id="bout2" ng-class="{ 'complete': state.boutComplete[1] }">2</span>
-	<span class="bout" id="bout3" ng-class="{ 'complete': state.boutComplete[2] }">3</span>
+	<span class="round" id="round1" ng-class="{ 'complete': state.roundComplete[0] }">1</span>
+	<span class="round" id="round2" ng-class="{ 'complete': state.roundComplete[1] }">2</span>
+	<span class="round" id="round3" ng-class="{ 'complete': state.roundComplete[2] }">3</span>
 </div>
