@@ -13,7 +13,7 @@ $round-left: 19vw;
 	position: absolute;
 
 	width: 29.5vw;
-	left: $bug-logo-width - 4.5vw;
+	left: $sport-bug-left;
 	z-index: 2;
 
 
@@ -53,22 +53,10 @@ $round-left: 19vw;
 	}
 
 	#timer {
-		font-size: 2.2vw;
-		left: 6.2vw;
-		font-weight: 700;
-		z-index: 2;
-		color: $light-colour;
+		@extend %timerText;
 	}
 
 	&:after {
-		position: absolute;
-		@include bug-round-right;
-		box-shadow: $right-box-shadow;
-		content: "";
-		@include overlay($dark-colour);
-		//left: 2vw;
-		width: 13vw;
-		height: $bug-height;
-		z-index: 1;
+		@extend %timerPod;
 	}
 }

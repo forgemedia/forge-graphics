@@ -36,12 +36,16 @@ $bug-border: $bug-border-width solid $border-colour;
 $bug-border-radius: $bug-height / 2;
 $bug-transition-duration: 0.75s;
 
+$sport-bug-left: $bug-logo-width - 4.5vw;
+
 $lower-third-top: 72vh;
 $lower-third-height: 8vw;
 
-@import 'mixins/bug';
+$gradient-split-bc: linear-gradient(to right, $colour-b 50%, $colour-b 49.99%, $colour-c 50.01%, $colour-c 100%);
+
 @import 'mixins/overlay';
 @import 'mixins/transitions';
+@import 'mixins/bug';
 @import 'fonts/acumin';
 @import 'bug';
 @import 'bug/hashtag';
@@ -51,6 +55,7 @@ $lower-third-height: 8vw;
 @import 'lowerThirds/headline';
 @import 'ticker';
 @import 'varsity/boxing';
+@import 'varsity/rugby';
 
 * {
     box-sizing: border-box;

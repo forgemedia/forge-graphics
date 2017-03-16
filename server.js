@@ -27,6 +27,9 @@ var sockets = {
 	'boxing': [
 		'startTimer',
 		'resetTimer'
+	],
+	'rugby': [
+		
 	]
 };
 

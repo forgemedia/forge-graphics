@@ -83,7 +83,7 @@ $lower-background-height: ($lower-third-height / 8) * 3;
 		}
 
 		.upperSegmentBackground {
-			@include overlay(linear-gradient(to right, $colour-b 50%, $colour-b 49.99%, $colour-c 50.01%, $colour-c 100%));
+			@include overlay($gradient-split-bc);
 		}
 	}
 }

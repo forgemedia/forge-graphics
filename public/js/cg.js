@@ -18,7 +18,7 @@ app.service('generalSync',
 			noLive: function() {
 				return noLive;
 			},
-			setNoLive: function(nl) {
+			setNoLive: function(nl, id) {
 				noLive = nl;
 			}
         };

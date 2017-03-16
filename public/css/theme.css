@@ -369,16 +369,38 @@ td,
 th {
   padding: 0; }
 
-#bug > *, #boxingBug {
-  position: absolute;
+#bug > *, #boxingBug, #rugbyBug {
   top: 6vh;
   height: 3vw;
   position: absolute;
   line-height: 3vw;
   border: 0 solid #323232;
   overflow: hidden;
-  box-shadow: inset 0px 10px 18px -10px rgba(0, 0, 0, 0.45), 10px 0px 18px -10px rgba(0, 0, 0, 0.45);
+  box-shadow: 10px 0px 18px -10px rgba(0, 0, 0, 0.45);
   letter-spacing: -0.15em; }
+
+#boxingBug:after, #rugbyBug:after, #rugbyBug .teamName {
+  position: absolute;
+  box-shadow: 10px 0px 18px -10px rgba(0, 0, 0, 0.45);
+  content: "";
+  height: 3vw;
+  z-index: 1;
+  line-height: 3vw; }
+
+#boxingBug:after, #rugbyBug:after {
+  border-top-right-radius: 1.5vw;
+  border-bottom-right-radius: 1.5vw;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
+  background-blend-mode: multiply, normal;
+  width: 13vw; }
+
+#boxingBug #timer, #rugbyBug #timer {
+  font-size: 2.2vw;
+  left: 6.2vw;
+  font-weight: 700;
+  z-index: 2;
+  color: #ffffff; }
 
 @font-face {
   font-family: 'Acumin Pro Wide';
@@ -920,7 +942,7 @@ th {
   font-weight: 500;
   font-style: italic; }
 
-#bug > * span, #boxingBug span {
+#bug > * span, #boxingBug span, #rugbyBug span {
   -webkit-transform: translateY(0.25vw);
           transform: translateY(0.25vw); }
 
@@ -978,6 +1000,7 @@ th {
     transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
     -webkit-transition-delay: 0.5s !important;
             transition-delay: 0.5s !important;
+    position: absolute;
     -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), background 0.5s cubic-bezier(0, 0.75, 0.75, 1), color 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
     transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), background 0.5s cubic-bezier(0, 0.75, 0.75, 1), color 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
     transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), background 0.5s cubic-bezier(0, 0.75, 0.75, 1), color 0.5s cubic-bezier(0, 0.75, 0.75, 1);
@@ -1492,24 +1515,75 @@ th {
     left: 23.4vw; }
   #boxingBug #round3 {
     left: 25.6vw; }
-  #boxingBug #timer {
-    font-size: 2.2vw;
-    left: 6.2vw;
-    font-weight: 700;
-    z-index: 2;
-    color: #ffffff; }
-  #boxingBug:after {
+
+#rugbyBug {
+  border-top-right-radius: 1.5vw;
+  border-bottom-right-radius: 1.5vw;
+  border-top-left-radius: 1.5vw;
+  border-bottom-left-radius: 1.5vw;
+  -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  -webkit-transition-delay: 1s !important;
+          transition-delay: 1s !important;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  background-blend-mode: multiply, normal;
+  color: #323232;
+  position: absolute;
+  width: 32.5vw;
+  left: 13.25vw;
+  z-index: 2; }
+  #rugbyBug.ng-hide {
+    -webkit-transform: translateX(-10vw);
+            transform: translateX(-10vw);
+    opacity: 0; }
+  #rugbyBug.ng-hide-add, #rugbyBug.ng-hide-remove {
+    -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+    transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+    transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+    transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1); }
+  #rugbyBug.ng-hide-add {
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+            transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+    -webkit-transition-delay: 0.25s !important;
+            transition-delay: 0.25s !important; }
+  #rugbyBug > * {
     position: absolute;
-    border-top-right-radius: 1.5vw;
-    border-bottom-right-radius: 1.5vw;
-    box-shadow: 10px 0px 18px -10px rgba(0, 0, 0, 0.45);
-    content: "";
-    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
-    background-blend-mode: multiply, normal;
-    width: 13vw;
-    height: 3vw;
-    z-index: 1; }
+    font-size: 1.5vw; }
+  #rugbyBug .teamName {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 700;
+    box-shadow: none;
+    margin: 0px;
+    width: 6vw;
+    padding-top: 0.2vw;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); }
+    #rugbyBug .teamName.leftPosition {
+      left: 16.5vw; }
+    #rugbyBug .teamName.rightPosition {
+      left: 22.5vw; }
+    #rugbyBug .teamName#shu {
+      color: #ffffff;
+      background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
+      background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
+      background-blend-mode: multiply, normal; }
+    #rugbyBug .teamName#uos {
+      background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+      background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+      background-blend-mode: multiply, normal; }
+  #rugbyBug .score {
+    font-size: 2.2vw;
+    z-index: 10;
+    text-align: center;
+    font-weight: 700; }
+    #rugbyBug .score#leftScore {
+      left: 14.25vw; }
+    #rugbyBug .score#rightScore {
+      left: 29.75vw; }
 
 * {
   box-sizing: border-box;

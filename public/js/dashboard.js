@@ -3,6 +3,8 @@ var app = angular.module('CGDashboardApp', ['ngRoute', 'LocalStorageModule', 'so
 app.controller('AppCtrl',
     function($scope, $location, socket){
         $scope.menu = [];
+		$scope.sports = [];
+		// $scope.currentSport = {};
 
         $scope.isActive = function (viewLocation) {
             return viewLocation === $location.path();
@@ -20,9 +22,15 @@ app.controller('AppCtrl',
             type: 'link'
         });
 
-		$scope.menu.push({
+		$scope.sports.push({
 			name: 'Boxing',
 			url: '/boxing',
+			type: 'link'
+		});
+
+		$scope.sports.push({
+			name: 'Rugby Union',
+			url: '/rugby',
 			type: 'link'
 		});
 
@@ -52,6 +60,10 @@ app.config(
 			.when("/boxing", {
 				templateUrl: '/templates/boxing.html',
 				controller: 'boxingCGController'
+			})
+			.when("/rugby", {
+				templateUrl: '/templates/rugby.html',
+				controller: 'rugbyCGController'
 			})
             .otherwise({redirectTo: '/general'});
     }

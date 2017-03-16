@@ -17,10 +17,17 @@
             </div>
         </header>
 
+		<div class="form-group">
+			<select class="form-control" ng-model="currentSport" ng-init="currentSport = sports[0]" ng-options="sport.name for sport in sports">
+
+			</select>
+		</div>
+
         <div class="row">
             <div class="col-lg-2">
                 <ul class="nav nav-pills nav-stacked">
                     <li role="presentation" ng-class="{active:isActive(section.url)}" ng-repeat="section in menu"><a ng-href="#!{{section.url}}">{{ section.name }}</a></li>
+					<li role="presentation" ng-class="{active:isActive(currentSport.url)}"><a ng-href="#!{{currentSport.url}}">Varsity: {{currentSport.name}}</a></li>
                 </ul>
             </div>
 
@@ -48,6 +55,7 @@
 	<script src="/js/dashboard/general.js"></script>
 	<script src="/js/dashboard/lowerThirds.js"></script>
 	<script src="/js/dashboard/varsity/boxing.js"></script>
+	<script src="/js/dashboard/varsity/rugby.js"></script>
 </body>
 
 </html>

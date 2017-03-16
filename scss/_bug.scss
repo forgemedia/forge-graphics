@@ -1,6 +1,5 @@
 // Business logic
 
-
 #bug {
     //z-index: 2;
 	position: absolute;
@@ -39,6 +38,7 @@
 		@include overlay($colour-b);
 		@include bug-round-right;
 		@include bug-transition($bug-transition-duration, 0.5s, 0s);
+		position: absolute;
 
 		transition:
 			opacity 0.5s $cubic-bezier,

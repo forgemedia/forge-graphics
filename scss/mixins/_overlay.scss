@@ -1,9 +1,9 @@
-@mixin overlay($backgroundColour) {
-	background: $overlay-background, $backgroundColour;
+@mixin overlay($background-colour) {
+	background: $overlay-background, $background-colour;
 	background-blend-mode: multiply, normal;
 }
 
-@mixin inverse-overlay($backgroundColour) {
-	background: $inverse-overlay-background, $backgroundColour;
+@mixin inverse-overlay($background-colour) {
+	background: $inverse-overlay-background, $background-colour;
 	background-blend-mode: multiply, normal;
 }

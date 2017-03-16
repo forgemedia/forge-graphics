@@ -44,7 +44,7 @@
 }
 
 %bug-styling {
-	position: absolute;
+	//position: absolute;
 	top: $bug-top;
 	height: $bug-height;
 
@@ -52,11 +52,36 @@
 	line-height: $bug-height;
 	border: $bug-border;
 	overflow: hidden;
-	box-shadow: inset $lower-box-shadow, $right-box-shadow;
+	//box-shadow: inset $lower-box-shadow, $right-box-shadow;
+	box-shadow: $right-box-shadow;
 
 	letter-spacing: -0.15em;
 }
 
 @mixin bug-styling {
 	@extend %bug-styling;
+}
+
+%bugPod {
+	position: absolute;
+	box-shadow: $right-box-shadow;
+	content: "";
+	height: $bug-height;
+	z-index: 1;
+	line-height: $bug-height;
+}
+
+%timerPod {
+	@extend %bugPod;
+	@include bug-round-right;
+	@include overlay($dark-colour);
+	width: 13vw;
+}
+
+%timerText {
+	font-size: 2.2vw;
+	left: 6.2vw;
+	font-weight: 700;
+	z-index: 2;
+	color: $light-colour
 }
