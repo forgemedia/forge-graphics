@@ -15,7 +15,8 @@
     "angular-drag-to-reorder": "latest",
     "d3": "^4.7.1",
     "normalize-scss": "^3.0.3",
-    "angular-timer": "^1.3.4"
+    "angular-timer": "^1.3.4",
+    "bootstrap-sass": "^3.3.7"
   },
   "private": true,
   "resolutions": {

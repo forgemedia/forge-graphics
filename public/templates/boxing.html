@@ -24,22 +24,24 @@
                 Bout 3 In Progress/Complete
             </label>
         </div>
-		<button
-			class="btn btn-success"
-			ng-click="startTimer()"
-			ng-disabled="!boxing.showBoxing">
-			Start Timer
-		</button>
-		<button
-			class="btn btn-warning"
-			ng-click="resetTimer()"
-			ng-disabled="!boxing.showBoxing">
-			Reset Timer
-		</button>
-		<button
-			class="btn btn-danger"
-			ng-click="resetBouts()">
-			Reset All
-		</button>
+		<div class="btn-group" role="group">
+			<button
+				class="btn btn-success"
+				ng-click="startTimer()"
+				ng-disabled="!boxing.showBoxing">
+				Start Timer
+			</button>
+			<button
+				class="btn btn-warning"
+				ng-click="resetTimer()"
+				ng-disabled="!boxing.showBoxing">
+				Reset Timer
+			</button>
+			<button
+				class="btn btn-danger"
+				ng-click="resetBouts()">
+				Reset All
+			</button>
+		</div>
     </div>
 </form>
