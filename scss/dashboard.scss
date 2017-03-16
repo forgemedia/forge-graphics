@@ -1,6 +1,10 @@
 @import 'dashboard/bootstrap';
 @import 'fonts/lato';
 
+* {
+	box-sizing: border-box;
+}
+
 body {
     font-family: 'Lato', sans-serif;
 }
@@ -24,4 +28,10 @@ span.itemDescriptor {
 	small {
 		font-weight: 500;
 	}
+}
+
+.queueItem {
+	padding-bottom: 15px;
+	border-bottom: 1px solid $gray-lighter;
+	margin-bottom: 20px;
 }

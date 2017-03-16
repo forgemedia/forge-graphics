@@ -1,6 +1,8 @@
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 
+$icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
 // Reset and dependencies
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/print";

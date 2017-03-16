@@ -1,4 +1,4 @@
-var app = angular.module('CGDashboardApp', ['ngRoute', 'LocalStorageModule', 'socket-io', 'ui.toggle']);
+var app = angular.module('CGDashboardApp', ['ngRoute', 'LocalStorageModule', 'socket-io', 'ui.toggle', 'ui.sortable']);
 
 app.controller('AppCtrl',
     function($scope, $location, socket){
@@ -139,9 +139,13 @@ app.controller('lowerThirdsCGController',
 		};
 
 		$scope.editQueueItem = function(item, index) {
-			$scope.ltTitleDashEntries = item;
+			$scope.copyQueueItem(item);
 
 			$scope.queue.splice(index, 1);
+		};
+
+		$scope.copyQueueItem = function(item) {
+			$scope.ltTitleDashEntries = item;
 		};
 
         $scope.topSelections = [
