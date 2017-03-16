@@ -10,6 +10,8 @@ app.service('generalSync',
             syncVars = state;
         });
 
+        syncVars.noLive = false;
+
         return {
             sync: function() {
                 return syncVars;
@@ -18,7 +20,7 @@ app.service('generalSync',
     }
 );
 
-app.controller('generalCtrl', ['$scope', 'generalSync', '$timeout', '$filter', '$interval', 'socket',
+app.controller('generalCtrl',
     function($scope, generalSync, $timeout, $filter, $interval, socket) {
         $scope.tickInterval = 1000;
 
@@ -83,9 +85,9 @@ app.controller('generalCtrl', ['$scope', 'generalSync', '$timeout', '$filter', '
 
         $timeout(tick, $scope.tickInterval);
     }
-]);
+);
 
-app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
+app.controller('lowerThirdsCtrl',
     function($scope, $timeout, $interval, socket) {
         $scope.tickInterval = 1000;
 
@@ -149,14 +151,21 @@ app.controller('lowerThirdsCtrl', ['$scope', '$timeout', '$interval', 'socket',
 
         $timeout(tick, $scope.tickInterval);
     }
-]);
+);
 
-app.controller('boxingCtrl', ['$scope', 'socket',
-    function($scope, socket) {
-        socket.emit("boxing:get");
+app.controller('boxingCtrl',
+    function($scope, generalSync, $timeout, socket) {
+
+        $timeout(function() {
+            socket.emit("boxing:get");
+        }, 2000);
 
         socket.on("boxing", function(state) {
             $scope.state = state;
+        });
+
+        $scope.$watch('state', function() {
+            generalSync.sync().noLive = $scope.state.showBoxing;
         });
 
         socket.on("boxing:resetTimer", function() {
@@ -167,4 +176,4 @@ app.controller('boxingCtrl', ['$scope', 'socket',
             $scope.$broadcast('timer-start');
         });
     }
-]);
+);

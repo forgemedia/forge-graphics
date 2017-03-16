@@ -24,18 +24,20 @@ $overshoot-cubic-bezier: cubic-bezier(0, 1.5, 0.5, 1);
 
 $perspective: 50vw;
 
+$main-container-width: 80vw;
+$main-margin: (100vw - $main-container-width) / 2;
+
 $bug-top: 6vh;
 $bug-height: 3vw;
-$lower-third-top: 72vh;
-$lower-third-height: 8vw;
-
+$bug-logo-left: $main-margin;
+$bug-logo-width: $bug-logo-left + 7.75vw;
 $bug-border-width: 0;
 $bug-border: $bug-border-width solid $border-colour;
 $bug-border-radius: $bug-height / 2;
 $bug-transition-duration: 0.75s;
 
-$main-container-width: 80vw;
-$main-margin: (100vw - $main-container-width) / 2;
+$lower-third-top: 72vh;
+$lower-third-height: 8vw;
 
 @import 'mixins/bug';
 @import 'mixins/overlay';

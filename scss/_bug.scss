@@ -1,6 +1,5 @@
 // Business logic
-$logo-left: $main-margin;
-$logo-width: $logo-left + 7.75vw;
+
 
 #bug {
     //z-index: 2;
@@ -19,7 +18,7 @@ $logo-width: $logo-left + 7.75vw;
 		@include bug-round-right;
 		@include bug-transition($bug-transition-duration, 0s, 0.25s);
 
-        width: $logo-width;
+        width: $bug-logo-width;
         z-index: 2;
 
         img {
@@ -29,7 +28,7 @@ $logo-width: $logo-left + 7.75vw;
 	        &#forge {
 	            top: 0.55vw;
 	            height: 1.8vw;
-	            left: $logo-left;
+	            left: $bug-logo-left;
 				opacity: 0.4;
 				transform: scale(1.3) rotate(-6deg);
 	        }
@@ -50,7 +49,7 @@ $logo-width: $logo-left + 7.75vw;
 
         //padding-top: 0.1vw;
         width: 9vw;
-        left: $logo-width - 2vw;
+        left: $bug-logo-width - 2vw;
         z-index: 1;
 
 		.liveSegmentText {
