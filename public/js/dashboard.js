@@ -31,7 +31,7 @@ app.controller('AppCtrl', ['$scope', '$location',
 /*
  *  Configure the app routes
  */
-app.config(['$routeProvider', 'localStorageServiceProvider',
+app.config(
     function($routeProvider, localStorageServiceProvider) {
         localStorageServiceProvider.setPrefix('forge');
 
@@ -50,9 +50,9 @@ app.config(['$routeProvider', 'localStorageServiceProvider',
 			})
             .otherwise({redirectTo: '/general'});
     }
-]);
+);
 
-app.controller('generalCGController', ['$scope', 'localStorageService', 'socket',
+app.controller('generalCGController',
     function($scope, localStorageService, socket){
         socket.on("general", function (msg) {
             $scope.general = msg;
@@ -103,9 +103,9 @@ app.controller('generalCGController', ['$scope', 'localStorageService', 'socket'
             socket.emit("general:get");
         };
     }
-]);
+);
 
-app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$timeout', '$interval', '$window', 'socket',
+app.controller('lowerThirdsCGController',
     function($scope, localStorageService, $timeout, $interval, $window, socket){
         var titleStored = localStorageService.get('lt_title');
         var headlineStored = localStorageService.get('lt_headline');
@@ -176,9 +176,9 @@ app.controller('lowerThirdsCGController', ['$scope', 'localStorageService', '$ti
         $scope.$on("$destroy", $scope.storeEntries);
         $window.onbeforeunload = $scope.storeEntries;
     }
-]);
+);
 
-app.controller('boxingCGController', ['$scope', '$timeout', 'socket',
+app.controller('boxingCGController',
 	function($scope, $timeout, socket) {
 		socket.on("boxing", function (msg) {
             $scope.boxing = msg;
@@ -212,4 +212,4 @@ app.controller('boxingCGController', ['$scope', '$timeout', 'socket',
             socket.emit("boxing:get");
         };
 	}
-]);
+);
