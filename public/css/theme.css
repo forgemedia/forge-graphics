@@ -1449,8 +1449,8 @@ th {
   transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-  -webkit-transition-delay: 0s !important;
-          transition-delay: 0s !important;
+  -webkit-transition-delay: 1s !important;
+          transition-delay: 1s !important;
   background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background-blend-mode: multiply, normal;
