@@ -66,8 +66,8 @@ $round-left: 19vw;
 		box-shadow: $right-box-shadow;
 		content: "";
 		@include overlay($dark-colour);
-		left: 2vw;
-		width: 11vw;
+		//left: 2vw;
+		width: 13vw;
 		height: $bug-height;
 		z-index: 1;
 	}

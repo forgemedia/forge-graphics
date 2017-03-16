@@ -1507,8 +1507,7 @@ th {
     background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
     background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
     background-blend-mode: multiply, normal;
-    left: 2vw;
-    width: 11vw;
+    width: 13vw;
     height: 3vw;
     z-index: 1; }
 
