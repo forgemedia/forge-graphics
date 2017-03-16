@@ -26,12 +26,14 @@
         </div>
 		<button
 			class="btn btn-success"
-			ng-click="startTimer()">
+			ng-click="startTimer()"
+			ng-disabled="!boxing.showBoxing">
 			Start Timer
 		</button>
 		<button
 			class="btn btn-warning"
-			ng-click="resetTimer()">
+			ng-click="resetTimer()"
+			ng-disabled="!boxing.showBoxing">
 			Reset Timer
 		</button>
 		<button

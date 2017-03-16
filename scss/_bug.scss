@@ -50,7 +50,7 @@
         //padding-top: 0.1vw;
         width: 9vw;
         left: $bug-logo-width - 2vw;
-        z-index: 1;
+        z-index: -1;
 
 		.liveSegmentText {
 			@include live-segment-transition(0.5s, 0s, 0s);

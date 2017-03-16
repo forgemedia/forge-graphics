@@ -985,7 +985,7 @@ th {
     color: #323232;
     width: 9vw;
     left: 15.75vw;
-    z-index: 1; }
+    z-index: -1; }
     #bug .liveSegment.ng-hide {
       -webkit-transform: translateX(-10vw);
               transform: translateX(-10vw);
@@ -1458,7 +1458,7 @@ th {
   position: absolute;
   width: 29.5vw;
   left: 13.25vw;
-  z-index: -1; }
+  z-index: 2; }
   #boxingBug.ng-hide {
     -webkit-transform: translateX(-10vw);
             transform: translateX(-10vw);
@@ -1496,7 +1496,7 @@ th {
     font-size: 2.2vw;
     left: 6.2vw;
     font-weight: 700;
-    z-index: -1;
+    z-index: 2;
     color: #ffffff; }
   #boxingBug:after {
     position: absolute;
@@ -1510,7 +1510,7 @@ th {
     left: 2vw;
     width: 11vw;
     height: 3vw;
-    z-index: -2; }
+    z-index: 1; }
 
 * {
   box-sizing: border-box;
