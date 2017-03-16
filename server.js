@@ -54,6 +54,11 @@ io.on('connection', function(socket) {
 			});
 		});
 	});
+
+	socket.on('project:get', function() {
+		console.log('* GET  project:get');
+		io.sockets.emit('project', project);
+	});
 });
 
 app.use(express.static(__dirname + '/public'));

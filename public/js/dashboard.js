@@ -1,7 +1,7 @@
 var app = angular.module('CGDashboardApp', ['ngRoute', 'LocalStorageModule', 'socket-io', 'ui.toggle']);
 
-app.controller('AppCtrl', ['$scope', '$location',
-    function($scope, $location){
+app.controller('AppCtrl',
+    function($scope, $location, socket){
         $scope.menu = [];
 
         $scope.isActive = function (viewLocation) {
@@ -25,8 +25,13 @@ app.controller('AppCtrl', ['$scope', '$location',
 			url: '/boxing',
 			type: 'link'
 		});
+
+		socket.emit('project:get');
+		socket.on('project', function(msg) {
+			$scope.project = msg;
+		});
     }
-]);
+);
 
 /*
  *  Configure the app routes
