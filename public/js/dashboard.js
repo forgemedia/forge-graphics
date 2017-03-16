@@ -53,7 +53,7 @@ app.config(
 );
 
 app.controller('generalCGController',
-    function($scope, localStorageService, $timeout, socket){
+    function($scope, localStorageService, socket){
         socket.on("general", function (msg) {
             $scope.general = msg;
 			$scope.general.showLive = true;
@@ -85,12 +85,7 @@ app.controller('generalCGController',
         };
 
         $scope.triggerResetCG = function () {
-			var logoInitial = $scope.general.showLogo;
-			$scope.general.showLogo = false;
-			$timeout(function() {
-				socket.emit("general:resetcg");
-				$scope.general.showLogo = logoInitial;
-			}, 2000);
+            socket.emit("general:resetcg");
         };
 
 		$scope.triggerVotesGraph = function() {

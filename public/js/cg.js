@@ -27,7 +27,10 @@ app.controller('generalCtrl',
         $scope.state = {};
 
         socket.on("general:resetcg", function() {
-            location.reload();
+			$scope.state.showLogo = false;
+			$timeout(function() {
+	            location.reload();
+			}, 2000);
         });
 
         var clockText = $filter('date')(Date.now(), "HH:mm");
