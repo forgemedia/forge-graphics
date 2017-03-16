@@ -3,6 +3,7 @@ var app = angular.module('cgApp', ['socket-io', 'ngAnimate', 'timer']);
 app.service('generalSync',
     function(socket) {
         var syncVars = {};
+		var noLive = false;
 
         socket.emit("general:get");
 
@@ -10,12 +11,16 @@ app.service('generalSync',
             syncVars = state;
         });
 
-        syncVars.noLive = false;
-
         return {
             sync: function() {
                 return syncVars;
-            }
+            },
+			noLive: function() {
+				return noLive;
+			},
+			setNoLive: function(nl) {
+				noLive = nl;
+			}
         };
     }
 );
@@ -69,6 +74,7 @@ app.controller('generalCtrl',
 
         var tick = function() {
             $scope.state = generalSync.sync();
+			$scope.noLive = generalSync.noLive();
             $scope.clockText = $scope.liveItems[1].text = $filter('date')(Date.now(), "HH:mm");
             $timeout(tick, $scope.tickInterval);
         };
@@ -166,7 +172,7 @@ app.controller('boxingCtrl',
         });
 
         $scope.$watch('state', function() {
-            generalSync.sync().noLive = $scope.state.showBoxing;
+            generalSync.setNoLive($scope.state.showBoxing);
         });
 
         socket.on("boxing:resetTimer", function() {
