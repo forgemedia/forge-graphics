@@ -6263,4 +6263,10 @@ body {
 .checkbox.checkbox-indented {
   padding-left: 15px;
   border-left: 2px solid #eeeeee; }
+
+span.itemDescriptor {
+  font-size: 24px;
+  font-weight: 700; }
+  span.itemDescriptor small {
+    font-weight: 500; }
 /*# sourceMappingURL=dashboard.css.map */

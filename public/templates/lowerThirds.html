@@ -1,16 +1,16 @@
 <div class="page-header">
     <h3>Names <small>Triggers for 10 seconds</small></h3>
 </div>
-<form>
+<form name="ltTitleForm">
     <div class="container">
         <div class="row">
             <div class="form-group col-md-6">
-                <label for="lowerThirdText">Left Lower Third Text</label>
+                <label for="lowerThirdText">Left</label>
                 <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="ltTitleDashEntries.leftUpper" placeholder="Upper"></input>
                 <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="ltTitleDashEntries.leftLower" placeholder="Lower"></input>
             </div>
             <div class="form-group col-md-6">
-                <label for="lowerThirdText">Right Lower Third Text (leave blank to leave blank)</label>
+                <label for="lowerThirdText">Right</label>
                 <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="ltTitleDashEntries.rightUpper" placeholder="Upper"></input>
                 <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="ltTitleDashEntries.rightLower" placeholder="Lower"></input>
             </div>
@@ -24,12 +24,37 @@
             </label>
         </div>
 	</div>
-    <div class="form-group">
+	<div class="form-group">
+        <button
+        class="btn btn-default"
+        ng-click="queueAdd()">Add to queue</button></span>
+    </div>
+    <!-- <div class="form-group">
         <button
         class="btn btn-danger"
         ng-click="triggerTitleLowerThird()">Show</button></span>
-    </div>
+    </div> -->
 </form>
+<div class="container" ng-repeat="item in queue">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="btn-group" role="group">
+				<button
+				class="btn btn-danger"
+				ng-click="triggerTitleLowerThird(item)">Trigger</button></span>
+
+				<button
+				class="btn btn-success"
+				ng-click="editQueueItem(item, $index)">Edit</button></span>
+
+				<button
+				class="btn btn-warning"
+				ng-click="queue.splice($index, 1)">Remove</button></span>
+			</div>
+		</div>
+		<div class="col-md-9"><span class="itemDescriptor"><small>Left:</small> {{item.leftUpper}}—{{item.leftLower}}, <small>Right:</small> {{item.rightUpper}}—{{item.rightLower}} <small>/ Options: {{item.titleClasses}}</small></span></div>
+	</div>
+</div>
 
 <!-- <div class="page-header">
     <h3>Breaking News <small>Stays on screen until hidden</small></h3>

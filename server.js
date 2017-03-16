@@ -1,3 +1,8 @@
+console.log('  Quit using CTRL+C');
+console.log('  In the event of issues, first try quitting and running \'npm install\' and \'bower install\'');
+
+var project = 'Varsity 2017';
+
 var express	= require('express');
 var http = require('http');
 
@@ -28,7 +33,7 @@ var sockets = {
 var dataStores = {};
 
 io.on('connection', function(socket) {
-	if (debug) console.log('  Client connected');
+	if (debug) console.log('* Client connected');
 
 	Object.keys(sockets).forEach(function(d) {
 		subs = sockets[d];
@@ -57,7 +62,8 @@ app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 server.listen(3000);
 
-console.log('Forge Graphics Server')
+console.log('\n  Forge Graphics Server - ' + project);
 if (debug) console.log('* Debug on')
-console.log('  Go to [hostname]:3000/dashboard to control')
-console.log('  run \'play 1-1 [html] http://[hostname]:3000\' in CasparCG\n')
+console.log('\n  Add http://[hostname]:3000 to a BrowserSource in OBS to use');
+console.log('  Go to [hostname]:3000/dashboard in a web browser to control');
+console.log('  The [hostname] is probably \'localhost\' if OBS/the dashboard are running on this computer');

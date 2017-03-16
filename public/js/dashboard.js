@@ -111,6 +111,7 @@ app.controller('lowerThirdsCGController',
         var titleStored = localStorageService.get('lt_title');
         var headlineStored = localStorageService.get('lt_headline');
         var ongoingStored = localStorageService.get('lt_ongoing');
+		var queueStored = localStorageService.get('lt_queue');
 
         if (titleStored === null) $scope.ltTitleDashEntries = {};
         else $scope.ltTitleDashEntries = titleStored;
@@ -121,6 +122,23 @@ app.controller('lowerThirdsCGController',
         if (ongoingStored === null) $scope.ltOngoingDashEntries = [];
         else $scope.ltOngoingDashEntries = ongoingStored;
 
+		if (queueStored === null) $scope.queue = [];
+        else $scope.queue = queueStored;
+
+		$scope.queueAdd = function() {
+			// console.log("Queue add");
+			$scope.queue.push($scope.ltTitleDashEntries);
+
+			$scope.ltTitleForm.$setPristine();
+			$scope.ltTitleDashEntries = {};
+		};
+
+		$scope.editQueueItem = function(item, index) {
+			$scope.ltTitleDashEntries = item;
+
+			$scope.queue.splice(index, 1);
+		};
+
         $scope.topSelections = [
             "Breaking News",
             "Incoming Result"
@@ -130,8 +148,8 @@ app.controller('lowerThirdsCGController',
 
         // $scope.timeRemaining = 10;
 
-        $scope.triggerTitleLowerThird = function () {
-            socket.emit("lowerThirds:showTitle", $scope.ltTitleDashEntries);
+        $scope.triggerTitleLowerThird = function (item) {
+            socket.emit("lowerThirds:showTitle", item);
             // $interval(function () {
             //     $scope.timeRemaining--;
             // }, 1000, 10);
@@ -168,6 +186,7 @@ app.controller('lowerThirdsCGController',
             localStorageService.set('lt_title', $scope.ltTitleDashEntries);
             localStorageService.set('lt_headline', $scope.ltHeadlineDashEntries);
             localStorageService.set('lt_ongoing', $scope.ltOngoingDashEntries);
+			localStorageService.set('lt_queue', $scope.queue);
         };
 
 		$scope.clearLocalStorage = function() {
