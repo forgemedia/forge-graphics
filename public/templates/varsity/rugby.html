@@ -10,13 +10,18 @@
 			<h3>Timer</h3>
 		</div>
 		<div class="btn-group">
-			<div class="btn btn-success" ng-click="resumeTimer()"><span class="glyphicon glyphicon-play"></span> Resume</div>
-			<div class="btn btn-warning" ng-click="stopTimer()"><span class="glyphicon glyphicon-pause"></span> Pause</div>
-			<div class="btn btn-danger" ng-click="startTimer()"><span class="glyphicon glyphicon-warning-sign"></span> Start/Reset</div>
-			<div class="btn btn-danger" ng-click="resetTimer()"><span class="glyphicon glyphicon-warning-sign"></span> Reset only</div>
+			<button class="btn btn-danger" ng-click="startTimer()">
+				<span class="glyphicon glyphicon-warning-sign"></span>
+				<span class="glyphicon glyphicon-play"></span>
+				Start/Reset
+			</button>
+			<button class="btn btn-success" ng-click="resumeTimer()"><span class="glyphicon glyphicon-play"></span> Resume</button>
+			<button class="btn btn-warning" ng-click="stopTimer()"><span class="glyphicon glyphicon-pause"></span> Pause</button>
+			<button class="btn btn-danger" ng-click="resetTimer()"><span class="glyphicon glyphicon-warning-sign"></span> Reset only</button>
 		</div>
 	</div>
-	Please note, 'Start' WILL reset the timer if it is currently running. Resume will break the timer if it is not currently ticking.
+	<h2><strong><span class="glyphicon glyphicon-warning-sign"></span> WARNING: Read before use</strong></h2>
+	'Start' WILL reset the timer if it is currently running. Resume will break the timer if it is not currently ticking.
 	<div class="page-header">
 		<h3>Scores</h3>
 	</div>
