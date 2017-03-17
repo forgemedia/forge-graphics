@@ -1,7 +1,7 @@
 var app = angular.module('CGDashboardApp', ['ngRoute', 'LocalStorageModule', 'socket-io', 'ui.toggle', 'ui.sortable']);
 
 app.controller('AppCtrl',
-    function($scope, $location, localStorageService, $filter, $window, socket){
+    function($scope, $rootScope, $location, localStorageService, $filter, $window, socket){
         $scope.menu = [];
 		$scope.modes = [];
 		// $scope.currentSport = {};
@@ -39,6 +39,7 @@ app.controller('AppCtrl',
         else $scope.currentMode = $filter('filter')($scope.modes, {name: modeStored})[0];
 
 		$scope.$watch('currentMode', function() {
+			$rootScope.$emit('teardown');
 			$location.path($scope.menu[0].url);
 		});
 

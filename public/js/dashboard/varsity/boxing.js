@@ -1,5 +1,5 @@
 app.controller('boxingCGController',
-	function($scope, $timeout, socket) {
+	function($scope, $rootScope, $timeout, socket) {
 		socket.on("boxing", function (msg) {
             $scope.boxing = msg;
         });
@@ -26,6 +26,11 @@ app.controller('boxingCGController',
 		$scope.startTimer = function() {
 			socket.emit("boxing:startTimer");
 		};
+
+		$rootScope.$on('teardown', function() {
+			$scope.resetRounds();
+			$scope.boxing.showBoxing = false;
+		});
 
         function getBoxingData() {
             socket.emit("boxing:get");

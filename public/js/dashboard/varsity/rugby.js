@@ -1,4 +1,4 @@
-app.controller('rugbyCGController', function($scope, socket) {
+app.controller('rugbyCGController', function($scope, $rootScope, socket) {
 	socket.on("rugby", function (msg) {
 		$scope.rugby = msg;
 	});
@@ -30,7 +30,13 @@ app.controller('rugbyCGController', function($scope, socket) {
 	$scope.resetScores = function() {
 		$scope.rugby.leftScore = 0;
 		$scope.rugby.rightScore = 0;
-	}
+	};
+
+	$rootScope.$on('teardown', function() {
+		$scope.resetScores();
+		$scope.resetTimer();
+		$scope.rugby.showRugby = false;
+	});
 
 	$scope.$watch('rugby', function() {
 		if ($scope.rugby) {
