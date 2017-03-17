@@ -1561,7 +1561,8 @@ th {
     width: 6vw;
     padding-top: 0.2vw;
     -webkit-transform: translateY(0px);
-            transform: translateY(0px); }
+            transform: translateY(0px);
+    text-transform: uppercase; }
     #rugbyBug .teamName.leftPosition {
       left: 16.5vw; }
     #rugbyBug .teamName.rightPosition {

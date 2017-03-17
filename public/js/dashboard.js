@@ -1,9 +1,9 @@
 var app = angular.module('CGDashboardApp', ['ngRoute', 'LocalStorageModule', 'socket-io', 'ui.toggle', 'ui.sortable']);
 
 app.controller('AppCtrl',
-    function($scope, $location, socket){
+    function($scope, $location, localStorageService, $filter, $window, socket){
         $scope.menu = [];
-		$scope.sports = [];
+		$scope.modes = [];
 		// $scope.currentSport = {};
 
         $scope.isActive = function (viewLocation) {
@@ -22,19 +22,23 @@ app.controller('AppCtrl',
             type: 'link'
         });
 
-		$scope.sports.push({
+		$scope.modes.push({
 			name: 'Boxing',
 			url: '/boxing',
 			type: 'link'
 		});
 
-		$scope.sports.push({
+		$scope.modes.push({
 			name: 'Rugby Union',
 			url: '/rugby',
 			type: 'link'
 		});
 
-		$scope.$watch('currentSport', function() {
+		var modeStored = localStorageService.get('gn_mode');
+		if (modeStored === null) $scope.currentMode = $scope.modes[0];
+        else $scope.currentMode = $filter('filter')($scope.modes, {name: modeStored})[0];
+
+		$scope.$watch('currentMode', function() {
 			$location.path($scope.menu[0].url);
 		});
 
@@ -42,6 +46,13 @@ app.controller('AppCtrl',
 		socket.on('project', function(msg) {
 			$scope.project = msg;
 		});
+
+		$scope.storeEntries = function() {
+            localStorageService.set('gn_mode', $scope.currentMode.name);
+        };
+
+        $scope.$on("$destroy", $scope.storeEntries);
+        $window.onbeforeunload = $scope.storeEntries;
     }
 );
 
@@ -62,11 +73,11 @@ app.config(
                 controller: 'lowerThirdsCGController'
             })
 			.when("/boxing", {
-				templateUrl: '/templates/boxing.html',
+				templateUrl: '/templates/varsity/boxing.html',
 				controller: 'boxingCGController'
 			})
 			.when("/rugby", {
-				templateUrl: '/templates/rugby.html',
+				templateUrl: '/templates/varsity/rugby.html',
 				controller: 'rugbyCGController'
 			})
             .otherwise({redirectTo: '/general'});

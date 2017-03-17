@@ -1,5 +1,7 @@
 app.controller('boxingCtrl',
     function($scope, generalSync, $timeout, socket) {
+		$scope.state = {};
+		$scope.state.showBoxing = false;
 
         $timeout(function() {
             socket.emit("boxing:get");

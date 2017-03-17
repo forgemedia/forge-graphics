@@ -18,7 +18,7 @@
         </header>
 
 		<div class="form-group">
-			<select class="form-control" ng-model="currentSport" ng-init="currentSport = sports[0]" ng-options="sport.name for sport in sports">
+			<select class="form-control" ng-model="currentMode" ng-options="mode.name for mode in modes">
 
 			</select>
 		</div>
@@ -27,7 +27,7 @@
             <div class="col-lg-2">
                 <ul class="nav nav-pills nav-stacked">
                     <li role="presentation" ng-class="{active:isActive(section.url)}" ng-repeat="section in menu"><a ng-href="#!{{section.url}}">{{ section.name }}</a></li>
-					<li role="presentation" ng-class="{active:isActive(currentSport.url)}"><a ng-href="#!{{currentSport.url}}">Varsity: {{currentSport.name}}</a></li>
+					<li role="presentation" ng-show="currentMode" ng-class="{active:isActive(currentMode.url)}"><a ng-href="#!{{currentMode.url}}">{{project}}: {{currentMode.name}}</a></li>
                 </ul>
             </div>
 

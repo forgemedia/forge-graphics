@@ -28,7 +28,7 @@
         <div class="btn-group">
         	<button
         	class="btn btn-success"
-        	ng-click="queueAdd()">Add to queue</button>
+        	ng-click="queueAdd()"><span class="glyphicon glyphicon-plus"></span> Add to queue</button>
 			<button
         	class="btn btn-warning"
         	ng-click="ltTitleDashEntries = {}">Reset</button>
@@ -54,15 +54,15 @@
 				<div class="btn-group" role="group">
 					<button
 					class="btn btn-danger"
-					ng-click="triggerTitleLowerThird(item)">Trigger</button>
+					ng-click="triggerTitleLowerThird(item)"><span class="glyphicon glyphicon-play"></span></button>
 
 					<button
 					class="btn btn-warning"
-					ng-click="editQueueItem(item, $index)">Edit</button>
+					ng-click="editQueueItem(item, $index)"><span class="glyphicon glyphicon-edit"></span> Edit</button>
 
 					<button
 					class="btn btn-danger"
-					ng-click="queue.splice($index, 1)">Remove from queue</button>
+					ng-click="queue.splice($index, 1)"><span class="glyphicon glyphicon-remove"></span></button>
 				</div>
 			</div>
 			<div class="col-md-8 col-sm-12 col-xs-12"><span class="itemDescriptor"><small>Left:</small> {{item.leftUpper}}—{{item.leftLower}}, <small>Right:</small> {{item.rightUpper}}—{{item.rightLower}} <small>/ Options: {{item.titleClasses}}</small></span></div>

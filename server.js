@@ -29,11 +29,17 @@ var sockets = {
 		'resetTimer'
 	],
 	'rugby': [
-		
+		'startTimer',
+		'resetTimer',
+		'stopTimer',
+		'resumeTimer'
 	]
 };
 
 var dataStores = {};
+dataStores.rugby = {};
+dataStores.rugby.leftScore = 0;
+dataStores.rugby.rightScore = 0;
 
 io.on('connection', function(socket) {
 	if (debug) console.log('* Client connected');

@@ -1,8 +1,8 @@
 <div id="rugbyBug" ng-controller="rugbyCtrl" ng-show="state.showRugby">
-	<span id="timer"><timer autostart="false" interval="1000" countdown="120">{{minutes}}:{{sseconds}}</timer></span>
+	<span id="timer"><timer autostart="false" interval="1000">{{minutes}}:{{sseconds}}</timer></span>
 	<span class="teamName leftPosition" id="shu">SHU</span>
 	<span class="teamName rightPosition" id="uos">UOS</span>
-	<span class="score" id="leftScore">1</span>
-	<span class="score" id="rightScore">2</span>
+	<span class="score" ng-bind="state.leftScore" id="leftScore"></span>
+	<span class="score" ng-bind="state.rightScore" id="rightScore"></span>
 	<!-- <span class="scores"><span class="score" id="leftScore">1</span><span class="score" id="rightScore">2</span></span> -->
 </div>

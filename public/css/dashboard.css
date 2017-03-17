@@ -6277,4 +6277,7 @@ span.itemDescriptor {
   padding-bottom: 15px;
   border-bottom: 1px solid #eeeeee;
   margin-bottom: 20px; }
+
+#rugbyScoreButtons .row {
+  padding-bottom: 5px; }
 /*# sourceMappingURL=dashboard.css.map */
