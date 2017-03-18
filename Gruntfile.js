@@ -5,10 +5,13 @@ module.exports = function(grunt) {
 				options: {
 					style: 'expanded'
 				},
-				files: {
-					'public/css/theme.css': 'scss/theme.scss',
-					'public/css/dashboard.css': 'scss/dashboard.scss'
-				}
+				files: [{
+					expand: true,
+					cwd: 'scss/',
+					src: ['[^_]*.scss'],
+					dest: 'public/css',
+					ext: '.css'
+				}]
 			}
 		}
 	});
