@@ -1,0 +1,11 @@
+.colourScheme {
+	&.shu {
+		color: $light-colour;
+		@include overlay($colour-c);
+	}
+
+	&.uos {
+		color: $dark-colour;
+		@include overlay($colour-b);
+	}
+}

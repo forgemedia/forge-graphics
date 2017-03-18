@@ -58,15 +58,6 @@ $left-team-name-left: 16.5vw;
 			left: $left-team-name-left + $team-name-width;
 			//padding-left: 1vw;
 		}
-
-		&.shu {
-			color: $light-colour;
-			@include overlay($colour-c);
-		}
-
-		&.uos {
-			@include overlay($colour-b);
-		}
 	}
 
 	.scoreContainer {

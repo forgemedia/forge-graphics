@@ -2,10 +2,10 @@
 	<img ng-src="/img/{{teamsContent.leftPosTeam.code}}.svg" ng-show="showTeams" class="logo leftLogo"/>
 	<img ng-src="/img/{{teamsContent.rightPosTeam.code}}.svg" ng-show="showTeams" class="logo rightLogo"/>
 	<div id="mtltContainer" ng-show="showTeams">
-		<div class="teamContainer" ng-class="teamsContent.leftPosTeam.code" id="leftTeamContainer">
+		<div class="teamContainer colourScheme" ng-class="teamsContent.leftPosTeam.code" id="leftTeamContainer">
 			<span ng-show="showTeams" class="team">{{teamsContent.leftPosTeam.name}}</span>
 		</div>
-		<div class="teamContainer" ng-class="teamsContent.rightPosTeam.code" id="rightTeamContainer">
+		<div class="teamContainer colourScheme" ng-class="teamsContent.rightPosTeam.code" id="rightTeamContainer">
 			<span ng-show="showTeams" class="team">{{teamsContent.rightPosTeam.name}}</span>
 		</div>
 	</div>

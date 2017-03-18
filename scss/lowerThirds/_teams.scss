@@ -75,17 +75,6 @@ $aux-height: 3vw;
 				font-size: 2.5vw;
 				//text-transform: uppercase;
 			}
-
-			&.shu {
-				@include overlay($colour-c);
-				color: $light-colour;
-			}
-
-			&.uos {
-				@include overlay($colour-b);
-				color: $dark-colour;
-				//line-height: $lower-third-height / 2 !important;
-			}
 		}
 	}
 
