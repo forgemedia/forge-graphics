@@ -1,4 +1,4 @@
-$aux-height: 3vw;
+$teams-aux-height: 3vw;
 
 .lowerThird.teamsLowerThird {
 	@include fade(0.5s, 0s, 1s);
@@ -83,7 +83,7 @@ $aux-height: 3vw;
 		width: $lower-third-container-width / 2;
 		left: $lower-third-container-width / 4;
 		text-align: center;
-		height: $aux-height;
+		height: $teams-aux-height;
 		@include overlay($dark-colour);
 		box-shadow: $lower-box-shadow;
 		z-index: -1;
@@ -96,15 +96,15 @@ $aux-height: 3vw;
 			width: 100%;
 			display: block;
 
-			line-height: $aux-height;
+			line-height: $teams-aux-height;
 		}
 
 		&#sportContainer {
 			@include slide-up(0.5s, 1s, 0s);
 
-			top: -$aux-height * 0.8;
-			border-top-left-radius: $aux-height / 3;
-			border-top-right-radius: $aux-height / 3;
+			top: -$teams-aux-height * 0.8;
+			border-top-left-radius: $teams-aux-height / 3;
+			border-top-right-radius: $teams-aux-height / 3;
 
 			span {
 				transform: translateY(-0.2vw);
@@ -114,9 +114,9 @@ $aux-height: 3vw;
 		&#venueContainer {
 			@include slide-down(0.5s, 1s, 0s);
 
-			top: $lower-third-height - $aux-height * 0.2;
-			border-bottom-left-radius: $aux-height / 3;
-			border-bottom-right-radius: $aux-height / 3;
+			top: $lower-third-height - $teams-aux-height * 0.2;
+			border-bottom-left-radius: $teams-aux-height / 3;
+			border-bottom-right-radius: $teams-aux-height / 3;
 
 			span {
 				transform: translateY(0.4vw);

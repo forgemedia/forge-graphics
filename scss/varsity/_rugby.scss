@@ -14,7 +14,7 @@ $left-team-name-left: 16.5vw;
 	position: absolute;
 
 	width: $rugby-bug-width;
-	left: $sport-bug-left;
+	left: $aux-bug-left;
 	z-index: 2;
 
 	> * {
@@ -87,9 +87,9 @@ $left-team-name-left: 16.5vw;
 			}
 
 			&#rightScore {
-				//left: ($sport-bug-left + $rugby-bug-width);
+				//left: ($aux-bug-left + $rugby-bug-width);
 				//left: 0.5vw;
-				//left: ($sport-bug-left + $rugby-bug-width) * 0.52;
+				//left: ($aux-bug-left + $rugby-bug-width) * 0.52;
 			}
 		}
 
