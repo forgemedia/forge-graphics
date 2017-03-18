@@ -1,5 +1,6 @@
 console.log('  Quit using CTRL+C');
 console.log('  In the event of issues, first try quitting and running \'npm install\' and \'bower install\'');
+console.log('  Time of start: ' + new Date().toISOString());
 
 var project = 'Varsity 2017';
 
@@ -36,10 +37,12 @@ var sockets = {
 	]
 };
 
-var dataStores = {};
-dataStores.rugby = {};
-dataStores.rugby.leftScore = 0;
-dataStores.rugby.rightScore = 0;
+var dataStores = {
+	rugby: {
+		leftScore: 0,
+		rightScore: 0
+	}
+};
 
 io.on('connection', function(socket) {
 	if (debug) console.log('* Client connected');

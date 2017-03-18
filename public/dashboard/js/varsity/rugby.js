@@ -1,14 +1,21 @@
-app.controller('rugbyCGController', function($scope, $rootScope, socket) {
+app.controller('rugbyCGController', function($scope, $rootScope, $filter, socket) {
 	socket.on("rugby", function (msg) {
 		$scope.rugby = msg;
 	});
 
+	$scope.teams = [
+		'uos',
+		'shu'
+	];
+
 	$scope.scoreAddLeft = function(score) {
+		if ($scope.rugby.leftScore < 1 && score < 1) return;
 		$scope.rugby.leftScore += score;
 	};
 
 	$scope.scoreAddRight = function(score) {
-		$scope.rugby.rightScore += score;
+		if ($scope.rugby.rightScore < 1 && score < 1) return;
+		else $scope.rugby.rightScore += score;
 	};
 
 	$scope.startTimer = function() {

@@ -1,5 +1,5 @@
 app.controller('generalCGController',
-    function($scope, localStorageService, socket){
+    function($scope, $interval, localStorageService, socket){
         socket.on("general", function (msg) {
             $scope.general = msg;
 			$scope.general.showLive = true;

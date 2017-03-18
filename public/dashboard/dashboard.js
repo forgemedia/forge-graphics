@@ -29,7 +29,7 @@ app.controller('AppCtrl',
 		});
 
 		$scope.modes.push({
-			name: 'Rugby Union',
+			name: 'Rugby/Football',
 			url: '/rugby',
 			type: 'link'
 		});
@@ -66,19 +66,19 @@ app.config(
 
         $routeProvider
             .when("/general", {
-                templateUrl: '/templates/general.html',
+                templateUrl: '/dashboard/templates/general.html',
                 controller: 'generalCGController'
             })
             .when("/lowerThirds", {
-                templateUrl: '/templates/lowerThirds.html',
+                templateUrl: '/dashboard/templates/lowerThirds.html',
                 controller: 'lowerThirdsCGController'
             })
 			.when("/boxing", {
-				templateUrl: '/templates/varsity/boxing.html',
+				templateUrl: '/dashboard/templates/varsity/boxing.html',
 				controller: 'boxingCGController'
 			})
 			.when("/rugby", {
-				templateUrl: '/templates/varsity/rugby.html',
+				templateUrl: '/dashboard/templates/varsity/rugby.html',
 				controller: 'rugbyCGController'
 			})
             .otherwise({redirectTo: '/general'});

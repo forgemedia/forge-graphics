@@ -1563,28 +1563,34 @@ th {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     text-transform: uppercase; }
-    #rugbyBug .teamName.leftPosition {
+    #rugbyBug .teamName#leftPosition {
       left: 16.5vw; }
-    #rugbyBug .teamName.rightPosition {
+    #rugbyBug .teamName#rightPosition {
       left: 22.5vw; }
-    #rugbyBug .teamName#shu {
+    #rugbyBug .teamName.shu {
       color: #ffffff;
       background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
       background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
       background-blend-mode: multiply, normal; }
-    #rugbyBug .teamName#uos {
+    #rugbyBug .teamName.uos {
       background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
       background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
       background-blend-mode: multiply, normal; }
-  #rugbyBug .score {
-    font-size: 2.2vw;
-    z-index: 10;
-    text-align: center;
-    font-weight: 700; }
-    #rugbyBug .score#leftScore {
-      left: 14.25vw; }
-    #rugbyBug .score#rightScore {
-      left: 29.75vw; }
+  #rugbyBug .scoreContainer {
+    width: 5vw;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); }
+    #rugbyBug .scoreContainer#leftScoreContainer {
+      left: 12.1vw; }
+    #rugbyBug .scoreContainer#rightScoreContainer {
+      left: 27.75vw; }
+    #rugbyBug .scoreContainer .score {
+      font-size: 2.2vw;
+      z-index: 10;
+      display: block;
+      text-align: center;
+      font-weight: 700;
+      width: 100%; }
 
 * {
   box-sizing: border-box;

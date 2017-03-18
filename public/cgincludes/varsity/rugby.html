@@ -1,8 +1,12 @@
 <div id="rugbyBug" ng-controller="rugbyCtrl" ng-show="state.showRugby">
 	<span id="timer"><timer autostart="false" interval="1000">{{minutes}}:{{sseconds}}</timer></span>
-	<span class="teamName leftPosition" id="shu">SHU</span>
-	<span class="teamName rightPosition" id="uos">UOS</span>
-	<span class="score" ng-bind="state.leftScore" id="leftScore"></span>
-	<span class="score" ng-bind="state.rightScore" id="rightScore"></span>
+	<span class="teamName" id="leftPosition" ng-class="state.leftPosTeam">{{state.leftPosTeam}}</span>
+	<span class="teamName" id="rightPosition" ng-class="state.rightPosTeam">{{state.rightPosTeam}}</span>
+	<div class="scoreContainer" id="leftScoreContainer">
+		<span class="score" ng-bind="state.leftScore" id="leftScore"></span>
+	</div>
+	<div class="scoreContainer" id="rightScoreContainer">
+		<span class="score" ng-bind="state.rightScore" id="rightScore"></span>
+	</div>
 	<!-- <span class="scores"><span class="score" id="leftScore">1</span><span class="score" id="rightScore">2</span></span> -->
 </div>
