@@ -40,6 +40,31 @@
             	    <span class="glyphicon glyphicon-trash"></span> Clear Dashboard local storage
             	</button>
             </div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="checkbox">
+							<label><toggle ng-model="adv"></toggle>Show advanced options <small>(<span class="glyphicon glyphicon-warning-sign"></span> <strong>CAUTION:</strong> May cause production values to increase)</small></label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<label>
+							<toggle ng-if="adv" ng-model="general.showSm[0]" class="btn-xs"></toggle>
+							<span ng-if="adv"><img src="/img/sm.jpg" style="width: 20px;"></div>
+						</label>
+						<label>
+							<toggle ng-if="adv" ng-model="general.showSm[1]" class="btn-xs"></toggle>
+							<span ng-if="adv"><img src="/img/sm.jpg" style="width: 20px;"></div>
+						</label>
+						<label>
+							<toggle ng-if="adv" ng-model="general.showSm[2]" class="btn-xs"></toggle>
+							<span ng-if="adv"><img src="/img/sm.jpg" style="width: 20px;"></div>
+						</label>
+					</div>
+				</div>
+			</div>
         </div>
 		<!-- <div class="form-group">
 			<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" placeholder="File" ng-model="votesCsvFile"></input>

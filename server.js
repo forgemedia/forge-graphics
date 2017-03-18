@@ -36,6 +36,9 @@ var sockets = {
 };
 
 var dataStores = {
+	general: {
+		showSm: {}
+	},
 	rugby: {
 		leftScore: 0,
 		rightScore: 0
@@ -54,6 +57,10 @@ var teams = [
 	{
 		code: 'fge',
 		name: 'Forge Media'
+	},
+	{
+		code: 'dch',
+		name: 'Danny Dyer\'s Chocolate Homunculus'
 	}
 ];
 
