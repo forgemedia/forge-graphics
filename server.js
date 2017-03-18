@@ -30,10 +30,7 @@ var sockets = {
 		'resetTimer'
 	],
 	'rugby': [
-		'startTimer',
-		'resetTimer',
-		'stopTimer',
-		'resumeTimer'
+		'timer'
 	]
 };
 

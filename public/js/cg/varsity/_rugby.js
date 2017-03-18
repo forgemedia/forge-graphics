@@ -1,5 +1,9 @@
 app.controller('rugbyCtrl', function($scope, generalSync, $timeout, socket) {
 	// $scope.state.showRugby = true;
+	$scope.$broadcast('timer-start');
+	$timeout(function() {
+		$scope.$broadcast('timer-reset');
+	}, 100);
 	$timeout(function() {
 		socket.emit("rugby:get");
 	}, 2000);
@@ -8,20 +12,8 @@ app.controller('rugbyCtrl', function($scope, generalSync, $timeout, socket) {
 		$scope.state = state;
 	});
 
-	socket.on("rugby:startTimer", function() {
-		$scope.$broadcast('timer-resume');
-	});
-
-	socket.on("rugby:stopTimer", function() {
-		$scope.$broadcast('timer-stop');
-	});
-
-	socket.on("rugby:resetTimer", function() {
-		$scope.$broadcast('timer-reset');
-	});
-
-	socket.on("rugby:resumeTimer", function() {
-		$scope.$broadcast('timer-resume');
+	socket.on("rugby:timer", function(msg) {
+		$scope.$broadcast('timer-' + msg);
 	});
 
 	$scope.$watch('state', function() {

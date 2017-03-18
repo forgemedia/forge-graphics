@@ -19,19 +19,19 @@ app.controller('rugbyCGController', function($scope, $rootScope, $filter, socket
 	};
 
 	$scope.startTimer = function() {
-		socket.emit("rugby:startTimer");
+		socket.emit("rugby:timer", 'start');
 	};
 
 	$scope.resetTimer = function() {
-		socket.emit("rugby:resetTimer");
+		socket.emit("rugby:timer", 'reset');
 	};
 
 	$scope.stopTimer = function() {
-		socket.emit("rugby:stopTimer");
+		socket.emit("rugby:timer", 'stop');
 	};
 
 	$scope.resumeTimer = function() {
-		socket.emit("rugby:resumeTimer");
+		socket.emit("rugby:timer", 'resume');
 	};
 
 	$scope.resetScores = function() {
