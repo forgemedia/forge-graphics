@@ -22,13 +22,15 @@ html {
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Remove default margin.
  */
 body {
-  margin: 0; }
+  margin: 0;
+}
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -51,7 +53,8 @@ menu,
 nav,
 section,
 summary {
-  display: block; }
+  display: block;
+}
 
 /**
  * 1. Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
@@ -64,7 +67,8 @@ video {
   display: inline-block;
   /* 1 */
   vertical-align: baseline;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Prevents modern browsers from displaying `audio` without controls.
@@ -72,7 +76,8 @@ video {
  */
 audio:not([controls]) {
   display: none;
-  height: 0; }
+  height: 0;
+}
 
 /**
  * Address `[hidden]` styling not present in IE 8/9/10.
@@ -80,7 +85,8 @@ audio:not([controls]) {
  */
 [hidden],
 template {
-  display: none; }
+  display: none;
+}
 
 /* Links
    ========================================================================== */
@@ -88,14 +94,16 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 /**
  * Improve readability of focused elements when they are also in an
  * active/hover state.
  */
 a:active, a:hover {
-  outline: 0; }
+  outline: 0;
+}
 
 /* Text-level semantics
    ========================================================================== */
@@ -103,20 +111,23 @@ a:active, a:hover {
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
 abbr[title] {
-  border-bottom: 1px dotted; }
+  border-bottom: 1px dotted;
+}
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
 b,
 strong {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 /**
  * Address styling not present in Safari and Chrome.
  */
 dfn {
-  font-style: italic; }
+  font-style: italic;
+}
 
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
@@ -124,20 +135,23 @@ dfn {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0;
+}
 
 /**
  * Addresses styling not present in IE 8/9.
  */
 mark {
   background: #ff0;
-  color: #000; }
+  color: #000;
+}
 
 /**
  * Address inconsistent and variable font size in all browsers.
  */
 small {
-  font-size: 80%; }
+  font-size: 80%;
+}
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
@@ -147,13 +161,16 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 sup {
-  top: -0.5em; }
+  top: -0.5em;
+}
 
 sub {
-  bottom: -0.25em; }
+  bottom: -0.25em;
+}
 
 /* Embedded content
    ========================================================================== */
@@ -162,13 +179,15 @@ sub {
  * 2. Improves image quality when scaled in IE 7.
  */
 img {
-  border: 0; }
+  border: 0;
+}
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
 svg:not(:root) {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /* Grouping content
    ========================================================================== */
@@ -176,20 +195,23 @@ svg:not(:root) {
  * Address margin not present in IE 8/9 and Safari.
  */
 figure {
-  margin: 1em 40px; }
+  margin: 1em 40px;
+}
 
 /**
  * Address differences between Firefox and other browsers.
  */
 hr {
   box-sizing: content-box;
-  height: 0; }
+  height: 0;
+}
 
 /**
  * Contain overflow in all browsers.
  */
 pre {
-  overflow: auto; }
+  overflow: auto;
+}
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
@@ -200,7 +222,8 @@ kbd,
 pre,
 samp {
   font-family: monospace, monospace;
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 /* Forms
    ========================================================================== */
@@ -225,13 +248,15 @@ textarea {
   font: inherit;
   /* 2 */
   margin: 0;
-  /* 3 */ }
+  /* 3 */
+}
 
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
 button {
-  overflow: visible; }
+  overflow: visible;
+}
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
@@ -241,7 +266,8 @@ button {
  */
 button,
 select {
-  text-transform: none; }
+  text-transform: none;
+}
 
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
@@ -259,14 +285,16 @@ input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
-  /* 3 */ }
+  /* 3 */
+}
 
 /**
  * Re-set default cursor for disabled elements.
  */
 button[disabled],
 html input[disabled] {
-  cursor: default; }
+  cursor: default;
+}
 
 /**
  * Remove inner padding and border in Firefox 4+.
@@ -274,14 +302,16 @@ html input[disabled] {
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
 input {
-  line-height: normal; }
+  line-height: normal;
+}
 
 /**
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
@@ -293,7 +323,8 @@ input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Fix the cursor style for Chrome's increment/decrement buttons. For certain
@@ -302,7 +333,8 @@ input[type="radio"] {
  */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
+  height: auto;
+}
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
@@ -312,7 +344,8 @@ input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   box-sizing: content-box;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
@@ -321,7 +354,8 @@ input[type="search"] {
  */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+}
 
 /**
  * Define consistent border, margin, and padding.
@@ -329,7 +363,8 @@ input[type="search"]::-webkit-search-decoration {
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: 0.35em 0.625em 0.75em;
+}
 
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
@@ -341,20 +376,23 @@ legend {
   border: 0;
   /* 1 */
   padding: 0;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
 textarea {
-  overflow: auto; }
+  overflow: auto;
+}
 
 /**
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
 optgroup {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 /* Tables
    ========================================================================== */
@@ -363,11 +401,13 @@ optgroup {
  */
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 td,
 th {
-  padding: 0; }
+  padding: 0;
+}
 
 #bug > *, #boxingBug, #rugbyBug {
   top: 6vh;
@@ -377,7 +417,8 @@ th {
   border: 0 solid #323232;
   overflow: hidden;
   box-shadow: 10px 0px 18px -10px rgba(0, 0, 0, 0.45);
-  letter-spacing: -0.15em; }
+  letter-spacing: -0.15em;
+}
 
 #boxingBug:after, #rugbyBug:after, #rugbyBug .teamName {
   position: absolute;
@@ -385,1047 +426,1007 @@ th {
   content: "";
   height: 3vw;
   z-index: 1;
-  line-height: 3vw; }
+  line-height: 3vw;
+}
 
 #boxingBug:after, #rugbyBug:after {
   border-top-right-radius: 1.5vw;
   border-bottom-right-radius: 1.5vw;
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
   background-blend-mode: multiply, normal;
-  width: 13vw; }
+  width: 13vw;
+}
 
 #boxingBug #timer, #rugbyBug #timer {
   font-size: 2.2vw;
   left: 6.2vw;
   font-weight: 700;
   z-index: 2;
-  color: #ffffff; }
+  color: #ffffff;
+}
 
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-Bold.woff2") format("woff2");
   font-weight: bold;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-ExtraLightItalic.woff2") format("woff2");
   font-weight: 200;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-Italic.woff2") format("woff2");
   font-weight: normal;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-BoldItalic.woff2") format("woff2");
   font-weight: bold;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-Bold.woff2") format("woff2");
   font-weight: bold;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-Regular.woff2") format("woff2");
   font-weight: normal;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-LightItalic.woff2") format("woff2");
   font-weight: 300;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-BlackItalic.woff2") format("woff2");
   font-weight: 900;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-MediumItalic.woff2") format("woff2");
   font-weight: 500;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-Black.woff2") format("woff2");
   font-weight: 900;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-Medium.woff2") format("woff2");
   font-weight: 500;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-ExtraLight.woff2") format("woff2");
   font-weight: 200;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-Italic.woff2") format("woff2");
   font-weight: normal;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-Italic.woff2") format("woff2");
   font-weight: normal;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-Semibold.woff2") format("woff2");
   font-weight: 600;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-LightItalic.woff2") format("woff2");
   font-weight: 300;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-SemiboldItalic.woff2") format("woff2");
   font-weight: 600;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-ExtraLight.woff2") format("woff2");
   font-weight: 200;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-UltraBlack.woff2") format("woff2");
   font-weight: 900;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-Semibold.woff2") format("woff2");
   font-weight: 600;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-UltraBlackItalic.woff2") format("woff2");
   font-weight: 900;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-ExtraLightItalic.woff2") format("woff2");
   font-weight: 200;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-Medium.woff2") format("woff2");
   font-weight: 500;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-UltraBlackItalic.woff2") format("woff2");
   font-weight: 900;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-UltraBlack.woff2") format("woff2");
   font-weight: 900;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-Regular.woff2") format("woff2");
   font-weight: normal;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-ThinItalic.woff2") format("woff2");
   font-weight: 100;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-BlackItalic.woff2") format("woff2");
   font-weight: 900;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-UltraBlack.woff2") format("woff2");
   font-weight: 900;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-ExtraLightItalic.woff2") format("woff2");
   font-weight: 200;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-UltraBlackItalic.woff2") format("woff2");
   font-weight: 900;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-Semibold.woff2") format("woff2");
   font-weight: 600;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-MediumItalic.woff2") format("woff2");
   font-weight: 500;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-Medium.woff2") format("woff2");
   font-weight: 500;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-SemiboldItalic.woff2") format("woff2");
   font-weight: 600;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-LightItalic.woff2") format("woff2");
   font-weight: 300;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-MediumItalic.woff2") format("woff2");
   font-weight: 500;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-Regular.woff2") format("woff2");
   font-weight: normal;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-MediumItalic.woff2") format("woff2");
   font-weight: 500;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-Light.woff2") format("woff2");
   font-weight: 300;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-ExtraLightItalic.woff2") format("woff2");
   font-weight: 200;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-Bold.woff2") format("woff2");
   font-weight: bold;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-UltraBlack.woff2") format("woff2");
   font-weight: 900;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-UltraBlackItalic.woff2") format("woff2");
   font-weight: 900;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-Regular.woff2") format("woff2");
   font-weight: normal;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-ThinItalic.woff2") format("woff2");
   font-weight: 100;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-Bold.woff2") format("woff2");
   font-weight: bold;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-SemiboldItalic.woff2") format("woff2");
   font-weight: 600;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-ThinItalic.woff2") format("woff2");
   font-weight: 100;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-Black.woff2") format("woff2");
   font-weight: 900;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-ExtraLight.woff2") format("woff2");
   font-weight: 200;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-Italic.woff2") format("woff2");
   font-weight: normal;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-Thin.woff2") format("woff2");
   font-weight: 100;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-Thin.woff2") format("woff2");
   font-weight: 100;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-LightItalic.woff2") format("woff2");
   font-weight: 300;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-Italic.woff2") format("woff2");
   font-weight: normal;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-Black.woff2") format("woff2");
   font-weight: 900;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-BlackItalic.woff2") format("woff2");
   font-weight: 900;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-ThinItalic.woff2") format("woff2");
   font-weight: 100;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-Thin.woff2") format("woff2");
   font-weight: 100;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-ExtraLight.woff2") format("woff2");
   font-weight: 200;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-UltraBlackItalic.woff2") format("woff2");
   font-weight: 900;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-Light.woff2") format("woff2");
   font-weight: 300;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-Regular.woff2") format("woff2");
   font-weight: normal;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-ExtraLightItalic.woff2") format("woff2");
   font-weight: 200;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-SemiboldItalic.woff2") format("woff2");
   font-weight: 600;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-UltraBlack.woff2") format("woff2");
   font-weight: 900;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-Thin.woff2") format("woff2");
   font-weight: 100;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-Light.woff2") format("woff2");
   font-weight: 300;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-Medium.woff2") format("woff2");
   font-weight: 500;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-Black.woff2") format("woff2");
   font-weight: 900;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-BoldItalic.woff2") format("woff2");
   font-weight: bold;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-Light.woff2") format("woff2");
   font-weight: 300;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-BoldItalic.woff2") format("woff2");
   font-weight: bold;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-ExtraLight.woff2") format("woff2");
   font-weight: 200;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-Black.woff2") format("woff2");
   font-weight: 900;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-Thin.woff2") format("woff2");
   font-weight: 100;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro';
   src: url("/fonts/AcuminPro-Light.woff2") format("woff2");
   font-weight: 300;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-LightItalic.woff2") format("woff2");
   font-weight: 300;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-Semibold.woff2") format("woff2");
   font-weight: 600;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-BlackItalic.woff2") format("woff2");
   font-weight: 900;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-Medium.woff2") format("woff2");
   font-weight: 500;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-ThinItalic.woff2") format("woff2");
   font-weight: 100;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro ExtraCondensed';
   src: url("/fonts/AcuminProExtraCond-BlackItalic.woff2") format("woff2");
   font-weight: 900;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-Bold.woff2") format("woff2");
   font-weight: bold;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-BoldItalic.woff2") format("woff2");
   font-weight: bold;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro SemiCondensed';
   src: url("/fonts/AcuminProSemiCond-Semibold.woff2") format("woff2");
   font-weight: 600;
-  font-style: normal; }
-
+  font-style: normal;
+}
 @font-face {
   font-family: 'Acumin Pro Condensed';
   src: url("/fonts/AcuminProCond-SemiboldItalic.woff2") format("woff2");
   font-weight: 600;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-BoldItalic.woff2") format("woff2");
   font-weight: bold;
-  font-style: italic; }
-
+  font-style: italic;
+}
 @font-face {
   font-family: 'Acumin Pro Wide';
   src: url("/fonts/AcuminProWide-MediumItalic.woff2") format("woff2");
   font-weight: 500;
-  font-style: italic; }
-
+  font-style: italic;
+}
 #bug > * span, #boxingBug span, #rugbyBug span {
-  -webkit-transform: translateY(0.25vw);
-          transform: translateY(0.25vw); }
+  transform: translateY(0.25vw);
+}
 
 #bug {
-  position: absolute; }
-  #bug .noBoxShadow {
-    box-shadow: none; }
-  #bug #logo {
-    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
-    background-blend-mode: multiply, normal;
-    border-top-right-radius: 1.5vw;
-    border-bottom-right-radius: 1.5vw;
-    -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-    -webkit-transition-delay: 0s !important;
-            transition-delay: 0s !important;
-    width: 17.75vw;
-    z-index: 2; }
-    #bug #logo.ng-hide {
-      -webkit-transform: translateX(-10vw);
-              transform: translateX(-10vw);
-      opacity: 0; }
-    #bug #logo.ng-hide-add, #bug #logo.ng-hide-remove {
-      -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1); }
-    #bug #logo.ng-hide-add {
-      -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-              transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-      -webkit-transition-delay: 0.25s !important;
-              transition-delay: 0.25s !important; }
-    #bug #logo img {
-      display: inline-block;
-      position: absolute; }
-      #bug #logo img#forge {
-        top: 0.55vw;
-        height: 1.8vw;
-        left: 10vw;
-        opacity: 0.4;
-        -webkit-transform: scale(1.3) rotate(-6deg);
-                transform: scale(1.3) rotate(-6deg); }
-  #bug .liveSegment {
-    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
-    background-blend-mode: multiply, normal;
-    border-top-right-radius: 1.5vw;
-    border-bottom-right-radius: 1.5vw;
-    -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-    -webkit-transition-delay: 0.5s !important;
-            transition-delay: 0.5s !important;
-    position: absolute;
-    -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), background 0.5s cubic-bezier(0, 0.75, 0.75, 1), color 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), background 0.5s cubic-bezier(0, 0.75, 0.75, 1), color 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), background 0.5s cubic-bezier(0, 0.75, 0.75, 1), color 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), background 0.5s cubic-bezier(0, 0.75, 0.75, 1), color 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    color: #323232;
-    width: 9vw;
-    left: 15.75vw;
-    z-index: -1; }
-    #bug .liveSegment.ng-hide {
-      -webkit-transform: translateX(-10vw);
-              transform: translateX(-10vw);
-      opacity: 0; }
-    #bug .liveSegment.ng-hide-add, #bug .liveSegment.ng-hide-remove {
-      -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1); }
-    #bug .liveSegment.ng-hide-add {
-      -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-              transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-      -webkit-transition-delay: 0s !important;
-              transition-delay: 0s !important; }
-    #bug .liveSegment .liveSegmentText {
-      -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      text-align: center; }
-      #bug .liveSegment .liveSegmentText.ng-hide, #bug .liveSegment .liveSegmentText.ng-leave-active {
-        -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-                transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-        -webkit-transform: translateX(10vw);
-                transform: translateX(10vw);
-        opacity: 0; }
-      #bug .liveSegment .liveSegmentText.ng-hide-remove, #bug .liveSegment .liveSegmentText.ng-enter {
-        -webkit-transform: translateX(-10vw);
-                transform: translateX(-10vw);
-        opacity: 0; }
-      #bug .liveSegment .liveSegmentText > span {
-        display: block;
-        font-size: 2.2vw;
-        width: 9vw;
-        position: absolute;
-        line-height: 3vw;
-        font-weight: 700;
-        left: 0.5vw; }
-    #bug .liveSegment.altLive {
-      background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
-      background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
-      background-blend-mode: multiply, normal;
-      color: #ffffff; }
+  position: absolute;
+}
+#bug .noBoxShadow {
+  box-shadow: none;
+}
+#bug #logo {
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  background-blend-mode: multiply, normal;
+  border-top-right-radius: 1.5vw;
+  border-bottom-right-radius: 1.5vw;
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition-delay: 0s !important;
+  width: 17.75vw;
+  z-index: 2;
+}
+#bug #logo.ng-hide {
+  transform: translateX(-10vw);
+  opacity: 0;
+}
+#bug #logo.ng-hide-add, #bug #logo.ng-hide-remove {
+  transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+}
+#bug #logo.ng-hide-add {
+  transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  transition-delay: 0.25s !important;
+}
+#bug #logo img {
+  display: inline-block;
+  position: absolute;
+}
+#bug #logo img#forge {
+  top: 0.55vw;
+  height: 1.8vw;
+  left: 10vw;
+  opacity: 0.4;
+  transform: scale(1.3) rotate(-6deg);
+}
+#bug .liveSegment {
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background-blend-mode: multiply, normal;
+  border-top-right-radius: 1.5vw;
+  border-bottom-right-radius: 1.5vw;
+  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+  transition-delay: 0.5s !important;
+  position: absolute;
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), background 0.5s cubic-bezier(0, 0.75, 0.75, 1), color 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  color: #323232;
+  width: 9vw;
+  left: 15.75vw;
+  z-index: -1;
+}
+#bug .liveSegment.ng-hide {
+  transform: translateX(-10vw);
+  opacity: 0;
+}
+#bug .liveSegment.ng-hide-add, #bug .liveSegment.ng-hide-remove {
+  transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+}
+#bug .liveSegment.ng-hide-add {
+  transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  transition-delay: 0s !important;
+}
+#bug .liveSegment .liveSegmentText {
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  text-align: center;
+}
+#bug .liveSegment .liveSegmentText.ng-hide, #bug .liveSegment .liveSegmentText.ng-leave-active {
+  transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  transform: translateX(10vw);
+  opacity: 0;
+}
+#bug .liveSegment .liveSegmentText.ng-hide-remove, #bug .liveSegment .liveSegmentText.ng-enter {
+  transform: translateX(-10vw);
+  opacity: 0;
+}
+#bug .liveSegment .liveSegmentText > span {
+  display: block;
+  font-size: 2.2vw;
+  width: 9vw;
+  position: absolute;
+  line-height: 3vw;
+  font-weight: 700;
+  left: 0.5vw;
+}
+#bug .liveSegment.altLive {
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
+  background-blend-mode: multiply, normal;
+  color: #ffffff;
+}
 
 #hashtagContainer {
-  -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1); }
-  #hashtagContainer.ng-hide, #hashtagContainer.ng-leave-active {
-    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-            transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-    -webkit-transform: translateX(10vw);
-            transform: translateX(10vw);
-    opacity: 0; }
-  #hashtagContainer.ng-hide-remove, #hashtagContainer.ng-enter {
-    -webkit-transform: translateX(-10vw);
-            transform: translateX(-10vw);
-    opacity: 0; }
-  #hashtagContainer .hashtag {
-    width: 80vw;
-    position: absolute;
-    top: 6vh;
-    height: 3vw;
-    line-height: 3vw;
-    left: 10vw;
-    text-align: right;
-    -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1); }
-    #hashtagContainer .hashtag span {
-      -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      position: relative;
-      color: #ffffff;
-      font-size: 2vw;
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.75); }
-      #hashtagContainer .hashtag span.ng-hide, #hashtagContainer .hashtag span.ng-leave-active {
-        -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-                transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-        -webkit-transform: translateX(10vw);
-                transform: translateX(10vw);
-        opacity: 0; }
-      #hashtagContainer .hashtag span.ng-hide-remove, #hashtagContainer .hashtag span.ng-enter {
-        -webkit-transform: translateX(-10vw);
-                transform: translateX(-10vw);
-        opacity: 0; }
-      #hashtagContainer .hashtag span.uos {
-        color: #323232;
-        text-shadow: 0 0 8px #ffdc00; }
-      #hashtagContainer .hashtag span.shu {
-        text-shadow: 0 0 8px #d4326b; }
-    #hashtagContainer .hashtag.ng-hide, #hashtagContainer .hashtag.ng-leave-active {
-      -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-              transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-      -webkit-transform: translateX(10vw);
-              transform: translateX(10vw);
-      opacity: 0; }
-    #hashtagContainer .hashtag.ng-hide-remove, #hashtagContainer .hashtag.ng-enter {
-      -webkit-transform: translateX(-10vw);
-              transform: translateX(-10vw);
-      opacity: 0; }
+}
+#hashtagContainer.ng-hide, #hashtagContainer.ng-leave-active {
+  transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  transform: translateX(10vw);
+  opacity: 0;
+}
+#hashtagContainer.ng-hide-remove, #hashtagContainer.ng-enter {
+  transform: translateX(-10vw);
+  opacity: 0;
+}
+#hashtagContainer .hashtag {
+  width: 80vw;
+  position: absolute;
+  top: 6vh;
+  height: 3vw;
+  line-height: 3vw;
+  left: 10vw;
+  text-align: right;
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+}
+#hashtagContainer .hashtag span {
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  position: relative;
+  color: #ffffff;
+  font-size: 2vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+}
+#hashtagContainer .hashtag span.ng-hide, #hashtagContainer .hashtag span.ng-leave-active {
+  transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  transform: translateX(10vw);
+  opacity: 0;
+}
+#hashtagContainer .hashtag span.ng-hide-remove, #hashtagContainer .hashtag span.ng-enter {
+  transform: translateX(-10vw);
+  opacity: 0;
+}
+#hashtagContainer .hashtag span.uos {
+  color: #323232;
+  text-shadow: 0 0 8px #ffdc00;
+}
+#hashtagContainer .hashtag span.shu {
+  text-shadow: 0 0 8px #d4326b;
+}
+#hashtagContainer .hashtag.ng-hide, #hashtagContainer .hashtag.ng-leave-active {
+  transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  transform: translateX(10vw);
+  opacity: 0;
+}
+#hashtagContainer .hashtag.ng-hide-remove, #hashtagContainer .hashtag.ng-enter {
+  transform: translateX(-10vw);
+  opacity: 0;
+}
 
 .lowerThird {
   width: 80vw;
   position: absolute;
   left: 10vw;
-  z-index: 0; }
-  .lowerThird > * {
-    overflow: hidden; }
-  .lowerThird .lowerThirdContainer {
-    left: 2vw;
-    width: 80vw;
-    position: absolute;
-    z-index: 5; }
-  .lowerThird .segment {
-    white-space: nowrap;
-    width: 100%; }
-    .lowerThird .segment span {
-      width: 100%;
-      display: block; }
+  z-index: 0;
+}
+.lowerThird > * {
+  overflow: hidden;
+}
+.lowerThird .lowerThirdContainer {
+  left: 2vw;
+  width: 80vw;
+  position: absolute;
+  z-index: 5;
+}
+.lowerThird .segment {
+  white-space: nowrap;
+  width: 100%;
+}
+.lowerThird .segment span {
+  width: 100%;
+  display: block;
+}
 
 .lowerThird.titleLowerThird {
-  -webkit-transition: opacity 0.3s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.3s cubic-bezier(0, 1.5, 0.5, 1);
-  transition: opacity 0.3s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.3s cubic-bezier(0, 1.5, 0.5, 1);
   transition: transform 0.3s cubic-bezier(0, 1.5, 0.5, 1), opacity 0.3s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: transform 0.3s cubic-bezier(0, 1.5, 0.5, 1), opacity 0.3s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.3s cubic-bezier(0, 1.5, 0.5, 1);
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1); }
-  .lowerThird.titleLowerThird .lowerThirdContainer .leftLowerThird, .lowerThird.titleLowerThird .lowerThirdContainer .rightLowerThird {
-    width: 76vw;
-    position: absolute; }
-  .lowerThird.titleLowerThird .lowerThirdContainer .rightLowerThird {
-    text-align: right; }
-  .lowerThird.titleLowerThird.ng-hide-remove {
-    -webkit-transition-delay: 0s;
-            transition-delay: 0s;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    opacity: 0; }
-  .lowerThird.titleLowerThird.ng-hide-add {
-    -webkit-transition-delay: 0.5s;
-            transition-delay: 0.5s;
-    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-            transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25); }
-  .lowerThird.titleLowerThird.ng-hide {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    opacity: 0; }
-  .lowerThird.titleLowerThird .upperSegment {
-    z-index: 8; }
-    .lowerThird.titleLowerThird .upperSegment span {
-      font-size: 3vw;
-      color: #ffffff;
-      letter-spacing: -0.05em;
-      font-weight: 700;
-      line-height: 5vw;
-      -webkit-transform: translateY(0.2vw);
-              transform: translateY(0.2vw); }
-    .lowerThird.titleLowerThird .upperSegmentBackground {
-      background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
-      background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
-      background-blend-mode: multiply, normal;
-      height: 5vw;
-      position: relative;
-      z-index: 2;
-      border-top-left-radius: 0.5vw;
-      border-top-right-radius: 0.5vw; }
-      .lowerThird.titleLowerThird .upperSegmentBackground .lowerThirdContainer {
-        -webkit-transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1);
-        transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1); }
-        .lowerThird.titleLowerThird .upperSegmentBackground .lowerThirdContainer.ng-hide-remove {
-          -webkit-transition-delay: 1.2s;
-                  transition-delay: 1.2s;
-          opacity: 0; }
-        .lowerThird.titleLowerThird .upperSegmentBackground .lowerThirdContainer.ng-hide-add {
-          -webkit-transition-delay: 0s;
-                  transition-delay: 0s; }
-        .lowerThird.titleLowerThird .upperSegmentBackground .lowerThirdContainer.ng-hide {
-          opacity: 0; }
-  .lowerThird.titleLowerThird .lowerSegment span, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegment span, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegment span {
-    font-size: 1.8vw;
-    font-weight: 500;
-    color: #323232;
-    letter-spacing: -0.05em;
-    line-height: 3vw;
-    -webkit-transform: translateY(0.2vw);
-            transform: translateY(0.2vw); }
-  .lowerThird.titleLowerThird .lowerSegmentBackground, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegmentBackground {
-    -webkit-transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.25s cubic-bezier(0, 1.5, 0.5, 1);
-    transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.25s cubic-bezier(0, 1.5, 0.5, 1);
-    transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), transform 0.25s cubic-bezier(0, 1.5, 0.5, 1);
-    transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), transform 0.25s cubic-bezier(0, 1.5, 0.5, 1), -webkit-transform 0.25s cubic-bezier(0, 1.5, 0.5, 1);
-    -webkit-transition-delay: 0.4s !important;
-            transition-delay: 0.4s !important;
-    -webkit-transform-origin: center top 0;
-            transform-origin: center top 0;
-    background: -webkit-linear-gradient(bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
-    background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
-    background-blend-mode: multiply, normal;
-    position: relative;
-    box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
-    height: 3vw;
-    z-index: 0;
-    border-bottom-left-radius: 0.5vw;
-    border-bottom-right-radius: 0.5vw; }
-    .lowerThird.titleLowerThird .lowerSegmentBackground.ng-hide-remove, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .ng-hide-remove.largeTopSegmentBackground {
-      -webkit-transform: rotateX(-90deg);
-              transform: rotateX(-90deg); }
-    .lowerThird.titleLowerThird .lowerSegmentBackground.ng-hide, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .ng-hide.largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .ng-hide.largeTopSegmentBackground {
-      -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-              transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-      -webkit-transition-delay: 0s !important;
-              transition-delay: 0s !important;
-      opacity: 0; }
-  .lowerThird.titleLowerThird.splitColour .leftLowerThird .upperSegment span {
-    color: #323232 !important; }
-  .lowerThird.titleLowerThird.splitColour .upperSegmentBackground {
-    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), -webkit-linear-gradient(left, #ffdc00 50%, #ffdc00 49.99%, #d4326b 50.01%, #d4326b 100%);
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), linear-gradient(to right, #ffdc00 50%, #ffdc00 49.99%, #d4326b 50.01%, #d4326b 100%);
-    background-blend-mode: multiply, normal; }
+  transform: scaleX(1);
+}
+.lowerThird.titleLowerThird .lowerThirdContainer .leftLowerThird, .lowerThird.titleLowerThird .lowerThirdContainer .rightLowerThird {
+  width: 76vw;
+  position: absolute;
+}
+.lowerThird.titleLowerThird .lowerThirdContainer .rightLowerThird {
+  text-align: right;
+}
+.lowerThird.titleLowerThird.ng-hide-remove {
+  transition-delay: 0s;
+  transform: scaleX(0);
+  opacity: 0;
+}
+.lowerThird.titleLowerThird.ng-hide-add {
+  transition-delay: 0.5s;
+  transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+}
+.lowerThird.titleLowerThird.ng-hide {
+  transform: scaleX(0);
+  opacity: 0;
+}
+.lowerThird.titleLowerThird .upperSegment {
+  z-index: 8;
+}
+.lowerThird.titleLowerThird .upperSegment span {
+  font-size: 3vw;
+  color: #ffffff;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+  line-height: 5vw;
+  transform: translateY(0.2vw);
+}
+.lowerThird.titleLowerThird .upperSegmentBackground {
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #323232;
+  background-blend-mode: multiply, normal;
+  height: 5vw;
+  position: relative;
+  z-index: 2;
+  border-top-left-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
+}
+.lowerThird.titleLowerThird .upperSegmentBackground .lowerThirdContainer {
+  transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1);
+}
+.lowerThird.titleLowerThird .upperSegmentBackground .lowerThirdContainer.ng-hide-remove {
+  transition-delay: 1.2s;
+  opacity: 0;
+}
+.lowerThird.titleLowerThird .upperSegmentBackground .lowerThirdContainer.ng-hide-add {
+  transition-delay: 0s;
+}
+.lowerThird.titleLowerThird .upperSegmentBackground .lowerThirdContainer.ng-hide {
+  opacity: 0;
+}
+.lowerThird.titleLowerThird .lowerSegment span, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegment span, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegment span {
+  font-size: 1.8vw;
+  font-weight: 500;
+  color: #323232;
+  letter-spacing: -0.05em;
+  line-height: 3vw;
+  transform: translateY(0.2vw);
+}
+.lowerThird.titleLowerThird .lowerSegmentBackground, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .largeTopSegmentBackground {
+  transition: opacity 0.25s cubic-bezier(0, 0.75, 0.75, 1), transform 0.25s cubic-bezier(0, 1.5, 0.5, 1);
+  transition-delay: 0.4s !important;
+  transform-origin: center top 0;
+  background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  background-blend-mode: multiply, normal;
+  position: relative;
+  box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
+  height: 3vw;
+  z-index: 0;
+  border-bottom-left-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
+}
+.lowerThird.titleLowerThird .lowerSegmentBackground.ng-hide-remove, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .ng-hide-remove.largeTopSegmentBackground {
+  transform: rotateX(-90deg);
+}
+.lowerThird.titleLowerThird .lowerSegmentBackground.ng-hide, .lowerThird.titleLowerThird .lowerThird.headlineLowerThird .ng-hide.largeTopSegmentBackground, .lowerThird.headlineLowerThird .lowerThird.titleLowerThird .ng-hide.largeTopSegmentBackground {
+  transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  transition-delay: 0s !important;
+  opacity: 0;
+}
+.lowerThird.titleLowerThird.splitColour .leftLowerThird .upperSegment span {
+  color: #323232 !important;
+}
+.lowerThird.titleLowerThird.splitColour .upperSegmentBackground {
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), linear-gradient(to right, #ffdc00 50%, #ffdc00 49.99%, #d4326b 50.01%, #d4326b 100%);
+  background-blend-mode: multiply, normal;
+}
 
 .lowerThird.headlineLowerThird {
-  -webkit-transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 1s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 1s cubic-bezier(0, 0.75, 0.75, 1);
   transition: transform 1s cubic-bezier(0, 0.75, 0.75, 1), opacity 1s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: transform 1s cubic-bezier(0, 0.75, 0.75, 1), opacity 1s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 1s cubic-bezier(0, 0.75, 0.75, 1); }
-  .lowerThird.headlineLowerThird .lowerThirdContainer .textRow {
-    position: absolute;
-    width: 80vw; }
-  .lowerThird.headlineLowerThird .upperSegment, .lowerThird.headlineLowerThird .lowerSegment, .lowerThird.headlineLowerThird .largeTopSegment {
-    text-transform: uppercase; }
-  .lowerThird.headlineLowerThird .upperSegment {
-    margin-top: 0.35vw; }
-    .lowerThird.headlineLowerThird .upperSegment span {
-      font-size: 2vw;
-      color: #ffffff; }
-    .lowerThird.headlineLowerThird .upperSegmentBackground {
-      background: -webkit-linear-gradient(bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
-      background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
-      background-blend-mode: multiply, normal;
-      height: 3vw;
-      position: absolute;
-      z-index: 2;
-      width: 100vw;
-      border-top-left-radius: 0.5vw;
-      border-top-right-radius: 0.5vw;
-      -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1); }
-      .lowerThird.headlineLowerThird .upperSegmentBackground.ng-hide {
-        opacity: 0;
-        -webkit-transform: translateY(2vw);
-                transform: translateY(2vw); }
-      .lowerThird.headlineLowerThird .upperSegmentBackground.ng-hide-remove {
-        -webkit-transition-delay: 1.2s;
-                transition-delay: 1.2s; }
-  .lowerThird.headlineLowerThird .lowerSegment, .lowerThird.headlineLowerThird .largeTopSegment {
-    margin-top: 0.4vw;
-    float: left;
-    width: 80vw;
-    -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    -webkit-transition-delay: 0.2s;
-            transition-delay: 0.2s; }
-    .lowerThird.headlineLowerThird .lowerSegment span, .lowerThird.headlineLowerThird .largeTopSegment span {
-      font-size: 3.5vw;
-      color: #ffffff;
-      letter-spacing: -0.1em; }
-    .lowerThird.headlineLowerThird .lowerSegment.ng-hide-remove, .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegment {
-      opacity: 0;
-      -webkit-transform: translateX(-4vw);
-              transform: translateX(-4vw); }
-    .lowerThird.headlineLowerThird .lowerSegmentBackground, .lowerThird.headlineLowerThird .largeTopSegmentBackground {
-      background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
-      background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
-      background-blend-mode: multiply, normal;
-      box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
-      position: absolute;
-      top: 3vw;
-      height: 5vw;
-      width: 100vw;
-      z-index: 3;
-      -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1); }
-      .lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide-remove, .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegmentBackground {
-        opacity: 0; }
-      .lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide-add, .lowerThird.headlineLowerThird .ng-hide-add.largeTopSegmentBackground {
-        -webkit-transition-delay: 0s;
-                transition-delay: 0s; }
-      .lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide, .lowerThird.headlineLowerThird .ng-hide.largeTopSegmentBackground {
-        opacity: 0;
-        -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-                transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-        -webkit-transition-delay: .5s;
-                transition-delay: .5s; }
-  .lowerThird.headlineLowerThird .largeTopSegmentBackground {
-    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
-    background-blend-mode: multiply, normal;
-    z-index: 0; }
-  .lowerThird.headlineLowerThird.ng-hide-add {
-    -webkit-transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1) 2s;
-    transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1) 2s; }
+}
+.lowerThird.headlineLowerThird .lowerThirdContainer .textRow {
+  position: absolute;
+  width: 80vw;
+}
+.lowerThird.headlineLowerThird .upperSegment, .lowerThird.headlineLowerThird .lowerSegment, .lowerThird.headlineLowerThird .largeTopSegment {
+  text-transform: uppercase;
+}
+.lowerThird.headlineLowerThird .upperSegment {
+  margin-top: 0.35vw;
+}
+.lowerThird.headlineLowerThird .upperSegment span {
+  font-size: 2vw;
+  color: #ffffff;
+}
+.lowerThird.headlineLowerThird .upperSegmentBackground {
+  background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background-blend-mode: multiply, normal;
+  height: 3vw;
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  border-top-left-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+}
+.lowerThird.headlineLowerThird .upperSegmentBackground.ng-hide {
+  opacity: 0;
+  transform: translateY(2vw);
+}
+.lowerThird.headlineLowerThird .upperSegmentBackground.ng-hide-remove {
+  transition-delay: 1.2s;
+}
+.lowerThird.headlineLowerThird .lowerSegment, .lowerThird.headlineLowerThird .largeTopSegment {
+  margin-top: 0.4vw;
+  float: left;
+  width: 80vw;
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  transition-delay: 0.2s;
+}
+.lowerThird.headlineLowerThird .lowerSegment span, .lowerThird.headlineLowerThird .largeTopSegment span {
+  font-size: 3.5vw;
+  color: #ffffff;
+  letter-spacing: -0.1em;
+}
+.lowerThird.headlineLowerThird .lowerSegment.ng-hide-remove, .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegment {
+  opacity: 0;
+  transform: translateX(-4vw);
+}
+.lowerThird.headlineLowerThird .lowerSegmentBackground, .lowerThird.headlineLowerThird .largeTopSegmentBackground {
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
+  background-blend-mode: multiply, normal;
+  box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
+  position: absolute;
+  top: 3vw;
+  height: 5vw;
+  width: 100vw;
+  z-index: 3;
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+}
+.lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide-remove, .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegmentBackground {
+  opacity: 0;
+}
+.lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide-add, .lowerThird.headlineLowerThird .ng-hide-add.largeTopSegmentBackground {
+  transition-delay: 0s;
+}
+.lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide, .lowerThird.headlineLowerThird .ng-hide.largeTopSegmentBackground {
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  transition-delay: .5s;
+}
+.lowerThird.headlineLowerThird .largeTopSegmentBackground {
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background-blend-mode: multiply, normal;
+  z-index: 0;
+}
+.lowerThird.headlineLowerThird.ng-hide-add {
+  transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1) 2s;
+}
 
 .lowerThird.headlineLowerThird {
-  -webkit-transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 1s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 1s cubic-bezier(0, 0.75, 0.75, 1);
   transition: transform 1s cubic-bezier(0, 0.75, 0.75, 1), opacity 1s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: transform 1s cubic-bezier(0, 0.75, 0.75, 1), opacity 1s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 1s cubic-bezier(0, 0.75, 0.75, 1); }
-  .lowerThird.headlineLowerThird .lowerThirdContainer .textRow {
-    position: absolute;
-    width: 80vw; }
-  .lowerThird.headlineLowerThird .upperSegment, .lowerThird.headlineLowerThird .lowerSegment, .lowerThird.headlineLowerThird .largeTopSegment {
-    text-transform: uppercase; }
-  .lowerThird.headlineLowerThird .upperSegment {
-    margin-top: 0.35vw; }
-    .lowerThird.headlineLowerThird .upperSegment span {
-      font-size: 2vw;
-      color: #ffffff; }
-    .lowerThird.headlineLowerThird .upperSegmentBackground {
-      background: -webkit-linear-gradient(bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
-      background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
-      background-blend-mode: multiply, normal;
-      height: 3vw;
-      position: absolute;
-      z-index: 2;
-      width: 100vw;
-      border-top-left-radius: 0.5vw;
-      border-top-right-radius: 0.5vw;
-      -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1); }
-      .lowerThird.headlineLowerThird .upperSegmentBackground.ng-hide {
-        opacity: 0;
-        -webkit-transform: translateY(2vw);
-                transform: translateY(2vw); }
-      .lowerThird.headlineLowerThird .upperSegmentBackground.ng-hide-remove {
-        -webkit-transition-delay: 1.2s;
-                transition-delay: 1.2s; }
-  .lowerThird.headlineLowerThird .lowerSegment, .lowerThird.headlineLowerThird .largeTopSegment {
-    margin-top: 0.4vw;
-    float: left;
-    width: 80vw;
-    -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-    -webkit-transition-delay: 0.2s;
-            transition-delay: 0.2s; }
-    .lowerThird.headlineLowerThird .lowerSegment span, .lowerThird.headlineLowerThird .largeTopSegment span {
-      font-size: 3.5vw;
-      color: #ffffff;
-      letter-spacing: -0.1em; }
-    .lowerThird.headlineLowerThird .lowerSegment.ng-hide-remove, .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegment {
-      opacity: 0;
-      -webkit-transform: translateX(-4vw);
-              transform: translateX(-4vw); }
-    .lowerThird.headlineLowerThird .lowerSegmentBackground, .lowerThird.headlineLowerThird .largeTopSegmentBackground {
-      background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
-      background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
-      background-blend-mode: multiply, normal;
-      box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
-      position: absolute;
-      top: 3vw;
-      height: 5vw;
-      width: 100vw;
-      z-index: 3;
-      -webkit-transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1);
-      transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1); }
-      .lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide-remove, .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegmentBackground {
-        opacity: 0; }
-      .lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide-add, .lowerThird.headlineLowerThird .ng-hide-add.largeTopSegmentBackground {
-        -webkit-transition-delay: 0s;
-                transition-delay: 0s; }
-      .lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide, .lowerThird.headlineLowerThird .ng-hide.largeTopSegmentBackground {
-        opacity: 0;
-        -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-                transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-        -webkit-transition-delay: .5s;
-                transition-delay: .5s; }
-  .lowerThird.headlineLowerThird .largeTopSegmentBackground {
-    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
-    background-blend-mode: multiply, normal;
-    z-index: 0; }
-  .lowerThird.headlineLowerThird.ng-hide-add {
-    -webkit-transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1) 2s;
-    transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1) 2s; }
-
-@-webkit-keyframes ticker {
-  0% {
-    -webkit-transform: translate3d(35%, 0, 0);
-            transform: translate3d(35%, 0, 0);
-    visibility: visible; }
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0); } }
+}
+.lowerThird.headlineLowerThird .lowerThirdContainer .textRow {
+  position: absolute;
+  width: 80vw;
+}
+.lowerThird.headlineLowerThird .upperSegment, .lowerThird.headlineLowerThird .lowerSegment, .lowerThird.headlineLowerThird .largeTopSegment {
+  text-transform: uppercase;
+}
+.lowerThird.headlineLowerThird .upperSegment {
+  margin-top: 0.35vw;
+}
+.lowerThird.headlineLowerThird .upperSegment span {
+  font-size: 2vw;
+  color: #ffffff;
+}
+.lowerThird.headlineLowerThird .upperSegmentBackground {
+  background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background-blend-mode: multiply, normal;
+  height: 3vw;
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  border-top-left-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+}
+.lowerThird.headlineLowerThird .upperSegmentBackground.ng-hide {
+  opacity: 0;
+  transform: translateY(2vw);
+}
+.lowerThird.headlineLowerThird .upperSegmentBackground.ng-hide-remove {
+  transition-delay: 1.2s;
+}
+.lowerThird.headlineLowerThird .lowerSegment, .lowerThird.headlineLowerThird .largeTopSegment {
+  margin-top: 0.4vw;
+  float: left;
+  width: 80vw;
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1), transform 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+  transition-delay: 0.2s;
+}
+.lowerThird.headlineLowerThird .lowerSegment span, .lowerThird.headlineLowerThird .largeTopSegment span {
+  font-size: 3.5vw;
+  color: #ffffff;
+  letter-spacing: -0.1em;
+}
+.lowerThird.headlineLowerThird .lowerSegment.ng-hide-remove, .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegment {
+  opacity: 0;
+  transform: translateX(-4vw);
+}
+.lowerThird.headlineLowerThird .lowerSegmentBackground, .lowerThird.headlineLowerThird .largeTopSegmentBackground {
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
+  background-blend-mode: multiply, normal;
+  box-shadow: 0px 10px 18px -10px rgba(0, 0, 0, 0.45);
+  position: absolute;
+  top: 3vw;
+  height: 5vw;
+  width: 100vw;
+  z-index: 3;
+  transition: opacity 0.5s cubic-bezier(0, 0.75, 0.75, 1);
+}
+.lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide-remove, .lowerThird.headlineLowerThird .ng-hide-remove.largeTopSegmentBackground {
+  opacity: 0;
+}
+.lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide-add, .lowerThird.headlineLowerThird .ng-hide-add.largeTopSegmentBackground {
+  transition-delay: 0s;
+}
+.lowerThird.headlineLowerThird .lowerSegmentBackground.ng-hide, .lowerThird.headlineLowerThird .ng-hide.largeTopSegmentBackground {
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  transition-delay: .5s;
+}
+.lowerThird.headlineLowerThird .largeTopSegmentBackground {
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background-blend-mode: multiply, normal;
+  z-index: 0;
+}
+.lowerThird.headlineLowerThird.ng-hide-add {
+  transition: opacity 1s cubic-bezier(0, 0.75, 0.75, 1) 2s;
+}
 
 @keyframes ticker {
   0% {
-    -webkit-transform: translate3d(35%, 0, 0);
-            transform: translate3d(35%, 0, 0);
-    visibility: visible; }
+    transform: translate3d(35%, 0, 0);
+    visibility: visible;
+  }
   100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0); } }
-
+    transform: translate3d(-100%, 0, 0);
+  }
+}
 #ticker {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
   background-blend-mode: multiply, normal;
   position: absolute;
@@ -1433,181 +1434,182 @@ th {
   height: 3vw;
   width: 100vw;
   color: #ffffff;
-  -webkit-transition: opacity 0.5s linear;
-  transition: opacity 0.5s linear; }
-  #ticker.ng-hide {
-    opacity: 0; }
+  transition: opacity 0.5s linear;
+}
+#ticker.ng-hide {
+  opacity: 0;
+}
 
 .ticker-contents {
   text-transform: uppercase;
   display: inline-block;
   white-space: nowrap;
   padding-right: 100%;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-name: ticker;
-          animation-name: ticker;
-  -webkit-animation-duration: 40s;
-          animation-duration: 40s; }
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 40s;
+}
 
 .ticker-item {
   display: inline-block;
   padding-top: 0.25vw;
   font-size: 2.25vw;
-  position: relative; }
-  .ticker-item:after {
-    display: inline-block;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    content: "—"; }
+  position: relative;
+}
+.ticker-item:after {
+  display: inline-block;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  content: "—";
+}
 
 #boxingBug {
   border-top-right-radius: 1.5vw;
   border-bottom-right-radius: 1.5vw;
   border-top-left-radius: 1.5vw;
   border-bottom-left-radius: 1.5vw;
-  -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-  -webkit-transition-delay: 1s !important;
-          transition-delay: 1s !important;
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  transition-delay: 1s !important;
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background-blend-mode: multiply, normal;
   color: #323232;
   position: absolute;
   width: 29.5vw;
   left: 13.25vw;
-  z-index: 2; }
-  #boxingBug.ng-hide {
-    -webkit-transform: translateX(-10vw);
-            transform: translateX(-10vw);
-    opacity: 0; }
-  #boxingBug.ng-hide-add, #boxingBug.ng-hide-remove {
-    -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1); }
-  #boxingBug.ng-hide-add {
-    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-            transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-    -webkit-transition-delay: 0.25s !important;
-            transition-delay: 0.25s !important; }
-  #boxingBug > * {
-    position: absolute;
-    font-size: 1.5vw; }
-  #boxingBug #round {
-    left: 14.5vw;
-    text-transform: uppercase;
-    color: #555555;
-    line-height: 3vw; }
-  #boxingBug .round {
-    color: #d0d0d0;
-    font-weight: 700; }
-    #boxingBug .round.complete {
-      color: #323232; }
-  #boxingBug #round1 {
-    left: 21.2vw; }
-  #boxingBug #round2 {
-    left: 23.4vw; }
-  #boxingBug #round3 {
-    left: 25.6vw; }
+  z-index: 2;
+}
+#boxingBug.ng-hide {
+  transform: translateX(-10vw);
+  opacity: 0;
+}
+#boxingBug.ng-hide-add, #boxingBug.ng-hide-remove {
+  transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+}
+#boxingBug.ng-hide-add {
+  transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  transition-delay: 0.25s !important;
+}
+#boxingBug > * {
+  position: absolute;
+  font-size: 1.5vw;
+}
+#boxingBug #round {
+  left: 14.5vw;
+  text-transform: uppercase;
+  color: #555555;
+  line-height: 3vw;
+}
+#boxingBug .round {
+  color: #d0d0d0;
+  font-weight: 700;
+}
+#boxingBug .round.complete {
+  color: #323232;
+}
+#boxingBug #round1 {
+  left: 21.2vw;
+}
+#boxingBug #round2 {
+  left: 23.4vw;
+}
+#boxingBug #round3 {
+  left: 25.6vw;
+}
 
 #rugbyBug {
   border-top-right-radius: 1.5vw;
   border-bottom-right-radius: 1.5vw;
   border-top-left-radius: 1.5vw;
   border-bottom-left-radius: 1.5vw;
-  -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
   transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-  transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-  -webkit-transition-delay: 1s !important;
-          transition-delay: 1s !important;
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
+  transition-delay: 1s !important;
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffffff;
   background-blend-mode: multiply, normal;
   color: #323232;
   position: absolute;
   width: 32.5vw;
   left: 13.25vw;
-  z-index: 2; }
-  #rugbyBug.ng-hide {
-    -webkit-transform: translateX(-10vw);
-            transform: translateX(-10vw);
-    opacity: 0; }
-  #rugbyBug.ng-hide-add, #rugbyBug.ng-hide-remove {
-    -webkit-transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1);
-    transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1), -webkit-transform 0.75s cubic-bezier(0, 0.75, 0.75, 1); }
-  #rugbyBug.ng-hide-add {
-    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-            transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
-    -webkit-transition-delay: 0.25s !important;
-            transition-delay: 0.25s !important; }
-  #rugbyBug > * {
-    position: absolute;
-    font-size: 1.5vw; }
-  #rugbyBug .teamName {
-    text-align: center;
-    font-size: 2vw;
-    font-weight: 700;
-    box-shadow: none;
-    margin: 0px;
-    width: 6vw;
-    padding-top: 0.2vw;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    text-transform: uppercase; }
-    #rugbyBug .teamName#leftPosition {
-      left: 16.5vw; }
-    #rugbyBug .teamName#rightPosition {
-      left: 22.5vw; }
-    #rugbyBug .teamName.shu {
-      color: #ffffff;
-      background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
-      background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
-      background-blend-mode: multiply, normal; }
-    #rugbyBug .teamName.uos {
-      background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
-      background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
-      background-blend-mode: multiply, normal; }
-  #rugbyBug .scoreContainer {
-    width: 5vw;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px); }
-    #rugbyBug .scoreContainer#leftScoreContainer {
-      left: 12.1vw; }
-    #rugbyBug .scoreContainer#rightScoreContainer {
-      left: 27.75vw; }
-    #rugbyBug .scoreContainer .score {
-      font-size: 2.2vw;
-      z-index: 10;
-      display: block;
-      text-align: center;
-      font-weight: 700;
-      width: 100%; }
+  z-index: 2;
+}
+#rugbyBug.ng-hide {
+  transform: translateX(-10vw);
+  opacity: 0;
+}
+#rugbyBug.ng-hide-add, #rugbyBug.ng-hide-remove {
+  transition: transform 0.75s cubic-bezier(0, 0.75, 0.75, 1), opacity 0.75s cubic-bezier(0, 0.75, 0.75, 1);
+}
+#rugbyBug.ng-hide-add {
+  transition-timing-function: cubic-bezier(0.75, 0, 1, 0.25);
+  transition-delay: 0.25s !important;
+}
+#rugbyBug > * {
+  position: absolute;
+  font-size: 1.5vw;
+}
+#rugbyBug .teamName {
+  text-align: center;
+  font-size: 2vw;
+  font-weight: 700;
+  box-shadow: none;
+  margin: 0px;
+  width: 6vw;
+  padding-top: 0.2vw;
+  transform: translateY(0px);
+  text-transform: uppercase;
+}
+#rugbyBug .teamName#leftPosition {
+  left: 16.5vw;
+}
+#rugbyBug .teamName#rightPosition {
+  left: 22.5vw;
+}
+#rugbyBug .teamName.shu {
+  color: #ffffff;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #d4326b;
+  background-blend-mode: multiply, normal;
+}
+#rugbyBug .teamName.uos {
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 100%), #ffdc00;
+  background-blend-mode: multiply, normal;
+}
+#rugbyBug .scoreContainer {
+  width: 5vw;
+  transform: translateY(0px);
+}
+#rugbyBug .scoreContainer#leftScoreContainer {
+  left: 12.1vw;
+}
+#rugbyBug .scoreContainer#rightScoreContainer {
+  left: 27.75vw;
+}
+#rugbyBug .scoreContainer .score {
+  font-size: 2.2vw;
+  z-index: 10;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  width: 100%;
+}
 
 * {
   box-sizing: border-box;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   background-clip: border-box;
   font-family: 'Acumin Pro', sans-serif;
-  -webkit-transform: perspective(50vw);
-          transform: perspective(50vw); }
+  transform: perspective(50vw);
+}
 
 body {
   margin: 0;
   background: transparent;
   overflow: hidden;
-  -webkit-font-smoothing: antialiased !important; }
+  -webkit-font-smoothing: antialiased !important;
+}
 
 #main-container {
   position: absolute;
-  top: 72vh; }
+  top: 72vh;
+}
+
 /*# sourceMappingURL=theme.css.map */
