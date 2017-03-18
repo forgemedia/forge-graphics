@@ -1,0 +1,121 @@
+$aux-height: 3vw;
+
+.lowerThird.teamsLowerThird {
+	transition: opacity 0.5s linear;
+	opacity: 1;
+
+	.logo {
+		width: $lower-third-height * 1.4;
+		z-index: 21;
+		position: absolute;
+		top: -($lower-third-height * 0.2);
+		filter: drop-shadow(0px 0px 0.5vw rgba(0, 0, 0, 0.5));
+
+		&.leftLogo {
+			float: left;
+			left: -2vw;
+		}
+
+		&.rightLogo {
+			float: right;
+			right: 0vw;
+		}
+	}
+
+	#mtltContainer {
+		//@include container($lower-third-container-width);
+		width: $lower-third-container-width;
+		@include overlay($light-colour);
+		box-shadow: $lower-box-shadow;
+		border-radius: $lower-third-height / 10;
+		height: $lower-third-height;
+		position: absolute;
+		//left: $main-margin;
+		overflow: hidden;
+
+		.teamContainer {
+			//@include span(6 of 12 no-gutters);
+			width: 50%;
+			position: absolute;
+			//text-align: center;
+			z-index: 5;
+			@include gutters(5vw inside);
+
+			&#leftTeamContainer {
+				//@include pre(1 of 12);
+				text-align: right;
+			}
+
+			&#rightTeamContainer {
+				//@include pre(6 of 12);
+				left: 50%;
+			}
+
+			&.shu {
+				@include overlay($colour-c);
+				color: $light-colour;
+			}
+
+			&.uos {
+				@include overlay($colour-b);
+				color: $dark-colour;
+			}
+
+			span.team {
+				display: block;
+				width: 100%;
+				//top: 50%;
+				line-height: $lower-third-height;
+				font-weight: 700;
+				font-size: 2.5vw;
+				//text-transform: uppercase;
+			}
+		}
+	}
+
+	.auxContainer {
+		position: absolute;
+		width: $lower-third-container-width / 2;
+		left: $lower-third-container-width / 4;
+		text-align: center;
+		height: $aux-height;
+		@include overlay($dark-colour);
+		box-shadow: $lower-box-shadow;
+		z-index: -1;
+		font-size: 1.25vw;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: $light-colour;
+
+		span {
+			width: 100%;
+			display: block;
+
+			line-height: $aux-height;
+		}
+
+		&#sportContainer {
+			top: -$aux-height * 0.8;
+			border-top-left-radius: $aux-height / 3;
+			border-top-right-radius: $aux-height / 3;
+
+			span {
+				transform: translateY(-0.2vw);
+			}
+		}
+
+		&#venueContainer {
+			top: $lower-third-height - $aux-height * 0.2;
+			border-bottom-left-radius: $aux-height / 3;
+			border-bottom-right-radius: $aux-height / 3;
+
+			span {
+				transform: translateY(0.4vw);
+			}
+		}
+	}
+
+	&.ng-hide {
+		opacity: 0;
+	}
+}

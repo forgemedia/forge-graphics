@@ -1,4 +1,27 @@
 <div class="page-header">
+	<h3>Teams</h3>
+</div>
+<form>
+	<div class="form-group">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-md-push-2">
+					<input type="text" class="form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="teamsContent.sport" placeholder="Sport">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4"><select class="form-control" ng-model="teamsContent.leftPosTeam" ng-options="team.name for team in teams"></select></div>
+				<div class="col-md-4"><select class="form-control" ng-model="teamsContent.rightPosTeam" ng-options="team.name for team in teams"></select></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-push-2"><input type="text" class="form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="teamsContent.venue" placeholder="Venue"></div>
+			</div>
+		</div>
+		<button class="btn btn-danger" ng-click="triggerTeamsLowerThird(teamsContent)"><span class="glyphicon glyphicon-play"></span> Trigger</button>
+	</div>
+</form>
+
+<div class="page-header">
     <h3>Names <small>Triggers for 10 seconds</small></h3>
 </div>
 <form name="ltTitleForm">

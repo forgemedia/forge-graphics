@@ -23,7 +23,8 @@ var sockets = {
 		'updateHeadline',
 		'hideHeadline',
 		'showOngoing',
-		'hideOngoing'
+		'hideOngoing',
+		'teams'
 	],
 	'boxing': [
 		'startTimer',
@@ -40,6 +41,17 @@ var dataStores = {
 		rightScore: 0
 	}
 };
+
+var teams = [
+	{
+		code: 'uos',
+		name: 'University of Sheffield'
+	},
+	{
+		code: 'shu',
+		name: 'Team Hallam'
+	}
+];
 
 io.on('connection', function(socket) {
 	if (debug) console.log('* Client connected');
@@ -67,6 +79,11 @@ io.on('connection', function(socket) {
 	socket.on('project:get', function() {
 		console.log('* GET  project:get');
 		io.sockets.emit('project', project);
+	});
+
+	socket.on('teams:get', function() {
+		console.log('* GET  teams:get');
+		io.sockets.emit('teams', teams);
 	});
 });
 

@@ -1,0 +1,18 @@
+<div class="lowerThird teamsLowerThird" ng-show="showTeams" ng-controller="lowerThirdsCtrl">
+	<img ng-src="/img/{{teamsContent.leftPosTeam.code}}.svg" class="logo leftLogo"/>
+	<img ng-src="/img/{{teamsContent.rightPosTeam.code}}.svg" class="logo rightLogo"/>
+	<div id="mtltContainer">
+		<div class="teamContainer" ng-class="teamsContent.leftPosTeam.code" id="leftTeamContainer">
+			<span class="team">{{teamsContent.leftPosTeam.name}}</span>
+		</div>
+		<div class="teamContainer" ng-class="teamsContent.rightPosTeam.code" id="rightTeamContainer">
+			<span class="team">{{teamsContent.rightPosTeam.name}}</span>
+		</div>
+	</div>
+	<div class="auxContainer" id="sportContainer">
+		<span>{{teamsContent.sport}}</span>
+	</div>
+	<div class="auxContainer" id="venueContainer">
+		<span>{{teamsContent.venue}}</span>
+	</div>
+</div>

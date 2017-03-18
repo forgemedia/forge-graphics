@@ -7,6 +7,16 @@ app.controller('lowerThirdsCtrl',
         // $scope.showHeadline = false;
         // $scope.showOngoing = false;
         $scope.titleContent = {};
+		$scope.teamsContent = {};
+		// $scope.showTeams = true;
+
+		socket.on("lowerThirds:teams", function(msg) {
+			$scope.showTeams = true;
+			$scope.teamsContent = msg;
+			$timeout(function() {
+				$scope.showTeams = false;
+			}, 10000);
+		});
 
         socket.on("lowerThirds:showTitle", function(msg) {
             if ($scope.showTitle) $scope.showTitle = false;

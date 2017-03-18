@@ -2,8 +2,8 @@
 	<div class="form-group" id="rugbyTeamSelects">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4"><select class="form-control" ng-model="rugby.leftPosTeam" ng-options="team.toUpperCase() for team in teams"></select></div>
-				<div class="col-md-4"><select class="form-control" ng-model="rugby.rightPosTeam" ng-options="team.toUpperCase() for team in teams"></select></div>
+				<div class="col-md-4"><select class="form-control" ng-model="rugby.leftPosTeam" ng-options="team.name for team in teams"></select></div>
+				<div class="col-md-4"><select class="form-control" ng-model="rugby.rightPosTeam" ng-options="team.name for team in teams"></select></div>
 			</div>
 		</div>
 	</div>
@@ -36,8 +36,8 @@
 	<div class="form-group" id="rugbyScoreButtons">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4"><strong>{{rugby.leftPosTeam | uppercase}}</strong> {{rugby.leftScore}}</div>
-				<div class="col-md-4"><strong>{{rugby.rightPosTeam | uppercase}}</strong> {{rugby.rightScore}}</div>
+				<div class="col-md-4"><strong>{{rugby.leftPosTeam.name}} ({{rugby.leftPosTeam.code | uppercase}})</strong> {{rugby.leftScore}}</div>
+				<div class="col-md-4"><strong>{{rugby.rightPosTeam.name}} ({{rugby.rightPosTeam.code | uppercase}})</strong> {{rugby.rightScore}}</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4">

@@ -156,6 +156,11 @@ app.config(
 		if (queueStored === null) $scope.queue = [];
         else $scope.queue = queueStored;
 
+		socket.emit('teams:get');
+		socket.on('teams', function(msg) {
+			$scope.teams = msg;
+		});
+
 		$scope.queueAdd = function() {
 			// console.log("Queue add");
 			$scope.queue.push($scope.ltTitleDashEntries);
@@ -192,6 +197,10 @@ app.config(
             //     $scope.timeRemaining = 10;
             // }, 11000);
         };
+
+		$scope.triggerTeamsLowerThird = function(item) {
+			socket.emit("lowerThirds:teams", item);
+		};
 
         $scope.triggerHeadlineLowerThird = function () {
             socket.emit("lowerThirds:showHeadline", $scope.ltHeadlineDashEntries);
@@ -276,10 +285,10 @@ app.config(
 		$scope.rugby = msg;
 	});
 
-	$scope.teams = [
-		'uos',
-		'shu'
-	];
+	socket.emit('teams:get');
+	socket.on('teams', function(msg) {
+		$scope.teams = msg;
+	});
 
 	$scope.scoreAddLeft = function(score) {
 		if ($scope.rugby.leftScore < 1 && score < 1) return;

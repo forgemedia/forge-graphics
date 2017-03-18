@@ -17,6 +17,11 @@ app.controller('lowerThirdsCGController',
 		if (queueStored === null) $scope.queue = [];
         else $scope.queue = queueStored;
 
+		socket.emit('teams:get');
+		socket.on('teams', function(msg) {
+			$scope.teams = msg;
+		});
+
 		$scope.queueAdd = function() {
 			// console.log("Queue add");
 			$scope.queue.push($scope.ltTitleDashEntries);
@@ -53,6 +58,10 @@ app.controller('lowerThirdsCGController',
             //     $scope.timeRemaining = 10;
             // }, 11000);
         };
+
+		$scope.triggerTeamsLowerThird = function(item) {
+			socket.emit("lowerThirds:teams", item);
+		};
 
         $scope.triggerHeadlineLowerThird = function () {
             socket.emit("lowerThirds:showHeadline", $scope.ltHeadlineDashEntries);

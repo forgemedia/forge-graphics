@@ -3,10 +3,10 @@ app.controller('rugbyCGController', function($scope, $rootScope, $filter, socket
 		$scope.rugby = msg;
 	});
 
-	$scope.teams = [
-		'uos',
-		'shu'
-	];
+	socket.emit('teams:get');
+	socket.on('teams', function(msg) {
+		$scope.teams = msg;
+	});
 
 	$scope.scoreAddLeft = function(score) {
 		if ($scope.rugby.leftScore < 1 && score < 1) return;
