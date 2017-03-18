@@ -2,8 +2,13 @@
 	<div class="form-group" id="rugbyTeamSelects">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4"><select class="form-control" ng-model="rugby.leftPosTeam" ng-options="team.name for team in teams"></select></div>
-				<div class="col-md-4"><select class="form-control" ng-model="rugby.rightPosTeam" ng-options="team.name for team in teams"></select></div>
+				<div class="col-md-4"><select class="form-control" ng-model="scratch.leftPosTeam" ng-options="team.name for team in teams"></select></div>
+				<div class="col-md-4"><select class="form-control" ng-model="scratch.rightPosTeam" ng-options="team.name for team in teams"></select></div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<button class="btn btn-danger" ng-click="setTeams()">Set teams</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -36,11 +41,11 @@
 	<div class="form-group" id="rugbyScoreButtons">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4"><strong>{{rugby.leftPosTeam.name}} ({{rugby.leftPosTeam.code | uppercase}})</strong> {{rugby.leftScore}}</div>
-				<div class="col-md-4"><strong>{{rugby.rightPosTeam.name}} ({{rugby.rightPosTeam.code | uppercase}})</strong> {{rugby.rightScore}}</div>
+				<div class="col-md-4 col-xs-6"><strong>{{rugby.leftPosTeam.name}} ({{rugby.leftPosTeam.code | uppercase}})</strong> {{rugby.leftScore}}</div>
+				<div class="col-md-4 col-xs-6"><strong>{{rugby.rightPosTeam.name}} ({{rugby.rightPosTeam.code | uppercase}})</strong> {{rugby.rightScore}}</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 col-xs-6">
 					<div class="btn-group btn-group-justified">
 						<div class="btn-group" role="group"><button class="btn btn-primary" ng-click="scoreAddLeft(1)">+1</button></div>
 						<div class="btn-group" role="group">
@@ -60,7 +65,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 col-xs-6">
 					<div class="btn-group btn-group-justified">
 						<div class="btn-group" role="group"><button class="btn btn-primary" ng-click="scoreAddRight(1)">+1</button></div>
 						<div class="btn-group" role="group">
@@ -82,7 +87,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 col-xs-6">
 					<div class="btn-group btn-group-justified">
 						<div class="btn-group" role="group"><button class="btn btn-warning" ng-click="scoreAddLeft(-1)">-1</button></div>
 						<div class="btn-group" role="group">
@@ -96,7 +101,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 col-xs-6">
 					<div class="btn-group btn-group-justified">
 						<div class="btn-group" role="group"><button class="btn btn-warning" ng-click="scoreAddRight(-1)">-1</button></div>
 						<div class="btn-group" role="group">

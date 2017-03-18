@@ -1,4 +1,6 @@
 app.controller('rugbyCGController', function($scope, $rootScope, $filter, socket) {
+	$scope.scratch = {};
+
 	socket.on("rugby", function (msg) {
 		$scope.rugby = msg;
 	});
@@ -37,6 +39,11 @@ app.controller('rugbyCGController', function($scope, $rootScope, $filter, socket
 	$scope.resetScores = function() {
 		$scope.rugby.leftScore = 0;
 		$scope.rugby.rightScore = 0;
+	};
+
+	$scope.setTeams = function() {
+		$scope.rugby.leftPosTeam = $scope.scratch.leftPosTeam;
+		$scope.rugby.rightPosTeam = $scope.scratch.rightPosTeam;
 	};
 
 	$rootScope.$on('teardown', function() {
