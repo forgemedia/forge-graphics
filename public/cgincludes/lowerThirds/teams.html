@@ -1,18 +1,18 @@
 <div class="lowerThird teamsLowerThird" ng-show="showTeams" ng-controller="lowerThirdsCtrl">
-	<img ng-src="/img/{{teamsContent.leftPosTeam.code}}.svg" class="logo leftLogo"/>
-	<img ng-src="/img/{{teamsContent.rightPosTeam.code}}.svg" class="logo rightLogo"/>
-	<div id="mtltContainer">
+	<img ng-src="/img/{{teamsContent.leftPosTeam.code}}.svg" ng-show="showTeams" class="logo leftLogo"/>
+	<img ng-src="/img/{{teamsContent.rightPosTeam.code}}.svg" ng-show="showTeams" class="logo rightLogo"/>
+	<div id="mtltContainer" ng-show="showTeams">
 		<div class="teamContainer" ng-class="teamsContent.leftPosTeam.code" id="leftTeamContainer">
-			<span class="team">{{teamsContent.leftPosTeam.name}}</span>
+			<span ng-show="showTeams" class="team">{{teamsContent.leftPosTeam.name}}</span>
 		</div>
 		<div class="teamContainer" ng-class="teamsContent.rightPosTeam.code" id="rightTeamContainer">
-			<span class="team">{{teamsContent.rightPosTeam.name}}</span>
+			<span ng-show="showTeams" class="team">{{teamsContent.rightPosTeam.name}}</span>
 		</div>
 	</div>
-	<div class="auxContainer" id="sportContainer">
+	<div class="auxContainer" ng-show="showTeams" id="sportContainer">
 		<span>{{teamsContent.sport}}</span>
 	</div>
-	<div class="auxContainer" id="venueContainer">
+	<div class="auxContainer" ng-show="showTeams" id="venueContainer">
 		<span>{{teamsContent.venue}}</span>
 	</div>
 </div>

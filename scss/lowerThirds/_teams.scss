@@ -1,10 +1,11 @@
 $aux-height: 3vw;
 
 .lowerThird.teamsLowerThird {
-	transition: opacity 0.5s linear;
-	opacity: 1;
+	@include fade(0.5s, 0s, 1s);
 
 	.logo {
+		@include fade(0.5s, 1s, 0s);
+
 		width: $lower-third-height * 1.4;
 		z-index: 21;
 		position: absolute;
@@ -32,23 +33,47 @@ $aux-height: 3vw;
 		position: absolute;
 		//left: $main-margin;
 		overflow: hidden;
+		//transition: opacity 0.5s linear 0.2s;
+		@include scale-from-centre(0.5s, 0s, 0.5s);
 
 		.teamContainer {
 			//@include span(6 of 12 no-gutters);
 			width: 50%;
+			height: 100%;
 			position: absolute;
-			//text-align: center;
+			text-align: center;
 			z-index: 5;
 			@include gutters(5vw inside);
 
 			&#leftTeamContainer {
 				//@include pre(1 of 12);
-				text-align: right;
+				//text-align: right;
+
+				span {
+					float: right;
+				}
 			}
 
 			&#rightTeamContainer {
 				//@include pre(6 of 12);
 				left: 50%;
+			}
+
+			span.team {
+				@include fade(0.5s, 1s, 0s);
+
+				position: relative;
+				top: 52%;
+				transform: translateY(-50%);
+
+				display: block;
+				width: 75%;
+				//top: 50%;
+				//line-height: $lower-third-height;
+				line-height: 2.6vw;
+				font-weight: 700;
+				font-size: 2.5vw;
+				//text-transform: uppercase;
 			}
 
 			&.shu {
@@ -59,16 +84,7 @@ $aux-height: 3vw;
 			&.uos {
 				@include overlay($colour-b);
 				color: $dark-colour;
-			}
-
-			span.team {
-				display: block;
-				width: 100%;
-				//top: 50%;
-				line-height: $lower-third-height;
-				font-weight: 700;
-				font-size: 2.5vw;
-				//text-transform: uppercase;
+				//line-height: $lower-third-height / 2 !important;
 			}
 		}
 	}
@@ -95,6 +111,8 @@ $aux-height: 3vw;
 		}
 
 		&#sportContainer {
+			@include slide-up(0.5s, 1s, 0s);
+
 			top: -$aux-height * 0.8;
 			border-top-left-radius: $aux-height / 3;
 			border-top-right-radius: $aux-height / 3;
@@ -105,6 +123,8 @@ $aux-height: 3vw;
 		}
 
 		&#venueContainer {
+			@include slide-down(0.5s, 1s, 0s);
+
 			top: $lower-third-height - $aux-height * 0.2;
 			border-bottom-left-radius: $aux-height / 3;
 			border-bottom-right-radius: $aux-height / 3;
@@ -113,9 +133,5 @@ $aux-height: 3vw;
 				transform: translateY(0.4vw);
 			}
 		}
-	}
-
-	&.ng-hide {
-		opacity: 0;
 	}
 }
