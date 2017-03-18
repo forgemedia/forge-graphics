@@ -1,43 +1,41 @@
 app.controller('lowerThirdsCGController',
-    function($scope, localStorageService, $timeout, $interval, $window, socket){
-        var titleStored = localStorageService.get('lt_title');
-        var headlineStored = localStorageService.get('lt_headline');
-        var ongoingStored = localStorageService.get('lt_ongoing');
-		var queueStored = localStorageService.get('lt_queue');
-
-        if (titleStored === null) $scope.ltTitleDashEntries = {};
-        else $scope.ltTitleDashEntries = titleStored;
-
-        if (headlineStored === null) $scope.ltHeadlineDashEntries = [];
-        else $scope.ltHeadlineDashEntries = headlineStored;
-
-        if (ongoingStored === null) $scope.ltOngoingDashEntries = [];
-        else $scope.ltOngoingDashEntries = ongoingStored;
-
-		if (queueStored === null) $scope.queue = [];
-        else $scope.queue = queueStored;
+    function($scope, localStorageService, $filter, $timeout, $interval, $window, socket){
+		$scope.dataStores = {
+			title: {},
+			headline: {},
+			ongoing: {},
+			queue: [],
+			teams: {}
+		};
 
 		socket.emit('teams:get');
+		$scope.teams = {};
 		socket.on('teams', function(msg) {
 			$scope.teams = msg;
 		});
 
+		for (var index in $scope.dataStores) {
+			var ie = localStorageService.get('lt_' + index);
+			if (ie) $scope.dataStores[index] = ie;
+		};
+
 		$scope.queueAdd = function() {
 			// console.log("Queue add");
-			$scope.queue.push($scope.ltTitleDashEntries);
+			console.log($scope.dataStores);
+			$scope.dataStores.queue.push("a");
 
 			$scope.ltTitleForm.$setPristine();
-			$scope.ltTitleDashEntries = {};
+			$scope.dataStores.title = {};
 		};
 
 		$scope.editQueueItem = function(item, index) {
 			$scope.copyQueueItem(item);
 
-			$scope.queue.splice(index, 1);
+			$scope.dataStores.queue.splice(index, 1);
 		};
 
 		$scope.copyQueueItem = function(item) {
-			$scope.ltTitleDashEntries = item;
+			$scope.dataStores.title = item;
 		};
 
         $scope.topSelections = [
@@ -45,18 +43,8 @@ app.controller('lowerThirdsCGController',
             "Incoming Result"
         ];
 
-        // $scope.hlTopScratch = $scope.topSelections[0];
-
-        // $scope.timeRemaining = 10;
-
         $scope.triggerTitleLowerThird = function (item) {
             socket.emit("lowerThirds:showTitle", item);
-            // $interval(function () {
-            //     $scope.timeRemaining--;
-            // }, 1000, 10);
-            // $timeout(function() {
-            //     $scope.timeRemaining = 10;
-            // }, 11000);
         };
 
 		$scope.triggerTeamsLowerThird = function(item) {
@@ -64,11 +52,11 @@ app.controller('lowerThirdsCGController',
 		};
 
         $scope.triggerHeadlineLowerThird = function () {
-            socket.emit("lowerThirds:showHeadline", $scope.ltHeadlineDashEntries);
+            socket.emit("lowerThirds:showHeadline", $scope.dataStores.headline);
         };
 
         $scope.updateHeadlineLowerThird = function () {
-            socket.emit("lowerThirds:updateHeadline", $scope.ltHeadlineDashEntries);
+            socket.emit("lowerThirds:updateHeadline", $scope.dataStores.headline);
         };
 
         $scope.hideHeadlineLowerThird = function () {
@@ -76,22 +64,17 @@ app.controller('lowerThirdsCGController',
         };
 
         $scope.triggerOngoingLowerThird = function () {
-            socket.emit("lowerThirds:showOngoing", $scope.ltOngoingDashEntries);
+            socket.emit("lowerThirds:showOngoing", $scope.dataStores.ongoing);
         };
 
         $scope.hideOngoingLowerThird = function () {
             socket.emit("lowerThirds:hideOngoing");
         };
 
-        socket.on("lowerThirds", function (msg) {
-            $scope.lowerThirds = msg;
-        });
-
         $scope.storeEntries = function() {
-            localStorageService.set('lt_title', $scope.ltTitleDashEntries);
-            localStorageService.set('lt_headline', $scope.ltHeadlineDashEntries);
-            localStorageService.set('lt_ongoing', $scope.ltOngoingDashEntries);
-			localStorageService.set('lt_queue', $scope.queue);
+			for (var index in $scope.dataStores) {
+				localStorageService.set('lt_' + index, $scope.dataStores[index]);
+			};
         };
 
 		$scope.clearLocalStorage = function() {

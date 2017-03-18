@@ -6,18 +6,18 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-md-push-2">
-					<input type="text" class="form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="teamsContent.sport" placeholder="Sport">
+					<input type="text" class="form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="dataStores.teams.sport" placeholder="Sport">
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4"><select class="form-control" ng-model="teamsContent.leftPosTeam" ng-options="team.name for team in teams"></select></div>
-				<div class="col-md-4"><select class="form-control" ng-model="teamsContent.rightPosTeam" ng-options="team.name for team in teams"></select></div>
+				<div class="col-md-4"><select class="form-control" ng-model="dataStores.teams.leftPosTeam" ng-options="team.name for team in teams"></select></div>
+				<div class="col-md-4"><select class="form-control" ng-model="dataStores.teams.rightPosTeam" ng-options="team.name for team in teams"></select></div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 col-md-push-2"><input type="text" class="form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="teamsContent.venue" placeholder="Venue"></div>
+				<div class="col-md-4 col-md-push-2"><input type="text" class="form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="dataStores.teams.venue" placeholder="Venue"></div>
 			</div>
 		</div>
-		<button class="btn btn-danger" ng-click="triggerTeamsLowerThird(teamsContent)"><span class="glyphicon glyphicon-play"></span> Trigger</button>
+		<button class="btn btn-danger" ng-click="triggerTeamsLowerThird(dataStores.teams)"><span class="glyphicon glyphicon-play"></span> Trigger</button>
 	</div>
 </form>
 
@@ -29,20 +29,20 @@
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="lowerThirdText">Left</label>
-                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="ltTitleDashEntries.leftUpper" placeholder="Upper"></input>
-                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="ltTitleDashEntries.leftLower" placeholder="Lower"></input>
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="dataStores.title.leftUpper" placeholder="Upper"></input>
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="dataStores.title.leftLower" placeholder="Lower"></input>
             </div>
             <div class="form-group col-md-6">
                 <label for="lowerThirdText">Right</label>
-                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="ltTitleDashEntries.rightUpper" placeholder="Upper"></input>
-                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="ltTitleDashEntries.rightLower" placeholder="Lower"></input>
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="dataStores.title.rightUpper" placeholder="Upper"></input>
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control lowerThirdText" ng-model="dataStores.title.rightLower" placeholder="Lower"></input>
             </div>
         </div>
     </div>
 	<div class="form-group">
 		<div class="checkbox">
             <label>
-                <toggle ng-model="ltTitleDashEntries.titleClasses.splitColour"></toggle>
+                <toggle ng-model="dataStores.title.titleClasses.splitColour"></toggle>
                 Split Colour (UOS–SHU)
             </label>
         </div>
@@ -54,7 +54,7 @@
         	ng-click="queueAdd()"><span class="glyphicon glyphicon-plus"></span> Add to queue</button>
 			<button
         	class="btn btn-warning"
-        	ng-click="ltTitleDashEntries = {}">Reset</button>
+        	ng-click="dataStores.title = {}">Reset</button>
         </div>
     </div>
     <!-- <div class="form-group">
@@ -65,10 +65,10 @@
 </form>
 
 <div class="page-header">
-    <h3>Queue <small>Drag to reorder</small> <small ng-show="!queue.length">(no items)</small></h3>
+    <h3>Queue <small>Drag to reorder</small> <small ng-show="!dataStores.queue.length">(no items)</small></h3>
 </div>
-<div ui-sortable ng-model="queue">
-	<div class="queueItem container" ng-repeat="item in queue">
+<div ui-sortable ng-model="dataStores.queue">
+	<div class="queueItem container" ng-repeat="item in dataStores.queue">
 		<div class="row">
 			<div class="col-md-1 col-sm-2 col-xs-2">
 				<span class="glyphicon glyphicon-menu-hamburger"></span>
@@ -85,7 +85,7 @@
 
 					<button
 					class="btn btn-danger"
-					ng-click="queue.splice($index, 1)"><span class="glyphicon glyphicon-remove"></span></button>
+					ng-click="dataStores.queue.splice($index, 1)"><span class="glyphicon glyphicon-remove"></span></button>
 				</div>
 			</div>
 			<div class="col-md-8 col-sm-12 col-xs-12"><span class="itemDescriptor"><small>Left:</small> {{item.leftUpper}}—{{item.leftLower}}, <small>Right:</small> {{item.rightUpper}}—{{item.rightLower}} <small>/ Options: {{item.titleClasses}}</small></span></div>
