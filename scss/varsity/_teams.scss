@@ -8,4 +8,9 @@
 		color: $dark-colour;
 		@include overlay($colour-b);
 	}
+
+	&.fge {
+		color: $light-colour;
+		@include overlay(#26bae1);
+	}
 }

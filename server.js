@@ -50,6 +50,10 @@ var teams = [
 	{
 		code: 'shu',
 		name: 'Team Hallam'
+	},
+	{
+		code: 'fge',
+		name: 'Forge Media'
 	}
 ];
 

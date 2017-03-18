@@ -6,7 +6,7 @@ $teams-aux-height: 3vw;
 	.logo {
 		@include fade(0.5s, 1s, 0s);
 
-		width: $lower-third-height * 1.4;
+		height: $lower-third-height * 1.4;
 		z-index: 21;
 		position: absolute;
 		top: -($lower-third-height * 0.2);
