@@ -2,6 +2,7 @@
 
 ## Prerequisites
 You need the following software to use the Forge Graphics Server:
+
 - `node`
 - `bower`
 - `grunt-cli` (for development)
