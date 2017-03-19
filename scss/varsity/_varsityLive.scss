@@ -45,6 +45,7 @@
 }
 
 #varsityBug {
+	@include slide-right(0.5s, 0s, 0s);
 	img {
 		height: 10vh;
 		float: right;

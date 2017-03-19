@@ -9,7 +9,7 @@
 }
 
 @mixin bug-transition($duration, $in-delay, $out-delay) {
-	transition: opacity $duration $cubic-bezier, transform $duration $cubic-bezier;
+	transition: opacity $duration $overshoot-cubic-bezier, transform $duration $overshoot-cubic-bezier;
 	transition-delay: $in-delay !important;
 
 	&.ng-hide {
@@ -19,7 +19,7 @@
 
 	&.ng-hide-add,
 	&.ng-hide-remove {
-		transition: transform $duration $cubic-bezier, opacity $duration $cubic-bezier;
+		transition: transform $duration $overshoot-cubic-bezier, opacity $duration $overshoot-cubic-bezier;
 	}
 
 	&.ng-hide-add {

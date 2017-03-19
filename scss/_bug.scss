@@ -17,7 +17,8 @@
 		@include bug-round-right;
 		@include bug-transition($bug-transition-duration, 0s, 0.25s);
 
-        width: $bug-logo-width;
+        width: $bug-logo-width + 2vw;
+		left: -2vw;
         z-index: 2;
 
         img {
