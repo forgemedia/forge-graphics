@@ -2,6 +2,8 @@ console.log('  Quit using CTRL+C');
 console.log('  In the event of issues, first try quitting and running \'npm install\' and \'bower install\'');
 console.log('  Time of start: ' + new Date().toISOString());
 
+var argv = require('minimist')(process.argv.slice(2));
+
 var project = 'Varsity 2017';
 
 var express	= require('express');
@@ -11,7 +13,7 @@ var app = express();
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
-var debug = true;
+var debug = argv.debug;
 
 var sockets = {
 	'general': [
@@ -34,7 +36,7 @@ var sockets = {
 		'timer'
 	],
 	'varsityLive': [
-		
+
 	]
 };
 
