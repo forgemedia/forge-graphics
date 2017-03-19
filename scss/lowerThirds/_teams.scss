@@ -14,7 +14,7 @@ $teams-aux-height: 3vw;
 
 		&.leftLogo {
 			float: left;
-			left: -2vw;
+			left: 0vw;
 		}
 
 		&.rightLogo {
@@ -25,7 +25,8 @@ $teams-aux-height: 3vw;
 
 	#mtltContainer {
 		//@include container($lower-third-container-width);
-		width: $lower-third-container-width;
+		width: $lower-third-container-width - 2vw;
+		left: 2vw;
 		@include overlay($light-colour);
 		box-shadow: $lower-box-shadow;
 		border-radius: $lower-third-height / 10;

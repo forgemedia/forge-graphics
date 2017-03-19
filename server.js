@@ -32,6 +32,9 @@ var sockets = {
 	],
 	'rugby': [
 		'timer'
+	],
+	'varsityLive': [
+		
 	]
 };
 

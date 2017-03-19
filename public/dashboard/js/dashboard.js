@@ -22,6 +22,12 @@ app.controller('AppCtrl',
             type: 'link'
         });
 
+		$scope.menu.push({
+			name: 'Forge Varsity Live',
+			url: '/varsityLive',
+			type: 'link'
+		});
+
 		$scope.modes.push({
 			name: 'Boxing',
 			url: '/boxing',
@@ -73,6 +79,10 @@ app.config(
                 templateUrl: '/dashboard/templates/lowerThirds.html',
                 controller: 'lowerThirdsCGController'
             })
+			.when("/varsityLive", {
+				templateUrl: '/dashboard/templates/varsity/varsityLive.html',
+				controller: 'varsityLiveCGController'
+			})
 			.when("/boxing", {
 				templateUrl: '/dashboard/templates/varsity/boxing.html',
 				controller: 'boxingCGController'
@@ -327,5 +337,24 @@ app.config(
 
 	function getRugbyData() {
 		socket.emit("rugby:get");
+	};
+});
+;app.controller('varsityLiveCGController', function($scope, socket) {
+	socket.on("varsityLive", function(msg){
+		$scope.varsityLive = msg;
+	});
+
+	socket.emit("varsityLive:get");
+
+	$scope.$watch('varsityLive', function() {
+		if ($scope.varsityLive) {
+			socket.emit("varsityLive", $scope.varsityLive);
+		} else {
+			getVarsityLiveData();
+		}
+	}, true);
+
+	function getVarsityLiveData() {
+		socket.emit("varsityLive:get");
 	};
 });

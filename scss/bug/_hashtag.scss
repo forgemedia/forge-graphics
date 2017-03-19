@@ -4,11 +4,12 @@
 	.hashtag {
 		width: $main-container-width;
 		position: absolute;
-		top: $bug-top;
+		//top: $bug-top;
+		top: 91vh;
 		height: $bug-height;
 		line-height: $bug-height;
 		left: $main-margin;
-		text-align: right;
+		//text-align: right;
 
 		span {
 			@include live-segment-transition(0.5s, 0s, 0s);
