@@ -24,11 +24,11 @@
         img {
             display: inline-block;
             position: absolute;
-
+			
 			&#forge {
 	            top: 0.55vw;
 	            height: 1.8vw;
-	            left: $bug-logo-left;
+	            left: $bug-logo-left + 2vw;
 				opacity: 0.4;
 				transform: scale(1.3) rotate(-6deg);
 	        }
