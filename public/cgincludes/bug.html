@@ -13,3 +13,6 @@
 <div id="sm" ng-controller="generalCtrl" ng-show="state.showSm[0] && state.showSm[1] && state.showSm[2]">
 	<img src="/img/sm.jpg" id="smpic" />
 </div>
+<div id="varsityBug" ng-controller="generalCtrl" ng-show="state.showVBug && state.showLogo">
+	<img ng-src="/img/varsity-{{state.bugBlack ? 'black' : 'white'}}.svg" />
+</div>
