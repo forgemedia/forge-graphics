@@ -38,6 +38,10 @@
 			"vo"
 		]
 	},
+	"expose": [
+		"project",
+		"teams"
+	],
 	"dataStoresDefault": {
 		"general": {
 			"showSm": {}

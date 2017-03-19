@@ -44,14 +44,11 @@ io.on('connection', function(socket) {
 		});
 	});
 
-	socket.on('project:get', function() {
-		console.log('* GET  project:get');
-		io.sockets.emit('project', config.project);
-	});
-
-	socket.on('teams:get', function() {
-		console.log('* GET  teams:get');
-		io.sockets.emit('teams', config.teams);
+	config.expose.forEach(function(d) {
+		socket.on(d + ':get', function() {
+			console.log('* GET  ' + d + ':get');
+			io.sockets.emit(d, config[d]);
+		});
 	});
 });
 
