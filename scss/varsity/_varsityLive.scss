@@ -25,6 +25,10 @@
 		display: inline-block;
 		width: 100%;
 
+		.il {
+			display: inline;
+		}
+
 		&.top {
 			margin-bottom: 1vw;
 			font-size: 2.5vw;

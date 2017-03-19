@@ -3,7 +3,7 @@
 
 	</div>
 	<div id="voicesOf" ng-show="show.vo">
-		<span class="top">Voices of</span>
+		<span class="top">Voice<span class="il" ng-if="dataStores.vo.people.length != 1">s</span> of</span>
 		<span class="name" ng-repeat="person in dataStores.vo.people">{{person}}</span>
 		<span class="bottom" ng-if="dataStores.vo.venue">from <strong>{{dataStores.vo.venue}}</strong></span>
 		<span class="bottom" ng-if="dataStores.vo.sport"><small>reporting on <strong>{{dataStores.vo.sport}}</strong></small></span>
