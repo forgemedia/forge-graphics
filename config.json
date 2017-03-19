@@ -1,0 +1,50 @@
+{
+	"project": "Varsity 2017",
+	"port": 3000,
+    "teams": [{
+        "code": "uos",
+        "name": "University of Sheffield"
+    }, {
+        "code": "shu",
+        "name": "Team Hallam"
+    }, {
+        "code": "fge",
+        "name": "Forge Media"
+    }, {
+        "code": "dch",
+        "name": "Danny Dyer's Chocolate Homunculus"
+    }],
+	"sockets": {
+		"general": [
+			"resetcg"
+		],
+		"lowerThirds": [
+			"showTitle",
+			"showHeadline",
+			"updateHeadline",
+			"hideHeadline",
+			"showOngoing",
+			"hideOngoing",
+			"teams"
+		],
+		"boxing": [
+			"startTimer",
+			"resetTimer"
+		],
+		"rugby": [
+			"timer"
+		],
+		"varsityLive": [
+			"vo"
+		]
+	},
+	"dataStoresDefault": {
+		"general": {
+			"showSm": {}
+		},
+		"rugby": {
+			"leftScore": 0,
+			"rightScore": 0
+		}
+	}
+}

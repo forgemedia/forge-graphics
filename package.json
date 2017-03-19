@@ -1,6 +1,7 @@
 {
   "name": "forge-graphics-server",
   "version": "0.2.0",
+  "main": "server",
   "dependencies": {
     "express": "*",
     "minimist": "^1.2.0",
