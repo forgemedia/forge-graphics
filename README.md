@@ -5,7 +5,6 @@ You need the following software to use the Forge Graphics Server:
 
 - `node`
 - `bower`
-- `grunt-cli` (for development)
 - A terminal to type commands at (e.g. Windows PowerShell)
 - It is also recommended to have `git` installed and to know the basics of how to use it (here's a great tutorial/reference: https://www.atlassian.com/git/tutorials/what-is-version-control)
 
@@ -28,3 +27,4 @@ You need the following software to use the Forge Graphics Server:
 1. Run `grunt watch` to watch for changes to JS and SCSS files
 1. Run `node server.js --debug` to output debug messages
 1. Use `nodemon` to monitor for changes to server.js as the server is running
+1. Use `grunt dev` to run watch and `nodemon` (with debug) at the same time

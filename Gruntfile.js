@@ -1,5 +1,26 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
+		concurrent: {
+			dev: {
+				tasks: ['watch', 'nodemon'],
+				options: {
+					logConcurrentOutput: true
+				}
+			}
+		},
+		nodemon: {
+			dev: {
+				script: 'server.js',
+				options: {
+					nodeArgs: ['--debug'],
+					callback: function(nodemon) {
+						nodemon.on('log', function (event) {
+					        console.log(event.colour);
+					    });
+					}
+				}
+			}
+		},
 		concat: {
 			options: {
 				separator: ';'
@@ -53,6 +74,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-notify');
+	grunt.loadNpmTasks('grunt-nodemon');
+	grunt.loadNpmTasks('grunt-concurrent');
 
 	grunt.registerTask('default', ['sass', 'concat']);
+	grunt.registerTask('dev', ['concurrent']);
 };

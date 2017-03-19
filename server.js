@@ -14,6 +14,8 @@ var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
 var debug = argv.debug;
+var port = 3000;
+if (argv.port) port = argv.port;
 
 var sockets = {
 	'general': [
@@ -107,7 +109,7 @@ app.use(express.static(__dirname + '/public'));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
-server.listen(3000);
+server.listen(port);
 
 console.log('\n  Forge Graphics Server - ' + project);
 if (debug) console.log('* Debug on')
