@@ -1,5 +1,5 @@
 app.controller('generalCGController',
-    function($scope, $interval, localStorageService, socket){
+    function($scope, $rootScope, $interval, localStorageService, socket){
         socket.on("general", function (msg) {
             $scope.general = msg;
 			$scope.general.showLive = true;
@@ -31,6 +31,7 @@ app.controller('generalCGController',
         };
 
         $scope.triggerResetCG = function () {
+			$rootScope.$emit('teardown');
             socket.emit("general:resetcg");
         };
 

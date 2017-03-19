@@ -1,12 +1,12 @@
 @mixin flip-down($duration, $in-delay, $out-delay) {
-	transition: opacity $duration $cubic-bezier, transform $duration $overshoot-cubic-bezier;
+	transition: opacity $duration $cubic-bezier $in-delay, transform $duration $overshoot-cubic-bezier $in-delay;
 	transition-delay: $in-delay !important;
 	transform-origin: center top 0;
 
 	&.ng-hide-remove {
 		//transform: translateY(-4vw);
 		transform: rotateX(-90deg);
-		//opacity: 0;
+		opacity: 0;
 		//transition-delay: $in-delay;
 	}
 
@@ -18,7 +18,7 @@
 }
 
 @mixin slide-up($duration, $in-delay, $out-delay) {
-	transition: transform $duration $overshoot-cubic-bezier, opacity $duration $cubic-bezier;
+	transition: transform $duration $overshoot-cubic-bezier $in-delay, opacity $duration $cubic-bezier $in-delay;
 	//transform: scaleX(1);
 
 	&.ng-hide-remove {
@@ -40,7 +40,7 @@
 }
 
 @mixin slide-down($duration, $in-delay, $out-delay) {
-	transition: transform $duration $overshoot-cubic-bezier, opacity $duration $cubic-bezier;
+	transition: transform $duration $overshoot-cubic-bezier $in-delay, opacity $duration $cubic-bezier $in-delay;
 	//transform: scaleX(1);
 
 	&.ng-hide-remove {
@@ -61,8 +61,52 @@
 	}
 }
 
+@mixin slide-left($duration, $in-delay, $out-delay) {
+	transition: transform $duration $overshoot-cubic-bezier $in-delay, opacity $duration $cubic-bezier $in-delay;
+	//transform: scaleX(1);
+
+	&.ng-hide-remove {
+		transition-delay: $in-delay;
+		transform: translateX(-2vw);
+		opacity: 0;
+	}
+
+	&.ng-hide-add {
+		transition-delay: $out-delay;
+		//transform: translateY(2vw);
+		transition-timing-function: $cubic-bezier-reverse;
+	}
+
+	&.ng-hide {
+		transform: translateX(-2vw);
+		opacity: 0;
+	}
+}
+
+@mixin slide-right($duration, $in-delay, $out-delay) {
+	transition: transform $duration $overshoot-cubic-bezier $in-delay, opacity $duration $cubic-bezier $in-delay;
+	//transform: scaleX(1);
+
+	&.ng-hide-remove {
+		transition-delay: $in-delay;
+		transform: translateX(2vw);
+		opacity: 0;
+	}
+
+	&.ng-hide-add {
+		transition-delay: $out-delay;
+		//transform: translateY(2vw);
+		transition-timing-function: $cubic-bezier-reverse;
+	}
+
+	&.ng-hide {
+		transform: translateX(2vw);
+		opacity: 0;
+	}
+}
+
 @mixin fade($duration, $in-delay, $out-delay) {
-	transition: opacity $duration $cubic-bezier;
+	transition: opacity $duration $cubic-bezier $in-delay;
 
 	&.ng-hide-remove {
 		transition-delay: $in-delay;
@@ -79,7 +123,7 @@
 }
 
 @mixin scale-from-centre($duration, $in-delay, $out-delay) {
-	transition: transform $duration $overshoot-cubic-bezier, opacity $duration $cubic-bezier;
+	transition: transform $duration $overshoot-cubic-bezier $in-delay, opacity $duration $cubic-bezier $in-delay;
 	transform: scaleX(1);
 
 	&.ng-hide-remove {
@@ -95,6 +139,27 @@
 
 	&.ng-hide {
 		transform: scaleX(0);
+		opacity: 0;
+	}
+}
+
+@mixin rotate-in($duration, $in-delay, $out-delay) {
+	transition: transform $duration $overshoot-cubic-bezier $in-delay, opacity $duration $cubic-bezier $in-delay;
+	transform: rotateY(0);
+
+	&.ng-hide-remove {
+		transition-delay: $in-delay;
+		transform: rotateY(45deg);
+		opacity: 0;
+	}
+
+	&.ng-hide-add {
+		transition-delay: $out-delay;
+		transition-timing-function: $cubic-bezier-reverse;
+	}
+
+	&.ng-hide {
+		transform: rotateY(-45deg);
 		opacity: 0;
 	}
 }

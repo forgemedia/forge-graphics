@@ -1,13 +1,14 @@
-<div id="bgOverlay">
+<div ng-controller="varsityLiveCtrl">
+	<div id="bgOverlay" ng-show="show.vo">
 
-</div>
-<div id="voicesOf">
-	<span class="top">Voices of</span>
-	<span class="name">A Person</span>
-	<span class="name">B Person</span>
-	<span class="bottom">from <strong>Hallam Sports Park</strong></span>
-	<span class="bottom"><small>reporting on <strong>Men's Rugby 1s</strong></small></span>
-</div>
-<div id="varsityBug">
-	<img src="/img/varsity-white.svg" />
-</div>
+	</div>
+	<div id="voicesOf" ng-show="show.vo">
+		<span class="top">Voices of</span>
+		<span class="name" ng-repeat="person in dataStores.vo.people">{{person}}</span>
+		<span class="bottom" ng-if="dataStores.vo.venue">from <strong>{{dataStores.vo.venue}}</strong></span>
+		<span class="bottom" ng-if="dataStores.vo.sport"><small>reporting on <strong>{{dataStores.vo.sport}}</strong></small></span>
+	</div>
+	<div id="varsityBug" ng-show="showVBug">
+		<img src="/img/varsity-white.svg" />
+	</div>
+	</div>

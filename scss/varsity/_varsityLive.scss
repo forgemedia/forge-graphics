@@ -1,4 +1,5 @@
 #bgOverlay {
+	@include fade(0.5s, 0s, 0.5s);
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -9,6 +10,7 @@
 }
 
 #voicesOf {
+	@include slide-down(0.5s, 0.5s, 0s);
 	z-index: 1;
 	position: absolute;
 	width: 70vw;

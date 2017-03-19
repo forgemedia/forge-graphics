@@ -95,7 +95,7 @@ app.config(
     }
 );
 ;app.controller('generalCGController',
-    function($scope, $interval, localStorageService, socket){
+    function($scope, $rootScope, $interval, localStorageService, socket){
         socket.on("general", function (msg) {
             $scope.general = msg;
 			$scope.general.showLive = true;
@@ -127,6 +127,7 @@ app.config(
         };
 
         $scope.triggerResetCG = function () {
+			$rootScope.$emit('teardown');
             socket.emit("general:resetcg");
         };
 
@@ -339,12 +340,31 @@ app.config(
 		socket.emit("rugby:get");
 	};
 });
-;app.controller('varsityLiveCGController', function($scope, socket) {
+;app.controller('varsityLiveCGController', function($scope, localStorageService, $window, socket) {
 	socket.on("varsityLive", function(msg){
 		$scope.varsityLive = msg;
 	});
 
+	$scope.desc = {
+		vo: {
+			people: []
+		}
+	};
+
+	for (var index in $scope.desc) {
+		var ie = localStorageService.get('vl_' + index);
+		if (ie) $scope.desc[index] = ie;
+	};
+
 	socket.emit("varsityLive:get");
+
+	$scope.triggerVo = function(vo) {
+		socket.emit('varsityLive:vo', vo);
+	};
+
+	$scope.hideVo = function() {
+		socket.emit('varsityLive:vo', 2);
+	};
 
 	$scope.$watch('varsityLive', function() {
 		if ($scope.varsityLive) {
@@ -357,4 +377,15 @@ app.config(
 	function getVarsityLiveData() {
 		socket.emit("varsityLive:get");
 	};
+
+	$scope.storeEntries = function() {
+		for (var index in $scope.desc) {
+			localStorageService.set('vl_' + index, $scope.desc[index]);
+		};
+	};
+
+	$scope.$on("$destroy", $scope.storeEntries);
+	$window.onbeforeunload = $scope.storeEntries;
 });
+
+//# sourceMappingURL=dashboard.js.map

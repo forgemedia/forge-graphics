@@ -1,0 +1,39 @@
+<div class="page-header">
+	<h3>Voices of</h3>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Venue (optional)" ng-model="desc.vo.venue"></input>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Sport (optional)" ng-model="desc.vo.sport"></input>
+		</div>
+	</div>
+	<div ng-repeat="person in desc.vo.people track by $index">
+		<div class="row">
+			<div class="col-md-2 col-xs-2">
+				<button class="btn btn-warning" ng-click="desc.vo.people.splice($index, 1)"><span class="glyphicon glyphicon-remove"></span></button>
+			</div>
+			<div class="col-md-10 col-xs-10">
+				<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Name" ng-model="desc.vo.people[$index]"></input>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="btn-group">
+				<button class="btn btn-success" ng-disabled="desc.vo.people.length > 2" ng-click="desc.vo.people.push('')"><span class="glyphicon glyphicon-plus"></span></button>
+				<button class="btn btn-danger" ng-click="triggerVo(desc.vo)" ng-disabled="desc.vo.people.length < 1"><span class="glyphicon glyphicon-play"></span></button>
+				<button class="btn btn-warning" ng-click="hideVo()"><span class="glyphicon glyphicon-stop"></span></button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<span ng-if="desc.vo.people.length > 2"><strong><span class="glyphicon glyphicon-warning-sign"></span> WARNING:</strong> Don't display a lower third when there are three names on screen</span>
+		</div>
+	</div>
+</div>

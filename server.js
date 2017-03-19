@@ -38,7 +38,7 @@ var sockets = {
 		'timer'
 	],
 	'varsityLive': [
-
+		'vo'
 	]
 };
 
