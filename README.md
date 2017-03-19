@@ -26,3 +26,5 @@ You need the following software to use the Forge Graphics Server:
 ## Development
 1. Run `grunt` to compile
 1. Run `grunt watch` to watch for changes to JS and SCSS files
+1. Run `node server.js --debug` to output debug messages
+1. Use `nodemon` to monitor for changes to server.js as the server is running
