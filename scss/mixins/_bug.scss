@@ -29,7 +29,7 @@
 }
 
 @mixin live-segment-transition($duration, $in-delay, $out-delay) {
-	transition: opacity .5s $cubic-bezier, transform .5s $cubic-bezier;
+	transition: opacity .5s $overshoot-cubic-bezier, transform .5s $overshoot-cubic-bezier;
 
 	&.ng-hide, &.ng-leave-active {
 		transition-timing-function: $cubic-bezier-reverse;
