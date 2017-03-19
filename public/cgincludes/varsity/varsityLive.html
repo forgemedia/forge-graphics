@@ -9,6 +9,6 @@
 		<span class="bottom" ng-if="dataStores.vo.sport"><small>reporting on <strong>{{dataStores.vo.sport}}</strong></small></span>
 	</div>
 	<div id="varsityBug" ng-show="state.showVBug">
-		<img src="/img/varsity-white.svg" />
+		<img ng-src="/img/varsity-{{state.bugBlack ? 'black' : 'white'}}.svg" />
 	</div>
 	</div>
