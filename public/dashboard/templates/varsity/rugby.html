@@ -22,6 +22,19 @@
 		<div class="page-header">
 			<h3>Timer</h3>
 		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 col-xs-5">
+					<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" ng-model="timeSetMins" placeholder="Minutes"/>
+				</div>
+				<div class="col-md-5 col-xs-5">
+					<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" ng-model="timeSetSecs" placeholder="Seconds"/>
+				</div>
+				<div class="col-md-2 col-xs-2">
+					<button class="btn btn-danger" ng-click="setTime()">Set</button>
+				</div>
+			</div>
+		</div>
 		<!-- <h2><strong><span class="glyphicon glyphicon-warning-sign"></span> WARNING: Read before use</strong></h2>
 		'Start' WILL reset the timer if it is currently running. Pressing 'Resume' will break the timer if you have not previously pressed 'Start/Reset'. -->
 		<div class="btn-group">

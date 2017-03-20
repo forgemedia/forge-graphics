@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 			dev: {
 				script: 'server.js',
 				options: {
-					nodeArgs: ['--debug'],
+					args: ['--debug'],
 					callback: function(nodemon) {
 						nodemon.on('log', function (event) {
 					        console.log(event.colour);

@@ -24,6 +24,12 @@ $left-team-name-left: $rugby-bug-width * 0.51;
 
 	#timer {
 		@extend %timerText;
+
+		span {
+			position: relative;
+			top: 0.2vw;
+			line-height: 100%;
+		}
 	}
 
 	&:after {

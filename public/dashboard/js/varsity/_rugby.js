@@ -46,6 +46,11 @@ app.controller('rugbyCGController', function($scope, $rootScope, $filter, socket
 		$scope.rugby.rightPosTeam = $scope.scratch.rightPosTeam;
 	};
 
+	$scope.setTime = function() {
+		console.log($scope.timeSetSecs);
+		socket.emit("rugby:setTimer", (+$scope.timeSetMins * 60) + +$scope.timeSetSecs);
+	};
+
 	$rootScope.$on('teardown', function() {
 		$scope.resetScores();
 		$scope.resetTimer();

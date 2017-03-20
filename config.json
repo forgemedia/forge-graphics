@@ -32,6 +32,7 @@
 			"resetTimer"
 		],
 		"rugby": [
+			"setTimer",
 			"timer"
 		],
 		"varsityLive": [

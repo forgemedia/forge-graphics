@@ -1,5 +1,6 @@
 <div id="rugbyBug" ng-controller="rugbyCtrl" ng-show="state.showRugby">
-	<span id="timer"><timer autostart="false" interval="1000">{{minutes}}:{{sseconds}}</timer></span>
+	<!-- <span id="timer"><timer autostart="false" start-time="100000000" interval="1000">{{minutes}}:{{sseconds}}</timer></span> -->
+	<div id="timer"><span>{{Math.floor(stopwatch/60).pad(2)}}:{{(stopwatch % 60).pad(2)}}</span></div>
 	<span class="teamName colourScheme" id="leftPosition" ng-class="state.leftPosTeam.code">{{state.leftPosTeam.code}}</span>
 	<span class="teamName colourScheme" id="rightPosition" ng-class="state.rightPosTeam.code">{{state.rightPosTeam.code}}</span>
 	<div class="scoreContainer" id="leftScoreContainer">
