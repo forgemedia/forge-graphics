@@ -1,6 +1,6 @@
 @keyframes ticker {
     0% {
-        transform: translate3d(35%, 0, 0);
+        transform: translate3d(0%, 0, 0);
         visibility: visible;
     }
 
@@ -10,13 +10,15 @@
 }
 
 #ticker {
-	@include overlay($colour-c);
+	@include overlay($dark-colour);
 
     position: absolute;
-    top: $lower-third-height;
+    top: $lower-bug-top;
     height: $bug-height;
     width: 100vw;
+	left: 0vw;
     color: $light-colour;
+	box-shadow: $lower-box-shadow;
     transition: opacity 0.5s linear;
 
 	&.ng-hide {
@@ -43,8 +45,35 @@
 
 	&:after {
 		display: inline-block;
-	    padding-left: 4vw;
-	    padding-right: 4vw;
-	    content: "—";
+	    padding-left: 6vw;
+	    padding-right: 6vw;
+	    content: "";
+	}
+}
+
+.ticker-subject {
+	@include slide-left(0.5s, 0.5s, 0s);
+	@extend %bugPod;
+	@include overlay($mid-colour);
+	@include bug-round-right;
+	//position: absolute;
+	left: 15vw;
+	padding-left: 10vw;
+	text-align: center;
+	text-transform: uppercase;
+	overflow: hidden;
+
+	span {
+		//@extend %timerText;
+		//position: absolute;
+		color: $dark-colour;
+		position: relative;
+		width: 10vw;
+		float: right;
+		right: 0.5vw;
+		font-size: 1.75vw;
+		font-weight: 300;
+		transform: translateY(0.2vw);
+		letter-spacing: -0.08em;
 	}
 }

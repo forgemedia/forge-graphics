@@ -14,12 +14,15 @@ $bug-logo-width: $bug-logo-left + ($bug-height * 2.58);
 // Aux bugs
 $aux-bug-left: $bug-logo-width - 4.5vw;
 
+// Lower bug
+$lower-bug-top: 88vh;
+
 // Lower thirds
 $lower-third-width: 80vw;
 $lower-third-margin: (100vw - $lower-third-width) / 2;
 $lower-third-container-width: $lower-third-width * 0.95;
 $lower-third-container-margin: ($lower-third-width - $lower-third-container-width) / 2;
-$lower-third-top: 70vh;
+$lower-third-top: 65vh;
 $lower-third-height: 8vw;
 
 

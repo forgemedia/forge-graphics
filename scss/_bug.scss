@@ -76,7 +76,7 @@
 
 	&.lower {
 		> * {
-			top: 90vh;
+			top: $lower-bug-top;
 		}
 	}
 }

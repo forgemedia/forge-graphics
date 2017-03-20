@@ -30,13 +30,91 @@
 				Varsity bug with black text
 			</label>
 		</div>
-		<div class="btn btn-warning" ng-click="toggleBugPosition()">Toggle bug position</div>
-        <!-- <div class="checkbox checkbox-indented">
+		<div class="checkbox checkbox-indented">
             <label>
                 <toggle ng-model="general.showTicker"></toggle>
-                Show Ticker
+                Show Ticker {{general.logoLower ? "" : "(requires bug to be in lower position)"}}
             </label>
+        </div>
+		<div>
+			<button class="btn btn-warning" ng-click="toggleBugPosition()">Move bug to {{general.logoLower ? "upper" : "lower"}} position</button>
+			<span> Current: {{general.logoLower ? "Lower" : "Upper"}}</span>
+		</div>
+
+		<!-- <div class="form-group">
+			<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" placeholder="File" ng-model="votesCsvFile"></input>
+			<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" placeholder="Position" ng-model="vwPos"></input>
+			<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" placeholder="Winner" ng-model="vwWin"></input>
+            <button
+                class="btn btn-danger"
+                ng-click="triggerVotesGraph()">
+                Trigger Votes Graph
+            </button>
+			<button
+                class="btn btn-danger"
+                ng-click="triggerVotesGraphDestruction()">
+                Destroy Votes Graph
+            </button>
         </div> -->
+        <div class="page-header">
+            <h3>Ticker items</h3>
+        </div>
+		<div class="form-group">
+			<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="general.tickerSubject" placeholder="Ticker subject"></input>
+		</div>
+		<button class="btn btn-danger" ng-click="general.cTickerSubject = general.tickerSubject">Set ticker subject</button>
+		<div class="checkbox">
+            <label>
+                <toggle ng-model="general.showTickerSubject"></toggle>
+                Show ticker subject
+            </label>
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="newTickerItem"></input>
+            </div>
+            <div class="btn-group-vertical">
+            	<div class="btn-group">
+            		<button
+            		    class="btn btn-success"
+            		    ng-click="addTickerItem()">
+            		    <span class="glyphicon glyphicon-plus"></span> Add item
+            		</button>
+            	</div>
+            	<div class="btn-group">
+            		<button
+            		    class="btn btn-warning"
+            		    ng-click="commitTickerItems()">
+            		    Update ticker
+            		</button>
+            	</div>
+            	<div class="btn-group">
+            		<button
+            		    class="btn btn-danger"
+            		    ng-click="resetTicker()">
+            		    Reset ticker items
+            		</button>
+            	</div>
+            </div>
+            <!-- <div><span><small>Press this if you cannot add items to the ticker</small></span></div> -->
+        </div>
+        <div class="form-group container">
+            <div ui-sortable ng-model="">
+            	<div class="form-group row" ng-repeat="ti in general.tickerItems track by $index">
+            	    <div class="col-md-1">
+            	        <button
+            	            class="btn btn-sm btn-warning"
+            	            ng-click="removeTickerItem($index)">
+            	            <span class="glyphicon glyphicon-minus"></span> Remove item
+            	        </button>
+            	    </div>
+            	    <div class="col-md-11">
+            	        <span>{{ti}}</span>
+            	    </div>
+            	</div>
+            </div>
+        </div>
+
 		<div class="page-header">
 		    <h3>Maintenance</h3>
 		</div>
@@ -79,58 +157,5 @@
 				</div>
 			</div>
         </div>
-		<!-- <div class="form-group">
-			<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" placeholder="File" ng-model="votesCsvFile"></input>
-			<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" placeholder="Position" ng-model="vwPos"></input>
-			<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" placeholder="Winner" ng-model="vwWin"></input>
-            <button
-                class="btn btn-danger"
-                ng-click="triggerVotesGraph()">
-                Trigger Votes Graph
-            </button>
-			<button
-                class="btn btn-danger"
-                ng-click="triggerVotesGraphDestruction()">
-                Destroy Votes Graph
-            </button>
-        </div> -->
-        <!-- <div class="page-header">
-            <h3>Ticker items</h3>
-        </div>
-        <div class="form-group">
-            <div class="form-group">
-                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="newTickerItem"></input>
-            </div>
-            <button
-                class="btn btn-success"
-                ng-click="addTickerItem()">
-                Add item
-            </button>
-            <button
-                class="btn btn-warning"
-                ng-click="commitTickerItems()">
-                Update ticker (Instant; use carefully)
-            </button>
-            <button
-                class="btn btn-danger"
-                ng-click="resetTicker()">
-                Reset ticker items
-            </button>
-            <span><small>Press this if you cannot add items to the ticker</small></span>
-        </div>
-        <div class="form-group container">
-            <div class="form-group row" ng-repeat="ti in general.tickerItems track by $index">
-                <div class="col-md-1">
-                    <button
-                        class="btn btn-sm btn-warning"
-                        ng-click="removeTickerItem($index)">
-                        Remove item
-                    </button>
-                </div>
-                <div class="col-md-11">
-                    <span>{{ti}}</span>
-                </div>
-            </div>
-        </div> -->
     </div>
 </form>
