@@ -1,5 +1,5 @@
 app.controller('generalCGController',
-    function($scope, $rootScope, $interval, localStorageService, socket){
+    function($scope, $rootScope, $interval, $timeout, localStorageService, socket){
         socket.on("general", function (msg) {
             $scope.general = msg;
 			$scope.general.showLive = true;
@@ -12,6 +12,17 @@ app.controller('generalCGController',
                 getGeneralData();
             }
         }, true);
+
+		$scope.toggleBugPosition = function() {
+			var lp = $scope.general.showLogo;
+			$scope.general.showLogo = false;
+			$timeout(function() {
+				$scope.general.logoLower = !$scope.general.logoLower;
+			}, 2000);
+			$timeout(function() {
+				$scope.general.showLogo = lp;
+			}, 4000);
+		}
 
         $scope.resetTicker = function() {
             $scope.general.tickerItems = [];

@@ -6,6 +6,7 @@
 
     > * {
 		@include bug-styling;
+		//transition: top 0.5s;
     }
 
     .noBoxShadow {
@@ -72,6 +73,12 @@
 			color: $light-colour;
 		}
     }
+
+	&.lower {
+		> * {
+			top: 90vh;
+		}
+	}
 }
 
 @keyframes rotate {

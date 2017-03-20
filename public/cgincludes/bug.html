@@ -1,4 +1,4 @@
-<div ng-controller="generalCtrl" id="bug">
+<div ng-controller="generalCtrl" id="bug" ng-class="{'lower': state.logoLower}">
 	<div id="logo" ng-show="state.showLogo">
 		<!-- <img id="polls" src="/img/polls.svg" /> -->
 		<img id="forge" src="/img/forge-black.svg" ng-hide="state.showSm[0] && state.showSm[1] && state.showSm[2]"/>
