@@ -1,5 +1,16 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
+		postcss: {
+			options: {
+				map: false,
+				processors: [
+					require('autoprefixer')({browsers: 'Chrome > 40'})
+				]
+			},
+			dist: {
+				src: 'public/css/*.css'
+			}
+		},
 		concurrent: {
 			dev: {
 				tasks: ['watch', 'nodemon'],
@@ -63,7 +74,7 @@ module.exports = function(grunt) {
 			},
 			sass: {
 				files: ['scss/**/*.scss'],
-				tasks: ['sass'],
+				tasks: ['sass', 'postcss'],
 				options: {
 					spawn: false
 				}
@@ -77,7 +88,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-nodemon');
 	grunt.loadNpmTasks('grunt-concurrent');
+	grunt.loadNpmTasks('grunt-postcss');
 
-	grunt.registerTask('default', ['sass', 'concat']);
+	grunt.registerTask('default', ['sass', 'postcss', 'concat']);
 	grunt.registerTask('dev', ['concurrent']);
 };
