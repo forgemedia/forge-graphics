@@ -274,8 +274,17 @@ app.config(
         };
 	}
 );
-;app.controller('rugbyCGController', function($scope, $rootScope, $filter, socket) {
+;app.controller('rugbyCGController', function($scope, $rootScope, $window, localStorageService, $filter, socket) {
 	$scope.scratch = {};
+	$scope.dataStores = {
+		timer: {},
+		limiter: {}
+	};
+
+	for (var index in $scope.dataStores) {
+		var ie = localStorageService.get('lt_' + index);
+		if (ie) $scope.dataStores[index] = ie;
+	};
 
 	socket.on("rugby", function (msg) {
 		$scope.rugby = msg;
@@ -324,15 +333,15 @@ app.config(
 
 	$scope.setTime = function() {
 		// console.log($scope.timeSetSecs);
-		if (!$scope.timeSetMins) $scope.timeSetMins = 0;
-		if (!$scope.timeSetSecs) $scope.timeSetSecs = 0;
-		socket.emit("rugby:setTimer", (+$scope.timeSetMins * 60) + +$scope.timeSetSecs);
+		if (!$scope.dataStores.timer.mins) $scope.dataStores.timer.mins = 0;
+		if (!$scope.dataStores.timer.secs) $scope.dataStores.timer.secs = 0;
+		socket.emit("rugby:setTimer", (+$scope.dataStores.timer.mins * 60) + +$scope.dataStores.timer.secs);
 	};
 
 	$scope.setLimiter = function() {
-		if (!$scope.limiterSetMins) $scope.limiterSetMins = 0;
-		if (!$scope.limiterSetSecs) $scope.limiterSetSecs = 0;
-		socket.emit("rugby:setLimiter", (+$scope.limiterSetMins * 60) + +$scope.limiterSetSecs);
+		if (!$scope.dataStores.limiter.mins) $scope.dataStores.limiter.mins = 0;
+		if (!$scope.dataStores.limiter.secs) $scope.dataStores.limiter.secs = 0;
+		socket.emit("rugby:setLimiter", (+$scope.dataStores.limiter.mins * 60) + +$scope.dataStores.limiter.secs);
 	};
 
 	$rootScope.$on('teardown', function() {
@@ -352,6 +361,15 @@ app.config(
 	function getRugbyData() {
 		socket.emit("rugby:get");
 	};
+
+	$scope.storeEntries = function() {
+		for (var index in $scope.dataStores) {
+			localStorageService.set('lt_' + index, $scope.dataStores[index]);
+		};
+	};
+
+	$scope.$on("$destroy", $scope.storeEntries);
+	$window.onbeforeunload = $scope.storeEntries;
 });
 ;app.controller('varsityLiveCGController', function($scope, localStorageService, $window, socket) {
 	socket.on("varsityLive", function(msg){

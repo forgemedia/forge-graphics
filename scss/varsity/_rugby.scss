@@ -36,6 +36,11 @@ $left-team-name-left: $rugby-bug-width * 0.51;
 		@extend %timerPod;
 	}
 
+	&.overtime:after {
+		@extend %timerPod;
+		@include overlay(#880000);
+	}
+
 	.teamName {
 		@extend %bugPod;
 

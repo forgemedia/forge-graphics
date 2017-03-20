@@ -24,8 +24,9 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" ng-model="timeSetMins" placeholder="Minutes"/>
-				<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" ng-model="timeSetSecs" placeholder="Seconds"/>
+				<h3>Set timer</h3>
+				<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" ng-model="dataStores.timer.mins" placeholder="Minutes"/>
+				<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" ng-model="dataStores.timer.secs" placeholder="Seconds"/>
 				<button class="btn btn-danger" ng-click="setTime()">Set</button>
 			</div>
 		</div>
@@ -35,10 +36,22 @@
 
 		<div class="container">
 			<div class="row">
-				<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" ng-model="limiterSetMins" placeholder="Limiter Minutes"/>
-				<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" ng-model="limiterSetSecs" placeholder="Limiter Seconds"/>
+				<h3>Set limiter</h3>
+				<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" ng-model="dataStores.limiter.mins" placeholder="Limiter Minutes"/>
+				<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" ng-model="dataStores.limiter.secs" placeholder="Limiter Seconds"/>
 				<button class="btn btn-danger" ng-click="setLimiter()">Set</button>
 			</div>
+			<div class="row">
+				<div class="checkbox">
+					<label>
+						<toggle ng-model="rugby.hardLimiter"></toggle>
+						Hard limiter
+					</label>
+				</div>
+			</div>
+			<div class="row"><span>
+				If the limiter is set to 0, there will be no time limit. If set to hard, the timer will stop when the time limit is reached. If set to soft, the timer will turn red above the time limit.
+			</span></div>
 		</div>
 		<div class="btn-group">
 			<!-- <button class="btn btn-danger" ng-click="startTimer()">

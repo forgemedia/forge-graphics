@@ -55,7 +55,7 @@ app.controller('rugbyCtrl', function($scope, generalSync, $interval, $timeout, s
 
 	$scope.start = function() {
 		timerPromise = $interval(function() {
-			if ($scope.limiter > 0 && $scope.stopwatch == $scope.limiter) $scope.stop();
+			if ($scope.limiter > 0 && $scope.stopwatch == $scope.limiter && $scope.state.hardLimiter) $scope.stop();
 			else $scope.stopwatch++;
 		}, 1000);
 	};
