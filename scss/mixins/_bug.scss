@@ -48,6 +48,7 @@
 	top: $bug-top;
 	height: $bug-height;
 
+	font-size: $bug-height * 0.75;
 	position: absolute;
 	line-height: $bug-height;
 	border: $bug-border;
@@ -55,7 +56,7 @@
 	//box-shadow: inset $lower-box-shadow, $right-box-shadow;
 	box-shadow: $right-box-shadow;
 
-	letter-spacing: -0.15em;
+	letter-spacing: -0.075em;
 }
 
 @mixin bug-styling {
@@ -75,12 +76,12 @@
 	@extend %bugPod;
 	@include bug-round-right;
 	@include overlay($dark-colour);
-	width: 13vw;
+	width: 12.75vw;
 }
 
 %timerText {
 	font-size: 2.2vw;
-	left: 6.2vw;
+	left: 6.075vw;
 	font-weight: 700;
 	z-index: 2;
 	color: $light-colour

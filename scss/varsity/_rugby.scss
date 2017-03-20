@@ -1,6 +1,6 @@
-$rugby-bug-width: 32.5vw;
-$team-name-width: 6vw;
-$left-team-name-left: 16.5vw;
+$rugby-bug-width: $bug-height * 11;
+$team-name-width: $bug-height * 2.15;
+$left-team-name-left: $rugby-bug-width * 0.51;
 
 #rugbyBug {
 	@include bug-round-right;
@@ -19,7 +19,7 @@ $left-team-name-left: 16.5vw;
 
 	> * {
 		position: absolute;
-		font-size: 1.5vw;
+		//font-size: 1.5vw;
 	}
 
 	#timer {
@@ -34,7 +34,7 @@ $left-team-name-left: 16.5vw;
 		@extend %bugPod;
 
 		text-align: center;
-		font-size: 2vw;
+		//font-size: 2vw;
 		font-weight: 700;
 		box-shadow: none;
 
@@ -65,15 +65,15 @@ $left-team-name-left: 16.5vw;
 		transform: translateY(0px);
 
 		&#leftScoreContainer {
-			left: 12.1vw;
+			left: $rugby-bug-width * 0.385;
 		}
 
 		&#rightScoreContainer {
-			left: 27.75vw;
+			left: $rugby-bug-width * 0.8615;
 		}
 
 		.score {
-			font-size: 2.2vw;
+			//font-size: 2.2vw;
 			z-index: 10;
 			display: block;
 			//position: absolute;

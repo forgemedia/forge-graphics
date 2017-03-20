@@ -7,9 +7,9 @@ $main-margin: (100vw - $main-container-width) / 2;
 
 // Bug
 $bug-top: 6vh;
-$bug-height: 3vw;
+$bug-height: 2.75vw;
 $bug-logo-left: $main-margin;
-$bug-logo-width: $bug-logo-left + 7.75vw;
+$bug-logo-width: $bug-logo-left + ($bug-height * 2.58);
 
 // Aux bugs
 $aux-bug-left: $bug-logo-width - 4.5vw;
