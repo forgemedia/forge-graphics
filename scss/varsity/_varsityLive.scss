@@ -47,15 +47,3 @@
 		}
 	}
 }
-
-#varsityBug {
-	@include slide-right(0.5s, 0s, 0s);
-	img {
-		height: 10vh;
-		float: right;
-		position: absolute;
-		top: $bug-top;
-		right: $main-margin;
-		filter: drop-shadow(0px 0px 0.5vw rgba(0,0,0,0.5));
-	}
-}
