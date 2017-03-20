@@ -324,10 +324,14 @@ app.config(
 
 	$scope.setTime = function() {
 		// console.log($scope.timeSetSecs);
+		if (!$scope.timeSetMins) $scope.timeSetMins = 0;
+		if (!$scope.timeSetSecs) $scope.timeSetSecs = 0;
 		socket.emit("rugby:setTimer", (+$scope.timeSetMins * 60) + +$scope.timeSetSecs);
 	};
 
 	$scope.setLimiter = function() {
+		if (!$scope.limiterSetMins) $scope.limiterSetMins = 0;
+		if (!$scope.limiterSetSecs) $scope.limiterSetSecs = 0;
 		socket.emit("rugby:setLimiter", (+$scope.limiterSetMins * 60) + +$scope.limiterSetSecs);
 	};
 
