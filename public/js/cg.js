@@ -196,15 +196,17 @@ app.service('generalSync',
 ;app.controller('rugbyCtrl', function($scope, generalSync, $interval, $timeout, socket) {
 	// $scope.state.showRugby = true;
 	$scope.Math = window.Math;
+	$scope.limiter = 0;
+
 	Number.prototype.pad = function(size) {
       var s = String(this);
       while (s.length < (size || 2)) {s = "0" + s;}
       return s;
 	};
-	$scope.$broadcast('timer-start');
-	$timeout(function() {
-		$scope.$broadcast('timer-reset');
-	}, 100);
+	// $scope.$broadcast('timer-start');
+	// $timeout(function() {
+	// 	$scope.$broadcast('timer-reset');
+	// }, 100);
 	$timeout(function() {
 		socket.emit("rugby:get");
 	}, 2000);
@@ -239,12 +241,17 @@ app.service('generalSync',
 		$scope.stopwatch = msg;
 	});
 
+	socket.on("rugby:setLimiter", function(msg) {
+		$scope.limiter = msg;
+	});
+
 	$scope.stopwatch = 0;
 	var timerPromise;
 
 	$scope.start = function() {
 		timerPromise = $interval(function() {
-			$scope.stopwatch++;
+			if ($scope.limiter > 0 && $scope.stopwatch == $scope.limiter) $scope.stop();
+			else $scope.stopwatch++;
 		}, 1000);
 	};
 
@@ -281,7 +288,7 @@ app.service('generalSync',
 		$scope.show.vo = true;
 	});
 	var tick = function() {
-		socket.emit('varsityLive:get');
+		// socket.emit('varsityLive:get');
 	};
 	tick();
 	$interval(tick, 1000);

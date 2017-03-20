@@ -47,8 +47,12 @@ app.controller('rugbyCGController', function($scope, $rootScope, $filter, socket
 	};
 
 	$scope.setTime = function() {
-		console.log($scope.timeSetSecs);
+		// console.log($scope.timeSetSecs);
 		socket.emit("rugby:setTimer", (+$scope.timeSetMins * 60) + +$scope.timeSetSecs);
+	};
+
+	$scope.setLimiter = function() {
+		socket.emit("rugby:setLimiter", (+$scope.limiterSetMins * 60) + +$scope.limiterSetSecs);
 	};
 
 	$rootScope.$on('teardown', function() {

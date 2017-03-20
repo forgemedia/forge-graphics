@@ -47,6 +47,18 @@
 			<button class="btn btn-warning" ng-click="stopTimer()"><span class="glyphicon glyphicon-pause"></span> Pause</button>
 			<button class="btn btn-danger" ng-click="resetTimer()"><span class="glyphicon glyphicon-stop"></span> Stop/Reset</button>
 		</div>
+
+		<div class="row">
+			<div class="col-md-5 col-xs-5">
+				<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" ng-model="limiterSetMins" placeholder="Limiter Minutes"/>
+			</div>
+			<div class="col-md-5 col-xs-5">
+				<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" ng-model="limiterSetSecs" placeholder="Limiter Seconds"/>
+			</div>
+			<div class="col-md-2 col-xs-2">
+				<button class="btn btn-danger" ng-click="setLimiter()">Set</button>
+			</div>
+		</div>
 	</div>
 	<div class="page-header">
 		<h3>Scores</h3>

@@ -33,6 +33,7 @@
 		],
 		"rugby": [
 			"setTimer",
+			"setLimiter",
 			"timer"
 		],
 		"varsityLive": [

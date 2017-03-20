@@ -16,7 +16,7 @@ app.controller('varsityLiveCtrl', function($scope, $interval, $timeout, socket) 
 		$scope.show.vo = true;
 	});
 	var tick = function() {
-		socket.emit('varsityLive:get');
+		// socket.emit('varsityLive:get');
 	};
 	tick();
 	$interval(tick, 1000);
