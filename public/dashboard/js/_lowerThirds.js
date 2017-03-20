@@ -21,8 +21,8 @@ app.controller('lowerThirdsCGController',
 
 		$scope.queueAdd = function() {
 			// console.log("Queue add");
-			console.log($scope.dataStores);
-			$scope.dataStores.queue.push("a");
+			// console.log($scope.dataStores);
+			$scope.dataStores.queue.push($scope.dataStores.title);
 
 			$scope.ltTitleForm.$setPristine();
 			$scope.dataStores.title = {};
