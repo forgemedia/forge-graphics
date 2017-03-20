@@ -20,12 +20,12 @@ app.controller('rugbyCGController', function($scope, $rootScope, $window, localS
 	});
 
 	$scope.scoreAddLeft = function(score) {
-		if ($scope.rugby.leftScore < 1 && score < 1) return;
-		$scope.rugby.leftScore += score;
+		if ($scope.rugby.leftScore + score < 0 && score < 1) $scope.rugby.leftScore = 0;
+		else $scope.rugby.leftScore += score;
 	};
 
 	$scope.scoreAddRight = function(score) {
-		if ($scope.rugby.rightScore < 1 && score < 1) return;
+		if ($scope.rugby.rightScore + score < 0 && score < 1) $scope.rugby.rightScore = 0;
 		else $scope.rugby.rightScore += score;
 	};
 
