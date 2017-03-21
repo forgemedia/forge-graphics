@@ -171,3 +171,24 @@
 		}
 	}
 }
+
+#backSoon {
+	@include popup(6vw);
+	z-index: -1;
+
+	img {
+		width: 4vw;
+		left: 0.8vw;
+		height: 6vw;
+		position: absolute;
+		transform: translateY(-0.3vw);
+	}
+
+	span {
+		left: 5.5vw;
+		letter-spacing: -0.055em;
+		font-size: 2.3vw;
+		line-height: 5.8vw;
+		//font-weight: 700;
+	}
+}
