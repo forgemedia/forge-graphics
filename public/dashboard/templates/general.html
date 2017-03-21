@@ -12,12 +12,6 @@
                 Show LIVE/Clock
             </label>
         </div> -->
-        <div class="checkbox checkbox-indented">
-            <label>
-                <toggle ng-model="general.showHashtag"></toggle>
-                Show Hashtags/Twitter Handle
-            </label>
-        </div>
 		<div class="checkbox checkbox-indented">
 			<label>
 				<toggle ng-model="general.showVBug"></toggle>
@@ -28,6 +22,12 @@
 			<label>
 				<toggle ng-model="general.bugBlack"></toggle>
 				Varsity bug with black text
+			</label>
+		</div>
+		<div class="checkbox checkbox-indented">
+			<label>
+				<toggle ng-model="general.showHashtag"></toggle>
+				Show Hashtags/Twitter Handle {{general.logoLower ? "(requires bug to be in upper position)" : ""}}
 			</label>
 		</div>
 		<div class="checkbox checkbox-indented">
@@ -44,7 +44,7 @@
         </div> -->
 		<div class="btn-group-vertical">
 			<div class="btn-group">
-				<button class="btn btn-warning" ng-click="triggerSocial()">Show social media channels</button>
+				<button class="btn btn-warning" ng-click="triggerSocial()">Highlight social media channels</button>
 			</div>
 			<div class="btn-group">
 				<button class="btn btn-danger" ng-click="toggleBugPosition()">
