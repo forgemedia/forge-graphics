@@ -9,7 +9,7 @@ You need the following software to use the Forge Graphics Server:
 - It is also recommended to have `git` installed and to know the basics of how to use it (here's a great tutorial/reference: https://www.atlassian.com/git/tutorials/what-is-version-control)
 
 ## Downloading
-1. Run `git clone [url]` to clone the repository (the URL is probably `http://bitbucket.org/forgemedia/forge-graphics.git`)
+1. Run `git clone [url]` to clone the repository (the URL is probably `https://github.com/forgemedia/forge-graphics.git` or `http://bitbucket.org/forgemedia/forge-graphics.git`)
 1. Run `cd [folder]` to change to the folder the repository was cloned to (probably `forge-graphics`)
 
 ## First-time setup and updating
