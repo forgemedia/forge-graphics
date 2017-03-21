@@ -9,3 +9,12 @@
 		<span class="bottom" ng-if="dataStores.vo.sport"><small>reporting on <strong>{{dataStores.vo.sport}}</strong></small></span>
 	</div>
 </div>
+
+<div ng-controller="varsityLiveCtrl" id="igc">
+	<div ng-show="show.igc">
+		<span class="fa fa-phone"></span>
+		<span class="smid">{{dataStores.igc.name}}</span>
+		<span class="smsub sport">{{dataStores.igc.sport}}</span>
+		<span class="smsub venue">{{dataStores.igc.venue}}</span>
+	</div>
+</div>

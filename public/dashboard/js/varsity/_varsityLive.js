@@ -6,7 +6,8 @@ app.controller('varsityLiveCGController', function($scope, localStorageService, 
 	$scope.desc = {
 		vo: {
 			people: []
-		}
+		},
+		igc: {}
 	};
 
 	for (var index in $scope.desc) {
@@ -22,6 +23,14 @@ app.controller('varsityLiveCGController', function($scope, localStorageService, 
 
 	$scope.hideVo = function() {
 		socket.emit('varsityLive:vo', 2);
+	};
+
+	$scope.triggerIgc = function(igc) {
+		socket.emit('varsityLive:igc', igc);
+	};
+	
+	$scope.hideIgc = function() {
+		socket.emit('varsityLive:igc', 2)
 	};
 
 	$scope.$watch('varsityLive', function() {

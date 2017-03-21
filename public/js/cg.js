@@ -308,7 +308,8 @@ app.service('generalSync',
 });
 ;app.controller('varsityLiveCtrl', function($scope, $interval, $timeout, socket) {
 	$scope.dataStores = {
-		vo: {}
+		vo: {},
+		igc: {}
 	};
 	$scope.show = {};
 	socket.on("varsityLive", function(msg) {
@@ -322,6 +323,15 @@ app.service('generalSync',
 		$scope.dataStores.vo = msg;
 		// $scope.showOverlay = true;
 		$scope.show.vo = true;
+	});
+	socket.on("varsityLive:igc", function(msg) {
+		if (msg == 2) {
+			$scope.show.igc = false;
+			return;
+		}
+		if ($scope.show.igc) $scope.show.igc = false;
+		$scope.dataStores.igc = msg;
+		$scope.show.igc = true;
 	});
 	var tick = function() {
 		// socket.emit('varsityLive:get');

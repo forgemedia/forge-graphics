@@ -37,3 +37,28 @@
 		</div>
 	</div>
 </div>
+
+<div class="page-header">
+	<h3>In-game call-in</h3>
+</div>
+<div class="container">
+	<div class="row">
+		<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Name" ng-model="desc.igc.name"></input>
+	</div>
+	<div class="row">
+		<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Sport" ng-model="desc.igc.sport"></input>
+	</div>
+	<div class="row">
+		<input type="text" class="form-control" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Venue" ng-model="desc.igc.venue"></input>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="btn-group-vertical">
+				<div class="btn-group">
+					<button class="btn btn-danger" ng-click="triggerIgc(desc.igc)">Trigger</button>
+				</div>
+				<div class="btn-group"><button class="btn btn-warning" ng-click="hideIgc()">Hide</button></div>
+			</div>
+		</div>
+	</div>
+</div>

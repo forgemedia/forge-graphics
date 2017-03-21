@@ -165,7 +165,7 @@
 }
 
 @mixin flip-stagger {
-	&.ng-enter {
+	&.ng-enter, &.ng-hide-remove {
 		opacity: 0;
 		transform: rotateX(270deg) perspective(50vw);
 		transform-origin: center top 0;
@@ -182,7 +182,7 @@
 		}
 	}
 
-	&.ng-leave {
+	&.ng-leave, &.ng-hide-add {
 		opacity: 1;
 		transform: rotateX(0deg) perspective(50vw);
 		transform-origin: center bottom 0;
