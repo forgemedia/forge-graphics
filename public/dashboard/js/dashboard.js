@@ -104,6 +104,7 @@ app.config(
 		$scope.cuIcons = [
 			'tv',
 			'radio',
+			'radio extra'
 			// 'headphones',
 			// 'soccer-ball-o'
 		];
