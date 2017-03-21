@@ -30,6 +30,17 @@ app.service('generalSync',
 
         $scope.state = {};
 
+		socket.emit("hashtags:get");
+		socket.emit("socialMediaOutlets:get");
+
+		socket.on("hashtags", function(msg) {
+			$scope.hashtags = msg;
+		});
+
+		socket.on("socialMediaOutlets", function(msg) {
+			$scope.iSocialMediaOutlets = msg;
+		});
+
         socket.on("general:resetcg", function() {
 			$scope.state.showLogo = false;
 			$timeout(function() {
@@ -46,33 +57,33 @@ app.service('generalSync',
         // $scope.round = "";
 
         $scope.htNumber = 0;
-        $scope.hashtags = [{
-                hashtag: '@ForgeSport',
-                classes: []
-            },
-            {
-                hashtag: '#suvarsity',
-                classes: ['uos']
-            },
-            {
-                hashtag: '#hallamvarsity',
-                classes: ['shu']
-            }
-        ];
-		$scope.iSocialMediaOutlets = [
-			{
-				icon: 'facebook-square',
-				id: '@ForgeSportPage'
-			},
-			{
-				icon: 'twitter-square',
-				id: '@ForgeSport'
-			},
-			{
-				icon: 'instagram',
-				id: '@Forge_Sport'
-			}
-		];
+        // $scope.hashtags = [{
+        //         hashtag: '@ForgeSport',
+        //         classes: []
+        //     },
+        //     {
+        //         hashtag: '#suvarsity',
+        //         classes: ['uos']
+        //     },
+        //     {
+        //         hashtag: '#hallamvarsity',
+        //         classes: ['shu']
+        //     }
+        // ];
+		// $scope.iSocialMediaOutlets = [
+		// 	{
+		// 		icon: 'facebook-square',
+		// 		id: '@ForgeSportPage'
+		// 	},
+		// 	{
+		// 		icon: 'twitter-square',
+		// 		id: '@ForgeSport'
+		// 	},
+		// 	{
+		// 		icon: 'instagram',
+		// 		id: '@Forge_Sport'
+		// 	}
+		// ];
 
         $scope.liNumber = 0;
         $scope.liveItems = [{

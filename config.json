@@ -14,6 +14,33 @@
         "code": "dch",
         "name": "Danny Dyer's Chocolate Homunculus"
     }],
+	"hashtags": [{
+			"hashtag": "@ForgeSport",
+			"classes": []
+		},
+		{
+			"hashtag": "#suvarsity",
+			"classes": ["uos"]
+		},
+		{
+			"hashtag": "#hallamvarsity",
+			"classes": ["shu"]
+		}
+	],
+	"socialMediaOutlets": [
+		{
+			"icon": "facebook-square",
+			"id": "@ForgeSportPage"
+		},
+		{
+			"icon": "twitter-square",
+			"id": "@ForgeSport"
+		},
+		{
+			"icon": "instagram",
+			"id": "@Forge_Sport"
+		}
+	],
 	"sockets": {
 		"general": [
 			"resetcg",
@@ -44,7 +71,9 @@
 	},
 	"expose": [
 		"project",
-		"teams"
+		"teams",
+		"socialMediaOutlets",
+		"hashtags"
 	],
 	"dataStoresDefault": {
 		"general": {
