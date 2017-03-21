@@ -163,3 +163,39 @@
 		opacity: 0;
 	}
 }
+
+@mixin flip-stagger {
+	&.ng-enter {
+		opacity: 0;
+		transform: rotateX(270deg) perspective(50vw);
+		transform-origin: center top 0;
+		transition: 0.5s;
+		transition-timing-function: $overshoot-cubic-bezier;
+
+		&-stagger {
+			transition-delay: 0.15s;
+		}
+
+		&-active {
+			transform: rotateX(0deg);
+			opacity: 1;
+		}
+	}
+
+	&.ng-leave {
+		opacity: 1;
+		transform: rotateX(0deg) perspective(50vw);
+		transform-origin: center bottom 0;
+		transition: 0.5s;
+		transition-timing-function: $cubic-bezier-reverse;
+
+		&-stagger {
+			transition-delay: 0.15s;
+		}
+
+		&-active {
+			transform: rotateX(90deg);
+			opacity: 0;
+		}
+	}
+}

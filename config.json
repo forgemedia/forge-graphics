@@ -16,7 +16,8 @@
     }],
 	"sockets": {
 		"general": [
-			"resetcg"
+			"resetcg",
+			"social"
 		],
 		"lowerThirds": [
 			"showTitle",

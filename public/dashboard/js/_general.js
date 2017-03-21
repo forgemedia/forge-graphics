@@ -18,6 +18,10 @@ app.controller('generalCGController',
             }
         }, true);
 
+		$scope.triggerSocial = function() {
+			socket.emit("general:social");
+		};
+
         $scope.toggleBugPosition = function() {
             var lp = $scope.general.showLogo;
             $scope.general.showLogo = false;

@@ -1,6 +1,9 @@
 @import "../bower_components/normalize-scss/normalize";
 @import "../bower_components/susy/sass/susy";
 @import "../node_modules/spline-scss/dist/spline";
+$fa-font-path: "../../bower_components/font-awesome-sass/assets/fonts/font-awesome/";
+@import "../bower_components/font-awesome-sass/assets/stylesheets/font-awesome";
+
 
 @import 'variables';
 @import 'mixins/overlay';
@@ -14,6 +17,7 @@
 @import 'lowerThirds/title';
 @import 'lowerThirds/teams';
 @import 'ticker';
+@import 'social';
 @import 'varsity/boxing';
 @import 'varsity/rugby';
 @import 'varsity/varsityLive';
