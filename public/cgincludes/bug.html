@@ -21,9 +21,10 @@
 	<div ng-show="showComingUp">
 		<ul>
 			<li ng-repeat="cu in comingUp">
-				<span class="fa fa-{{cu.icon}}"></span>
+				<!-- <span class="fa fa-{{cu.icon}}"></span> -->
+				<img ng-src="/img/{{cu.icon}}.svg" />
 				<span class="smid">{{cu.sport}}</span>
-				<span class="smsub"><strong>{{cu.network}} </strong>{{cu.time}}</span>
+				<span class="smsub"><strong>Forge {{cu.icon}} </strong>{{cu.time}}</span>
 			</li>
 		</ul>
 	</div>

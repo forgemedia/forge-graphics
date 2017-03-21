@@ -7,8 +7,9 @@ app.controller('generalCGController',
 
 		$scope.cuIcons = [
 			'tv',
-			'headphones',
-			'soccer-ball-o'
+			'radio',
+			// 'headphones',
+			// 'soccer-ball-o'
 		];
 
 		$scope.dataStores = {
