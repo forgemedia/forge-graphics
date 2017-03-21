@@ -1,9 +1,26 @@
 app.controller('generalCGController',
-    function($scope, $rootScope, $interval, $timeout, localStorageService, socket) {
-        // $scope.general = {
-        //     tickerItems: [],
-        //     cTickerItems: []
-        // };
+    function($scope, $rootScope, $interval, $timeout, localStorageService, $window, socket) {
+        $scope.general = {
+            tickerItems: [],
+            cTickerItems: []
+        };
+
+		$scope.cuIcons = [
+			'tv',
+			'headphones',
+			'soccer-ball-o'
+		];
+
+		$scope.dataStores = {
+			comingUp: []
+		};
+
+		// $scope.comingUp = [];
+
+		for (var index in $scope.dataStores) {
+			var ie = localStorageService.get('gn_' + index);
+			if (ie) $scope.dataStores[index] = ie;
+		};
 
         socket.on("general", function(msg) {
             $scope.general = msg;
@@ -17,6 +34,10 @@ app.controller('generalCGController',
                 getGeneralData();
             }
         }, true);
+
+		$scope.triggerComingUp = function(cu) {
+			socket.emit("general:comingUp", cu);
+		};
 
 		$scope.triggerSocial = function() {
 			socket.emit("general:social");
@@ -63,12 +84,21 @@ app.controller('generalCGController',
             socket.emit("general:destroyVotesGraph");
         };
 
-        $scope.clearLocalStorage = function() {
-            localStorageService.clearAll();
-        };
+		function getGeneralData() {
+			socket.emit("general:get");
+		};
 
-        function getGeneralData() {
-            socket.emit("general:get");
-        };
+		$scope.storeEntries = function() {
+			for (var index in $scope.dataStores) {
+				localStorageService.set('gn_' + index, $scope.dataStores[index]);
+			};
+		};
+
+		$scope.clearLocalStorage = function() {
+			localStorageService.clearAll();
+		};
+
+		$scope.$on("$destroy", $scope.storeEntries);
+		$window.onbeforeunload = $scope.storeEntries;
     }
 );

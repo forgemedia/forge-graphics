@@ -44,7 +44,8 @@
 	"sockets": {
 		"general": [
 			"resetcg",
-			"social"
+			"social",
+			"comingUp"
 		],
 		"lowerThirds": [
 			"showTitle",

@@ -16,3 +16,15 @@
 <div id="varsityBug" ng-controller="generalCtrl" ng-show="state.showVBug && state.showLogo">
 	<img ng-src="/img/varsity-{{state.bugBlack ? 'black' : 'white'}}.svg" />
 </div>
+
+<div id="comingUp" ng-controller="generalCtrl">
+	<div ng-show="showComingUp">
+		<ul>
+			<li ng-repeat="cu in comingUp">
+				<span class="fa fa-{{cu.icon}}"></span>
+				<span class="smid">{{cu.sport}}</span>
+				<span class="smsub"><strong>{{cu.network}} </strong>{{cu.time}}</span>
+			</li>
+		</ul>
+	</div>
+</div>

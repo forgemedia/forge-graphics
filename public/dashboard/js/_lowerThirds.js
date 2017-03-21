@@ -76,11 +76,7 @@ app.controller('lowerThirdsCGController',
 				localStorageService.set('lt_' + index, $scope.dataStores[index]);
 			};
         };
-
-		$scope.clearLocalStorage = function() {
-			localStorageService.clearAll();
-		};
-
+		
         $scope.$on("$destroy", $scope.storeEntries);
         $window.onbeforeunload = $scope.storeEntries;
     }

@@ -129,3 +129,35 @@
 		filter: drop-shadow(0px 0px 0.5vw rgba(0,0,0,0.5));
 	}
 }
+
+#comingUp {
+	@include popup-ul(6vw);
+
+	span {
+		&.fa {
+			font-size: 4vw;
+			line-height: 6vw;
+			left: 0.5vw;
+			transform: translateY(-0.3vw);
+		}
+
+		$smleft: 5.5vw;
+
+		&.smid {
+			font-size: 2vw;
+			//top: 0.7vw;
+			left: $smleft;
+			top: 0.9vw;
+			font-weight: 500;
+			//top: 0.75vw;
+			letter-spacing: -0.05em;
+		}
+
+		&.smsub {
+			left: $smleft;
+			font-size: 1.3vw;
+
+			top: 3.1vw;
+		}
+	}
+}

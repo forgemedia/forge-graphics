@@ -131,6 +131,45 @@
         </div>
 
 		<div class="page-header">
+			<h3>Matches/broadcasts coming up</h3>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<select class="form-control" ng-options="icon for icon in cuIcons" ng-model="cComingUp.icon"></select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<input type="text" class="form-control" autocorrect="off" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="Sport" ng-model="cComingUp.sport" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<input type="text" class="form-control" autocorrect="off" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="Network" ng-model="cComingUp.network" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<input type="text" class="form-control" autocorrect="off" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="Time" ng-model="cComingUp.time" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="btn-group">
+						<button class="btn btn-success" ng-click="dataStores.comingUp.push(cComingUp); cComingUp = {}" ng-disabled="dataStores.comingUp.length > 3"><span class="glyphicon glyphicon-plus"></span></button>
+						<button class="btn btn-danger" ng-click="triggerComingUp(dataStores.comingUp)" ng-disabled="dataStores.comingUp.length < 1"><span class="glyphicon glyphicon-play"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="row" ng-repeat="cu in dataStores.comingUp">
+				<span>{{cu}}</span>
+				<button class="btn btn-warning" ng-click="dataStores.comingUp.splice($index, 1)"><span class="glyphicon glyphicon-minus"></span></button>
+			</div>
+		</div>
+
+		<div class="page-header">
 		    <h3>Maintenance</h3>
 		</div>
         <div class="form-group">
