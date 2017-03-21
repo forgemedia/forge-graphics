@@ -1,0 +1,83 @@
+%popup-main {
+	position: absolute;
+	width: 25vw;
+	height: 100vh;
+	left: $main-margin;
+
+	* {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: clip;
+	}
+
+	span {
+		display: inline-block;
+		//top: -3vw;
+		position: absolute;
+		//line-height: 8vw;
+		//font-weight: 700;
+		padding-left: 0.5vw;
+	}
+}
+
+%popup-div {
+	width: 100%;
+	position: absolute;
+	bottom: 13vh;
+}
+
+%popup-inner {
+	@include flip-stagger;
+	@include overlay($light-colour);
+	border: 0.3vw solid $dark-colour;
+	color: $dark-colour;
+	box-shadow: $lower-box-shadow;
+	margin-bottom: 0.5vw;
+	border-radius: 0.5vw;
+}
+
+%popup {
+	@extend %popup-main;
+
+	> div {
+		@extend %popup-div;
+		@extend %popup-inner;
+	}
+}
+
+@mixin popup($height) {
+	@extend %popup;
+
+	> div {
+		height: $height;
+	}
+}
+
+%popup-ul {
+	@extend %popup-main;
+
+	> div {
+		@extend %popup-div;
+
+		ul {
+			width: 100%;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				@extend %popup-inner;
+			}
+		}
+	}
+}
+
+@mixin popup-ul($height) {
+	@extend %popup-ul;
+
+	ul {
+		li {
+			height: $height;
+		}
+	}
+}

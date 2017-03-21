@@ -49,85 +49,38 @@
 }
 
 #igc {
-	position: absolute;
-	//top: 0px;
-	//bottom: 0px;
-	width: 25vw;
-	height: 100vh;
-	left: $main-margin;
-	* {
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: clip;
-	}
-	//border: 2px solid $dark-colour;
+	@include popup(8vw);
 
-	> div {
-		//@include fade(0.5s, 0s, 0.5s);
-		//height: 20vh;
-		width: 100%;
-		position: absolute;
-		bottom: 13vh;
-		//border: 1px solid $dark-colour;
-		//margin: 1vw;
-		//@include fade(0.5s, 0s, 0s);
-		@include flip-stagger;
-		//opacity: 1;
-		//transition: opacity 0.5s linear;
-		height: 8vw;
-		@include overlay($light-colour);
-		border: 0.3vw solid $dark-colour;
-		color: $dark-colour;
-		box-shadow: $lower-box-shadow;
-		//padding: 0.6vw;
-		//padding-left: 1vw;
-		//margin-left: 0.3vw;
-		//margin-top: 0.2vw;
-		margin-bottom: 0.5vw;
-		border-radius: 0.5vw;
-
-		span {
-			&.fa {
-				font-size: 6vw;
-				line-height: 8vw;
-				left: 0.5vw;
-			}
-
-			$smleft: 6.5vw;
-
-			&.smid {
-				font-size: 2vw;
-				//top: 0.7vw;
-				left: $smleft;
-				top: 1.15vw;
-				font-weight: 500;
-				//top: 0.75vw;
-				letter-spacing: -0.05em;
-			}
-
-			&.smsub {
-				left: $smleft;
-				font-size: 1.3vw;
-
-				&.sport {
-					top: 3.45vw;
-				}
-
-				&.venue {
-					top: 4.95vw;
-				}
-			}
-
-			display: inline-block;
-			//top: -3vw;
-			position: absolute;
-			//line-height: 8vw;
-			//font-weight: 700;
-			padding-left: 0.5vw;
+	span {
+		&.fa {
+			font-size: 6vw;
+			line-height: 8vw;
+			left: 0.5vw;
 		}
 
-		//&.ng-hide {
-		//	opacity: 0;
-		//}
+		$smleft: 6.5vw;
+
+		&.smid {
+			font-size: 2vw;
+			//top: 0.7vw;
+			left: $smleft;
+			top: 1.15vw;
+			font-weight: 500;
+			//top: 0.75vw;
+			letter-spacing: -0.05em;
+		}
+
+		&.smsub {
+			left: $smleft;
+			font-size: 1.3vw;
+
+			&.sport {
+				top: 3.45vw;
+			}
+
+			&.venue {
+				top: 4.95vw;
+			}
+		}
 	}
 }
