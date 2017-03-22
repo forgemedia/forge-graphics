@@ -85,6 +85,43 @@
 	}
 }
 
+#lt {
+	@include popup(8vw);
+
+	span {
+		&.fa {
+			font-size: 6vw;
+			line-height: 8vw;
+			left: 0.5vw;
+		}
+
+		$smleft: 6.5vw;
+
+		&.smid {
+			font-size: 2vw;
+			//top: 0.7vw;
+			left: $smleft;
+			top: 1.15vw;
+			font-weight: 500;
+			//top: 0.75vw;
+			letter-spacing: -0.05em;
+		}
+
+		&.smsub {
+			left: $smleft;
+			font-size: 1.3vw;
+
+			&.lower1 {
+				top: 3.45vw;
+			}
+
+			&.lower2 {
+				top: 4.95vw;
+			}
+		}
+	}
+}
+
 $teams-aux-height: 3vw;
 
 .vsc {

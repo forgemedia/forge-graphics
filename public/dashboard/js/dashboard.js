@@ -444,8 +444,16 @@ app.config(
 		vo: {
 			people: []
 		},
-		igc: {}
+		igc: {},
+		lt: {}
 	};
+
+	$scope.icons = [
+		"phone",
+		"tv",
+		"headphones",
+		"futbol-o"
+	];
 
 	for (var index in $scope.desc) {
 		var ie = localStorageService.get('vl_' + index);
@@ -465,9 +473,13 @@ app.config(
 	$scope.triggerIgc = function(igc) {
 		socket.emit('varsityLive:igc', igc);
 	};
-	
+
 	$scope.hideIgc = function() {
 		socket.emit('varsityLive:igc', 2)
+	};
+
+	$scope.triggerLt = function(lt) {
+		socket.emit('varsityLive:lt', lt);
 	};
 
 	$scope.$watch('varsityLive', function() {

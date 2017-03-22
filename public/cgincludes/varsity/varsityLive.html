@@ -19,6 +19,15 @@
 	</div>
 </div>
 
+<div ng-controller="varsityLiveCtrl" id="lt">
+	<div ng-show="show.lt">
+		<span class="fa fa-{{dataStores.lt.icon}}"></span>
+		<span class="smid">{{dataStores.lt.upper}}</span>
+		<span class="smsub lower1">{{dataStores.lt.lower1}}</span>
+		<span class="smsub lower2">{{dataStores.lt.lower2}}</span>
+	</div>
+</div>
+
 <div class="lowerThird vsc" ng-controller="generalCtrl" ng-show="showScoreGraphic">
 	<!-- <img ng-src="/img/{{teamsContent.leftPosTeam.code}}.svg" ng-show="showScoreGraphic" class="logo leftLogo"/>
 	<img ng-src="/img/{{teamsContent.rightPosTeam.code}}.svg" ng-show="showScoreGraphic" class="logo rightLogo"/> -->
