@@ -25,13 +25,13 @@
 	<img ng-src="/img/uos.svg" ng-show="showScoreGraphic" class="logo leftLogo"/>
 	<img ng-src="/img/shu.svg" ng-show="showScoreGraphic" class="logo rightLogo"/>
 	<div id="mtltContainer" ng-show="showScoreGraphic">
-		<div class="teamContainer colourScheme uos" ng-style="{'width': (score.uos / (score.uos + score.shu)) * 100 + '%'}" id="leftTeamContainer">
+		<div class="teamContainer colourScheme uos" ng-style="{'width': (score.uos / (score.uos + score.shu)) * 100 + '%'}" id="leftTeamContainer" ng-show="showScoreGraphic">
 			<!-- <span ng-show="showScoreGraphic" class="team">{{teamsContent.leftPosTeam.name}}</span> -->
-			<span ng-show="showScoreGraphic" class="team">{{score.uos}}</span>
+			<span ng-show="showScoreGraphic" class="team" ng-class="{'winner': score.uos > 39}">{{score.uos}}</span>
 		</div>
-		<div class="teamContainer colourScheme shu" ng-style="{'left': (score.uos / (score.uos + score.shu)) * 100 + '%', 'width': (score.shu / (score.uos + score.shu)) * 100 + '%'}"  id="rightTeamContainer">
+		<div class="teamContainer colourScheme shu" ng-style="{'left': (score.uos / (score.uos + score.shu)) * 100 + '%', 'width': (score.shu / (score.uos + score.shu)) * 100 + '%'}"  id="rightTeamContainer" ng-show="showScoreGraphic">
 			<!-- <span ng-show="showScoreGraphic" class="team">{{teamsContent.rightPosTeam.name}}</span> -->
-			<span ng-show="showScoreGraphic" class="team">{{score.shu}}</span>
+			<span ng-show="showScoreGraphic" class="team"  ng-class="{'winner': score.shu > 39}">{{score.shu}}</span>
 		</div>
 	</div>
 	<div class="auxContainer" ng-show="showScoreGraphic" id="sportContainer">
