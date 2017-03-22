@@ -52,6 +52,10 @@ app.controller('generalCGController',
 			socket.emit("general:social");
 		};
 
+		$scope.triggerScore = function() {
+			socket.emit("general:showScore");
+		}
+
         $scope.toggleBugPosition = function() {
             var lp = $scope.general.showLogo;
             $scope.general.showLogo = false;

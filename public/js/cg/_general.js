@@ -3,6 +3,7 @@ app.controller('generalCtrl',
         $scope.tickInterval = 1000;
 
         $scope.state = {};
+		$scope.score = {};
 
 		socket.emit("hashtags:get");
 		socket.emit("socialMediaOutlets:get");
@@ -29,6 +30,15 @@ app.controller('generalCtrl',
 		// 		$scope.showComingUp = false;
 		// 	}, 8000);
 		// });
+
+		socket.on("general:showScore", function(msg){
+			$scope.score = $scope.state.score;
+			$scope.showScoreGraphic = true;
+
+			$timeout(function() {
+				$scope.showScoreGraphic = false;
+			}, 10000);
+		});
 
 		socket.on("general:comingUp", function(msg) {
 			$scope.comingUp = [];

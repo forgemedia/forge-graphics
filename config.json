@@ -45,7 +45,8 @@
 		"general": [
 			"resetcg",
 			"social",
-			"comingUp"
+			"comingUp",
+			"showScore"
 		],
 		"score": [],
 		"lowerThirds": [

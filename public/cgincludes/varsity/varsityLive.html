@@ -18,3 +18,26 @@
 		<span class="smsub venue">{{dataStores.igc.venue}}</span>
 	</div>
 </div>
+
+<div class="lowerThird vsc" ng-controller="generalCtrl" ng-show="showScoreGraphic">
+	<!-- <img ng-src="/img/{{teamsContent.leftPosTeam.code}}.svg" ng-show="showScoreGraphic" class="logo leftLogo"/>
+	<img ng-src="/img/{{teamsContent.rightPosTeam.code}}.svg" ng-show="showScoreGraphic" class="logo rightLogo"/> -->
+	<img ng-src="/img/uos.svg" ng-show="showScoreGraphic" class="logo leftLogo"/>
+	<img ng-src="/img/shu.svg" ng-show="showScoreGraphic" class="logo rightLogo"/>
+	<div id="mtltContainer" ng-show="showScoreGraphic">
+		<div class="teamContainer colourScheme uos" ng-style="{'width': (score.uos / (score.uos + score.shu)) * 100 + '%'}" id="leftTeamContainer">
+			<!-- <span ng-show="showScoreGraphic" class="team">{{teamsContent.leftPosTeam.name}}</span> -->
+			<span ng-show="showScoreGraphic" class="team">{{score.uos}}</span>
+		</div>
+		<div class="teamContainer colourScheme shu" ng-style="{'left': (score.uos / (score.uos + score.shu)) * 100 + '%', 'width': (score.shu / (score.uos + score.shu)) * 100 + '%'}"  id="rightTeamContainer">
+			<!-- <span ng-show="showScoreGraphic" class="team">{{teamsContent.rightPosTeam.name}}</span> -->
+			<span ng-show="showScoreGraphic" class="team">{{score.shu}}</span>
+		</div>
+	</div>
+	<div class="auxContainer" ng-show="showScoreGraphic" id="sportContainer">
+		<span>Sheffield Varsity 2017</span>
+	</div>
+	<div class="auxContainer" ng-show="showScoreGraphic" id="venueContainer">
+		<span>40 to win</span>
+	</div>
+</div>

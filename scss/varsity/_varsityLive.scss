@@ -84,3 +84,145 @@
 		}
 	}
 }
+
+$teams-aux-height: 3vw;
+
+.vsc {
+	@include fade(0.5s, 0s, 1s);
+
+	.logo {
+		@include fade(0.5s, 1s, 0s);
+
+		height: $lower-third-height * 1.4;
+		z-index: 21;
+		position: absolute;
+		top: -($lower-third-height * 0.2);
+		filter: drop-shadow(0px 0px 0.5vw rgba(0, 0, 0, 0.5));
+
+		&.leftLogo {
+			float: left;
+			left: 0vw;
+		}
+
+		&.rightLogo {
+			float: right;
+			right: 0vw;
+		}
+	}
+
+	#vs {
+		@include slide-down(0.5s, 1.5s, 0s);
+		position: absolute;
+		width: 100vw;
+		left: -$main-margin - 1;
+		height: $lower-third-height * 1.1;
+		z-index: 22;
+		display: block;
+		//margin: auto;
+		//text-align: center;
+		top: -0.4vw;
+		filter: drop-shadow(0px 0px 0.5vw rgba(0, 0, 0, 0.5));
+	}
+
+	#mtltContainer {
+		//@include container($lower-third-container-width);
+		width: $lower-third-container-width - 2vw;
+		left: 2vw;
+		@include overlay($light-colour);
+		box-shadow: $lower-box-shadow;
+		border-radius: $lower-third-height / 10;
+		height: $lower-third-height;
+		position: absolute;
+		//left: $main-margin;
+		overflow: hidden;
+		//transition: opacity 0.5s linear 0.2s;
+		@include scale-from-centre(0.5s, 0s, 0.5s);
+
+		.teamContainer {
+			//@include span(6 of 12 no-gutters);
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			text-align: center;
+			z-index: 5;
+			@include gutters(10vw inside);
+
+			&#leftTeamContainer {
+				//@include pre(1 of 12);
+				//text-align: right;
+
+				span {
+					float: right;
+				}
+			}
+
+			&#rightTeamContainer {
+				//@include pre(6 of 12);
+				left: 50%;
+			}
+
+			span.team {
+				@include fade(0.5s, 1s, 0s);
+
+				position: relative;
+				top: 52%;
+				transform: translateY(-50%);
+
+				display: block;
+				width: 60%;
+				//top: 50%;
+				//line-height: $lower-third-height;
+				line-height: 2.6vw;
+				font-weight: 700;
+				font-size: 2.5vw;
+				//text-transform: uppercase;
+			}
+		}
+	}
+
+	.auxContainer {
+		position: absolute;
+		width: $lower-third-container-width / 2;
+		left: $lower-third-container-width / 4;
+		text-align: center;
+		height: $teams-aux-height;
+		@include overlay($dark-colour);
+		box-shadow: $lower-box-shadow;
+		z-index: -1;
+		font-size: 1.25vw;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: $light-colour;
+
+		span {
+			width: 100%;
+			display: block;
+
+			line-height: $teams-aux-height;
+		}
+
+		&#sportContainer {
+			@include slide-up(0.5s, 1s, 0s);
+
+			top: -$teams-aux-height * 0.8;
+			border-top-left-radius: $teams-aux-height / 3;
+			border-top-right-radius: $teams-aux-height / 3;
+
+			span {
+				transform: translateY(-0.2vw);
+			}
+		}
+
+		&#venueContainer {
+			@include slide-down(0.5s, 1s, 0s);
+
+			top: $lower-third-height - $teams-aux-height * 0.2;
+			border-bottom-left-radius: $teams-aux-height / 3;
+			border-bottom-right-radius: $teams-aux-height / 3;
+
+			span {
+				transform: translateY(0.4vw);
+			}
+		}
+	}
+}
