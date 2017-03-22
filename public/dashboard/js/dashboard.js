@@ -108,6 +108,11 @@ app.config(
 			else $scope.general.score.shu=0;
 		};
 
+		$scope.tadd = function(i) {
+			if (!(($scope.general.score.total+i) < 1)) $scope.general.score.total+=i;
+			else $scope.general.score.total=0;
+		};
+
 		$scope.cuIcons = [
 			'tv',
 			'radio',
