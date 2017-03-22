@@ -47,6 +47,7 @@
 			"social",
 			"comingUp"
 		],
+		"score": [],
 		"lowerThirds": [
 			"showTitle",
 			"showHeadline",
@@ -64,10 +65,6 @@
 			"setTimer",
 			"setLimiter",
 			"timer"
-		],
-		"varsityLive": [
-			"vo",
-			"igc"
 		]
 	},
 	"expose": [
@@ -78,7 +75,13 @@
 	],
 	"dataStoresDefault": {
 		"general": {
-			"showSm": {}
+			"showSm": {},
+			"tickerItems": [],
+			"cTickerItems": [],
+			"score": {
+				"uos": 0,
+				"shu": 0
+			}
 		},
 		"rugby": {
 			"leftScore": 0,

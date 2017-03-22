@@ -1,9 +1,16 @@
 app.controller('generalCGController',
     function($scope, $rootScope, $interval, $timeout, localStorageService, $window, socket) {
-        $scope.general = {
-            tickerItems: [],
-            cTickerItems: []
-        };
+		socket.emit("general:get");
+
+		$scope.uadd = function(i) {
+			if (!(($scope.general.score.uos+i) < 1)) $scope.general.score.uos+=i;
+			else $scope.general.score.uos=0;
+		};
+
+		$scope.sadd = function(i) {
+			if (!(($scope.general.score.shu+i) < 1)) $scope.general.score.shu+=i;
+			else $scope.general.score.shu=0;
+		};
 
 		$scope.cuIcons = [
 			'tv',
