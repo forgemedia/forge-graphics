@@ -297,8 +297,8 @@ app.service('generalSync',
 
 	$scope.start = function() {
 		timerPromise = $interval(function() {
-			if ($scope.limiter > 0 && $scope.stopwatch == $scope.limiter && $scope.state.hardLimiter) $scope.stop();
-			else $scope.stopwatch++;
+			if (($scope.limiter > 0 && $scope.stopwatch == $scope.limiter && $scope.state.hardLimiter) || ($scope.state.isCountdown && $scope.stopwatch < 1)) $scope.stop();
+			else $scope.stopwatch+=$scope.state.isCountdown?-1:1;
 		}, 1000);
 	};
 
