@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 console.log('  Quit using CTRL+C');
 console.log('  In the event of issues, first try quitting and running \'npm install\' and \'bower install\'');
 console.log('  Time of start: ' + new Date().toISOString());
