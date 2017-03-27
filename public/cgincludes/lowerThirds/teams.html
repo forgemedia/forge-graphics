@@ -4,12 +4,14 @@
 	<div id="mtltContainer" ng-show="showTeams">
 		<div class="teamContainer colourScheme" ng-class="teamsContent.leftPosTeam.code" id="leftTeamContainer">
 			<span ng-show="showTeams" class="team">{{teamsContent.leftPosTeam.name}}</span>
+			<span class="score" ng-show="showTeams && teamsContent.showScores">{{teamsContent.leftPosScore}}</span>
 		</div>
 		<div class="teamContainer colourScheme" ng-class="teamsContent.rightPosTeam.code" id="rightTeamContainer">
+			<span class="score" ng-show="showTeams && teamsContent.showScores">{{teamsContent.rightPosScore}}</span>
 			<span ng-show="showTeams" class="team">{{teamsContent.rightPosTeam.name}}</span>
 		</div>
 	</div>
-	<img src="/img/vs.svg" id="vs" ng-show="showTeams">
+	<img src="/img/vs.svg" id="vs" ng-show="showTeams && !teamsContent.showScores">
 	<div class="auxContainer" ng-show="showTeams" id="sportContainer">
 		<span>{{teamsContent.sport}}</span>
 	</div>
