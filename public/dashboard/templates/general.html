@@ -48,6 +48,12 @@
 				Back soon
 			</label>
 		</div>
+		<div class="form-group">
+			<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="form-control" ng-model="general.backSoonMessage"></input>
+			<div class="btn-group">
+				<button class="btn btn-danger" ng-click="general.iBackSoonMessage = general.backSoonMessage">Set</button>
+			</div>
+		</div>
 		<!-- <div class="checkbox checkbox-indented">
             <label>
                 <toggle ng-model="general.showSocial"></toggle>
