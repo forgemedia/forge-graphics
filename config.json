@@ -84,6 +84,8 @@
 			"showSm": {},
 			"tickerItems": [],
 			"cTickerItems": [],
+			"backSoonMessage": "We'll be right back.",
+			"iBackSoonMessage": "We'll be right back.",
 			"score": {
 				"uos": 0,
 				"shu": 0,
