@@ -67,11 +67,36 @@ $teams-aux-height: 3vw;
 				span {
 					float: right;
 				}
+
+				span.score {
+					left: 80%;
+				}
 			}
 
 			&#rightTeamContainer {
 				//@include pre(6 of 12);
 				left: 50%;
+
+				span.score {
+					left: -5%;
+					float: left;
+				}
+			}
+
+			span.score {
+				@include fade(0.5s, 1s, 0s);
+
+				position: absolute;
+				top: 52%;
+				transform: translateY(-50%);
+
+				display: block;
+				width: 25%;
+				//top: 50%;
+				//line-height: $lower-third-height;
+				line-height: 2.6vw;
+				//font-weight: 700;
+				font-size: 2.5vw;
 			}
 
 			span.team {
@@ -82,7 +107,9 @@ $teams-aux-height: 3vw;
 				transform: translateY(-50%);
 
 				display: block;
-				width: 75%;
+				width: 65%;
+				left: 0px;
+				right: 0px;
 				//top: 50%;
 				//line-height: $lower-third-height;
 				line-height: 2.6vw;
