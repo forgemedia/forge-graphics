@@ -14,7 +14,7 @@
 				<div class="col-md-4 col-xs-6"><input type="text" class="form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="dataStores.teams.rightPosScore" placeholder="Score"></select></div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 col-xs-6"><input type="text" class="form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="dataStores.teams.sport" placeholder="Sport"></div>
+				<div class="col-md-4 col-xs-6"><select class="form-control" ng-model="dataStores.teams.leftPosTeam" ng-options="team.name for team in teams"></select></div>
 				<div class="col-md-4 col-xs-6"><select class="form-control" ng-model="dataStores.teams.rightPosTeam" ng-options="team.name for team in teams"></select></div>
 			</div>
 			<div class="row">
