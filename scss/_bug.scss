@@ -33,6 +33,14 @@
 				opacity: 0.4;
 				transform: scale(1.3) rotate(-6deg);
 	        }
+
+			&#winners {
+	            top: -7.1vw;
+	            width: 7.5vw;
+	            left: $bug-logo-left + 1vw;
+				opacity: 0.9;
+				transform: scale(1.3);
+	        }
         }
 	}
 
