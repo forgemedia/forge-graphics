@@ -1,5 +1,5 @@
-$rugby-bug-width: $bug-height * 11;
-$team-name-width: $bug-height * 2.15;
+$rugby-bug-width: $bug-height * 12;
+$team-name-width: $bug-height * 1.9;
 $left-team-name-left: $rugby-bug-width * 0.51;
 
 #rugbyBug {
@@ -61,12 +61,12 @@ $left-team-name-left: $rugby-bug-width * 0.51;
 		//box-shadow: inset $lower-box-shadow;
 
 		&#leftPosition {
-			left: $left-team-name-left;
+			left: $left-team-name-left + 1;
 			//padding-left: 2.5vw;
 		}
 
 		&#rightPosition {
-			left: $left-team-name-left + $team-name-width;
+			left: $left-team-name-left + $team-name-width +1;
 			//padding-left: 1vw;
 		}
 	}

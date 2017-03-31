@@ -46,8 +46,8 @@ app.controller('rugbyCGController', function($scope, $rootScope, $window, localS
 	};
 
 	$scope.resetScores = function() {
-		$scope.rugby.leftScore = 0;
-		$scope.rugby.rightScore = 0;
+		$scope.rugby.leftScore = 501;
+		$scope.rugby.rightScore = 501;
 	};
 
 	$scope.setTeams = function() {
