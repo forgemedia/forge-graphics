@@ -1,7 +1,8 @@
 <div ng-controller="generalCtrl" id="bug" ng-class="{'lower': state.logoLower}">
 	<div id="logo" ng-show="state.showLogo">
 		<!-- <img id="polls" src="/img/polls.svg" /> -->
-		<img id="forge" src="/img/forge-black.svg" />
+		<img id="forge" src="/img/forge-black.svg" ng-show="!state.showWinners"/>
+		<img id="winners" src="/img/winners.svg" ng-show="state.showWinners"/>
 	</div>
 	<div class="liveSegment" ng-show="state.showLogo && state.showLive && !noLive" ng-class="liveItems[liNumber].classes">
 		<!-- <div class="liveSegmentText" ng-hide="liveToggle"><span>{{clock|date:"HH"}}&nbsp;<span style="padding-top: .1vw" ng-show="colonOnBool">:</span>&nbsp;{{clock|date:"mm"}}</span></div> -->
