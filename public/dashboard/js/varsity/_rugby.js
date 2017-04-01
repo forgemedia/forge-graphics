@@ -4,6 +4,10 @@ app.controller('rugbyCGController', function($scope, $rootScope, $window, localS
 		timer: {},
 		limiter: {}
 	};
+	$scope.customSubtract = {
+		uni: 10,
+		hallam: 10
+	};
 
 	for (var index in $scope.dataStores) {
 		var ie = localStorageService.get('lt_' + index);
@@ -28,6 +32,14 @@ app.controller('rugbyCGController', function($scope, $rootScope, $window, localS
 		if ($scope.rugby.rightScore + score < 0 && score < 1) $scope.rugby.rightScore = 0;
 		else $scope.rugby.rightScore += score;
 	};
+
+	$scope.scoreMinusLeftCustom = function() {
+		$scope.scoreAddLeft(-$scope.customSubtract.uni);
+	};
+
+	$scope.scoreMinusRightCustom = function() {
+		$scope.scoreAddRight(-$scope.customSubtract.hallam);
+	}
 
 	$scope.startTimer = function() {
 		socket.emit("rugby:timer", 'start');

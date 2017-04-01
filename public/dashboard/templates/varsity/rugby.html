@@ -113,6 +113,9 @@
 								+6
 							</button>
 						</div>
+						<div class="btn-group" role="group">
+							<input type="text" class="form-control" ng-model="customSubtract.uni">
+						</div>
 					</div>
 				</div>
 				<div class="col-md-4 col-xs-6">
@@ -138,6 +141,9 @@
 								+6
 							</button>
 						</div>
+						<div class="btn-group" role="group">
+							<input type="text" class="form-control" ng-model="customSubtract.hallam">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -157,6 +163,9 @@
 						<div class="btn-group" role="group">
 							<button class="btn btn-warning" ng-click="scoreAddLeft(-6)">-6</button>
 						</div>
+						<div class="btn-group" role="group">
+							<button class="btn btn-warning" ng-click="scoreMinusLeftCustom()">-</button>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-4 col-xs-6">
@@ -173,6 +182,9 @@
 						</div>
 						<div class="btn-group" role="group">
 							<button class="btn btn-warning" ng-click="scoreAddRight(-6)">-6</button>
+						</div>
+						<div class="btn-group" role="group">
+							<button class="btn btn-warning" ng-click="scoreMinusRightCustom()">-</button>
 						</div>
 					</div>
 				</div>
