@@ -28,7 +28,11 @@ FGGlobal.io = SocketIO.listen(server);
 app.set('view engine', 'pug');
 app.set('views', Path.join(__dirname, 'views'));
 
-app.get('/', (req, res) => res.render('index', {
+app.get('/', (req, res) => res.render('cg/index', {
+    project: Config.project
+}));
+
+app.get(['/dash', '/dashboard'], (req, res) => res.render('dash/index', {
     project: Config.project
 }));
 
