@@ -33,10 +33,7 @@ app.get('/', (req, res) => res.render('index', {
 }));
 
 app.use(Express.static(Path.join(__dirname, 'public')));
-for (let path of [
-    'bower_components',
-    'node_modules'
-]) app.use(`/${path}`, Express.static(Path.join(__dirname, path)));
+for (let path of Config.publicPaths) app.use(`/${path}`, Express.static(Path.join(__dirname, path)));
 
 // Handle socket connections
 FGGlobal.io.on('connection', FGSocketHandler);
