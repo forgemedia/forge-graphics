@@ -55,7 +55,8 @@ Gulp.task('watch:js:dash', () =>
 Gulp.task('nodemon', () =>
     Nodemon({
         script: 'server.js',
-        watch: ['server.js', 'config.json']
+        watch: ['server.js', '*.es6', 'config.json'],
+        ext: 'js, es6, json'
     })
 );
 

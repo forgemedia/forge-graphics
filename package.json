@@ -3,6 +3,8 @@
   "version": "0.3.0",
   "main": "server",
   "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.24.1",
     "express": "*",
     "gulp": "gulpjs/gulp#4.0",
     "gulp-concat": "^2.6.1",
