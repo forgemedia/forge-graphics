@@ -13,7 +13,6 @@
     "minimist": "^1.2.0",
     "postcss-cssnext": "^2.10.0",
     "socket.io": "*",
-    "spline-scss": "^2.2.0",
     "underscore": "*"
   }
 }
