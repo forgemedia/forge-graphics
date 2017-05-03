@@ -1,0 +1,6 @@
+#bug(ng-controller='generalCtrl', ng-class="{'lower': state.logoLower}")
+    #logo(ng-show='state.showLogo')
+        img#forge(src='/img/forge-black.svg', ng-show='!state.showWinners')
+        img#winners(src='/img/winners.svg', ng-show='state.showWinners')
+    .liveSegment(ng-show='state.showLogo && state.showLive && !noLive', ng-class='liveItems[liNumber].classes')
+        .liveSegmentText(ng-animate-swap='liNumber'): span {{liveItems[liNumber].text}}

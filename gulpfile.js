@@ -11,7 +11,11 @@ Gulp.task('css', () =>
     Gulp.src('scss/**/*.scss')
         .pipe(Sourcemaps.init())
         .pipe(Sass({
-            style: 'expanded'
+            style: 'expanded',
+            includePaths: [
+                'bower_components/bootstrap-sass/assets/stylesheets/',
+                'bower_components/'
+            ]
         }))
         .pipe(PostCSS([
             Cssnext({
@@ -56,7 +60,8 @@ Gulp.task('nodemon', () =>
     Nodemon({
         script: 'server.js',
         watch: ['server.js', '*.es6', 'config.json'],
-        ext: 'js, es6, json'
+        ext: 'js, es6, json',
+        args: ['--debug']
     })
 );
 

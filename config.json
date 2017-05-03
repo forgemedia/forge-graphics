@@ -1,6 +1,6 @@
 {
-	"project": "Varsity 2017",
-	"port": 3000,
+    "project": "Varsity 2017",
+    "port": 3000,
     "teams": [{
         "code": "uos",
         "name": "University of Sheffield"
@@ -14,87 +14,109 @@
         "code": "dch",
         "name": "Danny Dyer's Chocolate Homunculus"
     }],
-	"hashtags": [{
-			"hashtag": "@ForgeSport",
-			"classes": []
-		},
-		{
-			"hashtag": "#suvarsity",
-			"classes": ["uos"]
-		},
-		{
-			"hashtag": "#hallamvarsity",
-			"classes": ["shu"]
-		}
-	],
-	"socialMediaOutlets": [
-		{
-			"icon": "facebook-square",
-			"id": "@ForgeSportPage"
-		},
-		{
-			"icon": "twitter-square",
-			"id": "@ForgeSport"
-		},
-		{
-			"icon": "instagram",
-			"id": "@Forge_Sport"
-		}
-	],
-	"sockets": {
-		"general": [
-			"resetcg",
-			"social",
-			"comingUp",
-			"showScore"
-		],
-		"score": [],
-		"lowerThirds": [
-			"showTitle",
-			"showHeadline",
-			"updateHeadline",
-			"hideHeadline",
-			"showOngoing",
-			"hideOngoing",
-			"teams"
-		],
-		"varsityLive": [
-			"vo",
-			"igc",
-			"lt"
-		],
-		"boxing": [
-			"startTimer",
-			"resetTimer"
-		],
-		"rugby": [
-			"setTimer",
-			"setLimiter",
-			"timer"
-		]
-	},
-	"expose": [
-		"project",
-		"teams",
-		"socialMediaOutlets",
-		"hashtags"
-	],
-	"dataStoresDefault": {
-		"general": {
-			"showSm": {},
-			"tickerItems": [],
-			"cTickerItems": [],
-			"backSoonMessage": "We'll be right back.",
-			"iBackSoonMessage": "We'll be right back.",
-			"score": {
-				"uos": 0,
-				"shu": 0,
-				"total": 80
-			}
-		},
-		"rugby": {
-			"leftScore": 0,
-			"rightScore": 0
-		}
-	}
+    "hashtags": [{
+            "hashtag": "@ForgeSport",
+            "classes": []
+        },
+        {
+            "hashtag": "#suvarsity",
+            "classes": ["uos"]
+        },
+        {
+            "hashtag": "#hallamvarsity",
+            "classes": ["shu"]
+        }
+    ],
+    "socialMediaOutlets": [
+        {
+            "icon": "facebook-square",
+            "id": "@ForgeSportPage"
+        },
+        {
+            "icon": "twitter-square",
+            "id": "@ForgeSport"
+        },
+        {
+            "icon": "instagram",
+            "id": "@Forge_Sport"
+        }
+    ],
+    "sockets": {
+        "general": [
+            "resetcg",
+            "social",
+            "comingUp",
+            "showScore"
+        ],
+        "score": [],
+        "lowerThirds": [
+            "showTitle",
+            "showHeadline",
+            "updateHeadline",
+            "hideHeadline",
+            "showOngoing",
+            "hideOngoing",
+            "teams"
+        ],
+        "varsityLive": [
+            "vo",
+            "igc",
+            "lt"
+        ],
+        "boxing": [
+            "startTimer",
+            "resetTimer"
+        ],
+        "rugby": [
+            "setTimer",
+            "setLimiter",
+            "timer"
+        ]
+    },
+    "expose": [
+        "project",
+        "teams",
+        "socialMediaOutlets",
+        "hashtags"
+    ],
+    "dataStoresDefault": {
+        "general": {
+            "showSm": {},
+            "tickerItems": [],
+            "cTickerItems": [],
+            "backSoonMessage": "We'll be right back.",
+            "iBackSoonMessage": "We'll be right back.",
+            "score": {
+                "uos": 0,
+                "shu": 0,
+                "total": 80
+            }
+        },
+        "rugby": {
+            "leftScore": 0,
+            "rightScore": 0
+        }
+    },
+    "cgvars": {
+        "includes": [
+            "varsity/varsityLive",
+            "hashtag",
+            "varsity/boxing",
+            "varsity/rugby",
+            "lowerThirds/title",
+            "lowerThirds/teams",
+            "social",
+            "ticker"
+        ],
+        "scripts": [
+            "node_modules/socket.io-client/dist/socket.io",
+            "bower_components/humanize-duration/humanize-duration",
+            "bower_components/moment/moment",
+            "bower_components/angular/angular",
+            "bower_components/angular-animate/angular-animate",
+            "bower_components/ng-socket-io/ng-socket-io",
+            "bower_components/d3/d3",
+            "js/cg"
+        ]
+    }
 }

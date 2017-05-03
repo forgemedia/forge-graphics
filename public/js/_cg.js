@@ -1,4 +1,4 @@
-var app = angular.module('cgApp', ['socket-io', 'ngAnimate', 'timer']);
+var app = angular.module('cgApp', ['socket-io', 'ngAnimate']);
 
 app.service('generalSync',
     function(socket) {

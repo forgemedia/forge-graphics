@@ -1,0 +1,6 @@
+#comingUp(ng-controller='generalCtrl')
+    div(ng-show='showComingUp')
+        ul: li(ng-repeat='cu in comingUp')
+            img(ng-src='/img/{{cu.icon}}.svg')
+            span#smid {{cu.sport}}
+            span#smsub {{cu.time}}

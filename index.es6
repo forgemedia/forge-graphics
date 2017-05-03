@@ -7,6 +7,7 @@ import Minimist from 'minimist';
 import Express from 'express';
 import HTTP from 'http';
 import SocketIO from 'socket.io';
+import Path from 'path';
 
 // Forge graphics module imports
 import Config from './config.json';
@@ -24,9 +25,18 @@ let app = Express();
 let server = HTTP.createServer(app);
 FGGlobal.io = SocketIO.listen(server);
 
-app.use(Express.static(__dirname + '/public'));
-app.use('/bower_components', Express.static(__dirname + '/bower_components'));
-app.use('/node_modules', Express.static(__dirname + '/node_modules'));
+app.set('view engine', 'pug');
+app.set('views', Path.join(__dirname, 'views'));
+
+app.get('/', (req, res) => res.render('index', Object.assign({
+    project: Config.project
+}, Config.cgvars)));
+
+app.use(Express.static(Path.join(__dirname, 'public')));
+for (let path of [
+    'bower_components',
+    'node_modules'
+]) app.use(`/${path}`, Express.static(Path.join(__dirname, path)));
 
 // Handle socket connections
 FGGlobal.io.on('connection', FGSocketHandler);

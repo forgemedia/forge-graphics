@@ -1,0 +1,16 @@
+doctype html
+html(ng-app='cgApp')
+    meta(charset='UTF-8')
+    title ForgeCG #{project}
+    link(href='/css/theme.css' rel='stylesheet')
+body
+    div
+        include cg/bug/bug
+        include cg/bug/sm
+        include cg/bug/varsity
+        include cg/bug/comingUp
+        include cg/bug/backSoon
+        each include in includes
+            div(ng-include=`'cgincludes/${include}.html'`)
+    each script in scripts
+        script(src=`/${script}.js`)
