@@ -100,7 +100,6 @@
     "cgvars": {
         "includes": [
             "varsity/varsityLive",
-            "hashtag",
             "varsity/boxing",
             "varsity/rugby",
             "lowerThirds/title",

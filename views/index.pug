@@ -5,11 +5,12 @@ html(ng-app='cgApp')
     link(href='/css/theme.css' rel='stylesheet')
 body
     div
-        include cg/bug/bug
-        include cg/bug/sm
-        include cg/bug/varsity
-        include cg/bug/comingUp
-        include cg/bug/backSoon
+        include cg/general/bug
+        include cg/general/sm
+        include cg/general/varsity
+        include cg/general/comingUp
+        include cg/general/backSoon
+        include cg/general/hashtag
         each include in includes
             div(ng-include=`'cgincludes/${include}.html'`)
     each script in scripts
