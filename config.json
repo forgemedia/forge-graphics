@@ -96,26 +96,5 @@
             "leftScore": 0,
             "rightScore": 0
         }
-    },
-    "cgvars": {
-        "includes": [
-            "varsity/varsityLive",
-            "varsity/boxing",
-            "varsity/rugby",
-            "lowerThirds/title",
-            "lowerThirds/teams",
-            "social",
-            "ticker"
-        ],
-        "scripts": [
-            "node_modules/socket.io-client/dist/socket.io",
-            "bower_components/humanize-duration/humanize-duration",
-            "bower_components/moment/moment",
-            "bower_components/angular/angular",
-            "bower_components/angular-animate/angular-animate",
-            "bower_components/ng-socket-io/ng-socket-io",
-            "bower_components/d3/d3",
-            "js/cg"
-        ]
     }
 }

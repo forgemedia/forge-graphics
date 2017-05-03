@@ -28,9 +28,9 @@ FGGlobal.io = SocketIO.listen(server);
 app.set('view engine', 'pug');
 app.set('views', Path.join(__dirname, 'views'));
 
-app.get('/', (req, res) => res.render('index', Object.assign({
+app.get('/', (req, res) => res.render('index', {
     project: Config.project
-}, Config.cgvars)));
+}));
 
 app.use(Express.static(Path.join(__dirname, 'public')));
 for (let path of [

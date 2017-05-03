@@ -1,17 +1,39 @@
+-
+    var scripts = [
+        'node_modules/socket.io-client/dist/socket.io',
+        'bower_components/humanize-duration/humanize-duration',
+        'bower_components/moment/moment',
+        'bower_components/angular/angular',
+        'bower_components/angular-animate/angular-animate',
+        'bower_components/ng-socket-io/ng-socket-io',
+        'bower_components/d3/d3',
+        'js/cg'
+    ]
 doctype html
 html(ng-app='cgApp')
     meta(charset='UTF-8')
     title ForgeCG #{project}
     link(href='/css/theme.css' rel='stylesheet')
 body
-    div
-        include cg/general/bug
-        include cg/general/sm
-        include cg/general/varsity
-        include cg/general/comingUp
-        include cg/general/backSoon
-        include cg/general/hashtag
-        each include in includes
-            div(ng-include=`'cgincludes/${include}.html'`)
+    include cg/general/bug
+    include cg/general/sm
+    include cg/general/varsity
+    include cg/general/comingUp
+    include cg/general/backSoon
+    include cg/general/hashtag
+    include cg/general/social
+
+    include cg/varsity/boxing
+    include cg/varsity/rugby
+
+    include cg/varsity/varsityLive/voices
+    include cg/varsity/varsityLive/inGameCall
+    include cg/varsity/varsityLive/lowerThird
+    include cg/varsity/varsityLive/varsityScore
+
+    include cg/lowerThirds/headline.pug
+    include cg/lowerThirds/ongoing.pug
+    include cg/lowerThirds/title.pug
+    include cg/lowerThirds/teams.pug
     each script in scripts
         script(src=`/${script}.js`)

@@ -1,0 +1,10 @@
+.lowerThird.ongoingLowerThird(ng-controller='lowerThirdsCtrl', ng-show='showOngoing')
+  .upperSegmentBackground(ng-show='showOngoing')
+    .lowerThirdContainer
+      .textRow
+        .segment.upperSegment
+          span {{ongoingTop}}
+  .lowerSegmentBackground(ng-show='showOngoing')
+    .lowerThirdContainer
+      .segment.lowerSegment(ng-show='showOngoing')
+        span {{ongoingMain}}

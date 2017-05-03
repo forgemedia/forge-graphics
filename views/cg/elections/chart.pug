@@ -1,0 +1,6 @@
+#barChartContainer(ng-controller='generalCtrl', ng-show='showVotesGraph || showFinalGraph')
+  span.bcTitle
+    | {{curPos}}: {{round}} Round 
+    small {{curWinner}} wins
+  #bc1.barChart(ng-show='showVotesGraph')
+  #bc2.barChart(ng-show='showFinalGraph')

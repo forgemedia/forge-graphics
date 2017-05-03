@@ -1,0 +1,10 @@
+.lowerThird.vsc(ng-controller='generalCtrl', ng-show='showScoreGraphic')
+    img.logo.leftLogo(src='/img/uos.svg', ng-show='showScoreGraphic')
+    img.logo.rightLogo(src='/img/shu.svg', ng-show='showScoreGraphic')
+    #mtltContainer(ng-show='showScoreGraphic')
+        .teamContainer.colourScheme.uos#leftTeamContainer(ng-show='showScoreGraphic', ng-style="{'width': (score.uos / (score.uos + score.shu)) * 100 + '%'}")
+            span.team(ng-show='showScoreGraphic', ng-class="{'winner': score.uos >= score.total / 2}") {{score.uos}}
+        .teamContainer.colourScheme.shu#rightTeamContainer(ng-show='showScoreGraphic', ng-style="{'width': (score.uos / (score.uos + score.shu)) * 100 + '%'}")
+            span.team(ng-show='showScoreGraphic', ng-class="{'winner': score.shu >= score.total / 2}") {{score.shu}}
+    .auxContainer#sportContainer(ng-show='showScoreGraphic'): span Sheffield Varsity 2017
+    .auxContainer#venueContainer(ng-show='showScoreGraphic'): span {{score.total / 2}} to retain, {{(score.total / 2) + 0.5}} to win

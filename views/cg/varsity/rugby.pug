@@ -1,0 +1,8 @@
+#rugbyBug(ng-controller='rugbyCtrl', ng-show='state.showRugby', ng-class="{'overtime': stopwatch > limiter && !state.hardLimiter && limiter > 0 }")
+    #timer: span {{Math.floor(stopwatch/60).pad(2)}}:{{(stopwatch%60).pad(2)}}
+    .teamName.colourScheme#leftPosition(ng-class='state.leftPosTeam.code') {{state.leftPosTeam.code}}
+    .teamName.colourScheme#rightPosition(ng-class='state.rightPosTeam.code') {{state.rightPosTeam.code}}
+    .scoreContainer#leftScoreContainer
+        .score#leftScore(ng-bind='state.leftScore')
+    .scoreContainer#rightScoreContainer
+        .score#rightScore(ng-bind='state.rightScore')

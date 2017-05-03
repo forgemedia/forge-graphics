@@ -1,0 +1,17 @@
+.lowerThird.titleLowerThird(ng-controller='lowerThirdsCtrl', ng-class='titleContent.titleClasses', ng-show='showTitle')
+  .upperSegmentBackground
+    .lowerThirdContainer
+      .leftLowerThird
+        .segment.upperSegment
+          span {{titleContent.leftUpper}}
+      .rightLowerThird
+        .segment.upperSegment
+          span {{titleContent.rightUpper}}
+  .lowerSegmentBackground(ng-show='showTitle')
+    .lowerThirdContainer
+      .leftLowerThird
+        .segment.lowerSegment
+          span {{titleContent.leftLower}}
+      .rightLowerThird
+        .segment.lowerSegment
+          span {{titleContent.rightLower}}
