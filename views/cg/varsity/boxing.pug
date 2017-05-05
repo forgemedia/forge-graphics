@@ -1,5 +1,0 @@
-#boxingBug(ng-controller='boxingCtrl', ng-show='state.showBoxing')
-    span#timer NN:NN
-    span#round round
-    each id in [...Array(3).keys()]
-        span.round(id=`round${id+1}`, ng-class=`{'complete': state.roundComplete[${id}]}`)= id+1

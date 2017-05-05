@@ -10,17 +10,10 @@ $fa-font-path: "../../bower_components/font-awesome-sass/assets/fonts/font-aweso
 @import 'mixins/bug';
 @import 'mixins/popup';
 @import 'fonts/acumin';
-@import 'varsity/teams';
 @import 'bug';
 @import 'bug/hashtag';
-@import 'lowerThirds';
-@import 'lowerThirds/title';
-@import 'lowerThirds/teams';
 @import 'ticker';
 @import 'social';
-@import 'varsity/boxing';
-@import 'varsity/rugby';
-@import 'varsity/varsityLive';
 
 * {
     box-sizing: border-box;

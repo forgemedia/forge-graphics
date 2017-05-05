@@ -5,100 +5,17 @@
         "bower_components",
         "node_modules"
     ],
-    "teams": [{
-        "code": "uos",
-        "name": "University of Sheffield"
-    }, {
-        "code": "shu",
-        "name": "Team Hallam"
-    }, {
-        "code": "fge",
-        "name": "Forge Media"
-    }, {
-        "code": "dch",
-        "name": "Danny Dyer's Chocolate Homunculus"
-    }],
-    "hashtags": [{
-            "hashtag": "@ForgeSport",
-            "classes": []
-        },
-        {
-            "hashtag": "#suvarsity",
-            "classes": ["uos"]
-        },
-        {
-            "hashtag": "#hallamvarsity",
-            "classes": ["shu"]
-        }
-    ],
-    "socialMediaOutlets": [
-        {
-            "icon": "facebook-square",
-            "id": "@ForgeSportPage"
-        },
-        {
-            "icon": "twitter-square",
-            "id": "@ForgeSport"
-        },
-        {
-            "icon": "instagram",
-            "id": "@Forge_Sport"
-        }
-    ],
     "sockets": {
         "general": [
-            "resetcg",
-            "social",
-            "comingUp",
-            "showScore"
-        ],
-        "score": [],
-        "lowerThirds": [
-            "showTitle",
-            "showHeadline",
-            "updateHeadline",
-            "hideHeadline",
-            "showOngoing",
-            "hideOngoing",
-            "teams"
-        ],
-        "varsityLive": [
-            "vo",
-            "igc",
-            "lt"
-        ],
-        "boxing": [
-            "startTimer",
-            "resetTimer"
-        ],
-        "rugby": [
-            "setTimer",
-            "setLimiter",
-            "timer"
+            
         ]
     },
     "expose": [
-        "project",
-        "teams",
-        "socialMediaOutlets",
-        "hashtags"
+        "project"
     ],
     "dataStoresDefault": {
         "general": {
-            "showSm": {},
-            "tickerItems": [],
-            "cTickerItems": [],
-            "backSoonMessage": "We'll be right back.",
-            "iBackSoonMessage": "We'll be right back.",
-            "score": {
-                "uos": 0,
-                "shu": 0,
-                "total": 80
-            }
-        },
-        "rugby": {
-            "leftScore": 0,
-            "rightScore": 0
+            
         }
     }
 }

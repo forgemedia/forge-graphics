@@ -1,39 +1,6 @@
--
-    var scripts = [
-        'node_modules/socket.io-client/dist/socket.io',
-        'bower_components/humanize-duration/humanize-duration',
-        'bower_components/moment/moment',
-        'bower_components/angular/angular',
-        'bower_components/angular-animate/angular-animate',
-        'bower_components/ng-socket-io/ng-socket-io',
-        'bower_components/d3/d3',
-        'js/cg'
-    ]
 doctype html
 html(ng-app='cgApp')
     meta(charset='UTF-8')
     title ForgeCG #{project}
     link(href='/css/theme.css' rel='stylesheet')
 body
-    include general/bug
-    include general/sm
-    include general/varsity
-    include general/comingUp
-    include general/backSoon
-    include general/hashtag
-    include general/social
-
-    include varsity/boxing
-    include varsity/rugby
-
-    include varsity/varsityLive/voices
-    include varsity/varsityLive/inGameCall
-    include varsity/varsityLive/lowerThird
-    include varsity/varsityLive/varsityScore
-
-    include lowerThirds/headline.pug
-    include lowerThirds/ongoing.pug
-    include lowerThirds/title.pug
-    include lowerThirds/teams.pug
-    each script in scripts
-        script(src=`/${script}.js`)

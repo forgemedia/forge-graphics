@@ -1,5 +1,0 @@
-#ticker(ng-controller='generalCtrl', ng-show='state.showTicket && state.showLogo && state.logoLower')
-    .ticker-subject(ng-show='state.showTicket && state.showLogo && state.logoLower && state.showTickerSubject')
-        span {{state.cTickerSubject}}
-    .ticker-contents
-        .ticker-item(ng-repeat='ti in state.cTicketItems track by $index') {{ti}}
