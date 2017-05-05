@@ -13,6 +13,7 @@ import Path from 'path';
 import Config from './config.json';
 import FGSocketHandler from './es6/fgSocketHandler';
 import FGGlobal from './es6/fgGlobal';
+import FGDashboardRouting from './es6/fgDashboardRouting';
 
 // Set up server configuration
 let argv = Minimist(process.argv.slice(2));
@@ -27,23 +28,18 @@ FGGlobal.io = SocketIO.listen(server);
 
 app.set('view engine', 'pug');
 app.set('views', Path.join(__dirname, 'views'));
-app.locals.basedir = app.get('views');
 app.locals = {
     basedir: Path.join(app.get('views'), 'dash', 'templates'),
     project: Config.project
 }
 
-app.get('/404', (req, res) => res.send('404!'));
-
 app.get('/', (req, res) => res.render('cg/index'));
-
-app.get(/^\/dashboard\/templates\/(.+)\.html/,
-    (req, res) => res.render(`dash/templates/${req.params[0]}`));
-
-app.get(['/dash', '/dashboard'], (req, res) => res.render('dash/index'));
+app.use(['/dash', '/dashboard'], FGDashboardRouting);
 
 app.use(Express.static(Path.join(__dirname, 'public')));
 for (let path of Config.publicPaths) app.use(`/${path}`, Express.static(Path.join(__dirname, path)));
+
+app.use((req, res) => res.status(404).render('404'));
 
 // Handle socket connections
 FGGlobal.io.on('connection', FGSocketHandler);
