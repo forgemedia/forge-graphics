@@ -1,0 +1,9 @@
+.container
+    .row: .col-md-12: +input('desc.igc.name', 'Name')
+    .row: .col-md-12: +input('desc.igc.sport', 'Sport')
+    .row: .col-md-12: +input('desc.igc.venue', 'Venue')
+    .row: .col-md-12: .btn-group
+        button.btn.btn-danger(ng-click='triggerIgc(desc.igc)')
+            +gi('play')
+        button.btn.btn-warning(ng-click='hideIgc()')
+            +gi('stop')

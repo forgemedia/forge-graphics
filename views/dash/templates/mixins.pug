@@ -1,0 +1,34 @@
+mixin cb(label, model)
+    .checkbox: label
+        toggle(ng-model=model)
+        | #{label}
+
+mixin cbi(label, model)
+    .checkbox.checkbox-indented: label
+        toggle(ng-model=model)
+        | #{label}
+
+-
+    var inputAttributes = {
+        autocomplete: 'off',
+        autocorrect: 'off',
+        autocapitalize: 'off',
+        spellcheck: 'false',
+        type: 'text'
+    }
+
+mixin input(model, placeholder)
+    input.form-control(ng-model=model, placeholder=placeholder)&attributes(inputAttributes)
+
+mixin sb(val, minus, id)
+    if minus
+        button.btn.btn-danger(ng-click=`${id}add(-${val})`)
+            span.glyphicon.glyphicon-minus
+            | #{val}
+    else
+        button.btn.btn-success(ng-click=`${id}add(${val})`)
+            span.glyphicon.glyphicon-plus
+            | #{val}
+
+mixin gi(name)
+    span.glyphicon(class=`glyphicon-${name}`)

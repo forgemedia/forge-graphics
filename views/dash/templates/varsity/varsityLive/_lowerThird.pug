@@ -1,0 +1,9 @@
+.container
+    .row: .col-md-12
+        select.form-control(ng-model='desc.lt.icon', ng-options='icon for icon in icons')
+    .row: .col-md-12: +input('desc.lt.upper', 'Upper')
+    .row: .col-md-12: +input('desc.lt.lower1', 'Lower 1')
+    .row: .col-md-12: +input('desc.lt.lower2', 'Lower 2')
+    .row: .col-md-12: .btn-group
+        button.btn.btn-danger(ng-click='triggerLt(desc.lt)')
+            +gi('play')

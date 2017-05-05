@@ -27,14 +27,20 @@ FGGlobal.io = SocketIO.listen(server);
 
 app.set('view engine', 'pug');
 app.set('views', Path.join(__dirname, 'views'));
-
-app.get('/', (req, res) => res.render('cg/index', {
+app.locals.basedir = app.get('views');
+app.locals = {
+    basedir: Path.join(app.get('views'), 'dash', 'templates'),
     project: Config.project
-}));
+}
 
-app.get(['/dash', '/dashboard'], (req, res) => res.render('dash/index', {
-    project: Config.project
-}));
+app.get('/404', (req, res) => res.send('404!'));
+
+app.get('/', (req, res) => res.render('cg/index'));
+
+app.get(/^\/dashboard\/templates\/(.+)\.html/,
+    (req, res) => res.render(`dash/templates/${req.params[0]}`));
+
+app.get(['/dash', '/dashboard'], (req, res) => res.render('dash/index'));
 
 app.use(Express.static(Path.join(__dirname, 'public')));
 for (let path of Config.publicPaths) app.use(`/${path}`, Express.static(Path.join(__dirname, path)));
@@ -46,9 +52,10 @@ let port = Config.port;
 if (argv.port) port = argv.port;
 server.listen(port);
 
-console.log(`\n  Forge Graphics Server - ${Config.project}`);
-console.log(`  Listening on port ${port}`);
-if (FGGlobal.debug) console.log(`* Debug on`)
-console.log(`\n  Add http://[hostname]:${port} to a BrowserSource in OBS to use`);
-console.log(`  Go to [hostname]:'${port}'/dashboard in a web browser to control`);
-console.log(`  The [hostname] is probably 'localhost' if OBS/the dashboard are running on this computer`);
+if (!FGGlobal.debug) {
+    console.log(`\n  Forge Graphics Server - ${Config.project}`);
+    console.log(`  Listening on port ${port}`);
+    console.log(`\n  Add http://[hostname]:${port} to a BrowserSource in OBS to use`);
+    console.log(`  Go to [hostname]:'${port}'/dashboard in a web browser to control`);
+    console.log(`  The [hostname] is probably 'localhost' if OBS/the dashboard are running on this computer`);
+} else console.log(`\n* Debug on`);

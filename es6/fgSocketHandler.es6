@@ -1,7 +1,7 @@
 import FGGlobal from './fgGlobal';
 
 export default socket => {
-    if (FGGlobal.debug) console.log('* Client connected');
+    if (FGGlobal.debug) console.log(`* CONN ${socket.handshake.address}`);
 
     for (let com in FGGlobal.config.sockets) {
         let subs = FGGlobal.config.sockets[com];
@@ -29,4 +29,6 @@ export default socket => {
             FGGlobal.io.sockets.emit(expose, FGGlobal.config[expose]);
         });
     }
+
+    if (FGGlobal.debug) socket.on('disconnect', () => console.log(`* DISC ${socket.handshake.address}`))
 };

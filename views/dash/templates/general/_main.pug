@@ -1,0 +1,16 @@
+.form-group
+    +cb('Show Bug', 'general.showLogo')
+    +cbi('Show Varsity bug', 'general.showVBug')
+    +cbi('Varsity Live bug', 'general.vLive')
+    +cbi('Varsity bug with black text', 'general.bugBlack')
+    +cbi('Show Hashtags/Twitter handle', 'general.showHashtag')
+    +cbi('Show Ticker', 'general.showTicker')
+    +cb('Back soon', 'general.showBackSoon')
+.form-group: .row
+    .col-lg-10: +input('general.backSoonMessage', 'Back Soon message')
+    .col-lg-2: button.btn.btn-danger(ng-click='general.iBackSoonMessage = general.backSoonMessage') Set
+.btn-group-vertical
+    .btn-group: button.btn.btn-warning(ng-click='triggerSocial()') Highlight social media channels
+    .btn-group: button.btn.btn-danger(ng-click='toggleBugPosition()')
+        +gi('warning-sign')
+        | Move bug to {{general.logoLower? 'upper':'lower'}} position

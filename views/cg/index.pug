@@ -15,25 +15,25 @@ html(ng-app='cgApp')
     title ForgeCG #{project}
     link(href='/css/theme.css' rel='stylesheet')
 body
-    include cg/general/bug
-    include cg/general/sm
-    include cg/general/varsity
-    include cg/general/comingUp
-    include cg/general/backSoon
-    include cg/general/hashtag
-    include cg/general/social
+    include general/bug
+    include general/sm
+    include general/varsity
+    include general/comingUp
+    include general/backSoon
+    include general/hashtag
+    include general/social
 
-    include cg/varsity/boxing
-    include cg/varsity/rugby
+    include varsity/boxing
+    include varsity/rugby
 
-    include cg/varsity/varsityLive/voices
-    include cg/varsity/varsityLive/inGameCall
-    include cg/varsity/varsityLive/lowerThird
-    include cg/varsity/varsityLive/varsityScore
+    include varsity/varsityLive/voices
+    include varsity/varsityLive/inGameCall
+    include varsity/varsityLive/lowerThird
+    include varsity/varsityLive/varsityScore
 
-    include cg/lowerThirds/headline.pug
-    include cg/lowerThirds/ongoing.pug
-    include cg/lowerThirds/title.pug
-    include cg/lowerThirds/teams.pug
+    include lowerThirds/headline.pug
+    include lowerThirds/ongoing.pug
+    include lowerThirds/title.pug
+    include lowerThirds/teams.pug
     each script in scripts
         script(src=`/${script}.js`)

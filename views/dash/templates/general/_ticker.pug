@@ -1,0 +1,21 @@
+.form-group
+    .col-md-10
+        +input('general.tickerSubject', 'Ticker subject')
+    .col-md-2
+        button.btn.btn-danger(ng-click='general.cTickerSubject=general.tickerSubject') Set ticker subject
+    +cb('Show ticker subject', 'general.showTickerSubject')
+    .form-group
+        .form-group
+            +input('newTickerItem', 'New ticker item')
+        .btn-group-vertical
+            .btn-group: button.btn.btn-success(ng-click='addTickerItem()')
+                +gi('plus')
+                |  Add item
+            .btn-group: button.btn.btn-warning(ng-click='commitTickerItems()') Update ticker
+            .btn-group: button.btn.btn-danger(ng-click='resetTicker()') Reset ticker items
+        .form-group.container: .ui-sortable
+            .form-group.row(ng-repeat='ti in general.tickerItems track by $index')
+                .col-md-1: button.btn.btn-sm.btn-warning(ng-click='removeTickerItem($index)')
+                    +gi('minus')
+                    |  Remove item
+                .col-md-11: span {{ti}}

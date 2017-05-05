@@ -34,7 +34,7 @@ html(lang='en', ng-app='CGDashboardApp')
                     li(role='presentation', ng-class='{active:isActive(section.url)}', ng-repeat="section in menu")
                         a(ng-href='#!{{section.url}}') {{section.name}}
                     li(role='presentation', ng-show='currentMode', ng-class='{active:isActive(currentMode.url)}')
-                        a(ng-href='#!{{section.url}}') {{project}}: {{currentMode.name}}
+                        a(ng-href='#!{{currentMode.url}}') {{project}}: {{currentMode.name}}
                 .col-lg-10
                     div(ng-view)
         each script in scripts
