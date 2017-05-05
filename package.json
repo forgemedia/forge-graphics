@@ -11,5 +11,14 @@
     "minimist": "^1.2.0",
     "pug": "^2.0.0-rc.1",
     "socket.io": "*"
+  },
+  "jspm": {
+    "configFile": "public/js/config.js",
+    "dependencies": {},
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
   }
 }

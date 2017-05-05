@@ -2,7 +2,8 @@
     "project": "Broken",
     "port": 3000,
     "publicPaths": [
-        "node_modules"
+        "node_modules",
+        "jspm_packages"
     ],
     "sockets": {
         "general": [

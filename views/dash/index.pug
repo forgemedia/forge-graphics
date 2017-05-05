@@ -4,17 +4,8 @@ html(lang='en', ng-app='CGDashboardApp')
         title #{project} Graphics Dashboard
         //- link(rel='stylesheet', href='/css/dashboard.css')
     body
-        .container(ng-controller='AppCtrl')
-            header: .page-header
-                h1
-                    img#forgeLogo(src='/img/forge-black.svg')
-                    | Graphics Dashboard
-                    small  #{project}
-            .row
-                .col-lg-2: ul.nav.nav-pills.nav-stacked
-                    li(role='presentation', ng-class='{active:isActive(section.url)}', ng-repeat="section in menu")
-                        a(ng-href='#!{{section.url}}') {{section.name}}
-                    li(role='presentation', ng-show='currentMode', ng-class='{active:isActive(currentMode.url)}')
-                        a(ng-href='#!{{currentMode.url}}') {{project}}: {{currentMode.name}}
-                .col-lg-10
-                    div(ng-view)
+        .container: header: h1 Forge Graphics Dashboard
+            small  #{project}
+        script(src='/jspm_packages/system.js')
+        script(src='/js/config.js')
+        script System.import('/js/dash.js')

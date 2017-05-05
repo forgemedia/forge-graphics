@@ -1,6 +1,10 @@
 doctype html
 html(ng-app='cgApp')
-    meta(charset='UTF-8')
-    title ForgeCG #{project}
-    //- link(href='/css/theme.css' rel='stylesheet')
-body
+    head
+        meta(charset='UTF-8')
+        title ForgeCG #{project}
+        //- link(href='/css/theme.css' rel='stylesheet')
+    body
+        script(src='/jspm_packages/system.js')
+        script(src='/js/config.js')
+        script System.import('/js/cg.js')
