@@ -7,6 +7,9 @@ import HTTP from 'http';
 import SocketIO from 'socket.io';
 import Path from 'path';
 import Winston from 'winston-color';
+import NodeSassMiddleware from 'node-sass-middleware';
+import PostCSSMiddleware from 'postcss-middleware';
+import Cssnext from 'postcss-cssnext';
 
 // Forge graphics module imports
 import Config from './config.json';
@@ -31,6 +34,21 @@ app.locals = {
     basedir: Path.join(app.get('views'), 'dash', 'templates'),
     project: Config.project
 };
+
+app.use(NodeSassMiddleware({
+    src: Path.join(__dirname, 'scss'),
+    dest: Path.join(__dirname, 'public', 'stylesheets', 'scss-out'),
+    prefix: '/stylesheets/scss-out',
+    response: false
+}));
+app.use('/stylesheets/scss-out', PostCSSMiddleware({
+    src: req => Path.join(__dirname, 'public', 'stylesheets', 'scss-out', req.url),
+    plugins: [
+        Cssnext({
+            browsers: ['Chrome > 40']
+        })
+    ]
+}));
 
 app.get('/', (req, res) => res.render('cg/index'));
 app.use(['/dash', '/dashboard'], FGDashboardRouting);
