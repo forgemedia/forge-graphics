@@ -1,8 +1,7 @@
 {
-    "project": "Varsity 2017",
+    "project": "Broken",
     "port": 3000,
     "publicPaths": [
-        "bower_components",
         "node_modules"
     ],
     "sockets": {
