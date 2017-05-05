@@ -48,8 +48,7 @@ for (let path of Config.publicPaths) app.use(`/${path}`, Express.static(Path.joi
 // Handle socket connections
 FGGlobal.io.on('connection', FGSocketHandler);
 
-let port = Config.port;
-if (argv.port) port = argv.port;
+let port = argv.port? argv.port : Config.port;
 server.listen(port);
 
 if (!FGGlobal.debug) {
