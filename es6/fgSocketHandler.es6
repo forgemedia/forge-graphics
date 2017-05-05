@@ -1,23 +1,24 @@
 import FGGlobal from './fgGlobal';
+import Winston from 'winston-color';
 
 export default socket => {
-    if (FGGlobal.debug) console.log(`* CONN ${socket.handshake.address}`);
+    Winston.verbose('CONN', socket.handshake.address);
 
     for (let com in FGGlobal.config.sockets) {
         let subs = FGGlobal.config.sockets[com];
         socket.on(com, msg => {
-            if (FGGlobal.debug) console.log(`* SYNC ${com}:get ${msg}`);
+            Winston.debug('SYNC', { com, msg });
             FGGlobal.dataStores[com] = msg;
             FGGlobal.io.sockets.emit(com, msg);
         })
         socket.on(`${com}:get`, msg => {
-            if (FGGlobal.debug) console.log(`* GET  ${com}:get ${msg}`);
+            Winston.debug('GET', { com, msg });
             FGGlobal.io.sockets.emit(com, FGGlobal.dataStores[com]);
         });
         for (let sub of subs) {
             let subId = `${com}:${sub}`;
             socket.on(subId, msg => {
-                if (FGGlobal.debug) console.log(`* MSG  ${subId} ${msg}`);
+                Winston.debug('MSG', { subId, msg });
                 FGGlobal.io.sockets.emit(subId, msg);
             });
         }
@@ -25,10 +26,10 @@ export default socket => {
 
     for (let expose of FGGlobal.config.expose) {
         socket.on(`${expose}:get`, () => {
-            if (FGGlobal.debug) console.log(`* XGET ${expose}:get`);
+            Winston.debug('XGET', expose);
             FGGlobal.io.sockets.emit(expose, FGGlobal.config[expose]);
         });
     }
 
-    if (FGGlobal.debug) socket.on('disconnect', () => console.log(`* DISC ${socket.handshake.address}`))
+    socket.on('disconnect', () => Winston.verbose('DISC', socket.handshake.address));
 };
