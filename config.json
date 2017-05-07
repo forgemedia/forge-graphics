@@ -9,7 +9,7 @@
         "Chrome > 40"
     ],
     "sockets": {
-        "general": [
+        "bug": [
             
         ]
     },
@@ -17,7 +17,7 @@
         "project"
     ],
     "dataStoresDefault": {
-        "general": {
+        "bug": {
             
         }
     }

@@ -1,17 +1,16 @@
 import Vue from 'vue';
+import Global from './_global';
 import ToggleButton from './_toggleButton.component';
 
 export default new Vue({
     data: {
         dataStore: {
             showBug: true
-        },
-        methods: {
-            created: function() {
-                this.$on('toggle', function(vb) {
-                    alert(vb);
-                })
-            }
         }
+    },
+    created: function() {
+        this.$watch('dataStore', function() {
+            Global.SIO.emit('bug', this.dataStore);
+        }, { deep: true });
     }
 })

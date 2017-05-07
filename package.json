@@ -27,7 +27,7 @@
     "configFile": "public/js/config.js",
     "dependencies": {
       "jquery": "npm:jquery@^3.2.1",
-      "socket.io-client": "github:socketio/socket.io-client@^1.7.2",
+      "socket.io-client": "github:socketio/socket.io-client@^1.7.4",
       "vue": "npm:vue@^2.3.2"
     },
     "devDependencies": {

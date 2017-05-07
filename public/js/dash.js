@@ -1,6 +1,7 @@
-import SIO from 'socket.io-client';
+import SocketIOClient from 'socket.io-client';
+import Global from './dash/_global';
 import BugApp from './dash/_bug';
 
 BugApp.$mount('#bugPanel');
 
-SIO.connect();
+Global.SIO = SocketIOClient.connect();
