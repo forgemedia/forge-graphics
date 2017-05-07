@@ -1,7 +1,7 @@
 @require 'normalize.css/normalize.css'
 @require 'jeet/styl'
 
-@require 'fonts/_dosis'
+@require 'fonts/_lato'
 
 @require 'dashboard/_variables'
 @require 'dashboard/_colourSchemes'
@@ -16,7 +16,7 @@
 
 body
     $_clr_{_body_clr}()
-    font-family Dosis
+    font-family Lato
 
 header
     $_clr_{_header_clr}()
@@ -55,7 +55,7 @@ header
                 margin-bottom 5px
                 @media (min-width: $_m_mobile)
                     border-radius 5px
-                &:hover, &.active
+                &:hover, &.active, /.router-link-active
                     $_clr_{_body_opposite_clr}_l()
                 a
                     width 100%

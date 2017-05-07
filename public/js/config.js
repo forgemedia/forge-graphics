@@ -20,6 +20,7 @@ System.config({
     "jquery": "npm:jquery@3.2.1",
     "socket.io-client": "github:socketio/socket.io-client@1.7.4",
     "vue": "npm:vue@2.3.2",
+    "vue-router": "npm:vue-router@2.5.3",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
@@ -74,6 +75,9 @@ System.config({
     },
     "npm:vm-browserify@0.0.4": {
       "indexof": "npm:indexof@0.0.1"
+    },
+    "npm:vue-router@2.5.3": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:vue@2.3.2": {
       "process": "github:jspm/nodelibs-process@0.1.2"

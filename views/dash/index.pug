@@ -10,16 +10,15 @@ html(lang='en')
             ._col_2._col_3_im.align-right: h1: small= project
         ._container.centre#dashboard
             ._col_5#sidebar: ul
-                li.active: a(href='#') Active menu item
-                each id in [...Array(5).keys()]
-                    li: a(href='#') Menu item
+                li(v-if='!mounted') Please wait...
+                router-link(v-for='route in this.$router.options.routes', tag='li', :to='route.path', :key='route.id')
+                    a {{ route.name }}
+                
             ._col_4of5#panel
-                .header-panel: h1 abc
-                #bugPanel
-                    ._container
-                        ._col_3
-                            toggle-button(v-model='dataStore.showBug', title='Bug')
+                router-view
 
+        script#bugTemplate(type='text/x-template')
+            include templates/bug
         script(src='/jspm_packages/system.js')
         script(src='/js/config.js')
         script System.import('/js/dash.js')

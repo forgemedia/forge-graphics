@@ -3,6 +3,7 @@ import Global from './_global';
 import ToggleButton from './_toggleButton.component';
 
 export default new Vue({
+    template: '#bugTemplate',
     data: {
         dataStore: {
             showBug: true
