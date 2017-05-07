@@ -2,21 +2,32 @@
 @require 'dashboard/util/_mixins'
 
 button.toggle-button
-    background _button_clr_inactive
-    border none
-    color _light-colour
-    padding 10px 20px
-    text-align center
-    text-decoration none
     display inline-block
-    outline none
-    font-size 32px
-    border-radius 5px
-    font-family inherit
-    font-weight bold
-    width 100%
-    cursor pointer
     height 10vh
     min-height 64px
+    width 100%
+    padding 10px 20px
+
+    background _button_clr_inactive
+    color _light-colour
+    outline none
+    border none
+    border-radius 5px
+    cursor pointer
+
+    text-align center
+    text-decoration none
+    font-size 32px
+    font-family inherit
+    font-weight bold
+
+    &:hover
+        background lighten(_button_clr_inactive, 20%)
+    &:active
+        background darken(_button_clr_inactive, 10%)
     &.active
         background _button_clr_active
+        &:hover
+            background darken(_button_clr_active, 15%)
+        &:active
+            background darken(_button_clr_active, 25%)
