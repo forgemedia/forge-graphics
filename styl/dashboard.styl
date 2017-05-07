@@ -19,14 +19,29 @@ body
 header
     $_clr_{_header_clr}()
     width 100%
-    margin-bottom 20px
+    height 6vh
+    margin-bottom 2vh
+    padding 0px 10px
+    line-height @height
+    overflow hidden
+    h1
+        font-size @height * 0.5
     {$_h_headers}
-        margin 15px 0px
+        text-overflow clip
+        padding 0px
+        margin 0px
 
 .header-panel
     border-bottom 2px dotted _mid-colour
+    margin-bottom 15px
+    {$_h_headers}
+        margin 3px 0px
 
 #dashboard
+    height 90vh
+    > *
+        @media (min-width: $_m_mobile)
+            height 95%
     #sidebar
         padding 5px 0px
         ul
@@ -36,7 +51,8 @@ header
             li
                 padding 5px 10px
                 margin-bottom 5px
-                border-radius 5px
+                @media (min-width: $_m_mobile)
+                    border-radius 5px
                 &:hover, &.active
                     $_clr_{_body_opposite_clr}_l()
                 a
@@ -44,9 +60,7 @@ header
                     text-decoration none
     #panel
         $_clr_{_panel_clr}()
-        border-radius 10px
         padding 10px 20px
         overflow auto
-        {$_h_headers}
-            margin 10px 0px
-
+        @media (min-width: $_m_mobile)
+            border-radius 10px
