@@ -15,6 +15,9 @@ html(lang='en')
                     li: a(href='#') Menu item
             ._col_4of5#panel
                 .header-panel: h1 abc
+                #bugPanel
+                    toggle-button(v-model='dataStore.showBug', title='Show Bug')
+
         script(src='/jspm_packages/system.js')
         script(src='/js/config.js')
         script System.import('/js/dash.js')
