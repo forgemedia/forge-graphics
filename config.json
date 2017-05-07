@@ -9,16 +9,11 @@
         "Chrome > 40"
     ],
     "sockets": {
-        "bug": [
-            
-        ]
+        "bug": []
     },
     "expose": [
-        "project"
     ],
     "dataStoresDefault": {
-        "bug": {
-            
-        }
+        "bug": {}
     }
 }
