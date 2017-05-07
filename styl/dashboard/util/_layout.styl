@@ -1,8 +1,7 @@
 @require 'dashboard/_media'
 _ccolumns = 2 3 4 5 6 8 12
 ._container
-    center()
-    ._col
+    > ._col
         for num in _ccolumns
             &_{num}
                 @media (min-width: $_m_mobile)
@@ -18,10 +17,12 @@ _ccolumns = 2 3 4 5 6 8 12
                     &_{spn}of{num}_im
                         @media (max-width: $_m_mobile)
                             column(spn/num)
-    ._span
+    > ._span
         for num in _ccolumns
             for spn in (1..num - 1)
                 &_{spn}of{num}
                     span(spn/num)
         &_all
             span(1/1)
+    &.centre
+        center()

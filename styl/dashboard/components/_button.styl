@@ -1,0 +1,22 @@
+@require 'dashboard/_variables'
+@require 'dashboard/util/_mixins'
+
+button.toggle-button
+    background _button_clr_inactive
+    border none
+    color _light-colour
+    padding 10px 20px
+    text-align center
+    text-decoration none
+    display inline-block
+    outline none
+    font-size 32px
+    border-radius 5px
+    font-family inherit
+    font-weight bold
+    width 100%
+    cursor pointer
+    height 10vh
+    min-height 64px
+    &.active
+        background _button_clr_active

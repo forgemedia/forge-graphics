@@ -8,6 +8,8 @@
 @require 'dashboard/_media'
 @require 'dashboard/util/_layout'
 @require 'dashboard/util/_helpers'
+@require 'dashboard/util/_mixins'
+@require 'dashboard/components/_button'
 
 *
     box-sizing: border-box
@@ -56,6 +58,7 @@ header
                 &:hover, &.active
                     $_clr_{_body_opposite_clr}_l()
                 a
+                    width 100%
                     color inherit
                     text-decoration none
     #panel
@@ -64,7 +67,3 @@ header
         overflow auto
         @media (min-width: $_m_mobile)
             border-radius 10px
-
-button.toggle-button
-    &.active
-        color #f00

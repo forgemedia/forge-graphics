@@ -5,10 +5,10 @@ html(lang='en')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
         link(rel='stylesheet', href='/css/dashboard.css')
     body
-        header: ._container
+        header: ._container.centre
             ._col_2._col_2of3_im: h1 Forge Graphics Dashboard
             ._col_2._col_3_im.align-right: h1: small= project
-        ._container#dashboard
+        ._container.centre#dashboard
             ._col_5#sidebar: ul
                 li.active: a(href='#') Active menu item
                 each id in [...Array(5).keys()]
@@ -16,7 +16,9 @@ html(lang='en')
             ._col_4of5#panel
                 .header-panel: h1 abc
                 #bugPanel
-                    toggle-button(v-model='dataStore.showBug', title='Show Bug')
+                    ._container
+                        ._col_3
+                            toggle-button(v-model='dataStore.showBug', title='Bug')
 
         script(src='/jspm_packages/system.js')
         script(src='/js/config.js')

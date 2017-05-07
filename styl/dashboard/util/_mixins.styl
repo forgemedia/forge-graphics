@@ -1,0 +1,7 @@
+_lgFactor = 15%
+
+$_mx_button-gradient($_clr)
+    linear-gradient(to bottom, $_clr, darken($_clr, _lgFactor))
+
+$_mx_button-gradient_inverse($_clr)
+    linear-gradient(to top, $_clr, darken($_clr, _lgFactor))
