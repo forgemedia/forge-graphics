@@ -1,9 +1,12 @@
 {
-    "project": "Broken",
+    "project": "Rebuild",
     "port": 3000,
     "publicPaths": [
         "node_modules",
         "jspm_packages"
+    ],
+    "browserSupport": [
+        "Chrome > 40"
     ],
     "sockets": {
         "general": [

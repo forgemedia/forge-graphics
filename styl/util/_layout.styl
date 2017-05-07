@@ -1,0 +1,18 @@
+_ccolumns = 2 3 4 5 6 8 12
+._container
+    center()
+    ._col
+        for num in _ccolumns
+            &_{num}
+                column(1/num)
+            if num > 2
+                for spn in (2..num - 1)
+                    &_{spn}of{num}
+                        column(spn/num)
+    ._span
+        for num in _ccolumns
+            for spn in (1..num - 1)
+                &_{spn}of{num}
+                    span(spn/num)
+        &_all
+            span(1/1)

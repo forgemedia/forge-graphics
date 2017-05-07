@@ -1,0 +1,16 @@
+$_clr_dark
+    background _dark-colour
+    color _light-colour
+    {$_h_headers}
+        small
+            color _light-colour_sub
+
+$_clr_light
+    background _light-colour
+    color _dark-colour
+    {$_h_headers}
+        small
+            color _dark-colour_super
+
+$_clr_opposite(id)
+    return (id==dark? light : dark)

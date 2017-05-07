@@ -3,11 +3,15 @@ html(lang='en')
     head
         title #{project} Graphics Dashboard
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        link(rel='stylesheet', href='/stylesheets/scss-out/dashboard.css')
+        link(rel='stylesheet', href='/css/dashboard.css')
     body
-        header: h1 Forge Graphics Dashboard
-            small  #{project}
-        #elem CONTENT
+        header: ._container
+            ._col_2: h1 Forge Graphics Dashboard
+            ._col_2.align-right: h1: small= project
+        ._container#dashboard
+            ._col_5#sidebar: ul: each id in [...Array(5).keys()]
+                li.blue: a(href='#') Menu item
+            ._col_4of5#panel: span hijklmnop
         script(src='/jspm_packages/system.js')
         script(src='/js/config.js')
         script System.import('/js/dash.js')

@@ -1,0 +1,9 @@
+_font(__code, __family, __weight, __style)
+  @font-face
+    font-family __family
+    if __style
+      font-style __style
+    else
+      font-style normal
+    font-weight __weight
+    src:  url('/fonts/' + __code + '/' + __weight + (__style? __style : '') + '.woff2') format('woff2')

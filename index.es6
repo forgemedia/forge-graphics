@@ -7,9 +7,11 @@ import HTTP from 'http';
 import SocketIO from 'socket.io';
 import Path from 'path';
 import Winston from 'winston-color';
-import NodeSassMiddleware from 'node-sass-middleware';
+
+import Stylus from 'stylus';
 import PostCSSMiddleware from 'postcss-middleware';
 import Cssnext from 'postcss-cssnext';
+import Cssnano from 'cssnano';
 
 // Forge graphics module imports
 import Config from './config.json';
@@ -35,22 +37,35 @@ app.locals = {
     project: Config.project
 };
 
-app.use(NodeSassMiddleware({
-    src: Path.join(__dirname, 'scss'),
-    dest: Path.join(__dirname, 'public', 'stylesheets', 'scss-out'),
-    prefix: '/stylesheets/scss-out',
-    response: false,
-    includePaths: [
-        'node_modules/bootstrap/scss/'
-    ]
-}));
-app.use('/stylesheets/scss-out', PostCSSMiddleware({
-    src: req => Path.join(__dirname, 'public', 'stylesheets', 'scss-out', req.url),
-    plugins: [
-        Cssnext({
-            browsers: ['Chrome > 40']
-        })
-    ]
+let postCssPluginsDbg = [
+    Cssnext({
+        browsers: Config.browserSupport
+    })
+];
+
+let postCssPluginsProd = [
+    Cssnano({
+        autoprefixer: false
+    })
+];
+
+let postCssPlugins = [];
+if (argv.debug) postCssPlugins = postCssPluginsDbg;
+else postCssPlugins = postCssPlugins.concat(postCssPluginsProd)
+
+app.use(Stylus.middleware({
+    src: Path.join(__dirname, 'styl'),
+    dest: Path.join(__dirname, 'public', 'css'),
+    compile: (str, path) => Stylus(str)
+        .set('filename', path)
+        .set('include css', true)
+        .set('paths', [
+            'node_modules/'
+        ])
+}))
+app.use('/css', PostCSSMiddleware({
+    src: req => Path.join(__dirname, 'public', 'css', req.url),
+    plugins: postCssPlugins
 }));
 
 app.get('/', (req, res) => res.render('cg/index'));
@@ -72,5 +87,5 @@ Winston.info(`Quit using CTRL+C`);
 Winston.info(`Time of start: ${new Date().toISOString()}`);
 Winston.info(`Listening on port ${port}`);
 Winston.info(`Add http://[hostname]:${port} to a BrowserSource in OBS to use`);
-Winston.info(`Go to [hostname]:'${port}'/dashboard in a web browser to control`);
+Winston.info(`Go to [hostname]:${port}/dashboard in a web browser to control`);
 Winston.info(`The [hostname] is probably 'localhost' if OBS/the dashboard are running on this computer`);

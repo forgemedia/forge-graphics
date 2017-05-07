@@ -1,0 +1,1531 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+
+figcaption,
+figure,
+main { /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details, /* 1 */
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+  display: none;
+}
+
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 200;
+  src: url("/fonts/dosis/200.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/dosis/300.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/dosis/400.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/dosis/500.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/dosis/600.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/dosis/700.woff2") format('woff2');
+}
+body,
+header {
+  background: #222;
+  color: #ddd;
+}
+#dashboard #sidebar ul li:hover,
+#dashboard #panel {
+  background: #ddd;
+  color: #222;
+}
+._container {
+  width: auto;
+  max-width: 1440px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+._container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_2 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_2::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_2:last-child {
+  margin-right: 0%;
+}
+._container ._col_3 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.33333333333333%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_3::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_3:last-child {
+  margin-right: 0%;
+}
+._container ._col_2of3 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 65.66666666666666%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_2of3::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_2of3:last-child {
+  margin-right: 0%;
+}
+._container ._col_4 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_4::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_4:last-child {
+  margin-right: 0%;
+}
+._container ._col_2of4 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_2of4::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_2of4:last-child {
+  margin-right: 0%;
+}
+._container ._col_3of4 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 74.25%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_3of4::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_3of4:last-child {
+  margin-right: 0%;
+}
+._container ._col_5 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 17.6%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_5::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_5:last-child {
+  margin-right: 0%;
+}
+._container ._col_2of5 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 38.2%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_2of5::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_2of5:last-child {
+  margin-right: 0%;
+}
+._container ._col_3of5 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 58.8%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_3of5::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_3of5:last-child {
+  margin-right: 0%;
+}
+._container ._col_4of5 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 79.4%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_4of5::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_4of5:last-child {
+  margin-right: 0%;
+}
+._container ._col_6 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 14.166666666666664%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_6::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_6:last-child {
+  margin-right: 0%;
+}
+._container ._col_2of6 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.33333333333333%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_2of6::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_2of6:last-child {
+  margin-right: 0%;
+}
+._container ._col_3of6 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_3of6::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_3of6:last-child {
+  margin-right: 0%;
+}
+._container ._col_4of6 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 65.66666666666666%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_4of6::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_4of6:last-child {
+  margin-right: 0%;
+}
+._container ._col_5of6 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 82.83333333333334%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_5of6::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_5of6:last-child {
+  margin-right: 0%;
+}
+._container ._col_8 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 9.875%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_8::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_8:last-child {
+  margin-right: 0%;
+}
+._container ._col_2of8 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_2of8::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_2of8:last-child {
+  margin-right: 0%;
+}
+._container ._col_3of8 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 35.625%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_3of8::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_3of8:last-child {
+  margin-right: 0%;
+}
+._container ._col_4of8 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_4of8::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_4of8:last-child {
+  margin-right: 0%;
+}
+._container ._col_5of8 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 61.375%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_5of8::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_5of8:last-child {
+  margin-right: 0%;
+}
+._container ._col_6of8 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 74.25%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_6of8::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_6of8:last-child {
+  margin-right: 0%;
+}
+._container ._col_7of8 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 87.125%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_7of8::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_7of8:last-child {
+  margin-right: 0%;
+}
+._container ._col_12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 5.583333333333332%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_12:last-child {
+  margin-right: 0%;
+}
+._container ._col_2of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 14.166666666666664%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_2of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_2of12:last-child {
+  margin-right: 0%;
+}
+._container ._col_3of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_3of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_3of12:last-child {
+  margin-right: 0%;
+}
+._container ._col_4of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.33333333333333%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_4of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_4of12:last-child {
+  margin-right: 0%;
+}
+._container ._col_5of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 39.91666666666667%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_5of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_5of12:last-child {
+  margin-right: 0%;
+}
+._container ._col_6of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_6of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_6of12:last-child {
+  margin-right: 0%;
+}
+._container ._col_7of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 57.083333333333336%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_7of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_7of12:last-child {
+  margin-right: 0%;
+}
+._container ._col_8of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 65.66666666666666%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_8of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_8of12:last-child {
+  margin-right: 0%;
+}
+._container ._col_9of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 74.25%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_9of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_9of12:last-child {
+  margin-right: 0%;
+}
+._container ._col_10of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 82.83333333333334%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_10of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_10of12:last-child {
+  margin-right: 0%;
+}
+._container ._col_11of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 91.41666666666666%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+._container ._col_11of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._col_11of12:last-child {
+  margin-right: 0%;
+}
+._container ._span_1of2 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_1of2::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_1of3 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 33.33333333333333%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_1of3::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_2of3 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 66.66666666666666%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_2of3::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_1of4 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_1of4::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_2of4 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_2of4::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_3of4 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 75%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_3of4::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_1of5 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 20%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_1of5::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_2of5 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 40%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_2of5::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_3of5 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 60%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_3of5::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_4of5 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 80%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_4of5::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_1of6 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 16.666666666666664%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_1of6::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_2of6 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 33.33333333333333%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_2of6::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_3of6 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_3of6::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_4of6 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 66.66666666666666%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_4of6::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_5of6 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 83.33333333333334%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_5of6::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_1of8 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 12.5%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_1of8::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_2of8 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_2of8::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_3of8 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 37.5%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_3of8::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_4of8 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_4of8::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_5of8 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 62.5%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_5of8::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_6of8 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 75%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_6of8::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_7of8 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 87.5%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_7of8::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_1of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 8.333333333333332%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_1of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_2of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 16.666666666666664%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_2of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_3of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_3of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_4of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 33.33333333333333%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_4of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_5of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 41.66666666666667%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_5of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_6of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_6of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_7of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 58.333333333333336%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_7of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_8of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 66.66666666666666%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_8of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_9of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 75%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_9of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_10of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 83.33333333333334%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_10of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_11of12 {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 91.66666666666666%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_11of12::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+._container ._span_all {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+._container ._span_all::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.align-left,
+.align-left * {
+  text-align: left;
+}
+.align-center,
+.align-center * {
+  text-align: center;
+}
+.align-right,
+.align-right * {
+  text-align: right;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Dosis;
+}
+header {
+  width: 100%;
+  margin-bottom: 20px;
+}
+header h1,
+header h2,
+header h3,
+header h4,
+header h5,
+header h6 {
+  margin: 15px 0px;
+}
+#dashboard #sidebar {
+  padding: 5px 0px;
+}
+#dashboard #sidebar ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+#dashboard #sidebar ul li {
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+#dashboard #sidebar ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+#dashboard #panel {
+  border-radius: 10px;
+  padding: 10px 20px;
+  overflow: auto;
+}
