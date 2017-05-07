@@ -17,7 +17,9 @@ System.config({
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.7",
+    "jquery": "npm:jquery@3.2.1",
     "socket.io-client": "github:socketio/socket.io-client@1.7.2",
+    "vue": "npm:vue@2.3.2",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
@@ -72,6 +74,9 @@ System.config({
     },
     "npm:vm-browserify@0.0.4": {
       "indexof": "npm:indexof@0.0.1"
+    },
+    "npm:vue@2.3.2": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     }
   }
 });

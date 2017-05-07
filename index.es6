@@ -39,7 +39,10 @@ app.use(NodeSassMiddleware({
     src: Path.join(__dirname, 'scss'),
     dest: Path.join(__dirname, 'public', 'stylesheets', 'scss-out'),
     prefix: '/stylesheets/scss-out',
-    response: false
+    response: false,
+    includePaths: [
+        'node_modules/bootstrap/scss/'
+    ]
 }));
 app.use('/stylesheets/scss-out', PostCSSMiddleware({
     src: req => Path.join(__dirname, 'public', 'stylesheets', 'scss-out', req.url),

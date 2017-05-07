@@ -1,11 +1,13 @@
 doctype html
-html(lang='en', ng-app='CGDashboardApp')
+html(lang='en')
     head
         title #{project} Graphics Dashboard
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
         link(rel='stylesheet', href='/stylesheets/scss-out/dashboard.css')
     body
-        .container: header: h1 Forge Graphics Dashboard
+        header: h1 Forge Graphics Dashboard
             small  #{project}
+        #elem CONTENT
         script(src='/jspm_packages/system.js')
         script(src='/js/config.js')
         script System.import('/js/dash.js')
