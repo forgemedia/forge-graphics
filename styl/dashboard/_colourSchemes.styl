@@ -1,5 +1,6 @@
 @require 'util/_helpers'
 @require 'dashboard/_variables'
+@require 'dashboard/util/_mixins'
 
 $_clr_dark_l()
     background _dark-colour
@@ -54,3 +55,12 @@ $_clr_light_sub()
     {$_h_headers}
         small
             color _dark-colour_super
+
+$_clr_red_l()
+    background _red-colour
+    color _light-colour
+$_clr_red()
+    $_clr_red_l()
+    {$_h_headers}
+        small
+            color _light-colour_sub

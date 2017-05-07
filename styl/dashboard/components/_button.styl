@@ -8,11 +8,11 @@ button.toggle-button
     width 100%
     padding 10px 20px
 
-    background _button_clr_inactive
+    background $_mx_gradient(_button_clr_inactive)
     color _button_clr_text
     outline none
     border none
-    border-radius 5px
+    border-radius 10px
     cursor pointer
 
     text-align center
@@ -22,12 +22,14 @@ button.toggle-button
     font-weight bold
 
     &:hover
-        background lighten(_button_clr_inactive, 20%)
+        background $_mx_gradient(lighten(_button_clr_inactive, 12%))
     &:active
-        background darken(_button_clr_inactive, 10%)
+        background $_mx_gradient(darken(_button_clr_inactive, 10%))
     &.active
-        background _button_clr_active
+        background $_mx_gradient_inverse(_button_clr_active)
+        color _button_clr_text_active
+        box-shadow inset 0px 2px 8px alpha(#000, 0.55)
         &:hover
-            background darken(_button_clr_active, 15%)
+            background $_mx_gradient_inverse(darken(_button_clr_active, 15%))
         &:active
-            background darken(_button_clr_active, 25%)
+            background $_mx_gradient_inverse(darken(_button_clr_active, 25%))
