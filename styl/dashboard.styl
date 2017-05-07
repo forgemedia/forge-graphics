@@ -5,8 +5,9 @@
 
 @require 'dashboard/_variables'
 @require 'dashboard/_colourSchemes'
-@require 'util/_layout'
-@require 'util/_helpers'
+@require 'dashboard/_media'
+@require 'dashboard/util/_layout'
+@require 'dashboard/util/_helpers'
 
 *
     box-sizing: border-box
@@ -21,6 +22,9 @@ header
     margin-bottom 20px
     {$_h_headers}
         margin 15px 0px
+
+.header-panel
+    border-bottom 2px dotted _mid-colour
 
 #dashboard
     #sidebar
@@ -43,4 +47,6 @@ header
         border-radius 10px
         padding 10px 20px
         overflow auto
+        {$_h_headers}
+            margin 10px 0px
 

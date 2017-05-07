@@ -6,14 +6,15 @@ html(lang='en')
         link(rel='stylesheet', href='/css/dashboard.css')
     body
         header: ._container
-            ._col_2: h1 Forge Graphics Dashboard
-            ._col_2.align-right: h1: small= project
+            ._col_2._col_2of3_im: h1 Forge Graphics Dashboard
+            ._col_2._col_3_im.align-right: h1: small= project
         ._container#dashboard
             ._col_5#sidebar: ul
                 li.active: a(href='#') Active menu item
                 each id in [...Array(5).keys()]
                     li: a(href='#') Menu item
-            ._col_4of5#panel: span hijklmnop
+            ._col_4of5#panel
+                .header-panel: h1 abc
         script(src='/jspm_packages/system.js')
         script(src='/js/config.js')
         script System.import('/js/dash.js')
