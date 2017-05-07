@@ -1,16 +1,56 @@
-$_clr_dark
+@require 'util/_helpers'
+@require 'dashboard/_variables'
+
+$_clr_dark_l()
     background _dark-colour
     color _light-colour
+$_clr_dark()
+    $_clr_dark_l()
     {$_h_headers}
         small
-            color _light-colour_sub
+            color _light-colour
 
-$_clr_light
+$_clr_dark_super_l()
+    background _dark-colour_super
+    color _light-colour_sub
+$_clr_dark_super()
+    $_clr_dark_super_l()
+    {$_h_headers}
+        small
+            color _light-colour
+
+$_clr_dark_sub_l()
+    background _dark-colour_sub
+    color _light-colour_super
+$_clr_dark_sub()
+    $_clr_dark_sub_l()
+    {$_h_headers}
+        small
+            color _light-colour
+
+$_clr_light_l()
     background _light-colour
     color _dark-colour
+$_clr_light()
+    $_clr_light_l()
     {$_h_headers}
         small
             color _dark-colour_super
 
-$_clr_opposite(id)
-    return (id==dark? light : dark)
+$_clr_light_super_l()
+    background _light-colour_super
+    color _dark-colour_sub
+$_clr_light_super()
+    $_clr_light_super_l()
+    {$_h_headers}
+        small
+            color _dark-colour
+
+$_clr_light_sub_l()
+    background _light-colour_sub
+    color _dark-colour_super
+$_clr_light_sub()
+    $_clr_light_sub_l()
+    {$_h_headers}
+        small
+            color _dark-colour_super

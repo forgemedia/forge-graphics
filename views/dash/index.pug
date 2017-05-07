@@ -9,8 +9,10 @@ html(lang='en')
             ._col_2: h1 Forge Graphics Dashboard
             ._col_2.align-right: h1: small= project
         ._container#dashboard
-            ._col_5#sidebar: ul: each id in [...Array(5).keys()]
-                li.blue: a(href='#') Menu item
+            ._col_5#sidebar: ul
+                li.active: a(href='#') Active menu item
+                each id in [...Array(5).keys()]
+                    li: a(href='#') Menu item
             ._col_4of5#panel: span hijklmnop
         script(src='/jspm_packages/system.js')
         script(src='/js/config.js')

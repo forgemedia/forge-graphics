@@ -12,11 +12,11 @@
     box-sizing: border-box
 
 body
-    @extend $_clr_{_body_clr}
+    $_clr_{_body_clr}()
     font-family Dosis
 
 header
-    @extend $_clr_{_header_clr}
+    $_clr_{_header_clr}()
     width 100%
     margin-bottom 20px
     {$_h_headers}
@@ -33,13 +33,13 @@ header
                 padding 5px 10px
                 margin-bottom 5px
                 border-radius 5px
-                &:hover
-                    @extend $_clr_{$_clr_opposite(_body_clr)}
+                &:hover, &.active
+                    $_clr_{_body_opposite_clr}_l()
                 a
                     color inherit
                     text-decoration none
     #panel
-        @extend $_clr_{_panel_clr}
+        $_clr_{_panel_clr}()
         border-radius 10px
         padding 10px 20px
         overflow auto
