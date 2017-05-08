@@ -8,7 +8,8 @@ Vue.use(VueRouter);
 
 let Bug = { template: '<div id="bugPanel"></div>' };
 let Routes = [
-    { path: '/bug', component: Bug, name: 'Bug' }
+    { path: '/bug', component: Bug, name: 'Bug' },
+    { path: '*', redirect: '/bug' }
 ];
 let Router = new VueRouter({
     routes: Routes
